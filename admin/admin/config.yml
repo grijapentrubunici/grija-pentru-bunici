@@ -1,0 +1,36 @@
+backend:
+  name: git-gateway
+  branch: main
+
+media_folder: "images/uploads"
+public_folder: "/images/uploads"
+
+collections:
+  - name: "pagini"
+    label: "Pagini"
+    files:
+      - file: "index.html"
+        label: "Pagina principală"
+        name: "index"
+        fields:
+          - { label: "Titlu", name: "title", widget: "string" }
+          - { label: "Descriere", name: "description", widget: "text" }
+          - { label: "Conținut", name: "body", widget: "markdown" }
+      - file: "despre.html"
+        label: "Despre noi"
+        name: "despre"
+        fields:
+          - { label: "Titlu", name: "title", widget: "string" }
+          - { label: "Conținut", name: "body", widget: "markdown" }
+      - file: "contact.html"
+        label: "Contact"
+        name: "contact"
+        fields:
+          - { label: "Titlu", name: "title", widget: "string" }
+          - { label: "Conținut", name: "body", widget: "markdown" }
+      - file: "servicii.html"
+        label: "Bone și Îngrijitori"
+        name: "servicii"
+        fields:
+          - { label: "Titlu", name: "title", widget: "string" }
+          - { label: "Conținut", name: "body", widget: "markdown" }
