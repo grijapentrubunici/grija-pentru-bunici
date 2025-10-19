@@ -1,0 +1,124 @@
+/* 🌸 Grija pentru Bunici - Design Roz-Somon Elegant */
+
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: #fff7f6;
+  color: #333;
+}
+
+header {
+  background-color: #fcbcb8;
+  color: white;
+  padding: 15px 0;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+}
+
+header h1 {
+  text-align: center;
+  margin: 0;
+  font-size: 1.8rem;
+}
+
+nav ul {
+  list-style: none;
+  display: flex;
+  justify-content: center;
+  padding: 0;
+  margin-top: 10px;
+  flex-wrap: wrap;
+}
+
+nav li {
+  margin: 0 12px;
+}
+
+nav a {
+  text-decoration: none;
+  color: white;
+  font-weight: bold;
+  transition: 0.3s;
+}
+
+nav a:hover, nav a.active {
+  color: #6e2e2c;
+}
+
+.hero {
+  background: linear-gradient(rgba(255, 200, 195, 0.8), rgba(255, 200, 195, 0.8)), 
+              url('https://images.unsplash.com/photo-1607746882042-944635dfe10e?auto=format&fit=crop&w=1350&q=80') center/cover;
+  color: #4a2c2a;
+  text-align: center;
+  padding: 80px 20px;
+  border-bottom: 5px solid #fcbcb8;
+}
+
+.hero h2 {
+  font-size: 2rem;
+  margin-bottom: 15px;
+}
+
+.hero p {
+  font-size: 1.2rem;
+  margin-bottom: 25px;
+}
+
+.btn {
+  background-color: #fcbcb8;
+  color: white;
+  padding: 12px 28px;
+  border-radius: 30px;
+  text-decoration: none;
+  font-weight: bold;
+  transition: 0.3s;
+}
+
+.btn:hover {
+  background-color: #f5978b;
+}
+
+.container {
+  width: 90%;
+  max-width: 1000px;
+  margin: 0 auto;
+}
+
+.info {
+  padding: 60px 20px;
+  text-align: center;
+}
+
+.info h3 {
+  color: #6e2e2c;
+  margin-bottom: 25px;
+  font-size: 1.6rem;
+}
+
+.info ul {
+  list-style: none;
+  padding: 0;
+}
+
+.info li {
+  margin: 10px 0;
+  font-size: 1.1rem;
+}
+
+footer {
+  background-color: #fcbcb8;
+  color: white;
+  text-align: center;
+  padding: 20px 10px;
+  font-size: 0.9rem;
+  margin-top: 40px;
+}
+
+footer a {
+  color: white;
+  text-decoration: underline;
+}
+
+footer a:hover {
+  color: #6e2e2c;
+}
