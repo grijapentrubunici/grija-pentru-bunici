@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="ro">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Contact - Grija pentru Bunici</title>
+  <style>
+    body { font-family: 'Poppins', sans-serif; text-align: center; background-color: #fff8f8; }
+    form { max-width: 500px; margin: 2rem auto; background: #fff; padding: 2rem; border-radius: 10px; box-shadow: 0 0 10px #fcd2c2; }
+    input, textarea { width: 100%; margin: 0.5rem 0; padding: 0.7rem; border: 1px solid #f7b8a8; border-radius: 6px; }
+    button { background-color: #f7b8a8; color: white; border: none; padding: 0.8rem 1.5rem; border-radius: 10px; cursor: pointer; }
+  </style>
+</head>
+<body>
+  <h1>Contactează-ne</h1>
+  <form action="mailto:opreabiancamaria10@yahoo.com" method="post" enctype="text/plain">
+    <label>Nume complet:</label>
+    <input type="text" name="Nume" required>
+
+    <label>Număr de telefon:</label>
+    <input type="text" name="Telefon" required>
+
+    <label>Mesaj:</label>
+    <textarea name="Mesaj" rows="5" required></textarea>
+
+    <button type="submit">Trimite mesajul</button>
+  </form>
+</body>
+</html>
