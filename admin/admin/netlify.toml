@@ -1,0 +1,13 @@
+[[redirects]]
+  from = "/admin"
+  to = "/admin/"
+  status = 301
+
+[[headers]]
+  for = "/admin/*"
+  [headers.values]
+    Access-Control-Allow-Origin = "*"
+
+[build]
+  publish = "."
+  command = ""
