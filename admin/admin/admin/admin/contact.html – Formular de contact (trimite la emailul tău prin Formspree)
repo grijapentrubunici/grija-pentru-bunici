@@ -1,0 +1,56 @@
+<!doctype html>
+<html lang="ro">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Contact — Grija pentru Bunici</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <header class="site-header">
+    <div class="wrap brand">
+      <div class="logo">GB</div>
+      <div>
+        <h1>Grija pentru Bunici</h1>
+        <p class="tagline">Bone și îngrijitori de încredere pentru cei dragi</p>
+      </div>
+    </div>
+  </header>
+
+  <nav class="main-nav">
+    <div class="wrap nav-inner">
+      <a href="index.html">Acasă</a>
+      <a href="servicii.html">Bone și Îngrijitori</a>
+      <a href="despre.html">Despre noi</a>
+      <a href="contact.html" class="active">Contact</a>
+    </div>
+  </nav>
+
+  <main class="wrap section">
+    <h2>Contactează-ne</h2>
+    <p>Completează formularul de mai jos și îți vom răspunde cât mai curând.</p>
+
+    <form action="https://formspree.io/f/xkgwkrjp" method="POST" class="contact-form">
+      <label>Nume complet</label>
+      <input type="text" name="nume" required>
+
+      <label>Număr de telefon</label>
+      <input type="text" name="telefon" required>
+
+      <label>Mesajul tău</label>
+      <textarea name="mesaj" rows="5" required></textarea>
+
+      <button type="submit" class="cta">Trimite mesajul</button>
+    </form>
+
+    <p style="margin-top:20px;">sau contactează-ne direct la: <strong>📞 0725782086</strong> sau <a href="mailto:opreabiancamaria10@yahoo.com">opreabiancamaria10@yahoo.com</a></p>
+  </main>
+
+  <footer class="site-footer">
+    <div class="wrap footer-inner">
+      <p class="contact">📞 0725782086 | ✉️ <a href="mailto:opreabiancamaria10@yahoo.com">opreabiancamaria10@yahoo.com</a></p>
+      <div class="copyright">© 2025 Grija pentru Bunici – Cu drag pentru cei dragi 🤍</div>
+    </div>
+  </footer>
+</body>
+</html>
