@@ -1,0 +1,59 @@
+<!doctype html>
+<html lang="ro">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Bone și Îngrijitori — Grija pentru Bunici</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <header class="site-header">
+    <div class="wrap brand">
+      <div class="logo">GB</div>
+      <div>
+        <h1>Grija pentru Bunici</h1>
+        <p class="tagline">Bone și îngrijitori de încredere pentru cei dragi</p>
+      </div>
+    </div>
+  </header>
+
+  <nav class="main-nav">
+    <div class="wrap nav-inner">
+      <a href="index.html">Acasă</a>
+      <a href="servicii.html" class="active">Bone și Îngrijitori</a>
+      <a href="despre.html">Despre noi</a>
+      <a href="contact.html">Contact</a>
+    </div>
+  </nav>
+
+  <main class="wrap section">
+    <h2>Bone și Îngrijitori disponibili</h2>
+    <p>Toate persoanele din rețeaua noastră sunt selectate cu grijă, verificate și recomandate de familii din București.</p>
+
+    <div class="grid">
+      <div class="card">
+        <img src="https://images.unsplash.com/photo-1551847677-dc82d764e1a0?auto=format&fit=crop&w=500&q=60" style="width:100%;border-radius:10px;">
+        <h4>Maria, 52 ani</h4>
+        <p>Îngrijitoare cu experiență de 10 ani în îngrijirea vârstnicilor, calmă și responsabilă.</p>
+      </div>
+      <div class="card">
+        <img src="https://images.unsplash.com/photo-1544005313-94ddf0286df2?auto=format&fit=crop&w=500&q=60" style="width:100%;border-radius:10px;">
+        <h4>Andreea, 43 ani</h4>
+        <p>Bonă dedicată, cu răbdare și empatie. Experiență cu copii de la 1 an în sus.</p>
+      </div>
+      <div class="card">
+        <img src="https://images.unsplash.com/photo-1594824476967-48c8b9642737?auto=format&fit=crop&w=500&q=60" style="width:100%;border-radius:10px;">
+        <h4>Elena, 60 ani</h4>
+        <p>Îngrijitoare pentru persoane cu mobilitate redusă. Recomandată pentru seriozitate și discreție.</p>
+      </div>
+    </div>
+  </main>
+
+  <footer class="site-footer">
+    <div class="wrap footer-inner">
+      <p class="contact">📞 0725782086 | ✉️ <a href="mailto:opreabiancamaria10@yahoo.com">opreabiancamaria10@yahoo.com</a></p>
+      <div class="copyright">© 2025 Grija pentru Bunici – Cu drag pentru cei dragi 🤍</div>
+    </div>
+  </footer>
+</body>
+</html>
