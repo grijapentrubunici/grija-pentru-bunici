@@ -1,0 +1,45 @@
+<!doctype html>
+<html lang="ro">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Despre noi — Grija pentru Bunici</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <header class="site-header">
+    <div class="wrap brand">
+      <div class="logo">GB</div>
+      <div>
+        <h1>Grija pentru Bunici</h1>
+        <p class="tagline">Bone și îngrijitori de încredere pentru cei dragi</p>
+      </div>
+    </div>
+  </header>
+
+  <nav class="main-nav">
+    <div class="wrap nav-inner">
+      <a href="index.html">Acasă</a>
+      <a href="servicii.html">Bone și Îngrijitori</a>
+      <a href="despre.html" class="active">Despre noi</a>
+      <a href="contact.html">Contact</a>
+    </div>
+  </nav>
+
+  <main class="wrap section">
+    <h2>Povestea noastră</h2>
+    <p>„Grija pentru Bunici” s-a născut din dorința de a aduce liniște familiilor care caută ajutor de încredere pentru cei dragi. Am văzut cât de greu este să găsești o persoană potrivită — cu suflet, empatie și responsabilitate — și am decis să construim o rețea bazată pe respect și grijă autentică.</p>
+
+    <p>Toți colaboratorii noștri sunt atent selectați, verificați și susținuți să ofere servicii de cea mai bună calitate umană. Misiunea noastră este simplă: <strong>să îți oferim siguranța că persoana iubită primește îngrijirea pe care o merită.</strong></p>
+
+    <img src="https://images.unsplash.com/photo-1607746882042-944635dfe10e?auto=format&fit=crop&w=900&q=60" style="width:100%;border-radius:12px;margin-top:20px;" alt="Îngrijitor și senior zâmbind">
+  </main>
+
+  <footer class="site-footer">
+    <div class="wrap footer-inner">
+      <p class="contact">📞 0725782086 | ✉️ <a href="mailto:opreabiancamaria10@yahoo.com">opreabiancamaria10@yahoo.com</a></p>
+      <div class="copyright">© 2025 Grija pentru Bunici – Cu drag pentru cei dragi 🤍</div>
+    </div>
+  </footer>
+</body>
+</html>
