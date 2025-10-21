@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="ro">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Caut Ajutor – Grija pentru Bunici</title>
+  <style>
+    body { font-family: 'Poppins', sans-serif; background-color: #fff6f5; color: #333; margin: 0; padding: 0; }
+    header { background-color: #f8c6b8; padding: 20px; text-align: center; }
+    header h1 { margin: 0; color: #4a2c2a; }
+    nav a { margin: 0 10px; text-decoration: none; color: #4a2c2a; font-weight: 600; }
+    form { max-width: 600px; margin: 40px auto; background: white; padding: 30px; border-radius: 10px; box-shadow: 0 4px 8px rgba(0,0,0,0.1); }
+    input, select, textarea { width: 100%; padding: 10px; margin-top: 10px; border-radius: 6px; border: 1px solid #ccc; }
+    button { background-color: #f8c6b8; border: none; padding: 12px 20px; border-radius: 6px; cursor: pointer; font-size: 16px; font-weight: 600; }
+    button:hover { background-color: #f5b5a4; }
+    .success { text-align: center; background: #d4edda; color: #155724; padding: 15px; border-radius: 8px; margin: 20px; }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>Grija pentru Bunici</h1>
+    <nav>
+      <a href="index.html">Acasă</a>
+      <a href="caut-ajutor.html">Caut Ajutor</a>
+      <a href="aplica.html">Aplică</a>
+      <a href="contact.html">Contact</a>
+    </nav>
+  </header>
+
+  <form id="helpForm" action="https://formspree.io/f/mkgwvybg" method="POST">
+    <h2>Caut Ajutor</h2>
+    <label>Nume complet:</label>
+    <input type="text" name="nume" required>
+
+    <label>Număr de telefon:</label>
+    <input type="text" name="telefon" required>
+
+    <label>Email:</label>
+    <input type="email" name="email" required>
+
+    <label>Tip ajutor dorit:</label>
+    <select name="tip">
+      <option>Bonă</option>
+      <option>Îngrijitor</option>
+      <option>Menaj</option>
+      <option>Altceva</option>
+    </select>
+
+    <label>Locație:</label>
+    <input type="text" name="locatie" placeholder="Ex: Sector 3, București">
+
+    <label>Detalii suplimentare:</label>
+    <textarea name="detalii" rows="4"></textarea>
+
+    <button type="submit">Trimite cererea</button>
+  </form>
+
+  <div id="successMessage" class="success" style="display:none;">
+    ✅ Mulțumim! Cererea ta a fost trimisă cu succes. Te vom contacta în cel mai scurt timp.
+  </div>
+
+  <script>
+    const form = document.getElementById('helpForm');
+    form.addEventListener('submit', function(e) {
+      e.preventDefault();
+      fetch(form.action, { method: 'POST', body: new FormData(form), headers: { 'Accept': 'application/json' } })
+        .then(response => {
+          form.reset();
+          document.getElementById('successMessage').style.display = 'block';
+        })
+        .catch(error => alert('A apărut o eroare. Te rugăm să încerci din nou.'));
+    });
+  </script>
+</body>
+</html>
