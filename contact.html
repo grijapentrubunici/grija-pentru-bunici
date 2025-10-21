@@ -1,38 +1,24 @@
 <!DOCTYPE html>
 <html lang="ro">
-<head><!-- SEO & Google Ads Meta Tags -->
-<meta name="description" content="Grija pentru Bunici - Agenție din București care oferă bone și îngrijitori de încredere pentru seniori. Găsește ajutorul potrivit pentru cei dragi, cu grijă și respect.">
-<meta name="keywords" content="grija pentru bunici, îngrijitori bătrâni București, bone București, agenție îngrijire persoane vârstnice, îngrijire seniori, îngrijitor la domiciliu, ajutor bătrâni">
-<meta name="author" content="Grija pentru Bunici">
-<meta name="robots" content="index, follow">
+<head>
+  <!-- SEO & Google Ads Meta Tags -->
+  <meta name="description" content="Grija pentru Bunici - Agenție din București care oferă bone și îngrijitori de încredere pentru seniori. Găsește ajutorul potrivit pentru cei dragi, cu grijă și respect.">
+  <meta name="keywords" content="grija pentru bunici, îngrijitori bătrâni București, bone București, agenție îngrijire persoane vârstnice, îngrijire seniori, îngrijitor la domiciliu, ajutor bătrâni">
+  <meta name="author" content="Grija pentru Bunici">
+  <meta name="robots" content="index, follow">
 
-<!-- Social Sharing (Open Graph / Facebook / WhatsApp) -->
-<meta property="og:title" content="Grija pentru Bunici | Bone și Îngrijitori de Încredere">
-<meta property="og:description" content="Ajutăm familiile din București să găsească bone și îngrijitori de încredere pentru cei dragi.">
-<meta property="og:image" content="https://grijapentrubunici.github.io/grijapentrubunici/images/og-image.jpg">
-<meta property="og:url" content="https://grijapentrubunici.github.io/grijapentrubunici/">
-<meta property="og:type" content="website">
+  <!-- Social Sharing -->
+  <meta property="og:title" content="Grija pentru Bunici | Bone și Îngrijitori de Încredere">
+  <meta property="og:description" content="Ajutăm familiile din București să găsească bone și îngrijitori de încredere pentru cei dragi.">
+  <meta property="og:image" content="https://grijapentrubunici.github.io/grija-pentru-bunici/images/og-image.jpg">
+  <meta property="og:url" content="https://grijapentrubunici.github.io/grija-pentru-bunici/">
+  <meta property="og:type" content="website">
 
-<!-- Twitter Card -->
-<meta name="twitter:card" content="summary_large_image">
-<meta name="twitter:title" content="Grija pentru Bunici | Bone și Îngrijitori de Încredere">
-<meta name="twitter:description" content="Servicii calde și sigure pentru seniorii tăi.">
-<meta name="twitter:image" content="https://grijapentrubunici.github.io/grijapentrubunici/images/og-image.jpg">
+  <!-- Canonical -->
+  <link rel="canonical" href="https://grijapentrubunici.github.io/grija-pentru-bunici/">
 
-<!-- Canonical link (evită duplicatele pentru Google) -->
-<link rel="canonical" href="https://grijapentrubunici.github.io/grijapentrubunici/">
-
-<!-- Favicon (iconița mică din browser) -->
-<link rel="icon" type="image/png" href="https://grijapentrubunici.github.io/grijapentrubunici/images/favicon.png">
-
-<!-- Google Analytics (urmărire trafic vizitatori - opțional dar recomandat) -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-XXXXXXXXXX"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
-  gtag('config', 'G-XXXXXXXXXX');
-</script>
+  <!-- Favicon -->
+  <link rel="icon" type="image/png" href="https://grijapentrubunici.github.io/grija-pentru-bunici/images/favicon.png">
 
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -75,6 +61,17 @@
     button:hover {
       background-color: #ec8e8e;
     }
+
+    .contact-info {
+      text-align: center;
+      margin-top: 20px;
+      font-size: 18px;
+    }
+
+    .contact-info a {
+      color: #d36b6b;
+      text-decoration: none;
+    }
   </style>
 </head>
 
@@ -100,9 +97,30 @@
         <strong><a href="mailto:opreabiancamaria10@yahoo.com">opreabiancamaria10@yahoo.com</a></strong> 💌</p>
 
       <form action="https://formsubmit.co/opreabiancamaria10@yahoo.com" method="POST">
-        <!-- FormSubmit va trimite mesajul direct la emailul tău -->
         <input type="hidden" name="_captcha" value="false">
-        <input type="hidden" name="_next" value="https://grijapentrubunici.github.io/grijapentrubunici/thanks.html">
+        <input type="hidden" name="_next" value="https://grijapentrubunici.github.io/grija-pentru-bunici/thanks.html">
 
-        <label for="nume">Nume</label>
-        <input type
+        <label for="nume">Nume complet</label>
+        <input type="text" id="nume" name="nume" required>
+
+        <label for="email">Adresă de email</label>
+        <input type="email" id="email" name="email" required>
+
+        <label for="mesaj">Mesajul tău</label>
+        <textarea id="mesaj" name="mesaj" rows="5" required></textarea>
+
+        <button type="submit">Trimite mesajul 💌</button>
+      </form>
+
+      <div class="contact-info">
+        <p>📞 Telefon: <a href="tel:0793553703">0793 553 703</a></p>
+        <p>📍 București, România</p>
+      </div>
+    </div>
+  </section>
+
+  <footer>
+    <p>&copy; 2025 Grija pentru Bunici. Toate drepturile rezervate.</p>
+  </footer>
+</body>
+</html>
