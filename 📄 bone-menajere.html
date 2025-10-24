@@ -25,6 +25,10 @@
       font-size: 26px;
     }
 
+    main {
+      padding: 20px;
+    }
+
     form {
       background: white;
       max-width: 600px;
@@ -85,8 +89,9 @@
   <h1>💗 Formular Bone & Menajere – Aplicare</h1>
 </header>
 
-<section>
+<main>
   <form id="bone-menajere-form" action="https://formsubmit.co/grijapentrubunici@yahoo.com" method="POST">
+    <!-- Configurare FormSubmit -->
     <input type="hidden" name="_captcha" value="false">
     <input type="hidden" name="_next" value="https://grijapentrubunici.github.io/grija-pentru-bunici/multumim.html">
 
@@ -130,7 +135,7 @@
   <div class="success-message" id="success-message">
     ✅ Cererea ta a fost trimisă cu succes! Îți mulțumim 💗
   </div>
-</section>
+</main>
 
 <script>
   const form = document.getElementById('bone-menajere-form');
