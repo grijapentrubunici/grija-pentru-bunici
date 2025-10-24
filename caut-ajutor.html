@@ -3,21 +3,22 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Formular înscriere | Grija pentru Bunici</title>
+  <title>Caut Ajutor | Grija pentru Bunici</title>
   <link rel="stylesheet" href="style.css">
   <style>
     body {
       font-family: 'Poppins', sans-serif;
-      background-color: #fff8f8;
+      background-color: #fafafa;
       margin: 0;
       padding: 0;
+      color: #333;
     }
 
     header {
-      background-color: #f4a3a3;
+      background-color: #f5bcbc;
       color: white;
-      padding: 15px 0;
       text-align: center;
+      padding: 20px 10px;
     }
 
     header h1 {
@@ -25,10 +26,24 @@
       font-size: 28px;
     }
 
+    .intro {
+      text-align: center;
+      max-width: 700px;
+      margin: 30px auto;
+      color: #444;
+      line-height: 1.6;
+    }
+
+    .intro img {
+      max-width: 120px;
+      border-radius: 50%;
+      margin-bottom: 10px;
+    }
+
     form {
       background: white;
       max-width: 600px;
-      margin: 40px auto;
+      margin: 30px auto;
       padding: 30px;
       border-radius: 10px;
       box-shadow: 0 2px 8px rgba(0,0,0,0.1);
@@ -36,9 +51,9 @@
 
     label {
       font-weight: bold;
-      color: #444;
       display: block;
       margin-top: 15px;
+      color: #555;
     }
 
     input, select, textarea {
@@ -54,7 +69,7 @@
       background-color: #f4a3a3;
       color: white;
       border: none;
-      padding: 12px 20px;
+      padding: 12px;
       border-radius: 6px;
       font-size: 16px;
       cursor: pointer;
@@ -66,72 +81,60 @@
       background-color: #ec8e8e;
     }
 
-    .success-message {
-      display: none;
+    footer {
       text-align: center;
-      background: #e6ffe6;
-      color: #008000;
       padding: 15px;
-      border-radius: 8px;
-      margin: 20px auto;
-      max-width: 600px;
-      font-weight: bold;
+      background: #f5bcbc;
+      color: white;
+      margin-top: 40px;
     }
   </style>
 </head>
 <body>
 
 <header>
-  <h1>💗 Formular Înscriere - Bone, Îngrijitori și Menajere</h1>
+  <h1>💗 Caut Ajutor pentru cei dragi</h1>
 </header>
 
-<section>
-  <form id="inscriere-form" action="https://formsubmit.co/opreabiancamaria10@yahoo.com" method="POST">
-    <input type="hidden" name="_captcha" value="false">
-    <input type="hidden" name="_next" value="https://grijapentrubunici.github.io/grija-pentru-bunici/multumim.html">
-
-    <label for="nume">Nume complet</label>
-    <input type="text" id="nume" name="nume" placeholder="Ex: Maria Popescu" required>
-
-    <label for="telefon">Număr de telefon</label>
-    <input type="tel" id="telefon" name="telefon" placeholder="Ex: 0793 553 703" required>
-
-    <label for="email">Adresă de email</label>
-    <input type="email" id="email" name="email" placeholder="Ex: maria@email.com" required>
-
-    <label for="tip">Tip cerere</label>
-    <select id="tip" name="tip" required>
-      <option value="">Selectează...</option>
-      <option value="bona">Bona</option>
-      <option value="ingrijitor">Îngrijitor</option>
-      <option value="menajera">Menajeră</option>
-    </select>
-
-    <label for="experienta">Experiență / Detalii relevante</label>
-    <textarea id="experienta" name="experienta" rows="4" placeholder="Descrie experiența ta sau ce fel de ajutor cauți..." required></textarea>
-
-    <label for="locatie">Locație preferată</label>
-    <input type="text" id="locatie" name="locatie" placeholder="Ex: București, Ilfov">
-
-    <button type="submit">Trimite cererea 💌</button>
-  </form>
-
-  <div class="success-message" id="success-message">
-    ✅ Cererea ta a fost trimisă cu succes! Îți mulțumim 💗
-  </div>
+<section class="intro">
+  <img src="https://cdn-icons-png.flaticon.com/512/3774/3774293.png" alt="Bunici">
+  <p>
+    Completează formularul de mai jos pentru a găsi îngrijitorul potrivit pentru familia ta.  
+    Echipa <strong>Grija pentru Bunici</strong> selectează cu atenție persoane de încredere,  
+    cu experiență și empatie, astfel încât cei dragi ție să primească sprijinul pe care îl merită.
+  </p>
 </section>
 
-<script>
-  const form = document.getElementById('inscriere-form');
-  const successMessage = document.getElementById('success-message');
+<form id="inscriere-form" action="https://formsubmit.co/opreabiancamaria10@yahoo.com" method="POST">
+  <input type="hidden" name="_captcha" value="false">
+  <input type="hidden" name="_next" value="https://grijapentrubunici.github.io/grija-pentru-bunici/multumim.html">
 
-  form.addEventListener('submit', (e) => {
-    setTimeout(() => {
-      successMessage.style.display = 'block';
-      form.reset();
-    }, 800);
-  });
-</script>
+  <label for="nume">Nume complet</label>
+  <input type="text" id="nume" name="nume" placeholder="Ex: Ionescu Andreea" required>
+
+  <label for="telefon">Număr de telefon</label>
+  <input type="tel" id="telefon" name="telefon" placeholder="Ex: 0793 553 703" required>
+
+  <label for="email">Adresă de email</label>
+  <input type="email" id="email" name="email" placeholder="Ex: andreea@email.com">
+
+  <label for="serviciu">Tip serviciu dorit</label>
+  <select id="serviciu" name="serviciu" required>
+    <option value="">Selectează...</option>
+    <option value="bona">Bona pentru copil</option>
+    <option value="ingrijitor">Îngrijitor pentru persoană vârstnică</option>
+    <option value="menajera">Menajeră</option>
+  </select>
+
+  <label for="detalii">Detalii suplimentare</label>
+  <textarea id="detalii" name="detalii" rows="4" placeholder="Descrie nevoile sau preferințele familiei tale..." required></textarea>
+
+  <button type="submit">Trimite cererea 💌</button>
+</form>
+
+<footer>
+  💗 Grija pentru Bunici – Bone și Îngrijitori de încredere, București
+</footer>
 
 </body>
 </html>
