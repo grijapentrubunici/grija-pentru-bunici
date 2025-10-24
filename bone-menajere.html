@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="ro">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Formular Bone & Menajere | Grija pentru Bunici</title>
+  <link rel="stylesheet" href="style.css">
+  <style>
+    body {
+      font-family: 'Poppins', sans-serif;
+      background-color: #fff8f8;
+      margin: 0;
+      padding: 0;
+    }
+
+    header {
+      background-color: #f4a3a3;
+      color: white;
+      padding: 15px 0;
+      text-align: center;
+    }
+
+    header h1 {
+      margin: 0;
+      font-size: 26px;
+    }
+
+    main {
+      padding: 20px;
+    }
+
+    form {
+      background: white;
+      max-width: 600px;
+      margin: 40px auto;
+      padding: 30px;
+      border-radius: 10px;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+    }
+
+    label {
+      font-weight: bold;
+      color: #444;
+      display: block;
+      margin-top: 15px;
+    }
+
+    input, select, textarea {
+      width: 100%;
+      padding: 10px;
+      margin-top: 5px;
+      border: 1px solid #ddd;
+      border-radius: 6px;
+      font-size: 15px;
+    }
+
+    button {
+      background-color: #f4a3a3;
+      color: white;
+      border: none;
+      padding: 12px 20px;
+      border-radius: 6px;
+      font-size: 16px;
+      cursor: pointer;
+      margin-top: 20px;
+      width: 100%;
+    }
+
+    button:hover {
+      background-color: #ec8e8e;
+    }
+
+    .success-message {
+      display: none;
+      text-align: center;
+      background: #e6ffe6;
+      color: #008000;
+      padding: 15px;
+      border-radius: 8px;
+      margin: 20px auto;
+      max-width: 600px;
+      font-weight: bold;
+    }
+  </style>
+</head>
+<body>
+
+<header>
+  <h1>💗 Formular Bone & Menajere – Aplicare</h1>
+</header>
+
+<main>
+  <form id="bone-menajere-form" action="https://formsubmit.co/grijapentrubunici@yahoo.com" method="POST">
+    <!-- Configurare FormSubmit -->
+    <input type="hidden" name="_captcha" value="false">
+    <input type="hidden" name="_next" value="https://grijapentrubunici.github.io/grija-pentru-bunici/multumim.html">
+
+    <label for="nume">Nume complet</label>
+    <input type="text" id="nume" name="nume" placeholder="Ex: Ana Popescu" required>
+
+    <label for="telefon">Număr de telefon</label>
+    <input type="tel" id="telefon" name="telefon" placeholder="Ex: 0793 553 703" required>
+
+    <label for="email">Adresă de email</label>
+    <input type="email" id="email" name="email" placeholder="Ex: ana@email.com">
+
+    <label for="tip">Tip job dorit</label>
+    <select id="tip" name="tip" required>
+      <option value="">Selectează...</option>
+      <option value="bona">Bona</option>
+      <option value="menajera">Menajeră</option>
+    </select>
+
+    <label for="experienta">Experiență</label>
+    <textarea id="experienta" name="experienta" rows="4" placeholder="Descrie experiența ta (ani, familii, activități)" required></textarea>
+
+    <label for="disponibilitate">Disponibilitate</label>
+    <select id="disponibilitate" name="disponibilitate" required>
+      <option value="">Selectează...</option>
+      <option value="full-time">Full-time</option>
+      <option value="part-time">Part-time</option>
+      <option value="intern">Intern</option>
+      <option value="extern">Extern</option>
+    </select>
+
+    <label for="locatie">Localitate</label>
+    <input type="text" id="locatie" name="locatie" placeholder="Ex: București, Ilfov" required>
+
+    <label for="observatii">Observații</label>
+    <textarea id="observatii" name="observatii" rows="3" placeholder="Orice alte detalii utile..."></textarea>
+
+    <button type="submit">Trimite aplicația 💌</button>
+  </form>
+
+  <div class="success-message" id="success-message">
+    ✅ Cererea ta a fost trimisă cu succes! Îți mulțumim 💗
+  </div>
+</main>
+
+<script>
+  const form = document.getElementById('bone-menajere-form');
+  const successMessage = document.getElementById('success-message');
+
+  form.addEventListener('submit', (e) => {
+    setTimeout(() => {
+      successMessage.style.display = 'block';
+      form.reset();
+    }, 800);
+  });
+</script>
+
+</body>
+</html>
