@@ -34,12 +34,6 @@
       line-height: 1.6;
     }
 
-    .intro img {
-      max-width: 120px;
-      border-radius: 50%;
-      margin-bottom: 10px;
-    }
-
     form {
       background: white;
       max-width: 600px;
@@ -97,10 +91,6 @@
 </header>
 
 <section class="intro">
- <img src="https://images.unsplash.com/photo-1607746882042-944635dfe10e?auto=format&fit=crop&w=1200&q=80"
-     alt="Îngrijitoare tânără și cuplu de bătrâni fericiți"
-     style="width:100%; border-radius:12px; margin:20px auto; max-height:400px; object-fit:cover;">
-
   <p>
     Completează formularul de mai jos pentru a găsi îngrijitorul potrivit pentru familia ta.  
     Echipa <strong>Grija pentru Bunici</strong> selectează cu atenție persoane de încredere,  
@@ -109,10 +99,6 @@
 </section>
 
 <form id="inscriere-form" action="https://formsubmit.co/opreabiancamaria10@yahoo.com" method="POST">
-  <input type="hidden" name="_captcha" value="false">
-  <input type="hidden" name="_next" value="https://grijapentrubunici.github.io/grija-pentru-bunici/multumim.html">
-<form action="https://formsubmit.co/opreabiancamaria10@yahoo.com" method="POST">
-  <!-- Ascundem capturile și direcționăm după trimitere -->
   <input type="hidden" name="_captcha" value="false">
   <input type="hidden" name="_template" value="table">
   <input type="hidden" name="_subject" value="🩷 Cerere nouă - Grija pentru Bunici">
@@ -140,29 +126,6 @@
   <textarea id="detalii" name="Detalii suplimentare" rows="5" placeholder="Ex: vârstă, program dorit, alte preferințe..." required></textarea>
 
   <button type="submit">Trimite solicitarea</button>
-</form>
-
-  <label for="nume">Nume complet</label>
-  <input type="text" id="nume" name="nume" placeholder="Ex: Ionescu Andreea" required>
-
-  <label for="telefon">Număr de telefon</label>
-  <input type="tel" id="telefon" name="telefon" placeholder="Ex: 0793 553 703" required>
-
-  <label for="email">Adresă de email</label>
-  <input type="email" id="email" name="email" placeholder="Ex: andreea@email.com">
-
-  <label for="serviciu">Tip serviciu dorit</label>
-  <select id="serviciu" name="serviciu" required>
-    <option value="">Selectează...</option>
-    <option value="bona">Bona pentru copil</option>
-    <option value="ingrijitor">Îngrijitor pentru persoană vârstnică</option>
-    <option value="menajera">Menajeră</option>
-  </select>
-
-  <label for="detalii">Detalii suplimentare</label>
-  <textarea id="detalii" name="detalii" rows="4" placeholder="Descrie nevoile sau preferințele familiei tale..." required></textarea>
-
-  <button type="submit">Trimite cererea 💌</button>
 </form>
 
 <footer>
