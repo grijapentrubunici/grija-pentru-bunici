@@ -1,8 +1,8 @@
 <!DOCTYPE html>
 <html lang="ro">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Grija pentru Bunici – Bone, Menajere și Îngrijitoare de Încredere</title>
   <meta name="description" content="Grija pentru Bunici oferă servicii profesionale de bone, menajere și îngrijitoare verificate. Sprijin real, siguranță și respect pentru seniorii și familiile lor.">
   <style>
@@ -109,84 +109,57 @@
     .card p {
       font-size: 16px;
       color: #555;
-    }<section class="contact-section" id="caut-ajutor">
-  <h2>Solicită Ajutor</h2>
-  <p>Dacă ai nevoie de o bonă, o menajeră sau o îngrijitoare, completează formularul de mai jos. Echipa <strong>Grija pentru Bunici</strong> te va contacta în cel mai scurt timp.</p>
+    }
 
-  <form action="https://formspree.io/f/tu-codul-tău" method="POST" class="contact-form">
-    <label for="nume">Nume complet:</label>
-    <input type="text" id="nume" name="nume" required>
-
-    <label for="email">Adresă de email:</label>
-    <input type="email" id="email" name="email" required>
-
-    <label for="telefon">Telefon:</label>
-    <input type="tel" id="telefon" name="telefon" placeholder="07..." required>
-
-    <label for="serviciu">Serviciul dorit:</label>
-    <select id="serviciu" name="serviciu" required>
-      <option value="">Selectează...</option>
-      <option value="Bona">Bona</option>
-      <option value="Menajeră">Menajeră</option>
-      <option value="Îngrijitoare">Îngrijitoare</option>
-    </select>
-
-    <label for="mesaj">Detalii suplimentare:</label>
-    <textarea id="mesaj" name="mesaj" rows="5" placeholder="Descrie nevoile sau preferințele tale..." required></textarea>
-
-    <button type="submit">Trimite Cererea</button>
-  </form>
-</section>
-
-<style>
-  .contact-section {
-    max-width: 800px;
-    margin: 60px auto;
-    background: #fff;
-    border-radius: 14px;
-    padding: 30px;
-    box-shadow: 0 2px 10px rgba(0,0,0,0.05);
-    text-align: center;
-  }
-  .contact-section h2 {
-    color: var(--rose2);
-    margin-bottom: 15px;
-  }
-  .contact-section p {
-    color: #444;
-    margin-bottom: 30px;
-    font-size: 17px;
-  }
-  .contact-form {
-    display: flex;
-    flex-direction: column;
-    gap: 15px;
-    text-align: left;
-  }
-  .contact-form input,
-  .contact-form select,
-  .contact-form textarea {
-    padding: 10px;
-    border: 1px solid #ccc;
-    border-radius: 8px;
-    font-size: 16px;
-  }
-  .contact-form button {
-    background: var(--rose2);
-    color: #fff;
-    border: none;
-    border-radius: 25px;
-    padding: 12px 20px;
-    font-size: 17px;
-    font-weight: 600;
-    cursor: pointer;
-    align-self: center;
-    transition: background 0.3s;
-  }
-  .contact-form button:hover {
-    background: #c46262;
-  }
-</style>
+    /* FORMULAR CAUT AJUTOR */
+    .contact-section {
+      max-width: 800px;
+      margin: 60px auto;
+      background: #fff;
+      border-radius: 14px;
+      padding: 30px;
+      box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+      text-align: center;
+    }
+    .contact-section h2 {
+      color: var(--rose2);
+      margin-bottom: 15px;
+      font-size: 26px;
+    }
+    .contact-section p {
+      color: #444;
+      margin-bottom: 30px;
+      font-size: 17px;
+    }
+    .contact-form {
+      display: flex;
+      flex-direction: column;
+      gap: 15px;
+      text-align: left;
+    }
+    .contact-form input,
+    .contact-form select,
+    .contact-form textarea {
+      padding: 10px;
+      border: 1px solid #ccc;
+      border-radius: 8px;
+      font-size: 16px;
+    }
+    .contact-form button {
+      background: var(--rose2);
+      color: #fff;
+      border: none;
+      border-radius: 25px;
+      padding: 12px 20px;
+      font-size: 17px;
+      font-weight: 600;
+      cursor: pointer;
+      align-self: center;
+      transition: background 0.3s;
+    }
+    .contact-form button:hover {
+      background: #c46262;
+    }
 
     footer {
       background: var(--rose2);
@@ -214,7 +187,6 @@
 
   <nav>
     <a href="index.html">Acasă</a>
-    <a href="caut-loc-de-munca.html">Caut Loc de Muncă</a>
     <a href="despre.html">Despre Noi</a>
     <a href="contact.html">Contact</a>
   </nav>
@@ -254,11 +226,53 @@
     </div>
   </section>
 
-  <footer>© 2025 Grija pentru Bunici — Cu grijă și respect, zi de zi.</footer>
+  <!-- FORMULAR CAUT AJUTOR -->
+  <section class="contact-section" id="caut-ajutor">
+    <h2>Solicită Ajutor</h2>
+    <p>Dacă ai nevoie de o bonă, menajeră sau îngrijitoare, completează formularul de mai jos. Echipa <strong>Grija pentru Bunici</strong> te va contacta cât mai curând.</p>
 
-  <a class="whatsapp-button" target="_blank"
-     href="https://wa.me/40712345678?text=Bună%20ziua!%20Aș%20dori%20informații%20despre%20serviciile%20Grija%20pentru%20Bunici.">
+    <form action="https://formspree.io/f/tu-codul-tău" method="POST" class="contact-form">
+      <label for="nume">Nume complet:</label>
+      <input type="text" id="nume" name="nume" required>
+
+      <label for="email">Adresă de email:</label>
+      <input type="email" id="email" name="email" required>
+
+      <label for="telefon">Telefon:</label>
+      <input type="tel" id="telefon" name="telefon" placeholder="07..." required>
+
+      <label for="serviciu">Serviciul dorit:</label>
+      <select id="serviciu" name="serviciu" required>
+        <option value="">Selectează...</option>
+        <option value="Bona">Bona</option>
+        <option value="Menajeră">Menajeră</option>
+        <option value="Îngrijitoare">Îngrijitoare</option>
+      </select>
+
+      <label for="mesaj">Detalii suplimentare:</label>
+      <textarea id="mesaj" name="mesaj" rows="5" placeholder="Descrie nevoile sau preferințele tale..." required></textarea>
+
+      <button type="submit">Trimite Cererea</button>
+    </form>
+  </section>
+
+  <footer>
+    © 2025 Grija pentru Bunici — Cu grijă și respect, zi de zi.
+  </footer>
+
+  <a class="whatsapp-button" target="_blank" href="https://wa.me/40712345678?text=Bună%20ziua!%20Aș%20dori%20informații%20despre%20serviciile%20Grija%20pentru%20Bunici.">
     <img src="https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg" alt="WhatsApp" width="55" height="55">
   </a>
+
+  <script>
+    // Evită versiunea veche din cache
+    (function() {
+      const currentUrl = window.location.href.split('?')[0];
+      const newUrl = currentUrl + '?v=' + new Date().getTime();
+      if (!window.location.href.includes('?v=')) {
+        window.location.replace(newUrl);
+      }
+    })();
+  </script>
 </body>
 </html>
