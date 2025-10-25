@@ -109,7 +109,85 @@
     .card p {
       font-size: 16px;
       color: #555;
-    }
+    }<section class="contact-section" id="caut-ajutor">
+  <h2>Solicită Ajutor</h2>
+  <p>Dacă ai nevoie de o bonă, o menajeră sau o îngrijitoare, completează formularul de mai jos. Echipa <strong>Grija pentru Bunici</strong> te va contacta în cel mai scurt timp.</p>
+
+  <form action="https://formspree.io/f/tu-codul-tău" method="POST" class="contact-form">
+    <label for="nume">Nume complet:</label>
+    <input type="text" id="nume" name="nume" required>
+
+    <label for="email">Adresă de email:</label>
+    <input type="email" id="email" name="email" required>
+
+    <label for="telefon">Telefon:</label>
+    <input type="tel" id="telefon" name="telefon" placeholder="07..." required>
+
+    <label for="serviciu">Serviciul dorit:</label>
+    <select id="serviciu" name="serviciu" required>
+      <option value="">Selectează...</option>
+      <option value="Bona">Bona</option>
+      <option value="Menajeră">Menajeră</option>
+      <option value="Îngrijitoare">Îngrijitoare</option>
+    </select>
+
+    <label for="mesaj">Detalii suplimentare:</label>
+    <textarea id="mesaj" name="mesaj" rows="5" placeholder="Descrie nevoile sau preferințele tale..." required></textarea>
+
+    <button type="submit">Trimite Cererea</button>
+  </form>
+</section>
+
+<style>
+  .contact-section {
+    max-width: 800px;
+    margin: 60px auto;
+    background: #fff;
+    border-radius: 14px;
+    padding: 30px;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+    text-align: center;
+  }
+  .contact-section h2 {
+    color: var(--rose2);
+    margin-bottom: 15px;
+  }
+  .contact-section p {
+    color: #444;
+    margin-bottom: 30px;
+    font-size: 17px;
+  }
+  .contact-form {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    text-align: left;
+  }
+  .contact-form input,
+  .contact-form select,
+  .contact-form textarea {
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    font-size: 16px;
+  }
+  .contact-form button {
+    background: var(--rose2);
+    color: #fff;
+    border: none;
+    border-radius: 25px;
+    padding: 12px 20px;
+    font-size: 17px;
+    font-weight: 600;
+    cursor: pointer;
+    align-self: center;
+    transition: background 0.3s;
+  }
+  .contact-form button:hover {
+    background: #c46262;
+  }
+</style>
+
     footer {
       background: var(--rose2);
       color: #fff;
