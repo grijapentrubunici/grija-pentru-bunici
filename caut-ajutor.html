@@ -111,6 +111,36 @@
 <form id="inscriere-form" action="https://formsubmit.co/opreabiancamaria10@yahoo.com" method="POST">
   <input type="hidden" name="_captcha" value="false">
   <input type="hidden" name="_next" value="https://grijapentrubunici.github.io/grija-pentru-bunici/multumim.html">
+<form action="https://formsubmit.co/opreabiancamaria10@yahoo.com" method="POST">
+  <!-- Ascundem capturile și direcționăm după trimitere -->
+  <input type="hidden" name="_captcha" value="false">
+  <input type="hidden" name="_template" value="table">
+  <input type="hidden" name="_subject" value="🩷 Cerere nouă - Grija pentru Bunici">
+  <input type="hidden" name="_next" value="https://grijapentrubunici.github.io/grija-pentru-bunici/thanks.html">
+
+  <label for="nume">Nume complet</label>
+  <input type="text" id="nume" name="Nume complet" placeholder="Ex: Ana Ionescu" required>
+
+  <label for="telefon">Număr de telefon</label>
+  <input type="tel" id="telefon" name="Număr de telefon" placeholder="Ex: 0793 553 703" required>
+
+  <label for="email">Adresă de email</label>
+  <input type="email" id="email" name="Adresă de email" placeholder="Ex: ana@gmail.com" required>
+
+  <label for="tip-ajutor">Tip ajutor dorit</label>
+  <select id="tip-ajutor" name="Tip ajutor dorit" required>
+    <option value="">Selectează...</option>
+    <option value="Îngrijitor">Îngrijitor</option>
+    <option value="Bonă">Bonă</option>
+    <option value="Menajeră">Menajeră</option>
+    <option value="Alt tip de ajutor">Alt tip de ajutor</option>
+  </select>
+
+  <label for="detalii">Detalii suplimentare</label>
+  <textarea id="detalii" name="Detalii suplimentare" rows="5" placeholder="Ex: vârstă, program dorit, alte preferințe..." required></textarea>
+
+  <button type="submit">Trimite solicitarea</button>
+</form>
 
   <label for="nume">Nume complet</label>
   <input type="text" id="nume" name="nume" placeholder="Ex: Ionescu Andreea" required>
