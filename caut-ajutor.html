@@ -26,6 +26,34 @@
     <button type="submit">Trimite Cererea</button>
   </form>
 </section>
+<section class="contact-section" id="caut-ajutor">
+  <h2>Solicită Ajutor</h2>
+  <p>Dacă ai nevoie de o bonă, menajeră sau îngrijitoare, completează formularul de mai jos. Echipa <strong>Grija pentru Bunici</strong> te va contacta cât mai curând.</p>
+
+  <form action="https://formspree.io/f/tu-codul-tău" method="POST" class="contact-form">
+    <label for="nume">Nume complet:</label>
+    <input type="text" id="nume" name="nume" required>
+
+    <label for="email">Adresă de email:</label>
+    <input type="email" id="email" name="email" required>
+
+    <label for="telefon">Telefon:</label>
+    <input type="tel" id="telefon" name="telefon" placeholder="07..." required>
+
+    <label for="serviciu">Serviciul dorit:</label>
+    <select id="serviciu" name="serviciu" required>
+      <option value="">Selectează...</option>
+      <option value="Bona">Bona</option>
+      <option value="Menajeră">Menajeră</option>
+      <option value="Îngrijitoare">Îngrijitoare</option>
+    </select>
+
+    <label for="mesaj">Detalii suplimentare:</label>
+    <textarea id="mesaj" name="mesaj" rows="5" placeholder="Descrie nevoile sau preferințele tale..." required></textarea>
+
+    <button type="submit">Trimite Cererea</button>
+  </form>
+</section>
 
 <style>
   .contact-section {
