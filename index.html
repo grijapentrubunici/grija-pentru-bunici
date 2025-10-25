@@ -1,53 +1,42 @@
 <!DOCTYPE html>
 <html lang="ro">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Grija pentru Bunici</title>
   <style>
-    :root {
-      --rose: #f4b6b8;
-      --rose2: #d57a7a;
-      --bg: #fff9f9;
-    }
     body {
-      font-family: 'Segoe UI', Roboto, sans-serif;
-      background: var(--bg);
+      font-family: "Poppins", sans-serif;
       margin: 0;
+      background-color: #fff8f8;
       color: #333;
-      line-height: 1.6;
     }
 
     header {
-      background: var(--rose);
-      color: white;
-      text-align: center;
-      padding: 18px;
-      font-size: 24px;
-      font-weight: 700;
-    }
-
-    nav {
-      background: var(--rose2);
+      background-color: #f08080;
       display: flex;
-      justify-content: center;
-      flex-wrap: wrap;
-      gap: 40px;
-      padding: 12px 0;
+      justify-content: space-between;
+      align-items: center;
+      padding: 10px 50px;
+      color: white;
     }
 
-   <nav>
-  <a href="index.html">Acasă</a>
-  <a href="caut-ajutor.html">Caut Ajutor</a>
-  <a href="#caut-loc">Caut Loc de Muncă</a>
-  <a href="despre.html">Despre Noi</a>
-  <a href="contact.html">Contact</a>
-</nav>
+    header h1 {
+      font-size: 1.5em;
+      display: flex;
+      align-items: center;
+      gap: 8px;
+    }
 
+    nav a {
+      color: white;
+      text-decoration: none;
+      margin: 0 12px;
+      font-weight: 500;
     }
 
     nav a:hover {
-      color: #ffeaea;
+      text-decoration: underline;
     }
 
     .hero {
@@ -55,150 +44,146 @@
       flex-wrap: wrap;
       align-items: center;
       justify-content: center;
-      max-width: 1100px;
-      margin: 50px auto;
-      background: #fff;
-      border-radius: 16px;
-      box-shadow: 0 4px 16px rgba(0,0,0,0.05);
-      overflow: hidden;
-    }
-
-    .hero-text {
-      flex: 1 1 450px;
-      padding: 40px;
-    }
-
-    .hero-text h1 {
-      color: #222;
-      font-size: 34px;
-      margin-bottom: 18px;
-    }
-
-    .hero-text p {
-      color: #555;
-      font-size: 17px;
+      padding: 40px 10%;
+      background-color: #fff;
     }
 
     .hero img {
-      flex: 1 1 400px;
-      width: 100%;
-      height: 100%;
-      object-fit: cover;
+      max-width: 400px;
+      border-radius: 12px;
+      margin: 20px;
+    }
+
+    .hero-text {
+      max-width: 500px;
+      margin: 20px;
+    }
+
+    .hero-text h2 {
+      font-size: 2em;
+      color: #222;
+    }
+
+    .hero-text p {
+      font-size: 1.1em;
+      line-height: 1.6;
+      color: #444;
     }
 
     .services {
-      max-width: 1100px;
-      margin: 60px auto;
       display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-      gap: 25px;
-      padding: 0 20px;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 20px;
+      padding: 40px 10%;
+      background-color: #fff;
     }
 
     .card {
-      background: #fff;
-      padding: 22px;
-      border-radius: 14px;
-      box-shadow: 0 2px 8px rgba(0,0,0,0.05);
-      transition: transform 0.2s ease;
-    }
-
-    .card:hover {
-      transform: translateY(-4px);
+      background: #fff8f8;
+      border-radius: 12px;
+      padding: 20px;
+      box-shadow: 0 2px 6px rgba(0,0,0,0.1);
     }
 
     .card img {
       width: 100%;
       border-radius: 10px;
-      margin-bottom: 15px;
+      height: 180px;
+      object-fit: cover;
     }
 
     .card h3 {
-      color: var(--rose2);
-      font-size: 20px;
-      margin-bottom: 10px;
+      margin-top: 15px;
+      color: #d65a5a;
     }
 
     .card p {
-      color: #555;
-      font-size: 16px;
+      font-size: 0.95em;
+      line-height: 1.5;
+      color: #444;
     }
 
     footer {
-      background: var(--rose2);
+      background-color: #f08080;
       color: white;
       text-align: center;
-      padding: 16px;
-      font-size: 14px;
-      margin-top: 60px;
+      padding: 15px;
+      position: relative;
     }
 
-    .whatsapp-button {
+    .whatsapp {
       position: fixed;
       bottom: 20px;
       right: 20px;
-      z-index: 1000;
-      transition: transform 0.2s;
+      background-color: #25d366;
+      color: white;
+      border-radius: 50%;
+      padding: 15px;
+      font-size: 28px;
+      text-decoration: none;
+      box-shadow: 0 3px 6px rgba(0,0,0,0.3);
     }
 
-    .whatsapp-button:hover {
-      transform: scale(1.1);
+    .whatsapp:hover {
+      background-color: #1ebc5a;
     }
   </style>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap" rel="stylesheet">
 </head>
-
 <body>
-  <header>💗 Grija pentru Bunici</header>
-
-  <nav>
-    <a href="index.html">Acasă</a>
-    <a href="caut-ajutor.html">Caut Ajutor</a>
-    <a href="despre.html">Despre Noi</a>
-    <a href="contact.html">Contact</a>
-  </nav>
+  <header>
+    <h1>💗 Grija pentru Bunici</h1>
+    <nav>
+      <a href="#">Acasă</a>
+      <a href="#">Despre Noi</a>
+      <a href="#">Caut Ajutor</a>
+      <a href="#">Caut Loc de Muncă</a>
+      <a href="#">Contact</a>
+    </nav>
+  </header>
 
   <section class="hero">
     <div class="hero-text">
-      <h1>Îngrijire de încredere pentru cei dragi</h1>
-      <p>La <strong>Grija pentru Bunici</strong> oferim servicii profesionale de bone, menajere și îngrijitoare pentru seniori. 
-      Fiecare angajată este selectată cu atenție și verificată temeinic pentru a garanta siguranță, respect și suport real.</p>
+      <h2>Îngrijire de încredere pentru cei dragi</h2>
+      <p>
+        La Grija pentru Bunici oferim servicii profesionale de bone, menajere și îngrijitoare pentru seniori. 
+        Fiecare angajată este selectată cu atenție și verificată temeinic pentru a garanta siguranța, respectul 
+        și suportul real pentru fiecare familie.
+      </p>
     </div>
-    <img src="images/hero-ingrijitoare.jpg" alt="Îngrijitoare și senioră zâmbitoare">
+    <img src="https://images.unsplash.com/photo-1584515933487-779824d29309" alt="Îngrijitoare cu bunică">
   </section>
 
   <section class="services">
     <div class="card">
-      <img src="images/bona.jpg" alt="Bonă grijulie cu copil">
-      <h3>👶 Bone</h3>
+      <img src="https://images.unsplash.com/photo-1584515933487-779824d29309" alt="Bone">
+      <h3>Bone</h3>
       <p>Bone profesioniste pentru copiii seniorilor sau pentru cei cu nevoi speciale — asigurăm siguranță, răbdare și grijă de calitate.</p>
     </div>
 
     <div class="card">
-      <img src="images/menajera.jpg" alt="Menajeră ajutând o doamnă în vârstă">
-      <h3>🧹 Menajere</h3>
-      <p>Menajerele noastre se ocupă de curățenie, gătit și administrarea gospodăriei, astfel încât seniorii să trăiască într-un ambient curat, ordonat și confortabil.</p>
+      <img src="https://images.unsplash.com/photo-1581578731548-c64695cc6952" alt="Menajere">
+      <h3>Menajere</h3>
+      <p>Menajerele noastre se ocupă de curățenie, gătit și administrarea gospodăriei, astfel încât seniorii să trăiască într-un mediu curat și confortabil.</p>
     </div>
 
     <div class="card">
-      <img src="images/ingrijitoare.jpg" alt="Îngrijitoare oferind sprijin unui senior">
-      <h3>🧑‍⚕️ Îngrijitoare</h3>
-      <p>Îngrijitoare cu experiență care oferă sprijin la domiciliu: administrarea medicamentelor, mobilitate, socializare și activități zilnice adaptate nevoilor fiecăruia.</p>
+      <img src="https://images.unsplash.com/photo-1603398938378-e54eab4466d0" alt="Îngrijitoare">
+      <h3>Îngrijitoare</h3>
+      <p>Îngrijitoare cu experiență oferă sprijin la domiciliu: medicamente, mobilitate, socializare și activități zilnice adaptate nevoilor fiecărui senior.</p>
     </div>
 
     <div class="card">
-      <img src="images/verificare.jpg" alt="Proces de verificare a angajatelor">
-      <h3>✔️ Selectare & Verificare</h3>
-      <p>Fiecare angajată este verificată riguros — analizăm referințe, calificări și compatibilitatea cu familia, pentru liniște și siguranță maximă.</p>
+      <img src="https://images.unsplash.com/photo-1603384691374-d3b5a13c18ab" alt="Selectare și Verificare">
+      <h3>Selectare & Verificare</h3>
+      <p>Fiecare angajată este verificată riguros — referințe, calificări și compatibilitate cu familia, pentru siguranță maximă.</p>
     </div>
   </section>
 
   <footer>
-    © 2025 Grija pentru Bunici — Cu grijă și respect pentru cei dragi 💗
+    <p>© 2025 Grija pentru Bunici | Toate drepturile rezervate</p>
   </footer>
 
-  <!-- Buton WhatsApp cu numărul tău -->
-  <a class="whatsapp-button" target="_blank" href="https://wa.me/40793553703?text=Bună%20ziua!%20Aș%20dori%20informații%20despre%20serviciile%20Grija%20pentru%20Bunici.">
-    <img src="https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg" alt="WhatsApp" width="55" height="55">
-  </a>
+  <a href="https://wa.me/40793553703?text=Bună%20ziua,%20aș%20dori%20mai%20multe%20informații%20despre%20serviciile%20Grija%20pentru%20Bunici" class="whatsapp" target="_blank">💬</a>
 </body>
 </html>
