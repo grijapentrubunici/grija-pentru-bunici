@@ -1,3 +1,32 @@
+header {
+  background: #f4b6b8; /* roz deschis */
+  color: white;
+  text-align: center;
+  padding: 18px;
+  font-size: 24px;
+  font-weight: 700;
+}
+
+nav {
+  background: #d57a7a; /* roz închis */
+  display: flex;
+  justify-content: center;
+  gap: 40px;
+  padding: 12px 0;
+}
+
+nav a {
+  color: white;
+  text-decoration: none;
+  font-weight: 600;
+  font-size: 17px;
+  transition: color 0.3s;
+}
+
+nav a:hover {
+  color: #ffeaea;
+}
+
 /* 🌸 Grija pentru Bunici - Design Roz-Somon Elegant */
 
 body {
