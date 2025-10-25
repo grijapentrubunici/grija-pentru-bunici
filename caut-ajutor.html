@@ -1,144 +1,79 @@
-<!DOCTYPE html>
-<html lang="ro">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Caut Ajutor | Grija pentru Bunici</title>
-  <link rel="stylesheet" href="style.css">
-  <style>
-    body {
-      font-family: 'Poppins', sans-serif;
-      background-color: #fafafa;
-      margin: 0;
-      padding: 0;
-      color: #333;
-    }
+<section class="contact-section" id="caut-ajutor">
+  <h2>Solicită Ajutor</h2>
+  <p>Dacă ai nevoie de o bonă, menajeră sau îngrijitoare, completează formularul de mai jos. Echipa <strong>Grija pentru Bunici</strong> te va contacta cât mai curând.</p>
 
-    <header>
-  <div class="navbar">
-    <h1>💗 Grija pentru Bunici</h1>
-    <nav>
-      <a href="index.html">Acasă</a>
-      <a href="caut-ajutor.html">Caut Ajutor</a>
-      <a href="aplica.html">Înscriere</a>
-      <a href="despre.html">Despre Noi</a>
-      <a href="contact.html">Contact</a>
-    </nav>
-  </div>
-</header>
+  <form action="https://formspree.io/f/tu-codul-tău" method="POST" class="contact-form">
+    <label for="nume">Nume complet:</label>
+    <input type="text" id="nume" name="nume" required>
 
-    }
+    <label for="email">Adresă de email:</label>
+    <input type="email" id="email" name="email" required>
 
-    header h1 {
-      margin: 0;
-      font-size: 28px;
-    }
+    <label for="telefon">Telefon:</label>
+    <input type="tel" id="telefon" name="telefon" placeholder="07..." required>
 
-    .intro {
-      text-align: center;
-      max-width: 700px;
-      margin: 30px auto;
-      color: #444;
-      line-height: 1.6;
-    }
+    <label for="serviciu">Serviciul dorit:</label>
+    <select id="serviciu" name="serviciu" required>
+      <option value="">Selectează...</option>
+      <option value="Bona">Bona</option>
+      <option value="Menajeră">Menajeră</option>
+      <option value="Îngrijitoare">Îngrijitoare</option>
+    </select>
 
-    form {
-      background: white;
-      max-width: 600px;
-      margin: 30px auto;
-      padding: 30px;
-      border-radius: 10px;
-      box-shadow: 0 2px 8px rgba(0,0,0,0.1);
-    }
+    <label for="mesaj">Detalii suplimentare:</label>
+    <textarea id="mesaj" name="mesaj" rows="5" placeholder="Descrie nevoile sau preferințele tale..." required></textarea>
 
-    label {
-      font-weight: bold;
-      display: block;
-      margin-top: 15px;
-      color: #555;
-    }
-
-    input, select, textarea {
-      width: 100%;
-      padding: 10px;
-      margin-top: 5px;
-      border: 1px solid #ddd;
-      border-radius: 6px;
-      font-size: 15px;
-    }
-
-    button {
-      background-color: #f4a3a3;
-      color: white;
-      border: none;
-      padding: 12px;
-      border-radius: 6px;
-      font-size: 16px;
-      cursor: pointer;
-      margin-top: 20px;
-      width: 100%;
-    }
-
-    button:hover {
-      background-color: #ec8e8e;
-    }
-
-    footer {
-      text-align: center;
-      padding: 15px;
-      background: #f5bcbc;
-      color: white;
-      margin-top: 40px;
-    }
-  </style>
-</head>
-<body>
-
-<header>
-  <h1>💗 Caut Ajutor pentru cei dragi</h1>
-</header>
-
-<section class="intro">
-  <p>
-    Completează formularul de mai jos pentru a găsi îngrijitorul potrivit pentru familia ta.  
-    Echipa <strong>Grija pentru Bunici</strong> selectează cu atenție persoane de încredere,  
-    cu experiență și empatie, astfel încât cei dragi ție să primească sprijinul pe care îl merită.
-  </p>
+    <button type="submit">Trimite Cererea</button>
+  </form>
 </section>
 
-<form id="inscriere-form" action="https://formsubmit.co/opreabiancamaria10@yahoo.com" method="POST">
-  <input type="hidden" name="_captcha" value="false">
-  <input type="hidden" name="_template" value="table">
-  <input type="hidden" name="_subject" value="🩷 Cerere nouă - Grija pentru Bunici">
-  <input type="hidden" name="_next" value="https://grijapentrubunici.github.io/grija-pentru-bunici/thanks.html">
-
-  <label for="nume">Nume complet</label>
-  <input type="text" id="nume" name="Nume complet" placeholder="Ex: Ana Ionescu" required>
-
-  <label for="telefon">Număr de telefon</label>
-  <input type="tel" id="telefon" name="Număr de telefon" placeholder="Ex: 0793 553 703" required>
-
-  <label for="email">Adresă de email</label>
-  <input type="email" id="email" name="Adresă de email" placeholder="Ex: ana@gmail.com" required>
-
-  <label for="tip-ajutor">Tip ajutor dorit</label>
-  <select id="tip-ajutor" name="Tip ajutor dorit" required>
-    <option value="">Selectează...</option>
-    <option value="Îngrijitor">Îngrijitor</option>
-    <option value="Bonă">Bonă</option>
-    <option value="Menajeră">Menajeră</option>
-    <option value="Alt tip de ajutor">Alt tip de ajutor</option>
-  </select>
-
-  <label for="detalii">Detalii suplimentare</label>
-  <textarea id="detalii" name="Detalii suplimentare" rows="5" placeholder="Ex: vârstă, program dorit, alte preferințe..." required></textarea>
-
-  <button type="submit">Trimite solicitarea</button>
-</form>
-
-<footer>
-  💗 Grija pentru Bunici – Bone și Îngrijitori de încredere, București
-</footer>
-
-</body>
-</html>
+<style>
+  .contact-section {
+    max-width: 800px;
+    margin: 60px auto;
+    background: #fff;
+    border-radius: 14px;
+    padding: 30px;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+    text-align: center;
+  }
+  .contact-section h2 {
+    color: var(--rose2);
+    margin-bottom: 15px;
+    font-size: 26px;
+  }
+  .contact-section p {
+    color: #444;
+    margin-bottom: 30px;
+    font-size: 17px;
+  }
+  .contact-form {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    text-align: left;
+  }
+  .contact-form input,
+  .contact-form select,
+  .contact-form textarea {
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    font-size: 16px;
+  }
+  .contact-form button {
+    background: var(--rose2);
+    color: #fff;
+    border: none;
+    border-radius: 25px;
+    padding: 12px 20px;
+    font-size: 17px;
+    font-weight: 600;
+    cursor: pointer;
+    align-self: center;
+    transition: background 0.3s;
+  }
+  .contact-form button:hover {
+    background: #c46262;
+  }
+</style>
