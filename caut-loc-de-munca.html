@@ -3,107 +3,134 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Caut loc de muncă | Grija pentru Bunici</title>
-  <meta name="description" content="Aplică pentru un loc de muncă în cadrul proiectului Grija pentru Bunici. Completează formularul și te vom contacta în cel mai scurt timp.">
+  <title>Caut loc de muncă - Grijă pentru Bunici</title>
   <style>
+    :root {
+      --rose: #f4b6b8;
+      --rose2: #d57a7a;
+      --bg: #fff9f9;
+    }
+
     body {
-      font-family: "Segoe UI", Arial, sans-serif;
-      background-color: #f9fafb;
-      color: #333;
+      font-family: 'Segoe UI', Roboto, sans-serif;
+      background: var(--bg);
       margin: 0;
-      padding: 0;
-    }
-    header {
-      background-color: #4caf50;
-      color: white;
-      text-align: center;
-      padding: 1.5rem 1rem;
-    }
-    main {
-      max-width: 700px;
-      margin: 2rem auto;
-      background: white;
-      padding: 2rem;
-      border-radius: 10px;
-      box-shadow: 0 2px 6px rgba(0,0,0,0.1);
-    }
-    h1 {
-      text-align: center;
       color: #333;
-    }
-    p {
-      text-align: center;
-      margin-bottom: 2rem;
       line-height: 1.6;
     }
+
+    header {
+      background: var(--rose);
+      color: white;
+      text-align: center;
+      padding: 18px;
+      font-size: 24px;
+      font-weight: 700;
+    }
+
+    nav {
+      background: var(--rose2);
+      display: flex;
+      justify-content: center;
+      gap: 40px;
+      padding: 12px 0;
+    }
+
+    nav a {
+      color: white;
+      text-decoration: none;
+      font-weight: 600;
+      transition: opacity 0.3s;
+    }
+
+    nav a:hover {
+      opacity: 0.8;
+    }
+
+    main {
+      max-width: 900px;
+      margin: 40px auto;
+      padding: 30px;
+      background: white;
+      border-radius: 16px;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+    }
+
+    h2 {
+      color: var(--rose2);
+      text-align: center;
+      margin-bottom: 20px;
+    }
+
     form {
       display: flex;
       flex-direction: column;
-      gap: 1rem;
+      gap: 15px;
     }
-    label {
-      font-weight: 600;
-    }
-    input, textarea, button {
-      padding: 0.8rem;
+
+    input, textarea {
+      padding: 12px;
+      border-radius: 8px;
       border: 1px solid #ccc;
-      border-radius: 6px;
-      font-size: 1rem;
+      font-size: 16px;
       width: 100%;
       box-sizing: border-box;
     }
+
     button {
-      background-color: #4caf50;
+      background: var(--rose2);
       color: white;
+      padding: 12px;
+      border: none;
+      border-radius: 8px;
+      font-size: 18px;
       font-weight: bold;
       cursor: pointer;
-      transition: 0.2s ease;
-      border: none;
+      transition: opacity 0.3s;
     }
+
     button:hover {
-      background-color: #43a047;
+      opacity: 0.9;
     }
+
     footer {
       text-align: center;
-      padding: 1rem;
+      padding: 24px 12px;
       color: #777;
-      font-size: 0.9rem;
-    }
-    @media (max-width: 600px) {
-      main {
-        margin: 1rem;
-        padding: 1.5rem;
-      }
+      font-size: 14px;
     }
   </style>
 </head>
 <body>
-  <header>
-    <h1>Caut loc de muncă</h1>
-  </header>
+  <header>Grijă pentru Bunici</header>
+
+  <nav>
+    <a href="index.html">Acasă</a>
+    <a href="despre-noi.html">Despre noi</a>
+    <a href="caut-ajutor.html">Caut ajutor</a>
+    <a href="caut-loc-de-munca.html">Caut loc de muncă</a>
+    <a href="https://wa.me/40793553703" target="_blank" rel="noopener">Contact WhatsApp</a>
+  </nav>
 
   <main>
-    <p>Dacă dorești să te alături echipei <strong>Grija pentru Bunici</strong> sau să afli mai multe despre oportunitățile disponibile, completează formularul de mai jos. Vom reveni cât mai curând cu detalii.</p>
+    <h2>Caut loc de muncă</h2>
+    <p style="text-align:center;">Completează formularul de mai jos pentru a aplica la un loc de muncă în domeniul îngrijirii, ca bonă, menajeră sau îngrijitoare.</p>
 
-    <form action="https://formspree.io/f/tu-codul-tău" method="POST">
-      <label for="nume">Nume complet</label>
-      <input type="text" id="nume" name="nume" required>
+    <form action="https://formsubmit.co/grijapentrubunici@yahoo.com" method="POST">
+      <input type="hidden" name="_captcha" value="false">
+      <input type="hidden" name="_next" value="https://grijapentrubunici.github.io/grija-pentru-bunici/multumim.html">
+      <input type="hidden" name="pagina" value="Formular - Caut loc de muncă">
 
-      <label for="email">Adresă de email</label>
-      <input type="email" id="email" name="email" required>
-
-      <label for="telefon">Număr de telefon</label>
-      <input type="tel" id="telefon" name="telefon">
-
-      <label for="mesaj">Mesaj / Experiență relevantă</label>
-      <textarea id="mesaj" name="mesaj" rows="5" placeholder="Scrie câteva detalii despre tine..." required></textarea>
-
-      <button type="submit">Trimite aplicația</button>
+      <input type="text" name="Nume" placeholder="Nume complet" required>
+      <input type="text" name="Telefon" placeholder="Număr de telefon" required>
+      <input type="email" name="Email" placeholder="Adresa de email" required>
+      <textarea name="Mesaj" placeholder="Descrie experiența și disponibilitatea ta" rows="5" required></textarea>
+      <button type="submit">Trimite cererea</button>
     </form>
   </main>
 
   <footer>
-    &copy; 2025 Grija pentru Bunici — Toate drepturile rezervate.
+    © 2025 Grijă pentru Bunici — Toate drepturile rezervate.
   </footer>
 </body>
 </html>
