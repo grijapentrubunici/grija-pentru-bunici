@@ -3,13 +3,14 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Despre Noi - Grija pentru Bunici</title>
+  <title>Despre Noi - Grijă pentru Bunici</title>
   <style>
     :root {
       --rose: #f4b6b8;
       --rose2: #d57a7a;
       --bg: #fff9f9;
     }
+
     body {
       font-family: 'Segoe UI', Roboto, sans-serif;
       background: var(--bg);
@@ -37,4 +38,61 @@
 
     nav a {
       color: white;
-      text-decoration: n
+      text-decoration: none;
+      font-weight: 600;
+      transition: opacity 0.3s;
+    }
+
+    nav a:hover {
+      opacity: 0.8;
+    }
+
+    main {
+      max-width: 900px;
+      margin: 40px auto;
+      padding: 30px;
+      background: white;
+      border-radius: 16px;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+    }
+
+    h2 {
+      color: var(--rose2);
+      text-align: center;
+      margin-bottom: 10px;
+    }
+
+    .intro {
+      text-align: center;
+      font-size: 18px;
+      margin-bottom: 30px;
+    }
+
+    .values {
+      background: #fff4f4;
+      padding: 20px;
+      border-radius: 12px;
+      margin-bottom: 30px;
+    }
+
+    .values h3 {
+      color: var(--rose2);
+      margin-top: 0;
+    }
+
+    .values ul {
+      list-style: none;
+      padding: 0;
+    }
+
+    .values li::before {
+      content: "🌿 ";
+    }
+
+    .testimonials {
+      margin-top: 40px;
+    }
+
+    .testimonials h3 {
+      color: var(--rose2);
+      margin-bottom: 12px;
