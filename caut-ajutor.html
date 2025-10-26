@@ -1,22 +1,24 @@
 <!DOCTYPE html>
 <html lang="ro">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Caut Ajutor - Grija pentru Bunici</title>
-  <meta name="description" content="Completează formularul pentru a solicita o bonă, menajeră sau îngrijitoare verificată. Echipa Grija pentru Bunici te va contacta în cel mai scurt timp.">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Caut ajutor - Grijă pentru Bunici</title>
   <style>
     :root {
       --rose: #f4b6b8;
       --rose2: #d57a7a;
       --bg: #fff9f9;
     }
+
     body {
       font-family: 'Segoe UI', Roboto, sans-serif;
       background: var(--bg);
       margin: 0;
       color: #333;
+      line-height: 1.6;
     }
+
     header {
       background: var(--rose);
       color: white;
@@ -25,127 +27,110 @@
       font-size: 24px;
       font-weight: 700;
     }
+
     nav {
       background: var(--rose2);
       display: flex;
       justify-content: center;
-      flex-wrap: wrap;
-      gap: 12px;
-      padding: 12px;
-    }
-    nav a {
-      color: #fff;
-      text-decoration: none;
-      font-weight: 600;
-      padding: 8px 14px;
-      border-radius: 6px;
-      transition: background 0.3s;
-    }
-    nav a:hover {
-      background: rgba(255,255,255,0.25);
+      gap: 40px;
+      padding: 12px 0;
     }
 
-    .contact-section {
-      max-width: 800px;
-      margin: 60px auto;
-      background: #fff;
-      border-radius: 14px;
+    nav a {
+      color: white;
+      text-decoration: none;
+      font-weight: 600;
+      transition: opacity 0.3s;
+    }
+
+    nav a:hover {
+      opacity: 0.8;
+    }
+
+    main {
+      max-width: 900px;
+      margin: 40px auto;
       padding: 30px;
-      box-shadow: 0 2px 10px rgba(0,0,0,0.05);
-      text-align: center;
+      background: white;
+      border-radius: 16px;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.1);
     }
-    .contact-section h2 {
+
+    h2 {
       color: var(--rose2);
-      margin-bottom: 15px;
-      font-size: 26px;
+      text-align: center;
+      margin-bottom: 20px;
     }
-    .contact-section p {
-      color: #444;
-      margin-bottom: 30px;
-      font-size: 17px;
-    }
-    .contact-form {
+
+    form {
       display: flex;
       flex-direction: column;
       gap: 15px;
-      text-align: left;
     }
-    .contact-form input,
-    .contact-form select,
-    .contact-form textarea {
-      padding: 10px;
-      border: 1px solid #ccc;
+
+    input, textarea {
+      padding: 12px;
       border-radius: 8px;
+      border: 1px solid #ccc;
       font-size: 16px;
+      width: 100%;
+      box-sizing: border-box;
     }
-    .contact-form button {
+
+    button {
       background: var(--rose2);
-      color: #fff;
+      color: white;
+      padding: 12px;
       border: none;
-      border-radius: 25px;
-      padding: 12px 20px;
-      font-size: 17px;
-      font-weight: 600;
+      border-radius: 8px;
+      font-size: 18px;
+      font-weight: bold;
       cursor: pointer;
-      align-self: center;
-      transition: background 0.3s;
+      transition: opacity 0.3s;
     }
-    .contact-form button:hover {
-      background: #c46262;
+
+    button:hover {
+      opacity: 0.9;
     }
 
     footer {
-      background: var(--rose2);
-      color: #fff;
       text-align: center;
-      padding: 16px;
+      padding: 24px 12px;
+      color: #777;
       font-size: 14px;
-      margin-top: 60px;
     }
   </style>
 </head>
-
 <body>
-  <header>💗 Grija pentru Bunici</header>
+  <header>Grijă pentru Bunici</header>
 
   <nav>
     <a href="index.html">Acasă</a>
-    <a href="caut-ajutor.html">Caut Ajutor</a>
-    <a href="despre.html">Despre Noi</a>
-    <a href="contact.html">Contact</a>
+    <a href="despre-noi.html">Despre noi</a>
+    <a href="caut-ajutor.html">Caut ajutor</a>
+    <a href="caut-loc-de-munca.html">Caut loc de muncă</a>
+    <a href="https://wa.me/40793553703" target="_blank" rel="noopener">Contact WhatsApp</a>
   </nav>
 
-  <section class="contact-section">
-    <h2>Solicită Ajutor</h2>
-    <p>Dacă ai nevoie de o bonă, menajeră sau îngrijitoare, completează formularul de mai jos. Echipa <strong>Grija pentru Bunici</strong> te va contacta cât mai curând.</p>
+  <main>
+    <h2>Caut ajutor</h2>
+    <p style="text-align:center;">Completează formularul de mai jos pentru a solicita ajutor pentru o persoană dragă.</p>
 
-    <form action="https://formspree.io/f/tu-codul-tău" method="POST" class="contact-form">
-      <label for="nume">Nume complet:</label>
-      <input type="text" id="nume" name="nume" required>
+    <form action="https://formsubmit.co/grijapentrubunici@yahoo.com" method="POST">
+      <input type="hidden" name="_captcha" value="false">
+      <input type="hidden" name="_next" value="https://grijapentrubunici.github.io/grija-pentru-bunici/multumim.html">
+      <input type="hidden" name="pagina" value="Formular - Caut ajutor">
 
-      <label for="email">Adresă de email:</label>
-      <input type="email" id="email" name="email" required>
-
-      <label for="telefon">Telefon:</label>
-      <input type="tel" id="telefon" name="telefon" placeholder="07..." required>
-
-      <label for="serviciu">Serviciul dorit:</label>
-      <select id="serviciu" name="serviciu" required>
-        <option value="">Selectează...</option>
-        <option value="Bona">Bona</option>
-        <option value="Menajeră">Menajeră</option>
-        <option value="Îngrijitoare">Îngrijitoare</option>
-      </select>
-
-      <label for="mesaj">Detalii suplimentare:</label>
-      <textarea id="mesaj" name="mesaj" rows="5" placeholder="Descrie nevoile sau preferințele tale..." required></textarea>
-
-      <button type="submit">Trimite Cererea</button>
+      <input type="text" name="Nume" placeholder="Nume complet" required>
+      <input type="text" name="Telefon" placeholder="Număr de telefon" required>
+      <input type="email" name="Email" placeholder="Adresa de email" required>
+      <textarea name="Mesaj" placeholder="Descrie nevoia de ajutor" rows="5" required></textarea>
+      <button type="submit">Trimite cererea</button>
     </form>
-  </section>
+  </main>
 
   <footer>
-    © 2025 Grija pentru Bunici — Cu grijă și respect pentru cei dragi 💗
+    © 2025 Grijă pentru Bunici — Toate drepturile rezervate.
   </footer>
 </body>
 </html>
