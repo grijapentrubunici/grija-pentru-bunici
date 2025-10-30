@@ -165,33 +165,6 @@
 
 
 
-<script>
-  document.getElementById('cautAjutorForm').addEventListener('submit', function(event) {
-    event.preventDefault();
-
-    // Colectează datele din formular
-    const formData = new FormData(this);
-
-    // Trimite formularul prin EmailJS
-    fetch('https://formspree.io/f/xzzzbqjw', { // <-- aici vom pune linkul tău personal
-      method: 'POST',
-      body: formData,
-      headers: {
-        'Accept': 'application/json'
-      }
-    }).then(response => {
-      if (response.ok) {
-        document.getElementById('mesajConfirmare').style.display = 'block';
-        this.reset(); // golește formularul
-      } else {
-        alert('A apărut o eroare. Te rugăm să încerci din nou.');
-      }
-    }).catch(error => {
-      alert('A apărut o problemă cu trimiterea mesajului.');
-    });
-  });
-</script>
-
   </main>
 
   <footer>
