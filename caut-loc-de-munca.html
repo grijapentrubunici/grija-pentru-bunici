@@ -103,22 +103,22 @@
   <main>
     <h2>Caut loc de muncă</h2>
     <p style="text-align:center;">
-      Completează formularul de mai jos pentru a te înscrie într-o listă de persoane care caută un loc de muncă îngrijire.
+      Completează formularul de mai jos pentru a te înscrie într-o listă de persoane care caută un loc de muncă în îngrijire.
     </p>
 
-    <!-- Formular Caut loc de munca -->
+    <!-- Formular Caut loc de muncă -->
     <form id="cautLocMuncaForm" class="formular-angajare">
-      <label for="nume">Nume complet:</label><br>
-      <input type="text" id="nume" name="nume" required><br><br>
+      <label for="nume">Nume complet:</label>
+      <input type="text" id="nume" name="nume" required>
 
-      <label for="email">Email:</label><br>
-      <input type="email" id="email" name="email" required><br><br>
+      <label for="email">Email:</label>
+      <input type="email" id="email" name="email" required>
 
-      <label for="telefon">Telefon:</label><br>
-      <input type="text" id="telefon" name="telefon" required><br><br>
+      <label for="telefon">Telefon:</label>
+      <input type="text" id="telefon" name="telefon" required>
 
-      <label for="experienta">Experiență / Detalii:</label><br>
-      <textarea id="experienta" name="experienta" rows="4" required></textarea><br><br>
+      <label for="experienta">Experiență / Detalii:</label>
+      <textarea id="experienta" name="experienta" rows="4" required></textarea>
 
       <button type="submit">Trimite candidatura</button>
     </form>
@@ -140,13 +140,11 @@
           headers: { 'Accept': 'application/json' }
         })
         .then(response => {
-          // Ascundem formularul și textul explicativ, apoi arătăm mesajul verde
           document.getElementById('cautLocMuncaForm').style.display = 'none';
           document.querySelector('p[style*="text-align:center"]').style.display = 'none';
           document.getElementById('mesajConfirmareAngajare').style.display = 'block';
         })
         .catch(error => {
-          // Dacă apare o problemă de rețea, tot afișăm mesajul de mulțumire
           document.getElementById('cautLocMuncaForm').style.display = 'none';
           document.querySelector('p[style*="text-align:center"]').style.display = 'none';
           document.getElementById('mesajConfirmareAngajare').innerText = 'Mulțumim, mesajul tău a fost trimis!';
