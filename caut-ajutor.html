@@ -116,7 +116,7 @@
     <h2>Caut ajutor</h2>
     <p style="text-align:center;">Completează formularul de mai jos pentru a solicita ajutor pentru o persoană dragă.</p>
 
-   <!-- Formular Caut Ajutor -->
+  <!-- Formular Caut Ajutor -->
 <form id="cautAjutorForm" class="formular-ajutor">
   <label for="nume">Nume complet:</label><br>
   <input type="text" id="nume" name="nume" required><br><br>
@@ -137,6 +137,34 @@
 <p id="mesajConfirmare" style="display:none; color:green; font-weight:bold; margin-top:15px;">
   Mulțumim, te vom contacta în curând! ❤️
 </p>
+
+<script>
+  document.getElementById('cautAjutorForm').addEventListener('submit', function(event) {
+    event.preventDefault();
+
+    // Colectează datele din formular
+    const formData = new FormData(this);
+
+    // Trimite formularul prin Formspree
+    fetch('https://formspree.io/f/xpwolkdp', { // ← LINKUL TĂU
+      method: 'POST',
+      body: formData,
+      headers: {
+        'Accept': 'application/json'
+      }
+    }).then(response => {
+      if (response.ok) {
+        document.getElementById('mesajConfirmare').style.display = 'block';
+        this.reset(); // golește formularul
+      } else {
+        alert('A apărut o eroare. Te rugăm să încerci din nou.');
+      }
+    }).catch(error => {
+      alert('A apărut o problemă cu trimiterea mesajului.');
+    });
+  });
+</script>
+
 
 <script>
   document.getElementById('cautAjutorForm').addEventListener('submit', function(event) {
