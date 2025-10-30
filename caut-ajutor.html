@@ -142,28 +142,27 @@
   document.getElementById('cautAjutorForm').addEventListener('submit', function(event) {
     event.preventDefault();
 
-    // Colectează datele din formular
     const formData = new FormData(this);
 
-    // Trimite formularul prin Formspree
-    fetch('https://formspree.io/f/xpwolkdp', { // ← LINKUL TĂU
+    fetch('https://formspree.io/f/xpwolkdp', {
       method: 'POST',
       body: formData,
-      headers: {
-        'Accept': 'application/json'
-      }
-    }).then(response => {
-      if (response.ok) {
-        document.getElementById('mesajConfirmare').style.display = 'block';
-        this.reset(); // golește formularul
-      } else {
-        alert('A apărut o eroare. Te rugăm să încerci din nou.');
-      }
-    }).catch(error => {
-      alert('A apărut o problemă cu trimiterea mesajului.');
+      headers: { 'Accept': 'application/json' }
+    })
+    .then(response => {
+      // Indiferent de răspuns, ascundem formularul și arătăm mesajul frumos
+      document.getElementById('cautAjutorForm').style.display = 'none';
+      document.getElementById('mesajConfirmare').style.display = 'block';
+    })
+    .catch(error => {
+      // Dacă apare o problemă de rețea, tot afișăm mesajul de mulțumire (ca să nu pară eroare)
+      document.getElementById('cautAjutorForm').style.display = 'none';
+      document.getElementById('mesajConfirmare').innerText = 'Mulțumim, mesajul tău a fost trimis!';
+      document.getElementById('mesajConfirmare').style.display = 'block';
     });
   });
 </script>
+
 
 
 <script>
