@@ -150,9 +150,12 @@
       headers: { 'Accept': 'application/json' }
     })
     .then(response => {
-      // Indiferent de răspuns, ascundem formularul și arătăm mesajul frumos
-      document.getElementById('cautAjutorForm').style.display = 'none';
-      document.getElementById('mesajConfirmare').style.display = 'block';
+  // Ascundem formularul și textul explicativ, apoi arătăm mesajul verde
+  document.getElementById('cautAjutorForm').style.display = 'none';
+  document.querySelector('p[style*="text-align:center"]').style.display = 'none';
+  document.getElementById('mesajConfirmare').style.display = 'block';
+})
+
     })
     .catch(error => {
       // Dacă apare o problemă de rețea, tot afișăm mesajul de mulțumire (ca să nu pară eroare)
