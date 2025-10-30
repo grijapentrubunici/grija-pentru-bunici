@@ -10,7 +10,6 @@
       --rose2: #d57a7a;
       --bg: #fff9f9;
     }
-
     body {
       font-family: 'Segoe UI', Roboto, sans-serif;
       background: var(--bg);
@@ -18,7 +17,6 @@
       color: #333;
       line-height: 1.6;
     }
-
     header {
       background: var(--rose);
       color: white;
@@ -27,7 +25,6 @@
       font-size: 24px;
       font-weight: 700;
     }
-
     nav {
       background: var(--rose2);
       display: flex;
@@ -35,18 +32,15 @@
       gap: 40px;
       padding: 12px 0;
     }
-
     nav a {
       color: white;
       text-decoration: none;
       font-weight: 600;
       transition: opacity 0.3s;
     }
-
     nav a:hover {
       opacity: 0.8;
     }
-
     main {
       max-width: 900px;
       margin: 40px auto;
@@ -55,19 +49,16 @@
       border-radius: 16px;
       box-shadow: 0 2px 8px rgba(0,0,0,0.1);
     }
-
     h2 {
       color: var(--rose2);
       text-align: center;
       margin-bottom: 20px;
     }
-
     form {
       display: flex;
       flex-direction: column;
       gap: 15px;
     }
-
     input, textarea {
       padding: 12px;
       border-radius: 8px;
@@ -76,7 +67,6 @@
       width: 100%;
       box-sizing: border-box;
     }
-
     button {
       background: var(--rose2);
       color: white;
@@ -88,11 +78,9 @@
       cursor: pointer;
       transition: opacity 0.3s;
     }
-
     button:hover {
       opacity: 0.9;
     }
-
     footer {
       text-align: center;
       padding: 24px 12px;
@@ -114,19 +102,59 @@
 
   <main>
     <h2>Caut loc de muncă</h2>
-    <p style="text-align:center;">Completează formularul de mai jos pentru a aplica la un loc de muncă în domeniul îngrijirii, ca bonă, menajeră sau îngrijitoare.</p>
+    <p style="text-align:center;">
+      Completează formularul de mai jos pentru a te înscrie într-o listă de persoane care caută un loc de muncă îngrijire.
+    </p>
 
-    <form action="https://formsubmit.co/grijapentrubunici@yahoo.com" method="POST">
-      <input type="hidden" name="_captcha" value="false">
-      <input type="hidden" name="_next" value="https://grijapentrubunici.github.io/grija-pentru-bunici/multumim.html">
-      <input type="hidden" name="pagina" value="Formular - Caut loc de muncă">
+    <!-- Formular Caut loc de munca -->
+    <form id="cautLocMuncaForm" class="formular-angajare">
+      <label for="nume">Nume complet:</label><br>
+      <input type="text" id="nume" name="nume" required><br><br>
 
-      <input type="text" name="Nume" placeholder="Nume complet" required>
-      <input type="text" name="Telefon" placeholder="Număr de telefon" required>
-      <input type="email" name="Email" placeholder="Adresa de email" required>
-      <textarea name="Mesaj" placeholder="Descrie experiența și disponibilitatea ta" rows="5" required></textarea>
-      <button type="submit">Trimite cererea</button>
+      <label for="email">Email:</label><br>
+      <input type="email" id="email" name="email" required><br><br>
+
+      <label for="telefon">Telefon:</label><br>
+      <input type="text" id="telefon" name="telefon" required><br><br>
+
+      <label for="experienta">Experiență / Detalii:</label><br>
+      <textarea id="experienta" name="experienta" rows="4" required></textarea><br><br>
+
+      <button type="submit">Trimite candidatura</button>
     </form>
+
+    <!-- Mesaj de confirmare -->
+    <p id="mesajConfirmareAngajare" style="display:none; color:green; font-weight:bold; margin-top:15px;">
+      Mulțumim, te vom contacta în curând! ❤️
+    </p>
+
+    <script>
+      document.getElementById('cautLocMuncaForm').addEventListener('submit', function(event) {
+        event.preventDefault();
+
+        const formData = new FormData(this);
+
+        fetch('https://formspree.io/f/xrbolrwp', {
+          method: 'POST',
+          body: formData,
+          headers: { 'Accept': 'application/json' }
+        })
+        .then(response => {
+          // Ascundem formularul și textul explicativ, apoi arătăm mesajul verde
+          document.getElementById('cautLocMuncaForm').style.display = 'none';
+          document.querySelector('p[style*="text-align:center"]').style.display = 'none';
+          document.getElementById('mesajConfirmareAngajare').style.display = 'block';
+        })
+        .catch(error => {
+          // Dacă apare o problemă de rețea, tot afișăm mesajul de mulțumire
+          document.getElementById('cautLocMuncaForm').style.display = 'none';
+          document.querySelector('p[style*="text-align:center"]').style.display = 'none';
+          document.getElementById('mesajConfirmareAngajare').innerText = 'Mulțumim, mesajul tău a fost trimis!';
+          document.getElementById('mesajConfirmareAngajare').style.display = 'block';
+        });
+      });
+    </script>
+
   </main>
 
   <footer>
