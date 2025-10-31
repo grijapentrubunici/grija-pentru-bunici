@@ -10,6 +10,7 @@
       --rose2: #d57a7a;
       --bg: #fff9f9;
     }
+
     body {
       font-family: 'Segoe UI', Roboto, sans-serif;
       background: var(--bg);
@@ -17,6 +18,7 @@
       color: #333;
       line-height: 1.6;
     }
+
     header {
       background: var(--rose);
       color: white;
@@ -25,6 +27,7 @@
       font-size: 24px;
       font-weight: 700;
     }
+
     nav {
       background: var(--rose2);
       display: flex;
@@ -32,15 +35,18 @@
       gap: 40px;
       padding: 12px 0;
     }
+
     nav a {
       color: white;
       text-decoration: none;
       font-weight: 600;
       transition: opacity 0.3s;
     }
+
     nav a:hover {
       opacity: 0.8;
     }
+
     main {
       max-width: 900px;
       margin: 40px auto;
@@ -49,17 +55,20 @@
       border-radius: 16px;
       box-shadow: 0 2px 8px rgba(0,0,0,0.1);
     }
+
     h2 {
       color: var(--rose2);
       text-align: center;
       margin-bottom: 20px;
     }
+
     form {
       display: flex;
       flex-direction: column;
       gap: 15px;
     }
-    input, textarea {
+
+    input, textarea, select {
       padding: 12px;
       border-radius: 8px;
       border: 1px solid #ccc;
@@ -67,6 +76,7 @@
       width: 100%;
       box-sizing: border-box;
     }
+
     button {
       background: var(--rose2);
       color: white;
@@ -78,9 +88,11 @@
       cursor: pointer;
       transition: opacity 0.3s;
     }
+
     button:hover {
       opacity: 0.9;
     }
+
     footer {
       text-align: center;
       padding: 24px 12px;
@@ -89,6 +101,7 @@
     }
   </style>
 </head>
+
 <body>
   <header>Grijă pentru Bunici</header>
 
@@ -102,12 +115,22 @@
 
   <main>
     <h2>Caut loc de muncă</h2>
-    <p style="text-align:center;">
-      Completează formularul de mai jos pentru a te înscrie într-o listă de persoane care caută un loc de muncă în îngrijire.
-    </p>
 
-    <!-- Formular Caut loc de muncă -->
-    <form id="cautLocMuncaForm" class="formular-angajare">
+    <!-- ✨ Text introductiv -->
+    <section style="text-align: center; padding: 2rem 1rem; background-color: #fffaf8; border-radius: 12px; margin-bottom: 2rem;">
+      <h3 style="color: #d96c6c; margin-bottom: 1rem;">Cauți un loc de muncă stabil și sigur în domeniul îngrijirii?</h3>
+
+      <p style="font-size: 1.1rem; color: #444; line-height: 1.6; max-width: 750px; margin: 0 auto;">
+        Completează formularul de mai jos și spune-ne <b>ce tip de job îți dorești</b> — 
+        ca <b>îngrijitoare pentru seniori</b>, <b>menajeră</b> sau <b>bonă</b>. <br><br>
+        Echipa <b>Grija pentru Bunici</b> colaborează cu familii serioase din toată țara
+        și te va contacta în cel mai scurt timp pentru a-ți oferi o oportunitate potrivită experienței tale. <br><br>
+        ✨ Colaboratorii noștri beneficiază de sprijin constant, comunicare clară și respect reciproc.
+      </p>
+    </section>
+
+    <!-- Formular -->
+    <form id="locMuncaForm">
       <label for="nume">Nume complet:</label>
       <input type="text" id="nume" name="nume" required>
 
@@ -117,46 +140,54 @@
       <label for="telefon">Telefon:</label>
       <input type="text" id="telefon" name="telefon" required>
 
-      <label for="experienta">Experiență / Detalii:</label>
+      <label for="tipJob">Tipul de job dorit:</label>
+      <select id="tipJob" name="tipJob" required>
+        <option value="">Alege o opțiune</option>
+        <option value="ingrijitoare">Îngrijitoare pentru seniori</option>
+        <option value="menajera">Menajeră</option>
+        <option value="bona">Bonă</option>
+        <option value="altul">Alt tip de ajutor</option>
+      </select>
+
+      <label for="experienta">Experiență relevantă:</label>
       <textarea id="experienta" name="experienta" rows="4" required></textarea>
 
-      <button type="submit">Trimite candidatura</button>
+      <button type="submit">Trimite aplicația</button>
     </form>
 
     <!-- Mesaj de confirmare -->
-    <p id="mesajConfirmareAngajare" style="display:none; color:green; font-weight:bold; margin-top:15px;">
-      Mulțumim, te vom contacta în curând! ❤️
+    <p id="mesajConfirmare" style="display:none; color:green; font-weight:bold; margin-top:15px;">
+      Mulțumim pentru înscriere! Te vom contacta în curând. 🌷
     </p>
-
-    <script>
-      document.getElementById('cautLocMuncaForm').addEventListener('submit', function(event) {
-        event.preventDefault();
-
-        const formData = new FormData(this);
-
-        fetch('https://formspree.io/f/xrbolrwp', {
-          method: 'POST',
-          body: formData,
-          headers: { 'Accept': 'application/json' }
-        })
-        .then(response => {
-          document.getElementById('cautLocMuncaForm').style.display = 'none';
-          document.querySelector('p[style*="text-align:center"]').style.display = 'none';
-          document.getElementById('mesajConfirmareAngajare').style.display = 'block';
-        })
-        .catch(error => {
-          document.getElementById('cautLocMuncaForm').style.display = 'none';
-          document.querySelector('p[style*="text-align:center"]').style.display = 'none';
-          document.getElementById('mesajConfirmareAngajare').innerText = 'Mulțumim, mesajul tău a fost trimis!';
-          document.getElementById('mesajConfirmareAngajare').style.display = 'block';
-        });
-      });
-    </script>
-
   </main>
 
   <footer>
     © 2025 Grijă pentru Bunici — Toate drepturile rezervate.
   </footer>
+
+  <script>
+    document.getElementById('locMuncaForm').addEventListener('submit', function(event) {
+      event.preventDefault();
+
+      const formData = new FormData(this);
+
+      fetch('https://formspree.io/f/xpwolkdp', {
+        method: 'POST',
+        body: formData,
+        headers: { 'Accept': 'application/json' }
+      })
+      .then(response => {
+        document.getElementById('locMuncaForm').style.display = 'none';
+        document.querySelector('section').style.display = 'none';
+        document.getElementById('mesajConfirmare').style.display = 'block';
+      })
+      .catch(error => {
+        document.getElementById('locMuncaForm').style.display = 'none';
+        document.querySelector('section').style.display = 'none';
+        document.getElementById('mesajConfirmare').innerText = 'Mulțumim, mesajul tău a fost trimis!';
+        document.getElementById('mesajConfirmare').style.display = 'block';
+      });
+    });
+  </script>
 </body>
 </html>
