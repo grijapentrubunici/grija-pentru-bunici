@@ -4,62 +4,76 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Grija pentru Bunici - Îngrijire de încredere</title>
-  <link rel="stylesheet" href="style.css" />
- <style>
-.hero {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  padding: 4rem 5%; /* adăugăm spațiu pe laterale */
-  gap: 2rem;
-  background-color: #fafafa;
-  flex-wrap: wrap;
-}
 
-.hero-text {
-  flex: 1;
-  max-width: 500px;
-}
-
-.hero-image {
-  flex: 1;
-  display: flex;
-  justify-content: center;
-}
-
-.hero-image img {
-  width: 100%;
-  max-width: 650px;
-  border-radius: 20px;
-  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.2);
-  object-fit: cover;
-  transition: transform 0.4s ease, box-shadow 0.4s ease;
-}
-
-.hero-image img:hover {
-  transform: scale(1.02);
-  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.25);
-}
-</style>
-body {
-  opacity: 0;
-  animation: fadeIn 1s ease-in forwards;
-}
-
-@keyframes fadeIn {
-  from { opacity: 0; }
-  to { opacity: 1; }
-}
+  <!-- 🎨 Font elegant Google -->
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap" rel="stylesheet">
 
   <style>
+    /* ✨ Efect de apariție lină */
     body {
-      font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+      opacity: 0;
+      animation: fadeIn 1s ease-in forwards;
+      font-family: 'Poppins', sans-serif;
       margin: 0;
       padding: 0;
       background-color: #fff;
       color: #333;
     }
 
+    @keyframes fadeIn {
+      from { opacity: 0; }
+      to { opacity: 1; }
+    }
+
+    /* 🔹 Secțiunea principală (hero) */
+    .hero {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 4rem 5%;
+      gap: 2rem;
+      background-color: #fafafa;
+      flex-wrap: wrap;
+    }
+
+    .hero-text {
+      flex: 1;
+      max-width: 500px;
+      padding-left: 1rem;
+    }
+
+    .hero-text h2 {
+      font-size: 2.2rem;
+      margin-bottom: 1rem;
+      color: #222;
+    }
+
+    .hero-text p {
+      font-size: 1.1rem;
+      line-height: 1.6;
+    }
+
+    .hero-image {
+      flex: 1;
+      display: flex;
+      justify-content: center;
+    }
+
+    .hero-image img {
+      width: 100%;
+      max-width: 650px;
+      border-radius: 20px;
+      box-shadow: 0 6px 18px rgba(0, 0, 0, 0.2);
+      object-fit: cover;
+      transition: transform 0.4s ease, box-shadow 0.4s ease;
+    }
+
+    .hero-image img:hover {
+      transform: scale(1.02);
+      box-shadow: 0 8px 20px rgba(0, 0, 0, 0.25);
+    }
+
+    /* 🔹 Meniu și antet */
     header {
       background-color: #f88686;
       display: flex;
@@ -99,36 +113,13 @@ body {
       text-decoration: underline;
     }
 
-    .hero {
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-      padding: 3rem 2rem;
-      flex-wrap: wrap;
-      background: #fafafa;
-    }
-
-    .hero-text {
-      flex: 1 1 400px;
-      max-width: 500px;
-    }
-
-    .hero-text h2 {
-      font-size: 2rem;
-      margin-bottom: 1rem;
-      color: #222;
-    }
-
-    .hero-text p {
-      font-size: 1.1rem;
-      line-height: 1.6;
-   
-
+    /* 🔹 Secțiunea servicii */
     .services {
+      background-color: #fff8f8; /* culoare caldă, plăcută */
       display: grid;
       grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
       gap: 1.5rem;
-      padding: 3rem 2rem;
+      padding: 3rem 5%;
     }
 
     .service-card {
@@ -137,12 +128,12 @@ body {
       border-radius: 10px;
       padding: 1.5rem;
       box-shadow: 0 2px 6px rgba(0, 0, 0, 0.05);
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
     }
 
-    .service-card img {
-      width: 100%;
-      border-radius: 10px;
-      margin-bottom: 1rem;
+    .service-card:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 6px 15px rgba(0, 0, 0, 0.1);
     }
 
     .service-card h3 {
@@ -155,6 +146,23 @@ body {
       color: #fff;
       text-align: center;
       padding: 1rem;
+      font-size: 0.95rem;
+    }
+
+    /* 📱 Responsive (mobil) */
+    @media (max-width: 768px) {
+      .hero {
+        flex-direction: column;
+        text-align: center;
+      }
+
+      .hero-text {
+        padding-left: 0;
+      }
+
+      .hero-image img {
+        max-width: 100%;
+      }
     }
   </style>
 </head>
@@ -168,62 +176,45 @@ body {
         <li><a href="despre-noi.html">Despre Noi</a></li>
         <li><a href="caut-ajutor.html">Caut Ajutor</a></li>
         <li><a href="caut-loc-de-munca.html">Caut Loc de Muncă</a></li>
-        <li><a href="https://wa.me/40793553703" target="_blank">Contact WhatsApp 0793553703</a></li>
+        <li><a href="https://wa.me/40793553703" target="_blank">Contact WhatsApp 0793 553 703</a></li>
       </ul>
     </nav>
   </header>
-<section class="hero">
-  <div class="hero-text">
-    <h2>Îngrijire de încredere pentru cei dragi</h2>
-    <p>
-      La Grija pentru Bunici oferim servicii profesionale de bone, menajere și îngrijitoare pentru seniori.
-      Fiecare angajată este selectată cu atenție și verificată temeinic pentru a garanta siguranța,
-      respectul și suportul real.
-    </p>
-  </div>
 
-  <div class="hero-image">
-   <img src="hero-ingrijitoare.jpg" alt="Îngrijitoare tânără ținând mâna unei bunici zâmbitoare, într-o lumină caldă de seară" />
+  <section class="hero">
+    <div class="hero-text">
+      <h2>Îngrijire de încredere pentru cei dragi</h2>
+      <p>
+        La Grija pentru Bunici oferim servicii profesionale de bone, menajere și îngrijitoare pentru seniori.
+        Fiecare colaboratoare este selectată cu atenție și verificată temeinic pentru a garanta siguranța,
+        respectul și suportul real.
+      </p>
+    </div>
 
-  </div>
-</section>
-
+    <div class="hero-image">
+      <img src="hero-ingrijitoare.jpg" alt="Îngrijitoare tânără ținând mâna unei bunici zâmbitoare, într-o lumină caldă de seară" />
+    </div>
+  </section>
 
   <section class="services">
     <div class="service-card">
-    
       <h3>Bone</h3>
-      <p>
-        Bone profesioniste pentru copii — asigurăm siguranță,
-        răbdare și grijă de calitate.
-      </p>
+      <p>Bone profesioniste pentru copii — siguranță, răbdare și grijă autentică.</p>
     </div>
 
     <div class="service-card">
-     
       <h3>Menajere</h3>
-      <p>
-        Menajerele noastre se ocupă de curățenie, gătit și administrarea gospodăriei, astfel încât seniorii
-        să trăiască într-un ambient curat și confortabil.
-      </p>
+      <p>Curățenie, gătit și îngrijirea casei — pentru un mediu curat și confortabil.</p>
     </div>
 
     <div class="service-card">
-     
       <h3>Îngrijitoare</h3>
-      <p>
-        Îngrijitoare cu experiență care oferă sprijin la domiciliu: medicație, mobilitate, socializare și
-        activități zilnice adaptate nevoilor fiecărui senior.
-      </p>
+      <p>Sprijin zilnic la domiciliu: medicație, mobilitate și socializare.</p>
     </div>
 
     <div class="service-card">
-     
       <h3>✔ Selectare & Verificare</h3>
-      <p>
-        Fiecare angajată este verificată riguros — referințe, calificări și compatibilitate cu familia, pentru
-        siguranță maximă și liniște deplină.
-      </p>
+      <p>Verificăm atent fiecare colaboratoare: referințe, experiență și compatibilitate.</p>
     </div>
   </section>
 
