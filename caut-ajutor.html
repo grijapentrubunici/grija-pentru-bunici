@@ -61,17 +61,6 @@
       text-align: center;
       margin-bottom: 20px;
     }
-<section style="text-align: center; padding: 2rem 1rem; background-color: #fffaf8;">
-  <h2 style="color: #d96c6c; margin-bottom: 1rem;">Ai nevoie de sprijin pentru tine sau pentru cineva drag?</h2>
-
-  <p style="font-size: 1.1rem; color: #444; line-height: 1.6; max-width: 750px; margin: 0 auto;">
-    Completează formularul de mai jos și spune-ne <b>ce fel de ajutor cauți</b> — 
-    o <b>îngrijitoare pentru seniori</b>, o <b>menajeră</b> pentru gospodărie sau o <b>bonă</b> pentru copii. <br><br>
-    Echipa <b>Grija pentru Bunici</b> va analiza cererea ta și te va contacta în cel mai scurt timp
-    pentru a te pune în legătură cu o persoană potrivită nevoilor tale și ale familiei tale. <br><br>
-    ✨ Toți colaboratorii noștri sunt atent verificați, cu experiență și recomandări reale.
-  </p>
-</section>
 
     form {
       display: flex;
@@ -112,6 +101,7 @@
     }
   </style>
 </head>
+
 <body>
   <header>Grijă pentru Bunici</header>
 
@@ -125,64 +115,69 @@
 
   <main>
     <h2>Caut ajutor</h2>
-    <p style="text-align:center;">Completează formularul de mai jos pentru a solicita ajutor pentru o persoană dragă.</p>
 
-  <!-- Formular Caut Ajutor -->
-<form id="cautAjutorForm" class="formular-ajutor">
-  <label for="nume">Nume complet:</label><br>
-  <input type="text" id="nume" name="nume" required><br><br>
+    <!-- ✨ Text explicativ deasupra formularului -->
+    <section style="text-align: center; padding: 2rem 1rem; background-color: #fffaf8; border-radius: 12px; margin-bottom: 2rem;">
+      <h3 style="color: #d96c6c; margin-bottom: 1rem;">Ai nevoie de sprijin pentru tine sau pentru cineva drag?</h3>
+      <p style="font-size: 1.1rem; color: #444; line-height: 1.6; max-width: 750px; margin: 0 auto;">
+        Completează formularul de mai jos și spune-ne <b>ce fel de ajutor cauți</b> — 
+        o <b>îngrijitoare pentru seniori</b>, o <b>menajeră</b> pentru gospodărie sau o <b>bonă</b> pentru copii. <br><br>
+        Echipa <b>Grija pentru Bunici</b> va analiza cererea ta și te va contacta în cel mai scurt timp
+        pentru a te pune în legătură cu o persoană potrivită nevoilor tale și ale familiei tale. <br><br>
+        ✨ Toți colaboratorii noștri sunt atent verificați, cu experiență și recomandări reale.
+      </p>
+    </section>
 
-  <label for="email">Email:</label><br>
-  <input type="email" id="email" name="email" required><br><br>
+    <!-- Formularul -->
+    <form id="cautAjutorForm" class="formular-ajutor">
+      <label for="nume">Nume complet:</label>
+      <input type="text" id="nume" name="nume" required>
 
-  <label for="telefon">Telefon:</label><br>
-  <input type="text" id="telefon" name="telefon" required><br><br>
+      <label for="email">Email:</label>
+      <input type="email" id="email" name="email" required>
 
-  <label for="mesaj">Mesaj:</label><br>
-  <textarea id="mesaj" name="mesaj" rows="4" required></textarea><br><br>
+      <label for="telefon">Telefon:</label>
+      <input type="text" id="telefon" name="telefon" required>
 
-  <button type="submit">Trimite solicitarea</button>
-</form>
+      <label for="mesaj">Mesaj:</label>
+      <textarea id="mesaj" name="mesaj" rows="4" required></textarea>
 
-<!-- Mesaj de confirmare -->
-<p id="mesajConfirmare" style="display:none; color:green; font-weight:bold; margin-top:15px;">
-  Mulțumim, te vom contacta în curând! ❤️
-</p>
+      <button type="submit">Trimite solicitarea</button>
+    </form>
 
-<script>
-  document.getElementById('cautAjutorForm').addEventListener('submit', function(event) {
-    event.preventDefault();
-
-    const formData = new FormData(this);
-
-    fetch('https://formspree.io/f/xpwolkdp', {
-      method: 'POST',
-      body: formData,
-      headers: { 'Accept': 'application/json' }
-    })
-    .then(response => {
-      // Ascundem formularul și textul explicativ, apoi arătăm mesajul verde
-      document.getElementById('cautAjutorForm').style.display = 'none';
-      document.querySelector('p[style*="text-align:center"]').style.display = 'none';
-      document.getElementById('mesajConfirmare').style.display = 'block';
-    })
-    .catch(error => {
-      // Dacă apare o problemă de rețea, tot afișăm mesajul de mulțumire (ca să nu pară eroare)
-      document.getElementById('cautAjutorForm').style.display = 'none';
-      document.querySelector('p[style*="text-align:center"]').style.display = 'none';
-      document.getElementById('mesajConfirmare').innerText = 'Mulțumim, mesajul tău a fost trimis!';
-      document.getElementById('mesajConfirmare').style.display = 'block';
-    });
-  });
-</script>
-
-
-
-
+    <!-- Mesaj de confirmare -->
+    <p id="mesajConfirmare" style="display:none; color:green; font-weight:bold; margin-top:15px;">
+      Mulțumim, te vom contacta în curând! ❤️
+    </p>
   </main>
 
   <footer>
     © 2025 Grijă pentru Bunici — Toate drepturile rezervate.
   </footer>
+
+  <script>
+    document.getElementById('cautAjutorForm').addEventListener('submit', function(event) {
+      event.preventDefault();
+
+      const formData = new FormData(this);
+
+      fetch('https://formspree.io/f/xpwolkdp', {
+        method: 'POST',
+        body: formData,
+        headers: { 'Accept': 'application/json' }
+      })
+      .then(response => {
+        document.getElementById('cautAjutorForm').style.display = 'none';
+        document.querySelector('section').style.display = 'none';
+        document.getElementById('mesajConfirmare').style.display = 'block';
+      })
+      .catch(error => {
+        document.getElementById('cautAjutorForm').style.display = 'none';
+        document.querySelector('section').style.display = 'none';
+        document.getElementById('mesajConfirmare').innerText = 'Mulțumim, mesajul tău a fost trimis!';
+        document.getElementById('mesajConfirmare').style.display = 'block';
+      });
+    });
+  </script>
 </body>
 </html>
