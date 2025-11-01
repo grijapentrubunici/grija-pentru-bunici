@@ -4,7 +4,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Contact | Grija pentru Bunici</title>
-  <meta name="description" content="Contactează Grija pentru Bunici - bone și îngrijitori de încredere în București. Trimite mesaj pe WhatsApp sau scrie-ne un e-mail.">
+  <meta name="description" content="Contactează Grija pentru Bunici - bone și îngrijitori de încredere în București.">
   <link rel="stylesheet" href="style.css">
   <style>
     body {
@@ -58,46 +58,20 @@
       margin-bottom: 20px;
     }
 
-    .contact-links {
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      gap: 20px;
-      margin-top: 20px;
+    .contact-info {
+      font-size: 18px;
+      color: #333;
+      line-height: 1.8;
     }
 
-    .contact-links a {
-      display: inline-block;
-      padding: 14px 25px;
-      border-radius: 30px;
-      font-size: 18px;
+    .contact-info a {
+      color: #e77c7c;
       font-weight: 600;
       text-decoration: none;
-      transition: 0.3s;
     }
 
-    .whatsapp-link {
-      background-color: #25D366;
-      color: white;
-    }
-
-    .whatsapp-link:hover {
-      background-color: #1ebe57;
-    }
-
-    .email-link {
-      background-color: #f8d7da;
-      color: #8a1c1c;
-    }
-
-    .email-link:hover {
-      background-color: #f4bfc3;
-    }
-
-    .tip {
-      font-size: 14px;
-      color: #777;
-      margin-top: 10px;
+    .contact-info a:hover {
+      text-decoration: underline;
     }
 
     footer {
@@ -115,55 +89,4 @@
   <div class="navbar">
     <h1>💗 Grija pentru Bunici</h1>
     <nav>
-      <a href="index.html">Acasă</a>
-      <a href="caut-ajutor.html">Caut Ajutor</a>
-      <a href="aplica.html">Înscriere</a>
-      <a href="despre.html">Despre Noi</a>
-      <a href="contact.html" class="active">Contact</a>
-    </nav>
-  </div>
-</header>
-
-<main>
-  <section class="contact-section">
-    <h2>Contactează-ne direct</h2>
-    <p>Suntem disponibili pe WhatsApp sau e-mail — răspundem rapid și cu drag ❤️</p>
-
-    <div class="contact-links">
-      <!-- Buton WhatsApp cu detectare automată -->
-      <a id="whatsapp-link" href="#" class="whatsapp-link">
-        📱 Trimite mesaj pe WhatsApp
-      </a>
-
-      <!-- Email clicabil -->
-      <a href="mailto:grijapentrubunici@yahoo.ro" class="email-link">
-        ✉️ grijapentrubunici@yahoo.ro
-      </a>
-
-      <p class="tip">👉 Dacă apare o fereastră, apasă <strong>„Deschide WhatsApp”</strong> pentru a continua.</p>
-    </div>
-  </section>
-</main>
-
-<footer>
-  <p>© 2025 Grija pentru Bunici • Îngrijire cu suflet 💗</p>
-</footer>
-
-<script>
-  // Detectare automată: telefon vs desktop
-  const isMobile = /iPhone|iPad|iPod|Android/i.test(navigator.userAgent);
-  const whatsappButton = document.getElementById('whatsapp-link');
-  const phoneNumber = '40793553703';
-  const message = encodeURIComponent('Bună! Aș dori mai multe informații despre Grija pentru Bunici.');
-
-  if (isMobile) {
-    // Pe telefon -> intră direct în aplicația WhatsApp
-    whatsappButton.href = `whatsapp://send?phone=${phoneNumber}&text=${message}`;
-  } else {
-    // Pe desktop -> folosește varianta web (poate apărea o singură dată confirmarea)
-    whatsappButton.href = `https://api.whatsapp.com/send?phone=${phoneNumber}&text=${message}`;
-  }
-</script>
-
-</body>
-</html>
+      <
