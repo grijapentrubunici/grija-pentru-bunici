@@ -116,20 +116,19 @@
   <main>
     <h2>Caut loc de muncă</h2>
 
-    <!-- ✨ Text introductiv -->
+    <!-- 🩷 Descriere de început -->
     <section style="text-align: center; padding: 2rem 1rem; background-color: #fffaf8; border-radius: 12px; margin-bottom: 2rem;">
-      <h3 style="color: #d96c6c; margin-bottom: 1rem;">Cauți un loc de muncă stabil și sigur în domeniul îngrijirii?</h3>
-
+      <h3 style="color: #d96c6c; margin-bottom: 1rem;">Cauți un loc de muncă sigur și respectuos în domeniul îngrijirii?</h3>
       <p style="font-size: 1.1rem; color: #444; line-height: 1.6; max-width: 750px; margin: 0 auto;">
         Completează formularul de mai jos și spune-ne <b>ce tip de job îți dorești</b> — 
         ca <b>îngrijitoare pentru seniori</b>, <b>menajeră</b> sau <b>bonă</b>. <br><br>
         Echipa <b>Grija pentru Bunici</b> colaborează cu familii serioase din toată țara
         și te va contacta în cel mai scurt timp pentru a-ți oferi o oportunitate potrivită experienței tale. <br><br>
-        ✨ Colaboratorii noștri beneficiază de sprijin constant, comunicare clară și respect reciproc.
+        🌸 Colaboratorii noștri beneficiază de sprijin constant, comunicare clară și respect reciproc.
       </p>
     </section>
 
-    <!-- Formular -->
+    <!-- 🩷 Formular -->
     <form id="locMuncaForm">
       <label for="nume">Nume complet:</label>
       <input type="text" id="nume" name="nume" required>
@@ -149,16 +148,23 @@
         <option value="altul">Alt tip de ajutor</option>
       </select>
 
-      <label for="experienta">Experiență relevantă:</label>
-      <textarea id="experienta" name="experienta" rows="4" required></textarea>
+      <label for="experienta">Descrie experiența ta:</label>
+      <textarea id="experienta" name="experienta" rows="4" placeholder="Ex: am 3 ani experiență ca îngrijitoare în București..." required></textarea>
 
       <button type="submit">Trimite aplicația</button>
-    </form>
-<button type="submit">Trimite solicitarea</button>
-</form>
 
-    <!-- Mesaj de confirmare -->
-    <p id="mesajConfirmare" style="display:none; color:green; font-weight:bold; margin-top:15px;">
+      <!-- Text GDPR sub buton -->
+      <p style="font-size: 0.9rem; color: #666; text-align: center; margin-top: 10px;">
+        Prin completarea acestui formular, confirm că am citit și sunt de acord cu
+        <a href="confidentialitate.html" target="_blank" style="color:#d96c6c; text-decoration:underline;">Politica de confidențialitate</a>
+        și
+        <a href="termeni.html" target="_blank" style="color:#d96c6c; text-decoration:underline;">Termenii și condițiile</a>
+        site-ului <b>Grija pentru Bunici</b>.
+      </p>
+    </form>
+
+    <!-- ✅ Mesaj de confirmare -->
+    <p id="mesajConfirmare" style="display:none; color:green; font-weight:bold; margin-top:15px; text-align:center;">
       Mulțumim pentru înscriere! Te vom contacta în curând. 🌷
     </p>
   </main>
