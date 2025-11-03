@@ -1,9 +1,10 @@
-/* 🌸 Paleta Grijă pentru Bunici – revizuită pastel, elegantă */
+/* 🌸 Paleta Grijă pentru Bunici – elegantă și neutră */
 :root {
-  --roz-deschis: #f4b6b8;  /* culoare principală pastel */
-  --roz-soft: #f7c7c9;     /* pentru bara, butoane, accente */
-  --bg: #fffaf9;           /* fundal curat, luminos */
-  --text: #2f2f2f;         /* text clar și lizibil */
+  --roz-deschis: #f4b6b8;   /* roz pastel pentru accente subtile */
+  --roz-soft: #f7c7c9;      /* roz foarte pal, doar pentru hover */
+  --bej-fundal: #f8f4f2;    /* crem pentru bara de sus */
+  --bg: #fffaf9;            /* fundal general */
+  --text: #2f2f2f;          /* text principal */
 }
 
 /* --- Import fonturi Google --- */
@@ -28,8 +29,8 @@ h1, h2, h3, h4 {
 
 /* --- Bara de navigare fixă sus --- */
 header {
-  background-color: var(--roz-soft);
-  color: white;
+  background-color: var(--bej-fundal);
+  color: #4a2c2a;
   text-align: center;
   padding: 15px 0;
   font-size: 24px;
@@ -41,17 +42,18 @@ header {
 }
 
 .navbar {
-  background-color: var(--roz-deschis);
+  background-color: #fffaf9;
   display: flex;
   justify-content: center;
   align-items: center;
   flex-wrap: wrap;
   gap: 25px;
   padding: 12px 0;
+  border-bottom: 2px solid #f3d1d1;
 }
 
 nav a {
-  color: #fff;
+  color: #4a2c2a;
   text-decoration: none;
   font-weight: 600;
   font-size: 17px;
@@ -61,7 +63,7 @@ nav a {
 }
 
 nav a:hover {
-  background-color: #f28f92;
+  background-color: var(--roz-deschis);
   color: white;
 }
 
@@ -129,97 +131,4 @@ nav a:hover {
 
 /* --- HERO PAGINA DESPRE NOI --- */
 .hero-despre-noi {
-  background-image: url('images/despre-noi-hero.jpg');
-  background-size: cover;
-  background-position: center;
-  background-repeat: no-repeat;
-  height: 70vh;
-  display: flex;
-  align-items: flex-end;
-  justify-content: center;
-  position: relative;
-  animation: fadeIn 2s ease-in;
-  border-bottom: 5px solid var(--roz-deschis);
-}
-
-.hero-despre-noi::before {
-  content: "";
-  position: absolute;
-  inset: 0;
-  background: rgba(244, 182, 184, 0.25);
-}
-
-.hero-despre-noi .banner-text {
-  position: relative;
-  z-index: 2;
-  background-color: rgba(255, 255, 255, 0.85);
-  color: #a44c4c;
-  padding: 12px 25px;
-  border-radius: 30px;
-  font-size: 1.3rem;
-  font-weight: 600;
-  margin-bottom: 30px;
-  animation: slideUp 2s ease-out;
-}
-
-.hero-despre-noi h1 {
-  color: white;
-  font-size: 3rem;
-  font-weight: 700;
-  text-shadow: 2px 2px 6px rgba(0, 0, 0, 0.4);
-  position: absolute;
-  top: 25%;
-  z-index: 2;
-  width: 100%;
-  text-align: center;
-}
-
-/* --- Animații --- */
-@keyframes fadeIn {
-  from { opacity: 0; }
-  to { opacity: 1; }
-}
-
-@keyframes slideUp {
-  from { transform: translateY(30px); opacity: 0; }
-  to { transform: translateY(0); opacity: 1; }
-}
-
-/* --- Footer --- */
-footer {
-  background-color: var(--roz-soft);
-  color: white;
-  text-align: center;
-  padding: 20px 10px;
-  font-size: 0.9rem;
-  margin-top: 40px;
-}
-
-footer a {
-  color: white;
-  text-decoration: underline;
-}
-
-footer a:hover {
-  color: #6e2e2c;
-}
-
-/* --- Responsivitate --- */
-@media (max-width: 768px) {
-  .navbar {
-    flex-direction: column;
-    text-align: center;
-    gap: 10px;
-  }
-
-  .hero-despre-noi h1 {
-    font-size: 2.2rem;
-    text-align: center;
-    padding: 0 20px;
-  }
-
-  nav a {
-    display: block;
-    margin: 6px 0;
-  }
-}
+  backgrou
