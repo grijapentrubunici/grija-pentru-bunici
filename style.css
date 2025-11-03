@@ -118,7 +118,7 @@ nav a:hover {
 
 /* --- HERO PAGINA DESPRE NOI --- */
 .hero-despre-noi {
-  background-image: url('https://github.com/biancaoprea/grijapentrubunici.github.io/raw/main/despre-noi-hero.jpg');
+  background-image: url('images/despre-noi-hero.jpg');
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
@@ -141,10 +141,10 @@ nav a:hover {
 .hero-despre-noi .banner-text {
   position: relative;
   z-index: 2;
-  background-color: rgba(255, 255, 255, 0.75);
+  background-color: rgba(255, 255, 255, 0.8);
   color: #a44c4c;
-  padding: 10px 25px;
-  border-radius: 25px;
+  padding: 12px 25px;
+  border-radius: 30px;
   font-size: 1.3rem;
   font-weight: 600;
   margin-bottom: 30px;
@@ -157,7 +157,7 @@ nav a:hover {
   font-weight: 700;
   text-shadow: 2px 2px 6px rgba(0, 0, 0, 0.4);
   position: absolute;
-  top: 30%;
+  top: 25%;
   z-index: 2;
   width: 100%;
   text-align: center;
@@ -212,3 +212,4 @@ footer a:hover {
     margin: 6px 0;
   }
 }
+
