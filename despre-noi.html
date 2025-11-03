@@ -47,15 +47,17 @@
       opacity: 0.8;
     }
 
+    /* 🔸 HERO SECTION CU ANIMAȚIE */
     .hero-despre-noi {
-      background: url("images/despre-noi-hero.jpg") center/cover no-repeat;
-      height: 300px;
+      background: url("despre-noi-hero.jpg") center/cover no-repeat;
+      height: 340px;
       display: flex;
       align-items: center;
       justify-content: center;
       color: white;
-      text-shadow: 0 2px 6px rgba(0,0,0,0.4);
+      text-shadow: 0 3px 8px rgba(0,0,0,0.6);
       position: relative;
+      animation: fadeIn 2.5s ease-in;
     }
 
     .hero-despre-noi::before {
@@ -63,16 +65,28 @@
       position: absolute;
       inset: 0;
       background: rgba(0, 0, 0, 0.4);
-      border-radius: 0;
+      z-index: 1;
     }
 
     .hero-despre-noi h1 {
       position: relative;
       z-index: 2;
-      font-size: 42px;
+      font-size: 46px;
       font-weight: 700;
+      animation: slideUp 2s ease-out;
     }
 
+    @keyframes fadeIn {
+      from {opacity: 0;}
+      to {opacity: 1;}
+    }
+
+    @keyframes slideUp {
+      from {transform: translateY(30px); opacity: 0;}
+      to {transform: translateY(0); opacity: 1;}
+    }
+
+    /* 🔸 CONȚINUT PRINCIPAL */
     main {
       max-width: 900px;
       margin: 40px auto;
@@ -112,6 +126,7 @@
     }
   </style>
 </head>
+
 <body>
   <header>Grijă pentru Bunici</header>
 
@@ -119,32 +134,4 @@
     <a href="index.html">Acasă</a>
     <a href="despre-noi.html">Despre noi</a>
     <a href="caut-ajutor.html">Caut ajutor</a>
-    <a href="caut-loc-de-munca.html">Caut loc de muncă</a>
-    <a href="https://wa.me/40793553703" target="_blank" rel="noopener">Contact WhatsApp</a>
-  </nav>
-
-  <!-- Hero Section -->
-  <section class="hero-despre-noi">
-    <h1>Despre Noi</h1>
-  </section>
-
-  <main>
-    <h2>Despre noi</h2>
-
-    <div class="image-container">
-      <img src="images/despre-noi-hero.jpg" alt="Despre Grija pentru Bunici">
-    </div>
-
-    <p>Suntem o agenție de introducere, nu o companie care gestionează direct serviciile de îngrijire.</p>
-    <p>Tu ai libertatea și flexibilitatea de a decide cine te va ajuta și în ce mod, în funcție de nevoile tale și ale familiei tale.</p>
-    <p>Colaborăm cu o echipă de bone, menajere și îngrijitori independenți, serioși și cu experiență, pe care îi potrivim cu tine în funcție de cerințele specifice.</p>
-    <p>Procesul este simplu, transparent și se poate organiza rapid — în cel mult 24 de ore, în orice localitate din România.</p>
-    <p>Toți colaboratorii noștri sunt persoane independente, care își gestionează singuri contribuțiile și plățile.</p>
-    <p>Credem în corectitudine și respect reciproc — de aceea structura noastră de colaborare asigură că fiecare persoană este plătită echitabil pentru munca valoroasă pe care o desfășoară în sprijinul familiilor din România.</p>
-  </main>
-
-  <footer>
-    © 2025 Grijă pentru Bunici — Toate drepturile rezervate.
-  </footer>
-</body>
-</html>
+    <a
