@@ -3,134 +3,98 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Despre Noi - Grija pentru Bunici</title>
+  <title>Despre Noi | Grija pentru Bunici</title>
   <link rel="stylesheet" href="style.css">
   <style>
-    body {
-      font-family: 'Poppins', sans-serif;
-      margin: 0;
-      padding: 0;
-      background-color: #fff8f8;
-      color: #333;
-    }
-
-    header {
-      background-color: #f4a6a6;
-      color: white;
-      text-align: center;
-      padding: 10px 0;
-      font-size: 1.5rem;
-      font-weight: 600;
-    }
-
-    nav {
-      background-color: #d27777;
-      text-align: center;
-      padding: 10px 0;
-    }
-
-    nav a {
-      color: white;
-      text-decoration: none;
-      margin: 0 20px;
-      font-weight: 500;
-      transition: opacity 0.3s;
-    }
-
-    nav a:hover {
-      opacity: 0.8;
-    }
-
-    /* Hero section */
     .hero {
-      background-image: url('despre-noi-hero.jpg.png');
-      background-size: cover;
-      background-position: center;
-      height: 380px;
-      display: flex;
-      align-items: center;
-      justify-content: center;
+      position: relative;
       text-align: center;
       color: white;
-      position: relative;
     }
 
-    .hero::after {
-      content: "";
-      position: absolute;
-      top: 0;
-      left: 0;
+    .hero-image {
       width: 100%;
-      height: 100%;
-      background: rgba(210, 119, 119, 0.45); /* roz semi-transparent */
+      height: 60vh;
+      object-fit: cover;
+      filter: brightness(60%);
     }
 
-    .hero h1 {
-      position: relative;
-      font-size: 2.5rem;
-      z-index: 2;
-      text-shadow: 1px 1px 4px rgba(0,0,0,0.3);
+    .hero-text {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
     }
 
-    /* Content section */
+    .hero-text h1 {
+      font-size: 3em;
+      color: #fff;
+      margin-bottom: 10px;
+    }
+
+    .hero-text p {
+      font-size: 1.2em;
+      color: #fff;
+    }
+
     .content {
       max-width: 900px;
       margin: 50px auto;
       padding: 0 20px;
-      text-align: center;
-      line-height: 1.8;
+      line-height: 1.7;
+      font-size: 1.1em;
+      color: #333;
     }
 
     .content h2 {
-      color: #d27777;
-      margin-bottom: 20px;
-      font-size: 1.6rem;
-    }
-
-    .content p {
-      font-size: 1.1rem;
-      margin-bottom: 20px;
-    }
-
-    footer {
-      background-color: #f4a6a6;
-      color: white;
+      color: #c76b7d;
       text-align: center;
-      padding: 15px 0;
-      margin-top: 50px;
+      margin-bottom: 20px;
     }
   </style>
 </head>
 <body>
-
-  <header>Grija pentru Bunici</header>
-
-  <nav>
-    <a href="index.html">Acasă</a>
-    <a href="despre-noi.html">Despre noi</a>
-    <a href="caut-ajutor.html">Caut ajutor</a>
-  </nav>
+  <header>
+    <nav>
+      <a href="index.html">Acasă</a>
+      <a href="despre-noi.html" class="active">Despre Noi</a>
+      <a href="caut-ajutor.html">Caut Ajutor</a>
+      <a href="caut-loc-de-munca.html">Caut Loc de Muncă</a>
+      <a href="mailto:grijapentrubunici@yahoo.com">Contact</a>
+    </nav>
+  </header>
 
   <section class="hero">
-    <h1>Despre Noi</h1>
+    <img src="https://raw.githubusercontent.com/grijapentrubunici/grija-pentru-bunici/main/despre-noi-hero.jpg.png" 
+         alt="Echipa Grija pentru Bunici" class="hero-image">
+    <div class="hero-text">
+      <h1>Despre Noi</h1>
+      <p>O echipă dedicată grijii, empatiei și încrederii</p>
+    </div>
   </section>
 
   <section class="content">
-    <h2>Cu grijă, respect și inimă deschisă ❤️</h2>
+    <h2>Grijă, Respect și Încredere</h2>
     <p>
-      <strong>Grija pentru Bunici</strong> s-a născut din dorința de a oferi sprijin real familiilor și seniorilor 
-      care au nevoie de încredere, empatie și profesionalism. Credem că fiecare persoană merită atenție, siguranță 
-      și căldură umană — iar echipa noastră lucrează zilnic pentru a face aceste lucruri posibile.
+      „Grija pentru Bunici” a apărut din dorința sinceră de a oferi sprijin persoanelor vârstnice și familiilor
+      care caută ajutor de încredere. Ne dorim să construim o punte între oameni – între cei care oferă ajutor și
+      cei care au nevoie de el.
     </p>
+
     <p>
-      Prin intermediul platformei noastre, conectăm familiile cu îngrijitori dedicați, responsabili și aleși cu grijă. 
-      Ne dorim să aducem liniște în case, zâmbete pe chipuri și să construim punți între oameni cu suflet mare.
+      Echipa noastră colaborează cu îngrijitori, menajere și însoțitori cu experiență, care înțeleg importanța
+      respectului, răbdării și empatiei în fiecare gest. Fiecare colaborator este ales cu grijă, pentru ca
+      familia ta să simtă siguranță și liniște.
+    </p>
+
+    <p>
+      Suntem mândri să fim parte dintr-o comunitate în care bunicii noștri primesc atenția și grija pe care o
+      merită. ❤️
     </p>
   </section>
 
   <footer>
-    <p>&copy; 2025 Grija pentru Bunici. Toate drepturile rezervate.</p>
+    <p>© 2025 Grija pentru Bunici | Toate drepturile rezervate</p>
   </footer>
-
 </body>
 </html>
