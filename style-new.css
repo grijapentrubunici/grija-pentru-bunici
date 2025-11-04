@@ -1,0 +1,60 @@
+/* --- Bara de navigare fixă sus --- */
+header {
+  background-color: #f8f4f2; /* crem deschis */
+  color: #4a2c2a; /* maro cald */
+  text-align: center;
+  padding: 15px 0;
+  font-size: 24px;
+  font-weight: 700;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.05);
+}
+
+.navbar {
+  background-color: #fffaf9; /* aproape alb, luminos */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 25px;
+  padding: 12px 0;
+  border-bottom: 1px solid #e2d3c5; /* linie discretă între bară și conținut */
+}
+
+nav a {
+  color: #4a2c2a; /* text maro cald */
+  text-decoration: none;
+  font-weight: 600;
+  font-size: 17px;
+  padding: 6px 12px;
+  border-radius: 6px;
+  transition: background 0.3s ease, color 0.3s ease;
+}
+
+nav a:hover {
+  background-color: #e9d8c7; /* bej-miere la hover */
+  color: #3c1f1d; /* text puțin mai închis */
+}
+
+/* --- Footer (bara de jos) --- */
+footer {
+  background-color: #e9d8c7; /* bej cald miere */
+  color: #3c1f1d;
+  text-align: center;
+  padding: 25px 10px;
+  font-size: 0.95rem;
+  margin-top: 40px;
+  box-shadow: 0 -2px 6px rgba(0, 0, 0, 0.05);
+}
+
+footer a {
+  color: #3c1f1d;
+  text-decoration: underline;
+  font-weight: 600;
+}
+
+footer a:hover {
+  color: #5e3b2e; /* puțin mai intens la hover */
+}
