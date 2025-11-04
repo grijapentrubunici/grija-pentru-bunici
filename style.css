@@ -1,6 +1,6 @@
-/* 🌿 Grijă pentru Bunici – Stil final crem-bej rafinat */
+/* 🌿 Grijă pentru Bunici – Stil crem & bej elegant */
 
-/* --- Paletă de culori --- */
+/* --- Paletă culori --- */
 :root {
   --bej-deschis: #f8f4f2;
   --bej-inchis: #e9d8c7;
@@ -15,12 +15,11 @@ body {
   padding: 0;
   background-color: var(--bej-deschis);
   color: var(--maro-text);
-  scroll-behavior: smooth;
 }
 
 /* --- Bara de sus cu efect fade-in --- */
 header {
-  background: linear-gradient(to bottom, #e9d8c7 85%, rgba(255,255,255,0));
+  background: linear-gradient(to bottom, #e9d8c7 90%, rgba(255, 255, 255, 0));
   color: #3c1f1d;
   text-align: center;
   padding: 15px 0 5px;
@@ -29,7 +28,6 @@ header {
   position: sticky;
   top: 0;
   z-index: 1000;
-  backdrop-filter: blur(4px);
   box-shadow: 0 2px 6px rgba(0, 0, 0, 0.05);
   font-family: 'Poppins', sans-serif;
 }
@@ -42,20 +40,107 @@ header h1 {
 
 /* --- Bara de navigare --- */
 .navbar {
-  background-color: rgba(255, 250, 249, 0.9);
+  background-color: #fffaf9;
   display: flex;
   justify-content: center;
   align-items: center;
   flex-wrap: wrap;
   gap: 25px;
-  padding: 10px 0;
+  padding: 12px 0;
   border-top: 1px solid #e2d3c5;
   border-bottom: 1px solid #e2d3c5;
-  backdrop-filter: blur(4px);
 }
 
 nav a {
   color: var(--maro-cald);
   text-decoration: none;
   font-weight: 600;
-  font-size: 17px
+  font-size: 17px;
+  padding: 6px 12px;
+  border-radius: 6px;
+  transition: background 0.3s ease, color 0.3s ease;
+}
+
+nav a:hover {
+  background-color: var(--bej-inchis);
+  color: var(--maro-text);
+}
+
+/* --- Hero (imagine principală mai mică) --- */
+.hero {
+  background: linear-gradient(rgba(255, 245, 238, 0.35), rgba(255, 245, 238, 0.35)),
+              url('hero-ingrijitoare.jpg') center/cover no-repeat;
+  text-align: center;
+  padding: 45px 20px;
+  color: var(--maro-text);
+  border-bottom: 4px solid var(--bej-inchis);
+  min-height: 55vh;
+}
+
+.hero h2 {
+  font-family: 'Poppins', sans-serif;
+  font-size: 1.9rem;
+  margin-bottom: 10px;
+}
+
+.hero p {
+  font-size: 1.1rem;
+  margin-bottom: 20px;
+}
+
+/* --- Butoane --- */
+.btn {
+  background-color: var(--bej-inchis);
+  color: var(--maro-text);
+  padding: 12px 28px;
+  border-radius: 30px;
+  text-decoration: none;
+  font-weight: bold;
+  transition: 0.3s;
+  border: none;
+}
+
+.btn:hover {
+  background-color: var(--maro-cald);
+  color: #fff;
+}
+
+/* --- Secțiuni interioare --- */
+.container {
+  width: 90%;
+  max-width: 1000px;
+  margin: 0 auto;
+}
+
+.info {
+  padding: 60px 20px;
+  text-align: center;
+}
+
+.info h3 {
+  font-family: 'Poppins', sans-serif;
+  color: var(--maro-cald);
+  margin-bottom: 25px;
+  font-size: 1.6rem;
+}
+
+.info p, .info li {
+  font-size: 1.1rem;
+  line-height: 1.7;
+}
+
+/* --- Carduri servicii --- */
+.services {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 1.5rem;
+  padding: 3rem 2rem;
+  background-color: #fff;
+}
+
+.service-card {
+  background: #fff;
+  border: 1px solid #eee;
+  border-radius: 12px;
+  padding: 1.5rem;
+  box-shadow: 0 3px 8px rgb
