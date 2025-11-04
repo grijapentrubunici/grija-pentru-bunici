@@ -5,49 +5,43 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Despre Noi – Grija pentru Bunici</title>
   <link rel="stylesheet" href="style.css">
+
   <style>
     body {
-      font-family: 'Poppins', sans-serif;
-      background-color: #fff;
       margin: 0;
+      font-family: 'Poppins', sans-serif;
+      background-color: #fff9f9;
       color: #333;
     }
 
-    /* Navbar simplu (alb, fără roz, fără inimă) */
+    /* 🔹 NAVBAR IDENTICĂ CU PAGINA ACASĂ DAR FĂRĂ INIMĂ */
     header {
-      width: 100%;
-      background-color: white;
-      display: flex;
-      justify-content: center;
-      position: fixed;
-      top: 0;
-      left: 0;
-      z-index: 1000;
-      box-shadow: 0 2px 8px rgba(0,0,0,0.05);
-    }
-
-    nav {
-      width: 90%;
-      max-width: 1200px;
+      background-color: #f7ccd5;
       display: flex;
       justify-content: space-between;
       align-items: center;
-      padding: 15px 0;
+      padding: 12px 10%;
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      z-index: 1000;
+      box-shadow: 0 2px 6px rgba(0,0,0,0.1);
     }
 
-    nav .logo {
-      font-size: 1.4rem;
-      font-weight: 600;
+    header a.logo {
       color: #5a2a38;
       text-decoration: none;
+      font-size: 1.3rem;
+      font-weight: 600;
     }
 
     nav ul {
       list-style: none;
-      display: flex;
-      gap: 25px;
       margin: 0;
       padding: 0;
+      display: flex;
+      gap: 25px;
     }
 
     nav ul li a {
@@ -58,21 +52,19 @@
     }
 
     nav ul li a:hover {
-      color: #b85c72;
+      color: #a94a64;
     }
 
-    /* Hero Section */
+    /* 🔹 HERO IMAGE */
     .hero {
       position: relative;
+      margin-top: 70px;
       text-align: center;
-      height: 60vh;
-      overflow: hidden;
-      margin-top: 80px; /* spațiu sub navbar */
     }
 
     .hero img {
       width: 100%;
-      height: 100%;
+      height: 400px;
       object-fit: cover;
       filter: brightness(70%);
     }
@@ -83,15 +75,15 @@
       left: 50%;
       transform: translate(-50%, -50%);
       color: white;
-      text-shadow: 2px 2px 10px rgba(0,0,0,0.5);
+      text-shadow: 2px 2px 10px rgba(0,0,0,0.4);
     }
 
     .hero-text h1 {
-      font-size: 3rem;
-      margin-bottom: 10px;
+      font-size: 2.5rem;
+      margin: 0;
     }
 
-    /* Conținut principal */
+    /* 🔹 CONȚINUT */
     .content {
       max-width: 1100px;
       margin: 60px auto;
@@ -101,16 +93,15 @@
 
     .content h2 {
       color: #b85c72;
-      margin-bottom: 15px;
-      font-size: 1.8rem;
       text-align: center;
+      margin-bottom: 20px;
+      font-size: 1.8rem;
     }
 
     .section {
       margin-bottom: 60px;
     }
 
-    /* Imagine + text lateral */
     .about-section {
       display: flex;
       flex-wrap: wrap;
@@ -121,21 +112,21 @@
     .about-section img {
       flex: 1 1 400px;
       width: 100%;
-      border-radius: 12px;
-      box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+      border-radius: 10px;
+      box-shadow: 0 3px 10px rgba(0,0,0,0.1);
     }
 
     .about-section div {
       flex: 1 1 400px;
     }
 
-    /* Contact box */
+    /* 🔹 CONTACT BOX */
     .contact-box {
-      background-color: #fff9f9;
+      background-color: #ffe6eb;
       border-radius: 12px;
       padding: 30px;
       text-align: center;
-      box-shadow: 0 3px 10px rgba(0,0,0,0.05);
+      box-shadow: 0 3px 10px rgba(0,0,0,0.1);
     }
 
     .contact-box a {
@@ -146,7 +137,7 @@
       border-radius: 30px;
       text-decoration: none;
       font-weight: 600;
-      margin-top: 15px;
+      margin-top: 10px;
     }
 
     .contact-box a:hover {
@@ -154,41 +145,40 @@
     }
 
     @media (max-width: 768px) {
-      nav ul {
+      header {
         flex-direction: column;
         gap: 10px;
       }
-
-      .hero-text h1 { font-size: 2rem; }
+      .hero img { height: 300px; }
+      .hero-text h1 { font-size: 1.8rem; }
       .about-section { flex-direction: column; }
     }
   </style>
 </head>
 <body>
 
-  <!-- NAVBAR -->
+  <!-- 🔹 NAVBAR -->
   <header>
+    <a href="index.html" class="logo">Grija pentru Bunici</a>
     <nav>
-      <a href="index.html" class="logo">Grija pentru Bunici</a>
       <ul>
         <li><a href="index.html">Acasă</a></li>
-        <li><a href="despre-noi.html">Despre Noi</a></li>
+        <li><a href="despre-noi.html" class="active">Despre Noi</a></li>
         <li><a href="caut-ajutor.html">Caut Ajutor</a></li>
         <li><a href="caut-loc-de-munca.html">Caut Loc de Muncă</a></li>
       </ul>
     </nav>
   </header>
 
-  <!-- HERO -->
+  <!-- 🔹 HERO -->
   <section class="hero">
     <img src="despre-noi-hero.jpg.png" alt="Echipa Grija pentru Bunici">
     <div class="hero-text">
       <h1>Despre Noi</h1>
-      <p>Îngrijire cu suflet și responsabilitate</p>
     </div>
   </section>
 
-  <!-- CONȚINUT PRINCIPAL -->
+  <!-- 🔹 CONȚINUT -->
   <div class="content">
 
     <div class="section">
@@ -223,8 +213,9 @@
 
     <div class="contact-box section">
       <h2>Contactează-ne</h2>
-      <p>Dacă dorești să afli mai multe sau să colaborăm, suntem aici pentru tine.</p>
-      <a href="https://wa.me/40740044448" target="_blank">Scrie-ne pe WhatsApp</a>
+      <p>Suntem mereu disponibili pentru întrebări, colaborări și recomandări.</p>
+      <p><strong>📞 0793 553 703</strong></p>
+      <a href="https://wa.me/40793553703" target="_blank">Scrie-ne pe WhatsApp</a>
     </div>
 
   </div>
