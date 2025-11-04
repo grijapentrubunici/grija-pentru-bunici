@@ -1,72 +1,61 @@
+
 <!DOCTYPE html>
 <html lang="ro">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Despre Noi – Grija pentru Bunici</title>
+  <title>Despre Noi | Grija pentru Bunici</title>
   <link rel="stylesheet" href="style.css">
 
   <style>
-    body {
-      margin: 0;
-      font-family: 'Poppins', sans-serif;
-      background-color: #fff9f9;
-      color: #333;
-    }
-
-    /* 🔹 NAVBAR IDENTICĂ CU PAGINA ACASĂ DAR FĂRĂ INIMĂ */
+    /* === NAV === */
     header {
-      background-color: #f7ccd5;
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      padding: 12px 10%;
+      background-color: #f6b1b1;
+      padding: 15px 0;
       position: fixed;
-      top: 0;
-      left: 0;
       width: 100%;
+      top: 0;
       z-index: 1000;
-      box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+      box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1); /* umbră discretă sub bara roz */
     }
 
-    header a.logo {
-      color: #5a2a38;
-      text-decoration: none;
-      font-size: 1.3rem;
-      font-weight: 600;
-    }
-
-    nav ul {
-      list-style: none;
-      margin: 0;
-      padding: 0;
+    nav {
       display: flex;
-      gap: 25px;
+      justify-content: center;
+      gap: 40px;
     }
 
-    nav ul li a {
+    nav a {
+      color: white;
       text-decoration: none;
-      color: #5a2a38;
-      font-weight: 500;
-      transition: color 0.3s;
+      font-weight: bold;
+      font-size: 1.1em;
+      transition: color 0.3s ease;
     }
 
-    nav ul li a:hover {
-      color: #a94a64;
+    nav a:hover,
+    nav a.active {
+      color: #5a2a2a;
     }
 
-    /* 🔹 HERO IMAGE */
+    /* === HERO === */
     .hero {
       position: relative;
-      margin-top: 70px;
       text-align: center;
+      color: white;
+      margin-top: 80px; /* împinge imaginea sub bara roz */
+      overflow: hidden;
+      animation: fadeIn 1.5s ease forwards;
     }
 
-    .hero img {
+    .hero-image {
       width: 100%;
-      height: 400px;
+      height: 70vh;
       object-fit: cover;
       filter: brightness(70%);
+      transform: scale(1.05);
+      opacity: 0;
+      animation: fadeZoom 2s ease forwards;
     }
 
     .hero-text {
@@ -74,151 +63,100 @@
       top: 50%;
       left: 50%;
       transform: translate(-50%, -50%);
-      color: white;
-      text-shadow: 2px 2px 10px rgba(0,0,0,0.4);
+      text-shadow: 0 2px 10px rgba(0, 0, 0, 0.4);
+      opacity: 0;
+      animation: fadeText 2s ease 0.6s forwards;
     }
 
     .hero-text h1 {
-      font-size: 2.5rem;
-      margin: 0;
+      font-size: 3em;
+      color: #fff;
+      margin-bottom: 10px;
     }
 
-    /* 🔹 CONȚINUT */
+    .hero-text p {
+      font-size: 1.2em;
+      color: #fff;
+    }
+
+    @keyframes fadeIn {
+      from { opacity: 0; }
+      to { opacity: 1; }
+    }
+
+    @keyframes fadeZoom {
+      from { opacity: 0; transform: scale(1.1); }
+      to { opacity: 1; transform: scale(1.03); }
+    }
+
+    @keyframes fadeText {
+      from { opacity: 0; transform: translate(-50%, -40%); }
+      to { opacity: 1; transform: translate(-50%, -50%); }
+    }
+
+    /* === CONTENT === */
     .content {
-      max-width: 1100px;
-      margin: 60px auto;
+      max-width: 900px;
+      margin: 50px auto;
       padding: 0 20px;
-      line-height: 1.8;
+      line-height: 1.7;
+      font-size: 1.1em;
+      color: #333;
     }
 
     .content h2 {
-      color: #b85c72;
+      color: #c76b7d;
       text-align: center;
       margin-bottom: 20px;
-      font-size: 1.8rem;
     }
 
-    .section {
-      margin-bottom: 60px;
-    }
-
-    .about-section {
-      display: flex;
-      flex-wrap: wrap;
-      align-items: center;
-      gap: 30px;
-    }
-
-    .about-section img {
-      flex: 1 1 400px;
-      width: 100%;
-      border-radius: 10px;
-      box-shadow: 0 3px 10px rgba(0,0,0,0.1);
-    }
-
-    .about-section div {
-      flex: 1 1 400px;
-    }
-
-    /* 🔹 CONTACT BOX */
-    .contact-box {
-      background-color: #ffe6eb;
-      border-radius: 12px;
-      padding: 30px;
+    /* === FOOTER === */
+    footer {
+      background-color: #f6b1b1;
       text-align: center;
-      box-shadow: 0 3px 10px rgba(0,0,0,0.1);
-    }
-
-    .contact-box a {
-      display: inline-block;
-      background-color: #b85c72;
+      padding: 20px;
+      margin-top: 50px;
       color: white;
-      padding: 12px 25px;
-      border-radius: 30px;
-      text-decoration: none;
-      font-weight: 600;
-      margin-top: 10px;
-    }
-
-    .contact-box a:hover {
-      background-color: #a34f63;
-    }
-
-    @media (max-width: 768px) {
-      header {
-        flex-direction: column;
-        gap: 10px;
-      }
-      .hero img { height: 300px; }
-      .hero-text h1 { font-size: 1.8rem; }
-      .about-section { flex-direction: column; }
+      font-weight: bold;
     }
   </style>
 </head>
-<body>
 
-  <!-- 🔹 NAVBAR -->
+<body>
   <header>
-    <a href="index.html" class="logo">Grija pentru Bunici</a>
     <nav>
-      <ul>
-        <li><a href="index.html">Acasă</a></li>
-        <li><a href="despre-noi.html" class="active">Despre Noi</a></li>
-        <li><a href="caut-ajutor.html">Caut Ajutor</a></li>
-        <li><a href="caut-loc-de-munca.html">Caut Loc de Muncă</a></li>
-      </ul>
+      <a href="index.html">Acasă</a>
+      <a href="despre-noi.html" class="active">Despre Noi</a>
+      <a href="caut-ajutor.html">Caut Ajutor</a>
+      <a href="caut-loc-de-munca.html">Caut Loc de Muncă</a>
+      <a href="mailto:grijapentrubunici@yahoo.com">Contact</a>
     </nav>
   </header>
 
-  <!-- 🔹 HERO -->
   <section class="hero">
-    <img src="despre-noi-hero.jpg.png" alt="Echipa Grija pentru Bunici">
+    <img src="https://raw.githubusercontent.com/grijapentrubunici/grija-pentru-bunici/main/despre-noi-hero.jpg.png"
+         alt="Echipa Grija pentru Bunici" class="hero-image">
     <div class="hero-text">
       <h1>Despre Noi</h1>
+      <p>O echipă dedicată grijii, empatiei și încrederii</p>
     </div>
   </section>
 
-  <!-- 🔹 CONȚINUT -->
-  <div class="content">
+  <section class="content">
+    <h2>Grijă, Respect și Încredere</h2>
+    <p>
+      „Grija pentru Bunici” a apărut din dorința sinceră de a oferi sprijin persoanelor vârstnice și familiilor
+      care caută ajutor de încredere. Ne dorim să construim o punte între oameni – între cei care oferă ajutor și
+      cei care au nevoie de el.
+    </p>
 
-    <div class="section">
-      <h2>Misiunea Noastră</h2>
-      <p>
-        La <strong>Grija pentru Bunici</strong> credem că fiecare persoană merită atenție, respect și sprijin. 
-        Suntem dedicați să oferim servicii de îngrijire personalizate pentru seniori, cu grijă, profesionalism și empatie.
-      </p>
-    </div>
+    <p>
+      Echipa noastră colaborează cu îngrijitori, menajere și însoțitori cu experiență, care înțeleg importanța
+      respectului, răbdării și empatiei în fiecare gest. Fiecare colaborator este ales cu grijă, pentru ca
+      familia ta să simtă siguranță și liniște.
+    </p>
 
-    <div class="section">
-      <h2>Experiență și Expertiză</h2>
-      <p>
-        Avem peste <strong>10 ani de experiență în străinătate</strong> în identificarea nevoilor fiecărei familii și în găsirea 
-        candidatului potrivit pentru fiecare situație.  
-        Suntem o <strong>agenție introductoare</strong> — noi ne ocupăm de selecție, verificări și de aducerea personalului 
-        potrivit direct la familii, acasă.
-      </p>
-    </div>
+    <p>
+      Suntem mândri să fim parte dintr-o comunitate
 
-    <div class="about-section section">
-      <img src="images/grijapentrubunici-team.jpg" alt="Echipa Grija pentru Bunici">
-      <div>
-        <h2>Profesionalism și Încredere</h2>
-        <p>
-          Fiecare colaborator al nostru este atent selectat și instruit pentru a oferi sprijin de calitate, 
-          fie că este vorba despre îngrijirea unui vârstnic, menaj sau servicii de bonă.  
-          Grija noastră nu se oprește la intermediere — rămânem aproape de familie și oferim sprijin constant.
-        </p>
-      </div>
-    </div>
-
-    <div class="contact-box section">
-      <h2>Contactează-ne</h2>
-      <p>Suntem mereu disponibili pentru întrebări, colaborări și recomandări.</p>
-      <p><strong>📞 0793 553 703</strong></p>
-      <a href="https://wa.me/40793553703" target="_blank">Scrie-ne pe WhatsApp</a>
-    </div>
-
-  </div>
-
-</body>
-</html>
+      
