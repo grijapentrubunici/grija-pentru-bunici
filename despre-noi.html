@@ -1,88 +1,233 @@
 <!DOCTYPE html>
 <html lang="ro">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Despre Noi - Grijă pentru Bunici</title>
-
-  <!-- Fonturi + CSS principal -->
-  <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600&family=Poppins:wght@500;700&display=swap" rel="stylesheet">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Despre Noi – Grija pentru Bunici</title>
   <link rel="stylesheet" href="style.css">
-</head>
+  <style>
+    body {
+      font-family: 'Poppins', sans-serif;
+      background-color: #fff;
+      margin: 0;
+      color: #333;
+    }
 
+    /* Navbar simplu (alb, fără roz, fără inimă) */
+    header {
+      width: 100%;
+      background-color: white;
+      display: flex;
+      justify-content: center;
+      position: fixed;
+      top: 0;
+      left: 0;
+      z-index: 1000;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+    }
+
+    nav {
+      width: 90%;
+      max-width: 1200px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 15px 0;
+    }
+
+    nav .logo {
+      font-size: 1.4rem;
+      font-weight: 600;
+      color: #5a2a38;
+      text-decoration: none;
+    }
+
+    nav ul {
+      list-style: none;
+      display: flex;
+      gap: 25px;
+      margin: 0;
+      padding: 0;
+    }
+
+    nav ul li a {
+      text-decoration: none;
+      color: #5a2a38;
+      font-weight: 500;
+      transition: color 0.3s;
+    }
+
+    nav ul li a:hover {
+      color: #b85c72;
+    }
+
+    /* Hero Section */
+    .hero {
+      position: relative;
+      text-align: center;
+      height: 60vh;
+      overflow: hidden;
+      margin-top: 80px; /* spațiu sub navbar */
+    }
+
+    .hero img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      filter: brightness(70%);
+    }
+
+    .hero-text {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      color: white;
+      text-shadow: 2px 2px 10px rgba(0,0,0,0.5);
+    }
+
+    .hero-text h1 {
+      font-size: 3rem;
+      margin-bottom: 10px;
+    }
+
+    /* Conținut principal */
+    .content {
+      max-width: 1100px;
+      margin: 60px auto;
+      padding: 0 20px;
+      line-height: 1.8;
+    }
+
+    .content h2 {
+      color: #b85c72;
+      margin-bottom: 15px;
+      font-size: 1.8rem;
+      text-align: center;
+    }
+
+    .section {
+      margin-bottom: 60px;
+    }
+
+    /* Imagine + text lateral */
+    .about-section {
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      gap: 30px;
+    }
+
+    .about-section img {
+      flex: 1 1 400px;
+      width: 100%;
+      border-radius: 12px;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+    }
+
+    .about-section div {
+      flex: 1 1 400px;
+    }
+
+    /* Contact box */
+    .contact-box {
+      background-color: #fff9f9;
+      border-radius: 12px;
+      padding: 30px;
+      text-align: center;
+      box-shadow: 0 3px 10px rgba(0,0,0,0.05);
+    }
+
+    .contact-box a {
+      display: inline-block;
+      background-color: #b85c72;
+      color: white;
+      padding: 12px 25px;
+      border-radius: 30px;
+      text-decoration: none;
+      font-weight: 600;
+      margin-top: 15px;
+    }
+
+    .contact-box a:hover {
+      background-color: #a34f63;
+    }
+
+    @media (max-width: 768px) {
+      nav ul {
+        flex-direction: column;
+        gap: 10px;
+      }
+
+      .hero-text h1 { font-size: 2rem; }
+      .about-section { flex-direction: column; }
+    }
+  </style>
+</head>
 <body>
 
-  <!-- ❤️ Bara sus -->
+  <!-- NAVBAR -->
   <header>
-    <h1>Grijă pentru Bunici</h1>
+    <nav>
+      <a href="index.html" class="logo">Grija pentru Bunici</a>
+      <ul>
+        <li><a href="index.html">Acasă</a></li>
+        <li><a href="despre-noi.html">Despre Noi</a></li>
+        <li><a href="caut-ajutor.html">Caut Ajutor</a></li>
+        <li><a href="caut-loc-de-munca.html">Caut Loc de Muncă</a></li>
+      </ul>
+    </nav>
   </header>
 
-  <nav class="navbar">
-    <a href="index.html">Acasă</a>
-    <a href="despre-noi.html" class="active">Despre Noi</a>
-    <a href="caut-ajutor.html">Caut Ajutor</a>
-    <a href="caut-loc-de-munca.html">Caut Loc de Muncă</a>
-    <a href="contact.html">Contact</a>
-  </nav>
-
-  <!-- 🌿 Hero -->
-  <section class="hero-despre-noi">
-    <h1>Despre Noi</h1>
-    <div class="banner-text">Îngrijire cu experiență și suflet</div>
+  <!-- HERO -->
+  <section class="hero">
+    <img src="despre-noi-hero.jpg.png" alt="Echipa Grija pentru Bunici">
+    <div class="hero-text">
+      <h1>Despre Noi</h1>
+      <p>Îngrijire cu suflet și responsabilitate</p>
+    </div>
   </section>
 
-  <!-- 💬 Secțiune de prezentare -->
-  <section class="info container">
-    <h3>Cine suntem</h3>
-    <p>
-      Suntem o echipă dedicată de profesioniști care cred în puterea empatiei și a grijii autentice.  
-      Cu peste <b>10 ani de experiență în străinătate</b> în identificarea nevoilor familiilor și a găsirii candidatului potrivit,  
-      am învățat că fiecare persoană merită atenție și sprijin personalizat.
-    </p>
-  </section>
+  <!-- CONȚINUT PRINCIPAL -->
+  <div class="content">
 
-  <section class="info container">
-    <h3>Misiunea noastră</h3>
-    <p>
-      <b>Grijă pentru Bunici</b> este o agenție introductoare — ne ocupăm cu selectarea, verificarea și prezentarea  
-      îngrijitorilor potriviți pentru familiile care au nevoie de ajutor.  
-      Ne asumăm responsabilitatea de a schimba personalul atunci când este necesar  
-      și de a aduce oameni de încredere direct la domiciliul familiilor.
-    </p>
-  </section>
+    <div class="section">
+      <h2>Misiunea Noastră</h2>
+      <p>
+        La <strong>Grija pentru Bunici</strong> credem că fiecare persoană merită atenție, respect și sprijin. 
+        Suntem dedicați să oferim servicii de îngrijire personalizate pentru seniori, cu grijă, profesionalism și empatie.
+      </p>
+    </div>
 
-  <section class="info container">
-    <h3>Valorile noastre</h3>
-    <ul>
-      <li>Empatie și respect față de fiecare persoană</li>
-      <li>Comunicare deschisă și onestitate</li>
-      <li>Profesionalism și promptitudine</li>
-      <li>Confidențialitate și responsabilitate</li>
-    </ul>
-  </section>
+    <div class="section">
+      <h2>Experiență și Expertiză</h2>
+      <p>
+        Avem peste <strong>10 ani de experiență în străinătate</strong> în identificarea nevoilor fiecărei familii și în găsirea 
+        candidatului potrivit pentru fiecare situație.  
+        Suntem o <strong>agenție introductoare</strong> — noi ne ocupăm de selecție, verificări și de aducerea personalului 
+        potrivit direct la familii, acasă.
+      </p>
+    </div>
 
-  <!-- 📸 Imagine reprezentativă -->
-  <section class="info">
-    <img src="despre-noi-hero.jpg.png" alt="Echipă de îngrijitoare zâmbitoare" style="width:100%; border-radius:12px; box-shadow:0 6px 18px rgba(0,0,0,0.15); max-width:900px;">
-  </section>
+    <div class="about-section section">
+      <img src="images/grijapentrubunici-team.jpg" alt="Echipa Grija pentru Bunici">
+      <div>
+        <h2>Profesionalism și Încredere</h2>
+        <p>
+          Fiecare colaborator al nostru este atent selectat și instruit pentru a oferi sprijin de calitate, 
+          fie că este vorba despre îngrijirea unui vârstnic, menaj sau servicii de bonă.  
+          Grija noastră nu se oprește la intermediere — rămânem aproape de familie și oferim sprijin constant.
+        </p>
+      </div>
+    </div>
 
-  <!-- 📞 Footer -->
-  <footer>
-    <p>&copy; 2025 Grijă pentru Bunici. Toate drepturile rezervate.</p>
-    <p>
-      Contact: 
-      <a href="mailto:grijapentrubunici@yahoo.com">grijapentrubunici@yahoo.com</a> |
-      <a href="https://wa.me/40793553703" target="_blank">WhatsApp</a>
-    </p>
-  </footer>
+    <div class="contact-box section">
+      <h2>Contactează-ne</h2>
+      <p>Dacă dorești să afli mai multe sau să colaborăm, suntem aici pentru tine.</p>
+      <a href="https://wa.me/40740044448" target="_blank">Scrie-ne pe WhatsApp</a>
+    </div>
 
-  <!-- 🔰 Buton WhatsApp -->
-  <a href="https://api.whatsapp.com/send?phone=40793553703&text=Bună!%20Aș%20dori%20mai%20multe%20informații%20despre%20Grijă%20pentru%20Bunici."
-     class="whatsapp-float" target="_blank" title="Scrie-ne pe WhatsApp">
-    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512" width="32" height="32" fill="white">
-      <path d="M380.9 97.1C339 55.1 283.2 32 224.5 32 103.5 32 4 131.5 4 252.5c0 43.6 11.4 85.5 33.1 122.6L0 480l108.7-35.4c35.7 19.6 75.9 29.9 116.7 29.9h.1c120.9 0 220.5-99.5 220.5-220.5 0-58.7-23.1-114.5-65.1-156.5zM224.5 438.7c-36.7 0-72.8-9.8-104.3-28.4l-7.5-4.4-64.5 21 21.3-63-4.9-7.8c-20.7-33.2-31.6-71.5-31.6-110.6C33 147.4 120 60.5 224.5 60.5c53.9 0 104.6 21 142.8 59.1 38.2 38.2 59.3 88.9 59.3 142.8 0 104.5-86.9 191.3-202.1 191.3zm121.1-144.3c-6.6-3.3-39.1-19.3-45.2-21.5-6.1-2.3-10.6-3.3-15.1 3.3s-17.3 21.5-21.2 26-7.8 5-14.4 1.7c-39.1-19.5-64.7-34.8-90.1-78.9-6.8-11.7 6.8-10.9 19.5-36.3 2.2-4.3 1.1-8-0.6-11.3-1.7-3.3-15.1-36.3-20.7-49.7-5.4-13-10.9-11.2-15.1-11.4-3.9-.2-8.4-.2-12.9-.2s-11.8 1.7-18 8.4c-6.1 6.6-23.7 23.2-23.7 56.6s24.2 65.5 27.5 70c3.3 4.4 47.6 72.6 115.4 101.8 16.1 7 28.7 11.2 38.5 14.4 16.2 5.2 30.9 4.5 42.6 2.7 13-2 39.1-16 44.6-31.4 5.5-15.4 5.5-28.6 3.9-31.4-1.6-2.8-6.1-4.4-12.7-7.7z"/>
-    </svg>
-  </a>
+  </div>
 
 </body>
 </html>
