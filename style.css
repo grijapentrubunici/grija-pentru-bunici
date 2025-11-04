@@ -1,36 +1,7 @@
-/* 🌸 Paleta Grijă pentru Bunici – elegantă și neutră */
-:root {
-  --roz-deschis: #f4b6b8;   /* roz pastel pentru accente subtile */
-  --roz-soft: #f7c7c9;      /* roz foarte pal, doar pentru hover */
-  --bej-fundal: #f8f4f2;    /* crem pentru bara de sus */
-  --bg: #fffaf9;            /* fundal general */
-  --text: #2f2f2f;          /* text principal */
-}
-
-/* --- Import fonturi Google --- */
-@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600&family=Poppins:wght@500;700&display=swap');
-
-/* --- Setări generale --- */
-body {
-  font-family: 'Open Sans', sans-serif;
-  margin: 0;
-  padding: 0;
-  background-color: var(--bg);
-  color: var(--text);
-  line-height: 1.6;
-}
-
-/* --- Titluri --- */
-h1, h2, h3, h4 {
-  font-family: 'Poppins', sans-serif;
-  font-weight: 600;
-  color: #4a2c2a;
-}
-
 /* --- Bara de navigare fixă sus --- */
 header {
-  background-color: var(--bej-fundal);
-  color: #4a2c2a;
+  background-color: #f8f4f2; /* crem deschis */
+  color: #4a2c2a; /* maro cald */
   text-align: center;
   padding: 15px 0;
   font-size: 24px;
@@ -42,18 +13,18 @@ header {
 }
 
 .navbar {
-  background-color: #fffaf9;
+  background-color: #fffaf9; /* aproape alb, luminos */
   display: flex;
   justify-content: center;
   align-items: center;
   flex-wrap: wrap;
   gap: 25px;
   padding: 12px 0;
-  border-bottom: 2px solid #f3d1d1;
+  border-bottom: 1px solid #e2d3c5; /* linie discretă între bară și conținut */
 }
 
 nav a {
-  color: #4a2c2a;
+  color: #4a2c2a; /* text maro cald */
   text-decoration: none;
   font-weight: 600;
   font-size: 17px;
@@ -63,72 +34,27 @@ nav a {
 }
 
 nav a:hover {
-  background-color: var(--roz-deschis);
-  color: white;
+  background-color: #e9d8c7; /* bej-miere la hover */
+  color: #3c1f1d; /* text puțin mai închis */
 }
 
-/* --- Hero general (pagina Acasă) --- */
-.hero {
-  background: linear-gradient(rgba(255, 200, 195, 0.75), rgba(255, 200, 195, 0.75)),
-              url('https://images.unsplash.com/photo-1607746882042-944635dfe10e?auto=format&fit=crop&w=1350&q=80') center/cover;
-  color: #402523;
+/* --- Footer (bara de jos) --- */
+footer {
+  background-color: #e9d8c7; /* bej cald miere */
+  color: #3c1f1d;
   text-align: center;
-  padding: 80px 20px;
-  border-bottom: 5px solid var(--roz-deschis);
+  padding: 25px 10px;
+  font-size: 0.95rem;
+  margin-top: 40px;
+  box-shadow: 0 -2px 6px rgba(0, 0, 0, 0.05);
 }
 
-.hero h2 {
-  font-size: 2rem;
-  margin-bottom: 15px;
+footer a {
+  color: #3c1f1d;
+  text-decoration: underline;
+  font-weight: 600;
 }
 
-.hero p {
-  font-size: 1.2rem;
-  margin-bottom: 25px;
+footer a:hover {
+  color: #5e3b2e; /* puțin mai intens la hover */
 }
-
-.btn {
-  background-color: var(--roz-deschis);
-  color: white;
-  padding: 12px 28px;
-  border-radius: 30px;
-  text-decoration: none;
-  font-weight: bold;
-  transition: 0.3s;
-}
-
-.btn:hover {
-  background-color: #f28f92;
-}
-
-/* --- Secțiuni interioare --- */
-.container {
-  width: 90%;
-  max-width: 1000px;
-  margin: 0 auto;
-}
-
-.info {
-  padding: 60px 20px;
-  text-align: center;
-}
-
-.info h3 {
-  color: #6e2e2c;
-  margin-bottom: 25px;
-  font-size: 1.6rem;
-}
-
-.info ul {
-  list-style: none;
-  padding: 0;
-}
-
-.info li {
-  margin: 10px 0;
-  font-size: 1.1rem;
-}
-
-/* --- HERO PAGINA DESPRE NOI --- */
-.hero-despre-noi {
-  backgrou
