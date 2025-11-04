@@ -1,30 +1,59 @@
-/* --- Bara de navigare fixă sus --- */
+/* 🌿 Grijă pentru Bunici – Stil final, crem & bej */
+
+/* --- Paletă de culori --- */
+:root {
+  --bej-deschis: #f8f4f2;
+  --bej-inchis: #e9d8c7;
+  --maro-cald: #4a2c2a;
+  --maro-text: #3c1f1d;
+}
+
+/* --- Setări generale --- */
+body {
+  font-family: 'Open Sans', sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: var(--bej-deschis);
+  color: var(--maro-text);
+  scroll-behavior: smooth;
+}
+
+/* --- Bara de sus --- */
 header {
-  background-color: #f8f4f2; /* crem deschis */
-  color: #4a2c2a; /* maro cald */
+  background-color: var(--bej-deschis);
+  color: var(--maro-cald);
   text-align: center;
-  padding: 15px 0;
-  font-size: 24px;
+  padding: 10px 0 0;
+  font-size: 26px;
   font-weight: 700;
   position: sticky;
   top: 0;
   z-index: 1000;
   box-shadow: 0 2px 6px rgba(0, 0, 0, 0.05);
+  font-family: 'Poppins', sans-serif;
 }
 
+header h1 {
+  margin: 10px 0;
+  font-size: 1.7rem;
+  font-weight: 700;
+}
+
+/* --- Bara de navigare --- */
 .navbar {
-  background-color: #fffaf9; /* aproape alb, luminos */
+  background-color: #fffaf9;
   display: flex;
   justify-content: center;
   align-items: center;
   flex-wrap: wrap;
   gap: 25px;
   padding: 12px 0;
-  border-bottom: 1px solid #e2d3c5; /* linie discretă între bară și conținut */
+  border-top: 1px solid #e2d3c5;
+  border-bottom: 1px solid #e2d3c5;
 }
 
 nav a {
-  color: #4a2c2a; /* text maro cald */
+  color: var(--maro-cald);
   text-decoration: none;
   font-weight: 600;
   font-size: 17px;
@@ -34,14 +63,135 @@ nav a {
 }
 
 nav a:hover {
-  background-color: #e9d8c7; /* bej-miere la hover */
-  color: #3c1f1d; /* text puțin mai închis */
+  background-color: var(--bej-inchis);
+  color: var(--maro-text);
 }
 
-/* --- Footer (bara de jos) --- */
+/* --- Secțiunea Hero (Acasă) --- */
+.hero {
+  background: linear-gradient(rgba(255, 245, 238, 0.3), rgba(255, 245, 238, 0.3)),
+              url('hero-ingrijitoare.jpg') center/cover no-repeat;
+  text-align: center;
+  padding: 50px 20px; /* micșorată ca să se vadă textul imediat */
+  color: var(--maro-text);
+  border-bottom: 4px solid var(--bej-inchis);
+}
+
+.hero h2 {
+  font-family: 'Poppins', sans-serif;
+  font-size: 1.9rem;
+  margin-bottom: 10px;
+}
+
+.hero p {
+  font-size: 1.1rem;
+  margin-bottom: 20px;
+}
+
+.btn {
+  background-color: var(--bej-inchis);
+  color: var(--maro-text);
+  padding: 12px 28px;
+  border-radius: 30px;
+  text-decoration: none;
+  font-weight: bold;
+  transition: 0.3s;
+  border: none;
+}
+
+.btn:hover {
+  background-color: var(--maro-cald);
+  color: #fff;
+}
+
+/* --- Secțiuni interioare --- */
+.container {
+  width: 90%;
+  max-width: 1000px;
+  margin: 0 auto;
+}
+
+.info {
+  padding: 60px 20px;
+  text-align: center;
+}
+
+.info h3 {
+  font-family: 'Poppins', sans-serif;
+  color: var(--maro-cald);
+  margin-bottom: 25px;
+  font-size: 1.6rem;
+}
+
+.info p, .info li {
+  font-size: 1.1rem;
+  line-height: 1.7;
+}
+
+/* --- Carduri servicii --- */
+.services {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 1.5rem;
+  padding: 3rem 2rem;
+  background-color: #fff;
+}
+
+.service-card {
+  background: #fff;
+  border: 1px solid #eee;
+  border-radius: 12px;
+  padding: 1.5rem;
+  box-shadow: 0 3px 8px rgba(0, 0, 0, 0.05);
+  transition: all 0.3s ease;
+}
+
+.service-card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.1);
+}
+
+.service-card h3 {
+  color: var(--maro-cald);
+  font-family: 'Poppins', sans-serif;
+  margin-top: 0;
+  margin-bottom: 10px;
+}
+
+/* --- HERO Pagină “Despre Noi” --- */
+.hero-despre-noi {
+  background-image: url('despre-noi-hero.jpg.png');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  height: 60vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  border-bottom: 5px solid var(--bej-inchis);
+}
+
+.hero-despre-noi::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: rgba(232, 212, 197, 0.3);
+}
+
+.hero-despre-noi h1 {
+  position: relative;
+  z-index: 2;
+  color: #fff;
+  font-size: 3rem;
+  font-family: 'Poppins', sans-serif;
+  text-shadow: 2px 2px 6px rgba(0, 0, 0, 0.3);
+}
+
+/* --- Footer --- */
 footer {
-  background-color: #e9d8c7; /* bej cald miere */
-  color: #3c1f1d;
+  background-color: var(--bej-inchis);
+  color: var(--maro-text);
   text-align: center;
   padding: 25px 10px;
   font-size: 0.95rem;
@@ -50,11 +200,59 @@ footer {
 }
 
 footer a {
-  color: #3c1f1d;
+  color: var(--maro-text);
   text-decoration: underline;
   font-weight: 600;
 }
 
 footer a:hover {
-  color: #5e3b2e; /* puțin mai intens la hover */
+  color: var(--maro-cald);
+}
+
+/* --- Buton WhatsApp plutitor --- */
+.whatsapp-float {
+  position: fixed;
+  width: 60px;
+  height: 60px;
+  bottom: 25px;
+  right: 25px;
+  background-color: #25D366;
+  border-radius: 50%;
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  box-shadow: 0 3px 8px rgba(0, 0, 0, 0.3);
+  transition: all 0.3s ease;
+  z-index: 999;
+}
+
+.whatsapp-float:hover {
+  background-color: #1ebe57;
+  transform: scale(1.08);
+}
+
+/* --- Responsivitate --- */
+@media (max-width: 768px) {
+  .navbar {
+    flex-direction: column;
+    text-align: center;
+    gap: 10px;
+  }
+
+  header h1 {
+    font-size: 1.4rem;
+  }
+
+  .hero {
+    padding: 40px 10px;
+  }
+
+  .hero h2 {
+    font-size: 1.6rem;
+  }
+
+  .info h3 {
+    font-size: 1.3rem;
+  }
 }
