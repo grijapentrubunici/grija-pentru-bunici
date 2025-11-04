@@ -3,39 +3,159 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Despre Noi – Grija pentru Bunici</title>
+  <title>Despre Noi | Grija pentru Bunici</title>
   <link rel="stylesheet" href="style.css">
+
   <style>
-    /* 🔸 doar culoarea, nimic altceva */
-    body {
-      background-color: #fff6f4; /* aceeași culoare ca pe restul site-ului */
-      margin: 0;
-      font-family: 'Poppins', sans-serif;
+    /* === NAV === */
+    header {
+      background-color: #f6b1b1;
+      padding: 15px 0;
+      position: fixed;
+      width: 100%;
+      top: 0;
+      z-index: 1000;
+      box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1); /* umbră discretă sub bara roz */
     }
 
+    nav {
+      display: flex;
+      justify-content: center;
+      gap: 40px;
+    }
+
+    nav a {
+      color: white;
+      text-decoration: none;
+      font-weight: bold;
+      font-size: 1.1em;
+      transition: color 0.3s ease;
+    }
+
+    nav a:hover,
+    nav a.active {
+      color: #5a2a2a;
+    }
+
+    /* === HERO === */
+    .hero {
+      position: relative;
+      text-align: center;
+      color: white;
+      margin-top: 80px; /* împinge imaginea sub bara roz */
+      overflow: hidden;
+      animation: fadeIn 1.5s ease forwards;
+    }
+
+    .hero-image {
+      width: 100%;
+      height: 70vh;
+      object-fit: cover;
+      filter: brightness(70%);
+      transform: scale(1.05);
+      opacity: 0;
+      animation: fadeZoom 2s ease forwards;
+    }
+
+    .hero-text {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      text-shadow: 0 2px 10px rgba(0, 0, 0, 0.4);
+      opacity: 0;
+      animation: fadeText 2s ease 0.6s forwards;
+    }
+
+    .hero-text h1 {
+      font-size: 3em;
+      color: #fff;
+      margin-bottom: 10px;
+    }
+
+    .hero-text p {
+      font-size: 1.2em;
+      color: #fff;
+    }
+
+    @keyframes fadeIn {
+      from { opacity: 0; }
+      to { opacity: 1; }
+    }
+
+    @keyframes fadeZoom {
+      from { opacity: 0; transform: scale(1.1); }
+      to { opacity: 1; transform: scale(1.03); }
+    }
+
+    @keyframes fadeText {
+      from { opacity: 0; transform: translate(-50%, -40%); }
+      to { opacity: 1; transform: translate(-50%, -50%); }
+    }
+
+    /* === CONTENT === */
+    .content {
+      max-width: 900px;
+      margin: 50px auto;
+      padding: 0 20px;
+      line-height: 1.7;
+      font-size: 1.1em;
+      color: #333;
+    }
+
+    .content h2 {
+      color: #c76b7d;
+      text-align: center;
+      margin-bottom: 20px;
+    }
+
+    /* === FOOTER === */
     footer {
-      background-color: #fff6f4; /* uniform, aceeași nuanță jos */
+      background-color: #f6b1b1;
+      text-align: center;
+      padding: 20px;
+      margin-top: 50px;
+      color: white;
+      font-weight: bold;
     }
   </style>
 </head>
-<body>
 
-  <!-- conținutul tău existent -->
+<body>
   <header>
-    <!-- bara ta de navigare -->
+    <nav>
+      <a href="index.html">Acasă</a>
+      <a href="despre-noi.html" class="active">Despre Noi</a>
+      <a href="caut-ajutor.html">Caut Ajutor</a>
+      <a href="caut-loc-de-munca.html">Caut Loc de Muncă</a>
+      <a href="mailto:grijapentrubunici@yahoo.com">Contact</a>
+    </nav>
   </header>
 
   <section class="hero">
-    <!-- imaginea ta despre noi -->
+    <img src="https://raw.githubusercontent.com/grijapentrubunici/grija-pentru-bunici/main/despre-noi-hero.jpg.png"
+         alt="Echipa Grija pentru Bunici" class="hero-image">
+    <div class="hero-text">
+      <h1>Despre Noi</h1>
+      <p>O echipă dedicată grijii, empatiei și încrederii</p>
+    </div>
   </section>
 
-  <div class="content">
-    <!-- textul și secțiunile existente -->
-  </div>
+  <section class="content">
+    <h2>Grijă, Respect și Încredere</h2>
+    <p>
+      „Grija pentru Bunici” a apărut din dorința sinceră de a oferi sprijin persoanelor vârstnice și familiilor
+      care caută ajutor de încredere. Ne dorim să construim o punte între oameni – între cei care oferă ajutor și
+      cei care au nevoie de el.
+    </p>
 
-  <footer>
-    <p>© 2025 Grija pentru Bunici | Termeni și condiții | Politica de confidențialitate | Contact WhatsApp: 0793 553 703</p>
-  </footer>
+    <p>
+      Echipa noastră colaborează cu îngrijitori, menajere și însoțitori cu experiență, care înțeleg importanța
+      respectului, răbdării și empatiei în fiecare gest. Fiecare colaborator este ales cu grijă, pentru ca
+      familia ta să simtă siguranță și liniște.
+    </p>
 
-</body>
-</html>
+    <p>
+      Suntem mândri să fim parte dintr-o comunitate
+
+      
