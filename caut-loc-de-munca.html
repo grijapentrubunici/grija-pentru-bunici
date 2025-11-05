@@ -158,4 +158,82 @@
   <main>
     <h2>Caut Loc de Muncă</h2>
 
-    <p clas
+    <p class="descriere">
+      Cauți un loc de muncă în domeniul <b>îngrijirii persoanelor vârstnice</b>, ca <b>menajeră</b> sau <b>bonă</b>?  
+      Completează formularul de mai jos cu datele tale și experiența ta, iar echipa <b>Grijă pentru Bunici</b> te va contacta în cel mai scurt timp.  
+      🌷 Căutăm persoane serioase, cu empatie și dorință de a aduce zâmbete celor din jur.
+    </p>
+
+    <!-- Formular -->
+    <form id="cautJobForm">
+      <label for="nume">Nume complet:</label>
+      <input type="text" id="nume" name="nume" required>
+
+      <label for="email">Email:</label>
+      <input type="email" id="email" name="email" required>
+
+      <label for="telefon">Telefon:</label>
+      <input type="text" id="telefon" name="telefon" required>
+
+      <label for="oras">Oraș / localitate:</label>
+      <input type="text" id="oras" name="oras" required>
+
+      <label for="experienta">Experiență (ani sau descriere scurtă):</label>
+      <textarea id="experienta" name="experienta" rows="4" placeholder="Ex: 5 ani experiență ca îngrijitoare persoane vârstnice..." required></textarea>
+
+      <label for="tip-loc-munca">Tipul de loc de muncă dorit:</label>
+      <select id="tip-loc-munca" name="tip-loc-munca" required>
+        <option value="">Selectează...</option>
+        <option value="ingrijitoare">Îngrijitoare seniori</option>
+        <option value="menajera">Menajeră</option>
+        <option value="bona">Bonă</option>
+      </select>
+
+      <button type="submit">Trimite aplicația</button>
+
+      <p style="font-size: 0.85rem; color: #666; text-align: center; margin-top: 10px;">
+        Prin completarea acestui formular, confirm că am citit și sunt de acord cu
+        <a href="confidentialitate.html" target="_blank" style="color: var(--rose); text-decoration: underline;">Politica de confidențialitate</a>
+        și
+        <a href="termeni.html" target="_blank" style="color: var(--rose); text-decoration: underline;">Termenii și condițiile</a>.
+      </p>
+    </form>
+
+    <p id="mesajConfirmare">Mulțumim! Cererea ta a fost trimisă cu succes. ❤️</p>
+  </main>
+
+  <footer>
+    © 2025 Grijă pentru Bunici — Toate drepturile rezervate.
+  </footer>
+
+  <a href="https://api.whatsapp.com/send?phone=40793553703&text=Bună!%20Sunt%20interesată%20de%20un%20loc%20de%20muncă."
+     class="whatsapp-float" target="_blank" title="Scrie-ne pe WhatsApp">
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512" width="32" height="32" fill="white">
+      <path d="M380.9 97.1C339 55.1 283.2 32 224.5 32 103.5 32 4 131.5 4 252.5c0 43.6 11.4 85.5 33.1 122.6L0 480l108.7-35.4c35.7 19.6 75.9 29.9 116.7 29.9h.1c120.9 0 220.5-99.5 220.5-220.5 0-58.7-23.1-114.5-65.1-156.5zM224.5 438.7c-36.7 0-72.8-9.8-104.3-28.4l-7.5-4.4-64.5 21 21.3-63-4.9-7.8c-20.7-33.2-31.6-71.5-31.6-110.6C33 147.4 120 60.5 224.5 60.5c53.9 0 104.6 21 142.8 59.1 38.2 38.2 59.3 88.9 59.3 142.8 0 104.5-86.9 191.3-202.1 191.3zm121.1-144.3c-6.6-3.3-39.1-19.3-45.2-21.5-6.1-2.3-10.6-3.3-15.1 3.3s-17.3 21.5-21.2 26-7.8 5-14.4 1.7c-39.1-19.5-64.7-34.8-90.1-78.9-6.8-11.7 6.8-10.9 19.5-36.3 2.2-4.3 1.1-8-0.6-11.3-1.7-3.3-15.1-36.3-20.7-49.7-5.4-13-10.9-11.2-15.1-11.4-3.9-.2-8.4-.2-12.9-.2s-11.8 1.7-18 8.4c-6.1 6.6-23.7 23.2-23.7 56.6s24.2 65.5 27.5 70c3.3 4.4 47.6 72.6 115.4 101.8 16.1 7 28.7 11.2 38.5 14.4 16.2 5.2 30.9 4.5 42.6 2.7 13-2 39.1-16 44.6-31.4 5.5-15.4 5.5-28.6 3.9-31.4-1.6-2.8-6.1-4.4-12.7-7.7z"/>
+    </svg>
+  </a>
+
+  <script>
+    document.getElementById('cautJobForm').addEventListener('submit', function(event) {
+      event.preventDefault();
+
+      const formData = new FormData(this);
+
+      fetch('https://formspree.io/f/xpwolkdp', {
+        method: 'POST',
+        body: formData,
+        headers: { 'Accept': 'application/json' }
+      })
+      .then(() => {
+        document.getElementById('cautJobForm').style.display = 'none';
+        document.getElementById('mesajConfirmare').style.display = 'block';
+      })
+      .catch(() => {
+        document.getElementById('cautJobForm').style.display = 'none';
+        document.getElementById('mesajConfirmare').innerText = 'Cererea ta a fost trimisă cu succes! ❤️';
+        document.getElementById('mesajConfirmare').style.display = 'block';
+      });
+    });
+  </script>
+</body>
+</html>
