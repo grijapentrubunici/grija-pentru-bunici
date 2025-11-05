@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="ro">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Atelier de Test | Grija pentru Bunici</title>
+  <link rel="stylesheet" href="style.css">
+  <style>
+    /* Doar pentru atelier, puțină magie separată ✨ */
+    .atelier-container {
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      background: linear-gradient(135deg, #fff6f7 0%, #f8e8e8 100%);
+      text-align: center;
+      padding: 30px;
+    }
+
+    .atelier-container h1 {
+      font-size: 2.5rem;
+      color: var(--rose);
+      margin-bottom: 10px;
+    }
+
+    .atelier-container p {
+      color: var(--text);
+      font-size: 1.1rem;
+      margin-bottom: 25px;
+    }
+
+    .atelier-buttons {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 15px;
+    }
+
+    .btn-test {
+      background-color: var(--rose);
+      color: white;
+      border: none;
+      padding: 12px 26px;
+      border-radius: 30px;
+      font-weight: bold;
+      cursor: pointer;
+      transition: all 0.3s ease;
+    }
+
+    .btn-test:hover {
+      background-color: var(--rose-light);
+      color: var(--text);
+      transform: scale(1.05);
+    }
+
+    .note {
+      margin-top: 40px;
+      font-size: 0.95rem;
+      color: var(--text);
+      opacity: 0.8;
+    }
+  </style>
+</head>
+<body>
+  <div class="atelier-container">
+    <h1>🎨 Atelierul Biancăi</h1>
+    <p>Aici poți testa culori, butoane, texte și idei noi — fără griji 💖</p>
+
+    <div class="atelier-buttons">
+      <button class="btn-test">Buton Roz</button>
+      <button class="btn-test" style="background-color:#d4a373;">Buton Bej</button>
+      <button class="btn-test" style="background-color:#9c6644;">Buton Maro Elegant</button>
+    </div>
+
+    <p class="note">✨ Când îți place ceva, poți copia codul în fișierul real.</p>
+  </div>
+</body>
+</html>
