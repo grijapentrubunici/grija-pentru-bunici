@@ -1,58 +1,65 @@
-/* 🌸 Grijă pentru Bunici – Versiune actualizată cu nuanțe roz-maro cald (#c76b7d) */
+/* 🌸 Grijă pentru Bunici – Stil unificat și paletă roz-bej caldă */
 
 /* --- Paletă culori --- */
 :root {
-  --rose: #c76b7d;
-  --rose-light: #e4a6b3;
-  --bg: #fffaf9;
-  --beige: #f8f4f2;
-  --beige-dark: #e9d8c7;
-  --text: #3c1f1d;
+  --rose: #c76b7d;        /* Roz principal */
+  --rose-light: #e4a6b3;  /* Roz deschis */
+  --bg: #fffaf9;          /* Fundal general */
+  --beige: #f8f4f2;       /* Bej deschis */
+  --beige-dark: #e9d8c7;  /* Bej închis */
+  --text: #3c1f1d;        /* Text principal */
 }
 
 /* --- Setări generale --- */
 body {
-  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  font-family: 'Open Sans', sans-serif;
   margin: 0;
   padding: 0;
   background-color: var(--bg);
   color: var(--text);
+  line-height: 1.6;
 }
 
-/* --- Bara de sus --- */
+/* --- Header --- */
 header {
-  background-color: var(--beige-dark);
+  background-color: var(--beige);
   color: var(--text);
-  text-align: center;
-  padding: 15px 0;
-  font-size: 26px;
-  font-weight: 700;
-  position: sticky;
-  top: 0;
-  z-index: 1000;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0.8rem 2rem;
   box-shadow: 0 2px 6px rgba(0, 0, 0, 0.05);
+  font-family: 'Poppins', sans-serif;
 }
 
-/* --- Bara de navigare --- */
-.navbar {
-  background-color: var(--bg);
+header h1 {
+  font-size: 1.3rem;
+  margin: 0;
   display: flex;
-  justify-content: center;
   align-items: center;
-  flex-wrap: wrap;
-  gap: 25px;
-  padding: 12px 0;
-  border-bottom: 1px solid #e2d3c5;
+}
+
+header h1::before {
+  content: "❤️";
+  margin-right: 8px;
+}
+
+/* --- Navigare --- */
+nav ul {
+  list-style: none;
+  display: flex;
+  gap: 1.5rem;
+  margin: 0;
+  padding: 0;
 }
 
 nav a {
   color: var(--text);
   text-decoration: none;
   font-weight: 600;
-  font-size: 17px;
-  padding: 6px 12px;
+  transition: 0.3s;
+  padding: 6px 10px;
   border-radius: 6px;
-  transition: background 0.3s ease, color 0.3s ease;
 }
 
 nav a:hover,
@@ -61,117 +68,53 @@ nav a.active {
   color: #fff;
 }
 
-/* --- HERO Pagina Acasă --- */
+/* --- HERO general --- */
 .hero {
-  background: linear-gradient(rgba(255, 245, 238, 0.4), rgba(255, 245, 238, 0.4)),
-              url('hero-ingrijitoare.jpg') center/cover no-repeat;
-  color: var(--text);
+  position: relative;
   text-align: center;
-  padding: 80px 20px;
-  border-bottom: 5px solid var(--rose-light);
+  overflow: hidden;
 }
 
-.hero h2 {
-  font-size: 2rem;
-  margin-bottom: 15px;
-  color: var(--rose);
+.hero img {
+  width: 100%;
+  height: auto;
+  display: block;
+  border-radius: 0;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+  transition: transform 3s ease;
 }
 
-.hero p {
-  font-size: 1.2rem;
-  margin-bottom: 25px;
+.hero img:hover {
+  transform: scale(1.02);
 }
 
-/* --- Buton principal --- */
-.btn {
-  background-color: var(--rose);
-  color: #fff;
-  padding: 12px 28px;
-  border-radius: 30px;
-  text-decoration: none;
-  font-weight: bold;
-  transition: 0.3s;
-  border: none;
-}
-
-.btn:hover {
-  background-color: var(--rose-light);
-  color: var(--text);
-}
-
-/* --- Secțiuni interioare --- */
+/* --- Secțiuni generale --- */
 .container {
   width: 90%;
   max-width: 1000px;
   margin: 0 auto;
 }
 
-.info {
-  padding: 60px 20px;
+.introducere, .info, .info-despre-noi {
+  padding: 3rem 2rem;
   text-align: center;
-}
-
-.info h3 {
-  color: var(--rose);
-  margin-bottom: 25px;
-  font-size: 1.6rem;
-}
-
-.info p {
-  font-size: 1.1rem;
-  line-height: 1.7;
-}
-
-/* --- Pagina DESPRE NOI --- */
-.hero-despre-noi {
-  background: linear-gradient(rgba(199, 107, 125, 0.35), rgba(199, 107, 125, 0.35)),
-              url('despre-noi-hero.jpg.png') center/cover no-repeat;
-  height: 80vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  text-align: center;
-  position: relative;
-  border-bottom: 5px solid var(--rose-light);
-}
-
-.hero-despre-noi h1 {
-  color: #fff;
-  font-size: 3rem;
-  font-weight: 700;
-  text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.4);
-  margin-bottom: 20px;
-}
-
-.hero-despre-noi .banner-text {
-  background-color: rgba(255, 255, 255, 0.85);
-  color: var(--text);
-  padding: 12px 25px;
-  border-radius: 30px;
-  font-size: 1.2rem;
-  font-weight: 600;
-}
-
-.info-despre-noi {
-  max-width: 900px;
-  margin: 60px auto;
-  padding: 40px 20px;
   background-color: var(--beige);
   border-radius: 12px;
-  box-shadow: 0 4px 12px rgba(0,0,0,0.05);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+  margin: 2rem auto;
 }
 
-.info-despre-noi h2 {
+.introducere h2, .info h3, .info-despre-noi h2 {
   color: var(--rose);
-  margin-bottom: 20px;
+  font-family: 'Poppins', sans-serif;
+  font-weight: 600;
+  margin-bottom: 1rem;
 }
 
-.info-despre-noi p {
-  line-height: 1.8;
-  color: var(--text);
+.introducere p, .info p, .info-despre-noi p {
   font-size: 1.1rem;
-  text-align: center;
+  color: var(--text);
+  line-height: 1.7;
 }
 
 /* --- Carduri servicii --- */
@@ -188,4 +131,55 @@ nav a.active {
   border: 1px solid #eee;
   border-radius: 12px;
   padding: 1.5rem;
-  box-shadow: 0 3px 8px rg
+  box-shadow: 0 3px 8px rgba(0, 0, 0, 0.05);
+  transition: all 0.3s ease;
+}
+
+.service-card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.1);
+}
+
+.service-card h3 {
+  color: var(--rose);
+  font-family: 'Poppins', sans-serif;
+  margin-top: 0;
+  margin-bottom: 10px;
+}
+
+.service-card p {
+  color: var(--text);
+}
+
+/* --- Formulare (Caut Ajutor / Caut Loc de Muncă) --- */
+form {
+  background-color: var(--beige);
+  padding: 2rem;
+  border-radius: 12px;
+  box-shadow: 0 3px 10px rgba(0,0,0,0.05);
+  max-width: 600px;
+  margin: 3rem auto;
+}
+
+form h2 {
+  text-align: center;
+  color: var(--rose);
+  font-family: 'Poppins', sans-serif;
+  margin-bottom: 1rem;
+}
+
+label {
+  display: block;
+  margin-top: 1rem;
+  font-weight: 600;
+  color: var(--text);
+}
+
+input, textarea, select {
+  width: 100%;
+  padding: 10px;
+  margin-top: 5px;
+  border: 1px solid var(--beige-dark);
+  border-radius: 6px;
+  font-size: 1rem;
+  font-family: 'Open Sans', sans-serif;
