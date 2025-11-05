@@ -4,132 +4,45 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Caut ajutor - Grijă pentru Bunici</title>
-  <style>
-    :root {
-      --rose: #f4b6b8;
-      --rose2: #d57a7a;
-      --bg: #fff9f9;
-    }
 
-    body {
-      font-family: 'Segoe UI', Roboto, sans-serif;
-      background: var(--bg);
-      margin: 0;
-      color: #333;
-      line-height: 1.6;
-    }
+  <!-- Fonturile site-ului -->
+  <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600&family=Poppins:wght@500;700&display=swap" rel="stylesheet">
 
-    header {
-      background: var(--rose);
-      color: white;
-      text-align: center;
-      padding: 18px;
-      font-size: 24px;
-      font-weight: 700;
-    }
+  <!-- Stilul comun -->
+  <link rel="stylesheet" href="style.css">
 
-    nav {
-      background: var(--rose2);
-      display: flex;
-      justify-content: center;
-      gap: 40px;
-      padding: 12px 0;
-    }
-
-    nav a {
-      color: white;
-      text-decoration: none;
-      font-weight: 600;
-      transition: opacity 0.3s;
-    }
-
-    nav a:hover {
-      opacity: 0.8;
-    }
-
-    main {
-      max-width: 900px;
-      margin: 40px auto;
-      padding: 30px;
-      background: white;
-      border-radius: 16px;
-      box-shadow: 0 2px 8px rgba(0,0,0,0.1);
-    }
-
-    h2 {
-      color: var(--rose2);
-      text-align: center;
-      margin-bottom: 20px;
-    }
-
-    form {
-      display: flex;
-      flex-direction: column;
-      gap: 15px;
-    }
-
-    input, textarea {
-      padding: 12px;
-      border-radius: 8px;
-      border: 1px solid #ccc;
-      font-size: 16px;
-      width: 100%;
-      box-sizing: border-box;
-    }
-
-    button {
-      background: var(--rose2);
-      color: white;
-      padding: 12px;
-      border: none;
-      border-radius: 8px;
-      font-size: 18px;
-      font-weight: bold;
-      cursor: pointer;
-      transition: opacity 0.3s;
-    }
-
-    button:hover {
-      opacity: 0.9;
-    }
-
-    footer {
-      text-align: center;
-      padding: 24px 12px;
-      color: #777;
-      font-size: 14px;
-    }
-  </style>
+  <meta name="description" content="Cauți ajutor pentru seniori, menaj sau îngrijire? Completează formularul și echipa Grijă pentru Bunici te va contacta.">
 </head>
 
 <body>
-  <header>Grijă pentru Bunici</header>
+  <header>
+    <h1>Grijă pentru Bunici</h1>
+    <nav>
+      <ul>
+        <li><a href="index.html">Acasă</a></li>
+        <li><a href="despre-noi.html">Despre Noi</a></li>
+        <li><a href="caut-ajutor.html" class="active">Caut Ajutor</a></li>
+        <li><a href="caut-loc-de-munca.html">Caut Loc de Muncă</a></li>
+      </ul>
+    </nav>
+  </header>
 
-  <nav>
-    <a href="index.html">Acasă</a>
-    <a href="despre-noi.html">Despre noi</a>
-    <a href="caut-ajutor.html">Caut ajutor</a>
-    <a href="caut-loc-de-munca.html">Caut loc de muncă</a>
-    <a href="https://wa.me/40793553703" target="_blank" rel="noopener">Contact WhatsApp</a>
-  </nav>
-
-  <main>
-    <h2>Caut ajutor</h2>
-
-    <!-- 🩷 Descriere de început -->
-    <section style="text-align: center; padding: 2rem 1rem; background-color: #fffaf8; border-radius: 12px; margin-bottom: 2rem;">
-      <h3 style="color: #d96c6c; margin-bottom: 1rem;">Ai nevoie de sprijin pentru tine sau pentru cineva drag?</h3>
-      <p style="font-size: 1.1rem; color: #444; line-height: 1.6; max-width: 750px; margin: 0 auto;">
-        Completează formularul de mai jos și spune-ne <b>ce fel de ajutor cauți</b> — 
-        o <b>îngrijitoare pentru seniori</b>, o <b>menajeră</b> pentru gospodărie sau o <b>bonă</b> pentru copii. <br><br>
-        Echipa <b>Grija pentru Bunici</b> va analiza cererea ta și te va contacta în cel mai scurt timp
-        pentru a te pune în legătură cu o persoană potrivită nevoilor tale și ale familiei tale. <br><br>
+  <main class="container">
+    <section class="info">
+      <h2>Caut Ajutor</h2>
+      <p>
+        Ai nevoie de sprijin pentru tine sau pentru cineva drag? Completează formularul de mai jos și spune-ne
+        <b>ce fel de ajutor cauți</b> — o <b>îngrijitoare</b>, o <b>menajeră</b> sau o <b>bonă</b>.
+        Echipa <b>Grija pentru Bunici</b> va analiza cererea ta și te va contacta în cel mai scurt timp.
+      </p>
+      <p>
         ✨ Toți colaboratorii noștri sunt atent verificați, cu experiență și recomandări reale.
       </p>
     </section>
 
-    <!-- 🩷 Formular -->
-    <form id="cautAjutorForm" class="formular-ajutor">
+    <form id="cautAjutorForm">
+      <h2>Formular de solicitare</h2>
+
       <label for="nume">Nume complet:</label>
       <input type="text" id="nume" name="nume" required>
 
@@ -144,17 +57,14 @@
 
       <button type="submit">Trimite solicitarea</button>
 
-      <!-- Text GDPR sub buton -->
       <p style="font-size: 0.9rem; color: #666; text-align: center; margin-top: 10px;">
         Prin completarea acestui formular, confirm că am citit și sunt de acord cu
-        <a href="confidentialitate.html" target="_blank" style="color:#d96c6c; text-decoration:underline;">Politica de confidențialitate</a>
+        <a href="confidentialitate.html" target="_blank">Politica de confidențialitate</a>
         și
-        <a href="termeni.html" target="_blank" style="color:#d96c6c; text-decoration:underline;">Termenii și condițiile</a>
-        site-ului <b>Grija pentru Bunici</b>.
+        <a href="termeni.html" target="_blank">Termenii și condițiile</a>.
       </p>
     </form>
 
-    <!-- ✅ Mesaj de confirmare -->
     <p id="mesajConfirmare" style="display:none; color:green; font-weight:bold; margin-top:15px; text-align:center;">
       Mulțumim, te vom contacta în curând! ❤️
     </p>
@@ -164,29 +74,7 @@
     © 2025 Grijă pentru Bunici — Toate drepturile rezervate.
   </footer>
 
-  <script>
-    document.getElementById('cautAjutorForm').addEventListener('submit', function(event) {
-      event.preventDefault();
-
-      const formData = new FormData(this);
-
-      fetch('https://formspree.io/f/xpwolkdp', {
-        method: 'POST',
-        body: formData,
-        headers: { 'Accept': 'application/json' }
-      })
-      .then(response => {
-        document.getElementById('cautAjutorForm').style.display = 'none';
-        document.querySelector('section').style.display = 'none';
-        document.getElementById('mesajConfirmare').style.display = 'block';
-      })
-      .catch(error => {
-        document.getElementById('cautAjutorForm').style.display = 'none';
-        document.querySelector('section').style.display = 'none';
-        document.getElementById('mesajConfirmare').innerText = 'Mulțumim, mesajul tău a fost trimis!';
-        document.getElementById('mesajConfirmare').style.display = 'block';
-      });
-    });
-  </script>
-</body>
-</html>
+  <a href="https://api.whatsapp.com/send?phone=40793553703&text=Bună!%20Aș%20dori%20mai%20multe%20informații%20despre%20Grijă%20pentru%20Bunici."
+     class="whatsapp-float" target="_blank" title="Scrie-ne pe WhatsApp">
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512" width="32" height="32" fill="white">
+      <path d="M380.9 97.1C339 55.1 283.2 32 224.5 32 103.5 32 4 131.5 4 252.5c0 43.6 11.4 85.5 33.1 122.6L0 480l108.7-35.4c35.7 19.6 75.9 29.9 116.7 29.9h.1c120.9 0 220.5-99.5 220.5-220.5 0-58.7-23.1-114.5-65.1-156.5zM224.5 438.7c-36.7 0-72.8-9.8-104.3-28.4l-7.5-4.4-64.5 21 21.3-63-4.9-7.8c-20.7-33.2-31.6-71.5-31.6-110.6C33 147.4 120 60.5 224.5 60.5c53.9 0 104.6 21 142.8 59.1 38.2 38.2 59.3 88.9 59.3 142.8 0 104.5-86.9 191.3-202.1 191.3zm121.1-144.3c-6.6-3.3-39.1-19.3-45.2-21.5-6.1-2.3-10.6-3.3-15.1 3.3s-17.3 21.5-21.2 26-7.8 5-14.4 1.7c-39.1-19.5-64.7-34.8-90.1-78.9-6.8-11.7 6.8-10.9 19.5-36.3 2.2-4.3 1.1-8-0.6-11.3-1.7-3.3-15.1-36.3-20.7-49.7-5.4-13-10.9-11.2-15.1-11.4-3.9-.2-8.4-.2-12.9-.2s-11.8 1.7-18 8.4c-6.1 6.6-23.7 23.2-23.7 56.6s24.2 65.5 27.5 70c3.3 4.4 47.6 72.6 115.4 101.8 16.1 7 28.7 11.2 38.5 14.4 16.2 5.2 30.9 4.5 42.6 2.7 13-2 39.1-16 44.6-31.4 5.5-15.4 5.5-28.6
