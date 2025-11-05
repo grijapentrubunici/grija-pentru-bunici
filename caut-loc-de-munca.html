@@ -4,198 +4,33 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Caut loc de muncă - Grijă pentru Bunici</title>
-  <style>
-    :root {
-      --rose: #f4b6b8;
-      --rose2: #d57a7a;
-      --bg: #fff9f9;
-    }
 
-    body {
-      font-family: 'Segoe UI', Roboto, sans-serif;
-      background: var(--bg);
-      margin: 0;
-      color: #333;
-      line-height: 1.6;
-    }
+  <!-- Fonturile site-ului -->
+  <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600&family=Poppins:wght@500;700&display=swap" rel="stylesheet">
 
-    header {
-      background: var(--rose);
-      color: white;
-      text-align: center;
-      padding: 18px;
-      font-size: 24px;
-      font-weight: 700;
-    }
+  <!-- Stilul comun -->
+  <link rel="stylesheet" href="style.css">
 
-    nav {
-      background: var(--rose2);
-      display: flex;
-      justify-content: center;
-      gap: 40px;
-      padding: 12px 0;
-    }
-
-    nav a {
-      color: white;
-      text-decoration: none;
-      font-weight: 600;
-      transition: opacity 0.3s;
-    }
-
-    nav a:hover {
-      opacity: 0.8;
-    }
-
-    main {
-      max-width: 900px;
-      margin: 40px auto;
-      padding: 30px;
-      background: white;
-      border-radius: 16px;
-      box-shadow: 0 2px 8px rgba(0,0,0,0.1);
-    }
-
-    h2 {
-      color: var(--rose2);
-      text-align: center;
-      margin-bottom: 20px;
-    }
-
-    form {
-      display: flex;
-      flex-direction: column;
-      gap: 15px;
-    }
-
-    input, textarea, select {
-      padding: 12px;
-      border-radius: 8px;
-      border: 1px solid #ccc;
-      font-size: 16px;
-      width: 100%;
-      box-sizing: border-box;
-    }
-
-    button {
-      background: var(--rose2);
-      color: white;
-      padding: 12px;
-      border: none;
-      border-radius: 8px;
-      font-size: 18px;
-      font-weight: bold;
-      cursor: pointer;
-      transition: opacity 0.3s;
-    }
-
-    button:hover {
-      opacity: 0.9;
-    }
-
-    footer {
-      text-align: center;
-      padding: 24px 12px;
-      color: #777;
-      font-size: 14px;
-    }
-  </style>
+  <meta name="description" content="Cauți un loc de muncă în îngrijire, menaj sau ca bonă? Completează formularul și echipa Grijă pentru Bunici te va contacta.">
 </head>
 
 <body>
-  <header>Grijă pentru Bunici</header>
+  <header>
+    <h1>Grijă pentru Bunici</h1>
+    <nav>
+      <ul>
+        <li><a href="index.html">Acasă</a></li>
+        <li><a href="despre-noi.html">Despre Noi</a></li>
+        <li><a href="caut-ajutor.html">Caut Ajutor</a></li>
+        <li><a href="caut-loc-de-munca.html" class="active">Caut Loc de Muncă</a></li>
+      </ul>
+    </nav>
+  </header>
 
-  <nav>
-    <a href="index.html">Acasă</a>
-    <a href="despre-noi.html">Despre noi</a>
-    <a href="caut-ajutor.html">Caut ajutor</a>
-    <a href="caut-loc-de-munca.html">Caut loc de muncă</a>
-    <a href="https://wa.me/40793553703" target="_blank" rel="noopener">Contact WhatsApp</a>
-  </nav>
-
-  <main>
-    <h2>Caut loc de muncă</h2>
-
-    <!-- 🩷 Descriere de început -->
-    <section style="text-align: center; padding: 2rem 1rem; background-color: #fffaf8; border-radius: 12px; margin-bottom: 2rem;">
-      <h3 style="color: #d96c6c; margin-bottom: 1rem;">Cauți un loc de muncă sigur și respectuos în domeniul îngrijirii?</h3>
-      <p style="font-size: 1.1rem; color: #444; line-height: 1.6; max-width: 750px; margin: 0 auto;">
-        Completează formularul de mai jos și spune-ne <b>ce tip de job îți dorești</b> — 
-        ca <b>îngrijitoare pentru seniori</b>, <b>menajeră</b> sau <b>bonă</b>. <br><br>
-        Echipa <b>Grija pentru Bunici</b> colaborează cu familii serioase din toată țara
-        și te va contacta în cel mai scurt timp pentru a-ți oferi o oportunitate potrivită experienței tale. <br><br>
-        🌸 Colaboratorii noștri beneficiază de sprijin constant, comunicare clară și respect reciproc.
-      </p>
-    </section>
-
-    <!-- 🩷 Formular -->
-    <form id="locMuncaForm">
-      <label for="nume">Nume complet:</label>
-      <input type="text" id="nume" name="nume" required>
-
-      <label for="email">Email:</label>
-      <input type="email" id="email" name="email" required>
-
-      <label for="telefon">Telefon:</label>
-      <input type="text" id="telefon" name="telefon" required>
-
-      <label for="tipJob">Tipul de job dorit:</label>
-      <select id="tipJob" name="tipJob" required>
-        <option value="">Alege o opțiune</option>
-        <option value="ingrijitoare">Îngrijitoare pentru seniori</option>
-        <option value="menajera">Menajeră</option>
-        <option value="bona">Bonă</option>
-        <option value="altul">Alt tip de ajutor</option>
-      </select>
-
-      <label for="experienta">Descrie experiența ta:</label>
-      <textarea id="experienta" name="experienta" rows="4" placeholder="Ex: am 3 ani experiență ca îngrijitoare în București..." required></textarea>
-
-      <button type="submit">Trimite aplicația</button>
-
-      <!-- Text GDPR sub buton -->
-      <p style="font-size: 0.9rem; color: #666; text-align: center; margin-top: 10px;">
-        Prin completarea acestui formular, confirm că am citit și sunt de acord cu
-        <a href="confidentialitate.html" target="_blank" style="color:#d96c6c; text-decoration:underline;">Politica de confidențialitate</a>
-        și
-        <a href="termeni.html" target="_blank" style="color:#d96c6c; text-decoration:underline;">Termenii și condițiile</a>
-        site-ului <b>Grija pentru Bunici</b>.
-      </p>
-    </form>
-
-    <!-- ✅ Mesaj de confirmare -->
-    <p id="mesajConfirmare" style="display:none; color:green; font-weight:bold; margin-top:15px; text-align:center;">
-      Mulțumim pentru înscriere! Te vom contacta în curând. 🌷
-    </p>
-  </main>
-
-  <footer>
-    © 2025 Grijă pentru Bunici — Toate drepturile rezervate.
-  </footer>
-
-  <script>
-    document.getElementById('locMuncaForm').addEventListener('submit', function(event) {
-      event.preventDefault();
-
-      const formData = new FormData(this);
-
-      fetch('https://formspree.io/f/xpwolkdp', {
-        method: 'POST',
-        body: formData,
-        headers: { 'Accept': 'application/json' }
-      })
-      .then(response => {
-        document.getElementById('locMuncaForm').style.display = 'none';
-        document.querySelector('section').style.display = 'none';
-        document.getElementById('mesajConfirmare').style.display = 'block';
-      })
-      .catch(error => {
-        document.getElementById('locMuncaForm').style.display = 'none';
-        document.querySelector('section').style.display = 'none';
-        document.getElementById('mesajConfirmare').innerText = 'Mulțumim, mesajul tău a fost trimis!';
-        document.getElementById('mesajConfirmare').style.display = 'block';
-      });
-    });
-  </script>
-</body>
-</html>
+  <main class="container">
+    <section class="info">
+      <h2>Caut Loc de Muncă</h2>
+      <p>
+        Cauți un loc de muncă în domeniul <b>îngrijirii persoanelor vârstnice</b>, ca <b>menajeră</b> sau <b>bonă</b>?  
+        Completează formularul de mai jos cu datele tale și experiența ta, iar echipa <b>Grijă pentru Bunici</b> te va contacta în cel mai scurt timp.  
+        Lucrăm doar cu persoane serioase, de încredere ș
