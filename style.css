@@ -24,42 +24,42 @@ body {
 header {
   background-color: var(--beige-dark);
   color: var(--text);
-  display: flex;
-  align-items: center;
-  justify-content: center;
   position: sticky;
   top: 0;
   z-index: 1000;
   box-shadow: 0 2px 6px rgba(0, 0, 0, 0.05);
-  padding: 15px 0;
-  gap: 60px; /* distanță între titlu și meniu */
+  padding: 10px 0;
 }
 
+.navbar {
+  max-width: 1200px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: 1fr auto 1fr;
+  align-items: center;
+  padding: 0 20px;
 }
 
-/* Logo pe mijloc */
-header h1 {
-  flex: 1;
+/* Titlul pe mijloc exact */
+.site-title {
+  grid-column: 2; /* coloana din mijloc */
   text-align: center;
-  font-size: 1.5rem;
+  font-size: 1.6rem;
   font-weight: 700;
-  margin: 0;
   font-family: 'Poppins', sans-serif;
   color: var(--text);
+  margin: 0;
 }
 
-/* Navigația – pe dreapta */
-nav {
- nav {
+/* Meniul pe dreapta */
+.menu {
+  grid-column: 3;
   display: flex;
   justify-content: flex-end;
-  align-items: center;
   gap: 25px;
 }
 
-}
-
-nav a {
+.menu a {
   color: var(--text);
   text-decoration: none;
   font-weight: 600;
@@ -69,12 +69,11 @@ nav a {
   transition: background 0.3s ease, color 0.3s ease;
 }
 
-nav a:hover,
-nav a.active {
+.menu a:hover,
+.menu a.active {
   background-color: var(--rose);
   color: #fff;
 }
-
 
 /* --- HERO general --- */
 .hero {
@@ -145,9 +144,9 @@ nav a.active {
   transition: all 0.3s ease;
   display: flex;
   flex-direction: column;
-  justify-content: space-between; /* aliniere perfectă jos */
+  justify-content: space-between;
   text-align: center;
-  min-height: 250px; /* toate cardurile au aceeași înălțime */
+  min-height: 250px;
 }
 
 .service-card h3 {
@@ -165,8 +164,6 @@ nav a.active {
 .service-card:hover {
   transform: translateY(-6px);
   box-shadow: 0 6px 16px rgba(0, 0, 0, 0.1);
-}
-
 }
 
 /* --- Formulare (Caut Ajutor / Caut Loc de Muncă) --- */
@@ -201,3 +198,4 @@ input, textarea, select {
   border-radius: 6px;
   font-size: 1rem;
   font-family: 'Open Sans', sans-serif;
+}
