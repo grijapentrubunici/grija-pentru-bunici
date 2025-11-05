@@ -2,12 +2,12 @@
 
 /* --- Paletă culori --- */
 :root {
-  --rose: #c76b7d;        /* Roz principal */
+  --rose: #c76b7d;        /* Roz principal (pentru accente, nu header) */
   --rose-light: #e4a6b3;  /* Roz deschis */
   --bg: #fffaf9;          /* Fundal general */
   --beige: #f8f4f2;       /* Bej deschis */
   --beige-dark: #e9d8c7;  /* Bej închis */
-  --text: #3c1f1d;        /* Text principal */
+  --text: #3c1f1d;        /* Text maro închis */
 }
 
 /* --- Setări generale --- */
@@ -20,182 +20,44 @@ body {
   line-height: 1.6;
 }
 
-/* --- HEADER UNIFICAT --- */
+/* --- HEADER UNIFICAT (bej + maro) --- */
 header {
   background-color: var(--beige-dark);
   color: var(--text);
+  text-align: center;
+  padding: 15px 0 10px 0;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.05);
   position: sticky;
   top: 0;
   z-index: 1000;
-  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.05);
-  padding: 10px 0;
 }
 
-.navbar {
-  max-width: 1200px;
-  margin: 0 auto;
-  display: grid;
-  grid-template-columns: 1fr auto 1fr;
-  align-items: center;
-  padding: 0 20px;
-}
-
-/* Titlul pe mijloc exact */
+/* Titlul site-ului */
 .site-title {
-  grid-column: 2; /* coloana din mijloc */
-  text-align: center;
-  font-size: 1.6rem;
-  font-weight: 700;
   font-family: 'Poppins', sans-serif;
+  font-weight: 700;
+  font-size: 1.7rem;
   color: var(--text);
   margin: 0;
+  margin-bottom: 8px;
 }
 
-/* Meniul pe dreapta */
+/* Bara de navigație dedesubt */
 .menu {
-  grid-column: 3;
   display: flex;
-  justify-content: flex-end;
-  gap: 25px;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 30px;
 }
 
 .menu a {
   color: var(--text);
   text-decoration: none;
-  font-weight: 600;
+  font-weight: 700;
   font-size: 1rem;
-  padding: 6px 10px;
-  border-radius: 6px;
-  transition: background 0.3s ease, color 0.3s ease;
+  transition: color 0.3s ease;
 }
 
 .menu a:hover,
 .menu a.active {
-  background-color: var(--rose);
-  color: #fff;
-}
-
-/* --- HERO general --- */
-.hero {
-  position: relative;
-  text-align: center;
-  overflow: hidden;
-}
-
-.hero img {
-  width: 100%;
-  height: auto;
-  display: block;
-  border-radius: 0;
-  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
-  transition: transform 3s ease;
-}
-
-.hero img:hover {
-  transform: scale(1.02);
-}
-
-/* --- Secțiuni generale --- */
-.container {
-  width: 90%;
-  max-width: 1000px;
-  margin: 0 auto;
-}
-
-.introducere, .info, .info-despre-noi {
-  padding: 3rem 2rem;
-  text-align: center;
-  background-color: var(--beige);
-  border-radius: 12px;
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
-  margin: 2rem auto;
-}
-
-.introducere h2, .info h3, .info-despre-noi h2 {
-  color: var(--rose);
-  font-family: 'Poppins', sans-serif;
-  font-weight: 600;
-  margin-bottom: 1rem;
-}
-
-.introducere p, .info p, .info-despre-noi p {
-  font-size: 1.1rem;
-  color: var(--text);
-  line-height: 1.7;
-}
-
-/* --- Carduri servicii (aliniate perfect) --- */
-.services {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
-  gap: 1.5rem;
-  padding: 3rem 2rem;
-  background-color: #fff;
-  max-width: 900px;
-  margin: 0 auto; /* centrăm toată secțiunea */
-}
-
-.service-card {
-  background: #fff;
-  border: 1px solid #eee;
-  border-radius: 12px;
-  padding: 1.5rem;
-  box-shadow: 0 3px 8px rgba(0, 0, 0, 0.05);
-  transition: all 0.3s ease;
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-  text-align: center;
-  min-height: 250px;
-}
-
-.service-card h3 {
-  color: var(--rose);
-  margin-top: 0;
-  margin-bottom: 15px;
-}
-
-.service-card p {
-  color: var(--text);
-  font-size: 1rem;
-  line-height: 1.6;
-}
-
-.service-card:hover {
-  transform: translateY(-6px);
-  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.1);
-}
-
-/* --- Formulare (Caut Ajutor / Caut Loc de Muncă) --- */
-form {
-  background-color: var(--beige);
-  padding: 2rem;
-  border-radius: 12px;
-  box-shadow: 0 3px 10px rgba(0,0,0,0.05);
-  max-width: 600px;
-  margin: 3rem auto;
-}
-
-form h2 {
-  text-align: center;
-  color: var(--rose);
-  font-family: 'Poppins', sans-serif;
-  margin-bottom: 1rem;
-}
-
-label {
-  display: block;
-  margin-top: 1rem;
-  font-weight: 600;
-  color: var(--text);
-}
-
-input, textarea, select {
-  width: 100%;
-  padding: 10px;
-  margin-top: 5px;
-  border: 1px solid var(--beige-dark);
-  border-radius: 6px;
-  font-size: 1rem;
-  font-family: 'Open Sans', sans-serif;
-}
+  color: #8b5e3c; /* maro mai cald la hove*
