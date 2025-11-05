@@ -119,13 +119,15 @@ nav a.active {
   line-height: 1.7;
 }
 
-/* --- Carduri servicii --- */
+/* --- Carduri servicii (aliniate perfect) --- */
 .services {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
   gap: 1.5rem;
   padding: 3rem 2rem;
   background-color: #fff;
+  max-width: 900px;
+  margin: 0 auto; /* centrăm toată secțiunea */
 }
 
 .service-card {
@@ -135,6 +137,23 @@ nav a.active {
   padding: 1.5rem;
   box-shadow: 0 3px 8px rgba(0, 0, 0, 0.05);
   transition: all 0.3s ease;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between; /* aliniere perfectă jos */
+  text-align: center;
+  min-height: 250px; /* toate cardurile au aceeași înălțime */
+}
+
+.service-card h3 {
+  color: var(--rose);
+  margin-top: 0;
+  margin-bottom: 15px;
+}
+
+.service-card p {
+  color: var(--text);
+  font-size: 1rem;
+  line-height: 1.6;
 }
 
 .service-card:hover {
@@ -142,15 +161,6 @@ nav a.active {
   box-shadow: 0 6px 16px rgba(0, 0, 0, 0.1);
 }
 
-.service-card h3 {
-  color: var(--rose);
-  font-family: 'Poppins', sans-serif;
-  margin-top: 0;
-  margin-bottom: 10px;
-}
-
-.service-card p {
-  color: var(--text);
 }
 
 /* --- Formulare (Caut Ajutor / Caut Loc de Muncă) --- */
