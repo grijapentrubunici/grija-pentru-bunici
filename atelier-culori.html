@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="ro">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Atelier Culori | Grija pentru Bunici</title>
+  <link rel="stylesheet" href="style.css">
+  <style>
+    body {
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      background-color: var(--bg);
+      margin: 0;
+      padding: 40px 20px;
+      color: var(--text);
+    }
+
+    h1 {
+      text-align: center;
+      color: var(--rose);
+      font-size: 2.2rem;
+      margin-bottom: 40px;
+    }
+
+    .palette {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+      gap: 25px;
+      max-width: 1000px;
+      margin: 0 auto;
+    }
+
+    .color-card {
+      border-radius: 16px;
+      overflow: hidden;
+      box-shadow: 0 3px 8px rgba(0,0,0,0.1);
+      background-color: white;
+      transition: transform 0.3s ease;
+    }
+
+    .color-card:hover {
+      transform: scale(1.03);
+    }
+
+    .color-swatch {
+      height: 120px;
+    }
+
+    .color-info {
+      padding: 15px;
+      text-align: center;
+    }
+
+    .color-name {
+      font-weight: bold;
+      margin-bottom: 8px;
+      font-size: 1.1rem;
+    }
+
+    .color-code {
+      font-family: monospace;
+      opacity: 0.8;
+    }
+
+    footer {
+      text-align: center;
+      margin-top: 50px;
+      font-size: 0.9rem;
+      opacity: 0.8;
+    }
+  </style>
+</head>
+<body>
+  <h1>🎨 Atelierul de Culori – Grija pentru Bunici</h1>
+
+  <div class="palette">
+    <div class="color-card">
+      <div class="color-swatch" style="background-color: var(--rose);"></div>
+      <div class="color-info">
+        <div class="color-name">Culoare principală</div>
+        <div class="color-code">#c76b7d</div>
+      </div>
+    </div>
+
+    <div class="color-card">
+      <div class="color-swatch" style="background-color: var(--rose-light);"></div>
+      <div class="color-info">
+        <div class="color-name">Accent deschis</div>
+        <div class="color-code">#e4a6b3</div>
+      </div>
+    </div>
+
+    <div class="color-card">
+      <div class="color-swatch" style="background-color: var(--beige);"></div>
+      <div class="color-info">
+        <div class="color-name">Bej fond</div>
+        <div class="color-code">#f8f4f2</div>
+      </div>
+    </div>
+
+    <div class="color-card">
+      <div class="color-swatch" style="background-color: var(--beige-dark);"></div>
+      <div class="color-info">
+        <div class="color-name">Bej închis</div>
+        <div class="color-code">#e9d8c7</div>
+      </div>
+    </div>
+
+    <div class="color-card">
+      <div class="color-swatch" style="background-color: var(--bg);"></div>
+      <div class="color-info">
+        <div class="color-name">Fundal general</div>
+        <div class="color-code">#fffaf9</div>
+      </div>
+    </div>
+
+    <div class="color-card">
+      <div class="color-swatch" style="background-color: var(--text); color:white; display:flex; align-items:center; justify-content:center; font-weight:bold;">
+        Text
+      </div>
+      <div class="color-info">
+        <div class="color-name">Culoare
