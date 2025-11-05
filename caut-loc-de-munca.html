@@ -5,13 +5,141 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Caut loc de muncă - Grijă pentru Bunici</title>
 
-  <!-- Fonturile site-ului -->
+  <!-- Fonturi -->
   <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600&family=Poppins:wght@500;700&display=swap" rel="stylesheet">
 
-  <!-- Stilul comun -->
+  <!-- Stil principal -->
   <link rel="stylesheet" href="style.css">
 
-  <meta name="description" content="Cauți un loc de muncă în îngrijire, menaj sau ca bonă? Completează formularul și echipa Grijă pentru Bunici te va contacta.">
+  <style>
+    /* Ajustări specifice doar pentru această pagină */
+    header {
+      background-color: var(--beige-dark);
+      padding: 8px 0;
+      font-size: 20px;
+      box-shadow: 0 2px 4px rgba(0,0,0,0.05);
+    }
+
+    header h1 {
+      font-size: 1.2rem;
+      letter-spacing: 0.5px;
+    }
+
+    nav ul {
+      list-style: none;
+      display: flex;
+      justify-content: center;
+      gap: 1.2rem;
+      margin: 0;
+      padding: 0;
+    }
+
+    nav a {
+      color: var(--text);
+      text-decoration: none;
+      font-weight: 600;
+      font-size: 0.95rem;
+      padding: 5px 10px;
+      border-radius: 5px;
+      transition: 0.3s;
+    }
+
+    nav a:hover, nav a.active {
+      background-color: var(--rose);
+      color: #fff;
+    }
+
+    main {
+      max-width: 650px;
+      margin: 60px auto;
+      padding: 2rem;
+      background: #fffaf9;
+      border-radius: 16px;
+      box-shadow: 0 4px 15px rgba(0,0,0,0.05);
+    }
+
+    main h2 {
+      color: var(--rose);
+      text-align: center;
+      margin-bottom: 1rem;
+      font-size: 1.7rem;
+    }
+
+    .descriere {
+      text-align: center;
+      color: var(--text);
+      font-size: 1.05rem;
+      line-height: 1.7;
+      margin-bottom: 2rem;
+    }
+
+    form {
+      display: flex;
+      flex-direction: column;
+      gap: 1rem;
+    }
+
+    label {
+      font-weight: 600;
+      color: var(--text);
+      font-size: 1rem;
+    }
+
+    input, textarea, select {
+      padding: 12px;
+      border: 1px solid #ddd;
+      border-radius: 8px;
+      font-size: 1rem;
+      background-color: #fff;
+      transition: border 0.3s;
+    }
+
+    input:focus, textarea:focus, select:focus {
+      outline: none;
+      border-color: var(--rose);
+    }
+
+    button {
+      background-color: var(--rose);
+      color: #fff;
+      padding: 12px;
+      border: none;
+      border-radius: 8px;
+      font-weight: bold;
+      font-size: 1rem;
+      cursor: pointer;
+      transition: background 0.3s;
+    }
+
+    button:hover {
+      background-color: var(--rose-light);
+      color: var(--text);
+    }
+
+    #mesajConfirmare {
+      display: none;
+      color: green;
+      font-weight: bold;
+      text-align: center;
+      margin-top: 20px;
+    }
+
+    footer {
+      margin-top: 60px;
+      background-color: var(--beige-dark);
+      color: var(--text);
+      text-align: center;
+      padding: 1.2rem;
+      font-size: 0.9rem;
+    }
+
+    @media (max-width: 768px) {
+      main {
+        margin: 30px 15px;
+        padding: 1.5rem;
+      }
+    }
+  </style>
 </head>
 
 <body>
@@ -27,10 +155,7 @@
     </nav>
   </header>
 
-  <main class="container">
-    <section class="info">
-      <h2>Caut Loc de Muncă</h2>
-      <p>
-        Cauți un loc de muncă în domeniul <b>îngrijirii persoanelor vârstnice</b>, ca <b>menajeră</b> sau <b>bonă</b>?  
-        Completează formularul de mai jos cu datele tale și experiența ta, iar echipa <b>Grijă pentru Bunici</b> te va contacta în cel mai scurt timp.  
-        Lucrăm doar cu persoane serioase, de încredere ș
+  <main>
+    <h2>Caut Loc de Muncă</h2>
+
+    <p clas
