@@ -12,7 +12,6 @@
   <link rel="stylesheet" href="style.css">
 
   <style>
-    /* Ajustări specifice doar pentru această pagină */
     header {
       background-color: var(--beige-dark);
       padding: 8px 0;
@@ -44,7 +43,8 @@
       transition: 0.3s;
     }
 
-    nav a:hover, nav a.active {
+    nav a:hover,
+    nav a.active {
       background-color: var(--rose);
       color: #fff;
     }
@@ -55,11 +55,11 @@
       padding: 2rem;
       background: #fffaf9;
       border-radius: 16px;
-      box-shadow: 0 4px 15px rgba(0,0,0,0.05);
+      box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05);
     }
 
     main h2 {
-      color: var(--text); /* titlu maro elegant */
+      color: var(--text);
       text-align: center;
       margin-bottom: 1rem;
       font-size: 1.7rem;
@@ -68,7 +68,7 @@
 
     .descriere {
       text-align: center;
-      color: #5a3c38; /* maro mai deschis pentru echilibru */
+      color: #5a3c38;
       font-size: 1.05rem;
       line-height: 1.7;
       margin-bottom: 2rem;
@@ -86,7 +86,9 @@
       font-size: 1rem;
     }
 
-    input, textarea, select {
+    input,
+    textarea,
+    select {
       padding: 12px;
       border: 1px solid #ddd;
       border-radius: 8px;
@@ -95,7 +97,9 @@
       transition: border 0.3s;
     }
 
-    input:focus, textarea:focus, select:focus {
+    input:focus,
+    textarea:focus,
+    select:focus {
       outline: none;
       border-color: var(--rose);
     }
@@ -162,10 +166,26 @@
     <p class="descriere">
       Cauți un loc de muncă în domeniul <b>îngrijirii persoanelor vârstnice</b>, ca <b>menajeră</b> sau <b>bonă</b>?  
       Completează formularul de mai jos cu datele tale și experiența ta, iar echipa <b>Grijă pentru Bunici</b> te va contacta în cel mai scurt timp.  
-      🌷 Căutăm persoane serioase, cu empatie și dorință de a aduce zâmbete celor din jur.
+       Căutăm persoane serioase, cu empatie și dorință de a aduce zâmbete celor din jur.
     </p>
 
-    <!-- Formular -->
     <form id="cautJobForm">
       <label for="nume">Nume complet:</label>
-      <in
+      <input type="text" id="nume" name="nume" required>
+
+      <label for="email">Email:</label>
+      <input type="email" id="email" name="email" required>
+
+      <label for="telefon">Telefon:</label>
+      <input type="text" id="telefon" name="telefon" required>
+
+      <label for="oras">Oraș / localitate:</label>
+      <input type="text" id="oras" name="oras" required>
+
+      <label for="experienta">Experiență (ani sau descriere scurtă):</label>
+      <textarea id="experienta" name="experienta" rows="4" placeholder="Ex: 5 ani experiență ca îngrijitoare persoane vârstnice..." required></textarea>
+
+      <label for="tip-loc-munca">Tipul de loc de muncă dorit:</label>
+      <select id="tip-loc-munca" name="tip-loc-munca" required>
+        <option value="">Selectează...</option>
+        <option value="ingrijitoare">Îngrijitoare sen
