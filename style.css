@@ -2,7 +2,7 @@
 
 /* --- Paletă culori --- */
 :root {
-  --rose: #c76b7d;        /* Roz principal (pentru accente, nu header) */
+  --rose: #c76b7d;        /* Roz principal */
   --rose-light: #e4a6b3;  /* Roz deschis */
   --bg: #fffaf9;          /* Fundal general */
   --beige: #f8f4f2;       /* Bej deschis */
@@ -60,22 +60,24 @@ header {
 
 .menu a:hover,
 .menu a.active {
-  color: #8b5e3c; /* maro mai cald la hove*
-  /* --- FUNDAL COMPLET BEJ --- */
+  color: #8b5e3c; /* maro mai cald la hover */
+}
+
+/* --- FUNDAL GENERAL BEJ --- */
 body {
-  background-color: var(--beige); /* bej deschis uniform */
+  background-color: var(--beige);
   color: var(--text);
   margin: 0;
 }
 
-/* Secțiuni și formulare integrate în fond */
+/* --- Structură principală --- */
 main {
   max-width: 900px;
   margin: 2rem auto 4rem auto;
   padding: 0 1.5rem;
 }
 
-section, form {
+section {
   background-color: var(--beige);
   border-radius: 12px;
   box-shadow: 0 2px 8px rgba(0, 0, 0, 0.04);
@@ -89,7 +91,7 @@ section h2 {
   font-family: 'Poppins', sans-serif;
 }
 
-/* Formular */
+/* --- Formular general --- */
 form label {
   display: block;
   margin-top: 1rem;
@@ -104,7 +106,7 @@ form textarea {
   border: 1px solid var(--beige-dark);
   border-radius: 6px;
   font-size: 1rem;
-  background-color: #fff; /* câmpurile rămân albe pentru lizibilitate */
+  background-color: #fff;
 }
 
 form button {
@@ -124,91 +126,8 @@ form button:hover {
   background-color: #5b3a29;
 }
 
-/* Bara de jos */
+/* --- FOOTER --- */
 footer {
-  /* === FORMULAR CAUT AJUTOR === */
-.formular-ajutor {
-  max-width: 700px;
-  margin: 60px auto;
-  background: #fff;
-  padding: 40px 50px;
-  border-radius: 20px;
-  box-shadow: 0 6px 30px rgba(0,0,0,0.06);
-}
-
-.formular-ajutor h2 {
-  color: var(--rose, #b56b75);
-  text-align: center;
-  font-size: 28px;
-  margin-bottom: 15px;
-}
-
-.intro-form {
-  text-align: center;
-  margin-bottom: 30px;
-  color: #333;
-  line-height: 1.6;
-}
-
-.formular-ajutor form {
-  display: flex;
-  flex-direction: column;
-  gap: 15px;
-}
-
-.formular-ajutor label {
-  font-weight: 600;
-  color: #5a2c2f;
-}
-
-.formular-ajutor input,
-.formular-ajutor textarea {
-  width: 100%;
-  padding: 12px 14px;
-  border: 1px solid #ddd;
-  border-radius: 10px;
-  font-size: 16px;
-  transition: border-color 0.2s, box-shadow 0.2s;
-}
-
-.formular-ajutor input:focus,
-.formular-ajutor textarea:focus {
-  border-color: var(--rose, #b56b75);
-  box-shadow: 0 0 0 3px rgba(181,107,117,0.2);
-  outline: none;
-}
-
-.formular-ajutor button {
-  background: var(--rose, #b56b75);
-  color: #fff;
-  font-size: 17px;
-  border: none;
-  border-radius: 12px;
-  padding: 14px 20px;
-  cursor: pointer;
-  transition: background 0.3s, transform 0.2s;
-}
-
-.formular-ajutor button:hover {
-  background: var(--rose2, #d88a93);
-  transform: translateY(-2px);
-}
-
-.disclaimer {
-  font-size: 13px;
-  color: #777;
-  text-align: center;
-  margin-top: 20px;
-}
-
-.disclaimer a {
-  color: var(--rose, #b56b75);
-  text-decoration: none;
-}
-.disclaimer a:hover {
-  text-decoration: underline;
-}
-
   text-align: center;
   background-color: var(--beige-dark);
   color: var(--text);
@@ -217,3 +136,119 @@ footer {
   box-shadow: 0 -2px 6px rgba(0, 0, 0, 0.05);
 }
 
+/* === FORMULAR CAUT AJUTOR === */
+.sectiune-ajutor {
+  max-width: 850px;
+  background: var(--beige);
+  padding: 40px 50px;
+  margin: 60px auto 40px auto;
+  border-radius: 20px;
+  box-shadow: 0 6px 20px rgba(0,0,0,0.05);
+  text-align: center;
+}
+
+.sectiune-ajutor h1 {
+  font-family: 'Poppins', sans-serif;
+  color: var(--rose);
+  font-size: 32px;
+  margin-bottom: 20px;
+}
+
+.descriere-ajutor {
+  font-size: 18px;
+  line-height: 1.8;
+  color: var(--text);
+  margin-bottom: 20px;
+}
+
+.text-secundar {
+  color: #6c5a4a;
+  font-size: 16px;
+}
+
+.formular-ajutor {
+  max-width: 700px;
+  margin: 0 auto 80px auto;
+  background: #fff;
+  padding: 50px 60px;
+  border-radius: 20px;
+  box-shadow: 0 8px 25px rgba(0,0,0,0.06);
+}
+
+.formular-ajutor h2 {
+  color: var(--rose);
+  text-align: center;
+  font-size: 26px;
+  margin-bottom: 25px;
+}
+
+.camp-formular {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 15px;
+}
+
+.camp-formular label {
+  font-weight: 600;
+  margin-bottom: 6px;
+  color: var(--text);
+}
+
+.camp-formular input,
+.camp-formular textarea {
+  padding: 12px 14px;
+  border-radius: 10px;
+  border: 1px solid #ddd;
+  background: #fffaf9;
+  font-size: 16px;
+  transition: all 0.2s ease;
+}
+
+.camp-formular input:focus,
+.camp-formular textarea:focus {
+  border-color: var(--rose);
+  box-shadow: 0 0 0 3px rgba(199,107,125,0.15);
+  outline: none;
+}
+
+.formular-ajutor button {
+  background: var(--rose);
+  color: #fff;
+  border: none;
+  border-radius: 12px;
+  padding: 14px 20px;
+  font-size: 17px;
+  cursor: pointer;
+  transition: background 0.3s, transform 0.2s;
+}
+
+.formular-ajutor button:hover {
+  background: var(--rose-light);
+  transform: translateY(-2px);
+}
+
+.disclaimer {
+  text-align: center;
+  font-size: 13px;
+  color: #777;
+  margin-top: 20px;
+}
+
+.disclaimer a {
+  color: var(--rose);
+  text-decoration: none;
+}
+
+.disclaimer a:hover {
+  text-decoration: underline;
+}
+
+.form-status {
+  margin-top: 15px;
+  text-align: center;
+  padding: 12px;
+  border-radius: 10px;
+  background: var(--beige);
+  color: var(--text);
+  box-shadow: 0 4px 12px rgba(0,0,0,0.05);
+}
