@@ -252,3 +252,118 @@ footer {
   color: var(--text);
   box-shadow: 0 4px 12px rgba(0,0,0,0.05);
 }
+/* === SECTIUNEA CAUT AJUTOR === */
+.sectiune-ajutor {
+  max-width: 750px;
+  margin: 0 auto;
+  text-align: center;
+  padding: 30px 20px 10px;
+}
+
+.sectiune-ajutor h1 {
+  font-size: 1.8rem;
+  color: var(--rose, #cc3366);
+  margin-bottom: 10px;
+  font-weight: 600;
+}
+
+.descriere-ajutor {
+  font-size: 0.95rem;
+  line-height: 1.4;
+  color: #444;
+  margin-bottom: 8px;
+}
+
+.text-secundar {
+  font-size: 0.9rem;
+  line-height: 1.4;
+  color: #666;
+  margin-bottom: 20px;
+}
+
+/* === FORMULAR === */
+.formular-ajutor {
+  max-width: 700px;
+  margin: 0 auto 40px;
+  padding: 20px;
+  background-color: var(--bg, #fff5f7);
+  border-radius: 16px;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.08);
+}
+
+.formular-ajutor h2 {
+  text-align: center;
+  color: var(--rose2, #c94f7c);
+  margin-bottom: 20px;
+}
+
+.camp-formular {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 15px;
+}
+
+.camp-formular label {
+  font-weight: 500;
+  margin-bottom: 5px;
+  color: #333;
+}
+
+.camp-formular input,
+.camp-formular select,
+.camp-formular textarea {
+  padding: 10px;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  font-size: 1rem;
+  font-family: inherit;
+  transition: border-color 0.2s ease;
+}
+
+.camp-formular input:focus,
+.camp-formular select:focus,
+.camp-formular textarea:focus {
+  border-color: var(--rose, #cc3366);
+  outline: none;
+}
+
+button[type="submit"] {
+  display: block;
+  width: 100%;
+  padding: 12px;
+  background-color: var(--rose, #cc3366);
+  color: white;
+  font-size: 1rem;
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+button[type="submit"]:hover {
+  background-color: var(--rose2, #d95f8a);
+}
+
+.disclaimer {
+  font-size: 0.8rem;
+  text-align: center;
+  color: #666;
+  margin-top: 15px;
+}
+
+.disclaimer a {
+  color: var(--rose2, #c94f7c);
+  text-decoration: none;
+}
+
+.disclaimer a:hover {
+  text-decoration: underline;
+}
+
+/* === MESAJ CONFIRMARE === */
+.form-status {
+  text-align: center;
+  font-size: 0.95rem;
+  color: #444;
+  margin-top: 10px;
+}
