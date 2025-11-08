@@ -29,42 +29,36 @@
 
 
   <main class="container">
-    <section class="info">
-      <h2>Caut Ajutor</h2>
-      <p>
-        Ai nevoie de sprijin pentru tine sau pentru cineva drag? Completează formularul de mai jos și spune-ne
-        <b>ce fel de ajutor cauți</b> — o <b>îngrijitoare</b>, o <b>menajeră</b> sau o <b>bonă</b>.
-        Echipa <b>Grija pentru Bunici</b> va analiza cererea ta și te va contacta în cel mai scurt timp.
-      </p>
-      <p>
-        ✨ Toți colaboratorii noștri sunt atent verificați, cu experiență și recomandări reale.
-      </p>
-    </section>
+   <section class="formular-ajutor">
+  <h2>Formular de solicitare ajutor</h2>
+  <p class="intro-form">
+    Ai nevoie de sprijin pentru tine sau pentru cineva drag? Completează formularul de mai jos 
+    și spune-ne ce fel de ajutor cauți — o îngrijitoare, o menajeră sau o bonă. 
+    Echipa <strong>Grija pentru Bunici</strong> va analiza cererea și te va contacta în cel mai scurt timp.
+  </p>
 
-    <form id="cautAjutorForm">
-      <h2>Formular de solicitare</h2>
+  <form action="https://formspree.io/f/xpwolkdp" method="POST">
+    <label for="nume">Nume complet:</label>
+    <input type="text" id="nume" name="nume" placeholder="Ex: Maria Popescu" required>
 
-      <label for="nume">Nume complet:</label>
-      <input type="text" id="nume" name="nume" required>
+    <label for="email">Email:</label>
+    <input type="email" id="email" name="_replyto" placeholder="exemplu@email.com" required>
 
-      <label for="email">Email:</label>
-      <input type="email" id="email" name="email" required>
+    <label for="telefon">Telefon:</label>
+    <input type="tel" id="telefon" name="telefon" placeholder="07xx xxx xxx" required>
 
-      <label for="telefon">Telefon:</label>
-      <input type="text" id="telefon" name="telefon" required>
+    <label for="descriere">Descrie nevoia ta de ajutor:</label>
+    <textarea id="descriere" name="mesaj" rows="5" placeholder="Ex: Am nevoie de o îngrijitoare pentru bunica mea, program zilnic..." required></textarea>
 
-      <label for="mesaj">Descrie nevoia ta de ajutor:</label>
-      <textarea id="mesaj" name="mesaj" rows="4" placeholder="Ex: am nevoie de o îngrijitoare pentru bunica mea, program zilnic..." required></textarea>
+    <button type="submit">Trimite solicitarea 💌</button>
 
-      <button type="submit">Trimite solicitarea</button>
-
-      <p style="font-size: 0.9rem; color: #666; text-align: center; margin-top: 10px;">
-        Prin completarea acestui formular, confirm că am citit și sunt de acord cu
-        <a href="confidentialitate.html" target="_blank">Politica de confidențialitate</a>
-        și
-        <a href="termeni.html" target="_blank">Termenii și condițiile</a>.
-      </p>
-    </form>
+    <p class="disclaimer">
+      Prin completarea acestui formular, confirm că am citit și sunt de acord cu 
+      <a href="#">Politica de confidențialitate</a> și 
+      <a href="#">Termenii și condițiile</a>.
+    </p>
+  </form>
+</section>
 
     <p id="mesajConfirmare" style="display:none; color:green; font-weight:bold; margin-top:15px; text-align:center;">
       Mulțumim, te vom contacta în curând! ❤️
