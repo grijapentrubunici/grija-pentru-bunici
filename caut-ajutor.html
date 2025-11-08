@@ -22,8 +22,9 @@
 
   <!-- CONȚINUT PRINCIPAL -->
   <main>
+    <!-- Descriere introductivă -->
     <section class="sectiune-ajutor">
-      <h1>Caut Ajutor</h1>
+      <h1>Caut ajutor</h1>
       <p class="descriere-ajutor">
         Ai nevoie de sprijin pentru tine sau pentru cineva drag?  
         Completează formularul de mai jos și spune-ne <strong>ce fel de ajutor cauți</strong> — 
@@ -37,9 +38,11 @@
       </p>
     </section>
 
+    <!-- Formular -->
     <section class="formular-ajutor">
       <h2>Formular de solicitare</h2>
       <form action="https://formspree.io/f/xpwolkdp" method="POST">
+        
         <div class="camp-formular">
           <label for="nume">Nume complet:</label>
           <input type="text" id="nume" name="nume" placeholder="Ex: Maria Popescu" required>
@@ -56,4 +59,70 @@
         </div>
 
         <div class="camp-formular">
-          <label for="
+          <label for="tip-ajutor">Tipul de ajutor dorit:</label>
+          <select id="tip-ajutor" name="tip-ajutor" required>
+            <option value="" disabled selected>-- Alege o opțiune --</option>
+            <option value="ingrijitoare">Îngrijitoare</option>
+            <option value="menajera">Menajeră</option>
+            <option value="bona">Bonă</option>
+            <option value="altul">Alt tip de ajutor</option>
+          </select>
+        </div>
+
+        <div class="camp-formular">
+          <label for="mesaj">Descrie nevoia ta de ajutor:</label>
+          <textarea id="mesaj" name="mesaj" rows="5" placeholder="Ex: Am nevoie de o îngrijitoare pentru bunica mea, program zilnic..." required></textarea>
+        </div>
+
+        <button type="submit">Trimite solicitarea 💌</button>
+
+        <p class="disclaimer">
+          Prin completarea acestui formular, confirm că am citit și sunt de acord cu  
+          <a href="confidentialitate.html">Politica de confidențialitate</a> și  
+          <a href="#">Termenii și condițiile</a>.
+        </p>
+      </form>
+    </section>
+  </main>
+
+  <!-- FOOTER -->
+  <footer>
+    <p>&copy; 2025 Grijă pentru Bunici. Toate drepturile rezervate.</p>
+    <p><a href="mailto:grijapentrubunici@yahoo.com">grijapentrubunici@yahoo.com</a> | 
+    Tel: <a href="tel:+40712345678">+40 712 345 678</a></p>
+  </footer>
+
+  <!-- SCRIPT CONFIRMARE -->
+  <script>
+  document.addEventListener('DOMContentLoaded', () => {
+    const form = document.querySelector('form[action*="formspree"]');
+    const status = document.createElement('div');
+    status.className = 'form-status';
+    form.insertAdjacentElement('afterend', status);
+
+    form.addEventListener('submit', async (e) => {
+      e.preventDefault();
+      status.textContent = 'Se trimite...';
+      const data = new FormData(form);
+
+      try {
+        const res = await fetch(form.action, {
+          method: 'POST',
+          body: data,
+          headers: { 'Accept': 'application/json' }
+        });
+
+        if (res.ok) {
+          status.textContent = 'Mulțumim! Te vom contacta în curând. 💌';
+          form.reset();
+        } else {
+          status.textContent = 'Eroare la trimitere. Încearcă din nou.';
+        }
+      } catch {
+        status.textContent = 'Conexiune indisponibilă. Reîncearcă.';
+      }
+    });
+  });
+  </script>
+</body>
+</html>
