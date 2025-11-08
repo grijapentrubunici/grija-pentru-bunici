@@ -126,6 +126,89 @@ form button:hover {
 
 /* Bara de jos */
 footer {
+  /* === FORMULAR CAUT AJUTOR === */
+.formular-ajutor {
+  max-width: 700px;
+  margin: 60px auto;
+  background: #fff;
+  padding: 40px 50px;
+  border-radius: 20px;
+  box-shadow: 0 6px 30px rgba(0,0,0,0.06);
+}
+
+.formular-ajutor h2 {
+  color: var(--rose, #b56b75);
+  text-align: center;
+  font-size: 28px;
+  margin-bottom: 15px;
+}
+
+.intro-form {
+  text-align: center;
+  margin-bottom: 30px;
+  color: #333;
+  line-height: 1.6;
+}
+
+.formular-ajutor form {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.formular-ajutor label {
+  font-weight: 600;
+  color: #5a2c2f;
+}
+
+.formular-ajutor input,
+.formular-ajutor textarea {
+  width: 100%;
+  padding: 12px 14px;
+  border: 1px solid #ddd;
+  border-radius: 10px;
+  font-size: 16px;
+  transition: border-color 0.2s, box-shadow 0.2s;
+}
+
+.formular-ajutor input:focus,
+.formular-ajutor textarea:focus {
+  border-color: var(--rose, #b56b75);
+  box-shadow: 0 0 0 3px rgba(181,107,117,0.2);
+  outline: none;
+}
+
+.formular-ajutor button {
+  background: var(--rose, #b56b75);
+  color: #fff;
+  font-size: 17px;
+  border: none;
+  border-radius: 12px;
+  padding: 14px 20px;
+  cursor: pointer;
+  transition: background 0.3s, transform 0.2s;
+}
+
+.formular-ajutor button:hover {
+  background: var(--rose2, #d88a93);
+  transform: translateY(-2px);
+}
+
+.disclaimer {
+  font-size: 13px;
+  color: #777;
+  text-align: center;
+  margin-top: 20px;
+}
+
+.disclaimer a {
+  color: var(--rose, #b56b75);
+  text-decoration: none;
+}
+.disclaimer a:hover {
+  text-decoration: underline;
+}
+
   text-align: center;
   background-color: var(--beige-dark);
   color: var(--text);
