@@ -1,60 +1,53 @@
-<!DOCTYPE html>
-<html lang="ro">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Caut loc de muncă | Grija pentru Bunici</title>
-  <link rel="stylesheet" href="style.css">
-</head>
-<body>
+/* --- Fundal animat cald pentru secțiunea de formulare --- */
+.form-section {
+  position: relative;
+  overflow: hidden;
+  background: linear-gradient(135deg, #ffe5e5, #ffd6c9, #fff2ec);
+  animation: gradientShift 10s ease infinite alternate;
+  border-radius: 12px;
+  padding: 40px 20px;
+  box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+  max-width: 700px;
+  margin: 50px auto;
+}
 
-  <!-- Bara de sus -->
-  <header>
-    <h1 class="site-title">Grija pentru Bunici</h1>
-    <nav class="menu">
-      <a href="index.html">Acasă</a>
-      <a href="despre-noi.html">Despre noi</a>
-      <a href="caut-ajutor.html">Caut ajutor</a>
-      <a href="caut-loc-de-munca.html" class="active">Caut loc de muncă</a>
-      <a href="contact.html">Contact</a>
-    </nav>
-  </header>
+/* Bule plutitoare subtile */
+.form-section::before,
+.form-section::after {
+  content: "";
+  position: absolute;
+  top: -50px;
+  width: 300px;
+  height: 300px;
+  background: radial-gradient(circle at center, rgba(255,200,200,0.4), transparent 70%);
+  border-radius: 50%;
+  animation: floatBubble 12s infinite ease-in-out;
+}
 
-  <!-- Conținutul principal -->
-  <main>
-    <section class="introducere">
-      <h2>Caut loc de muncă</h2>
-      <p>
-        Dacă dorești să lucrezi în domeniul îngrijirii persoanelor vârstnice, 
-        ca menajeră, bonă sau îngrijitoare, completează formularul de mai jos. 
-        Te vom contacta în cel mai scurt timp posibil.
-      </p>
-    </section>
+.form-section::after {
+  top: auto;
+  bottom: -60px;
+  right: -80px;
+  left: auto;
+  background: radial-gradient(circle at center, rgba(255,210,180,0.4), transparent 70%);
+  animation-delay: 5s;
+}
 
-    <form action="https://formspree.io/f/xpwolkdp" method="POST">
-      <label for="nume">Nume complet:</label>
-      <input type="text" id="nume" name="nume" required>
+/* Animații */
+@keyframes floatBubble {
+  0%, 100% {
+    transform: translateY(0) scale(1);
+  }
+  50% {
+    transform: translateY(-20px) scale(1.1);
+  }
+}
 
-      <label for="telefon">Telefon:</label>
-      <input type="tel" id="telefon" name="telefon" required>
-
-      <label for="email">Email:</label>
-      <input type="email" id="email" name="email">
-
-      <label for="experienta">Experiență relevantă:</label>
-      <textarea id="experienta" name="experienta" rows="4"></textarea>
-
-      <label for="locatie">Localitate / Zonă preferată:</label>
-      <input type="text" id="locatie" name="locatie">
-
-      <button type="submit">Trimite</button>
-    </form>
-  </main>
-
-  <!-- Bara de jos (opțională, dar recomandată) -->
-  <footer>
-    <p>© 2025 Grija pentru Bunici. Toate drepturile rezervate.</p>
-  </footer>
-
-</body>
-</html>
+@keyframes gradientShift {
+  0% {
+    background: linear-gradient(135deg, #ffe5e5, #ffd6c9, #fff2ec);
+  }
+  100% {
+    background: linear-gradient(135deg, #ffd6c9, #fff2ec, #ffe5e5);
+  }
+}
