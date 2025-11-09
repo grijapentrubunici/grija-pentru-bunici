@@ -136,84 +136,54 @@ footer {
   box-shadow: 0 -2px 6px rgba(0, 0, 0, 0.05);
 }
 
-/* === FORMULAR CAUT AJUTOR === */
-.sectiune-ajutor {
-  max-width: 850px;
-  background: var(--beige);
-  padding: 40px 50px;
-  margin: 60px auto 40px auto;
-  border-radius: 20px;
-  box-shadow: 0 6px 20px rgba(0,0,0,0.05);
-  text-align: center;
-}
-
-.sectiune-ajutor h1 {
-  font-family: 'Poppins', sans-serif;
-  color: var(--rose);
-  font-size: 32px;
-  margin-bottom: 20px;
-}
-
-.descriere-ajutor {
-  font-size: 18px;
-  line-height: 1.8;
-  color: var(--text);
-  margin-bottom: 20px;
-}
-
-.text-secundar {
-  color: #6c5a4a;
-  font-size: 16px;
-}
-
+/* --- Formular Caut Ajutor – Stil Nude Bej Elegant --- */
 .formular-ajutor {
   max-width: 700px;
   margin: 0 auto 80px auto;
-  background: #fff;
+  background: linear-gradient(135deg, #f9f4ef, #f4e6d8, #f9f4ef);
+  animation: gradientShift 15s ease infinite alternate;
   padding: 50px 60px;
   border-radius: 20px;
-  box-shadow: 0 8px 25px rgba(0,0,0,0.06);
+  box-shadow: 0 8px 25px rgba(0,0,0,0.05);
 }
 
 .formular-ajutor h2 {
-  color: var(--rose);
+  color: #5a4634;
   text-align: center;
   font-size: 26px;
   margin-bottom: 25px;
-}
-
-.camp-formular {
-  display: flex;
-  flex-direction: column;
-  margin-bottom: 15px;
+  font-family: 'Poppins', sans-serif;
 }
 
 .camp-formular label {
   font-weight: 600;
   margin-bottom: 6px;
-  color: var(--text);
+  color: #3b2f25;
 }
 
 .camp-formular input,
-.camp-formular textarea {
+.camp-formular textarea,
+.camp-formular select {
   padding: 12px 14px;
   border-radius: 10px;
-  border: 1px solid #ddd;
-  background: #fffaf9;
+  border: 1px solid #d8cbbd;
+  background: #fffaf5;
   font-size: 16px;
-  transition: all 0.2s ease;
+  color: #3b2f25;
+  transition: border-color 0.2s ease, box-shadow 0.2s ease;
 }
 
 .camp-formular input:focus,
-.camp-formular textarea:focus {
-  border-color: var(--rose);
-  box-shadow: 0 0 0 3px rgba(199,107,125,0.15);
+.camp-formular textarea:focus,
+.camp-formular select:focus {
+  border-color: #d6bfa3;
+  box-shadow: 0 0 0 3px rgba(214,191,163,0.2);
   outline: none;
 }
 
 .formular-ajutor button {
-  background: var(--rose);
-  color: #fff;
+  background-color: #d6bfa3;
+  color: #3b2f25;
   border: none;
   border-radius: 12px;
   padding: 14px 20px;
@@ -223,9 +193,10 @@ footer {
 }
 
 .formular-ajutor button:hover {
-  background: var(--rose-light);
+  background-color: #c5a988;
   transform: translateY(-2px);
 }
+
 
 .disclaimer {
   text-align: center;
