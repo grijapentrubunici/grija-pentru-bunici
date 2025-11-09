@@ -413,7 +413,7 @@ button[type="submit"]:hover {
 }
 
 
-/* HERO - pe toată lățimea și mai scurtă */
+/* HERO - imagine mare, pe toată lățimea și bine încadrată */
 .hero {
   width: 100%;
   margin: 0;
@@ -422,19 +422,19 @@ button[type="submit"]:hover {
 
 .hero img {
   width: 100%;
-  height: 340px; /* puțin mai înaltă ca să încapă fețele */
+  height: 480px; /* imagine mare și clară */
   object-fit: cover;
-  object-position: top center; /* mută cadrul mai sus, ca să se vadă fețele */
+  object-position: center top; /* arată fețele complet */
   display: block;
   border-radius: 0;
   box-shadow: none;
-  filter: brightness(98%);
+  filter: brightness(99%);
 }
 
 @media (max-width: 768px) {
   .hero img {
-    height: 220px;
-    object-position: center top;
+    height: 300px;
+    object-position: top center;
   }
 }
 
