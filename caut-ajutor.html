@@ -3,15 +3,185 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Caut Ajutor - Grijă pentru Bunici</title>
+  <title>Caut Ajutor | Grijă pentru Bunici</title>
+  <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600&family=Poppins:wght@500;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="style.css">
-</head>
+  <style>
+    body {
+      background-color: var(--beige);
+      font-family: 'Open Sans', sans-serif;
+      color: var(--text);
+      margin: 0;
+      padding: 0;
+    }
 
+    header {
+      background-color: var(--beige-dark);
+      padding: 15px 0;
+      text-align: center;
+      box-shadow: 0 2px 6px rgba(0,0,0,0.05);
+    }
+
+    header h1 {
+      font-family: 'Poppins', sans-serif;
+      color: var(--text);
+      margin: 0;
+    }
+
+    nav {
+      margin-top: 10px;
+    }
+
+    nav a {
+      text-decoration: none;
+      color: var(--text);
+      font-weight: 600;
+      margin: 0 12px;
+    }
+
+    nav a:hover {
+      color: var(--rose);
+    }
+
+    /* INTRO - secțiune caldă */
+    .intro-form {
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      justify-content: center;
+      max-width: 1000px;
+      margin: 50px auto 30px;
+      padding: 40px 25px;
+      background: linear-gradient(135deg, #fff7f6, #fff3f1);
+      border-radius: 20px;
+      box-shadow: 0 6px 18px rgba(0,0,0,0.05);
+      gap: 40px;
+    }
+
+    .intro-text {
+      flex: 1 1 450px;
+    }
+
+    .intro-text h2 {
+      font-family: 'Poppins', sans-serif;
+      font-size: 1.9rem;
+      color: var(--rose);
+      margin-bottom: 15px;
+    }
+
+    .intro-text p {
+      font-size: 1.05rem;
+      line-height: 1.8;
+      color: var(--text);
+      text-align: justify;
+    }
+
+    .intro-image {
+      flex: 1 1 350px;
+      text-align: center;
+    }
+
+    .intro-image img {
+      width: 100%;
+      max-width: 380px;
+      border-radius: 16px;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+    }
+
+    @media (max-width: 768px) {
+      .intro-form {
+        flex-direction: column;
+        text-align: center;
+      }
+
+      .intro-text p {
+        text-align: center;
+      }
+    }
+
+    /* FORMULAR */
+    .formular-ajutor {
+      max-width: 700px;
+      margin: 0 auto 60px;
+      background: #fffdfc;
+      border: 1px solid #f2e3db;
+      border-radius: 18px;
+      padding: 40px 50px;
+      box-shadow: 0 6px 20px rgba(0,0,0,0.05);
+    }
+
+    .formular-ajutor h2 {
+      text-align: center;
+      color: var(--rose);
+      font-family: 'Poppins', sans-serif;
+      margin-bottom: 25px;
+    }
+
+    .camp-formular {
+      margin-bottom: 15px;
+    }
+
+    .camp-formular label {
+      display: block;
+      font-weight: 600;
+      margin-bottom: 5px;
+    }
+
+    .camp-formular input,
+    .camp-formular textarea,
+    .camp-formular select {
+      width: 100%;
+      padding: 12px;
+      border-radius: 10px;
+      border: 1px solid #d8cbbd;
+      background-color: #fff;
+      font-size: 1rem;
+    }
+
+    .formular-ajutor button {
+      background-color: var(--rose);
+      color: white;
+      border: none;
+      border-radius: 12px;
+      padding: 14px 25px;
+      font-size: 17px;
+      cursor: pointer;
+      display: block;
+      margin: 25px auto 10px;
+      transition: background 0.3s, transform 0.2s;
+    }
+
+    .formular-ajutor button:hover {
+      background-color: var(--rose-light);
+      transform: translateY(-2px);
+    }
+
+    /* Mesaj după formular */
+    .post-form-message {
+      text-align: center;
+      font-size: 0.95rem;
+      color: #5a4634;
+      margin-top: 25px;
+      background: #fffaf7;
+      padding: 15px 20px;
+      border-radius: 10px;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.04);
+    }
+
+    footer {
+      background-color: var(--beige-dark);
+      text-align: center;
+      padding: 20px;
+      color: var(--text);
+      font-size: 0.95rem;
+      margin-top: 40px;
+    }
+  </style>
+</head>
 <body>
-  <!-- HEADER -->
   <header>
-    <h1 class="site-title">💗 Grijă pentru Bunici</h1>
-    <nav class="menu">
+    <h1>Grijă pentru Bunici</h1>
+    <nav>
       <a href="index.html">Acasă</a>
       <a href="despre-noi.html">Despre noi</a>
       <a href="caut-ajutor.html" class="active">Caut ajutor</a>
@@ -20,109 +190,68 @@
     </nav>
   </header>
 
-  <!-- CONȚINUT PRINCIPAL -->
-  <main>
-    <!-- Descriere introductivă -->
-    <section class="sectiune-ajutor">
-      <h1>Caut ajutor</h1>
-      <p class="descriere-ajutor">
-        Ai nevoie de sprijin pentru tine sau pentru cineva drag?  
-        Completează formularul de mai jos și spune-ne <strong>ce fel de ajutor cauți</strong> — 
-        o îngrijitoare, o menajeră sau o bonă.  
-        Echipa <strong>Grija pentru Bunici</strong> va analiza cererea ta și te va contacta 
-        în cel mai scurt timp. ❤️
+  <section class="intro-form">
+    <div class="intro-text">
+      <h2>Ai nevoie de ajutor acasă?</h2>
+      <p>
+        Fie că ai nevoie de <b>îngrijitoare</b> pentru un părinte, o <b>bonă</b> pentru copil sau o <b>menajeră</b> de încredere,  
+        echipa <b>Grijă pentru Bunici</b> este aici să te sprijine.  
+        Selectăm cu atenție persoane empatice, responsabile și verificate, pentru ca tu și familia ta să aveți liniștea că totul este pe mâini bune.
       </p>
-      <p class="text-secundar">
-        Toți colaboratorii noștri sunt atent verificați, cu experiență și recomandări reale.  
-        Dorim să te ajutăm să găsești persoana potrivită pentru tine și familia ta.
+      <p>
+        Completează formularul de mai jos și vom reveni în cel mai scurt timp cu o soluție potrivită nevoilor tale.  
+        Grija, încrederea și respectul sunt temelia fiecărei colaborări.
       </p>
-    </section>
+    </div>
+    <div class="intro-image">
+      <img src="form-ajutor.jpg" alt="Îngrijitoare zâmbitoare alături de bunică">
+    </div>
+  </section>
 
-    <!-- Formular -->
-    <section class="formular-ajutor form-section">
-      <h2>Formular de solicitare</h2>
-      <form action="https://formspree.io/f/xpwolkdp" method="POST">
-        
-        <div class="camp-formular">
-          <label for="nume">Nume complet:</label>
-          <input type="text" id="nume" name="nume" placeholder="Ex: Maria Popescu" required>
-        </div>
+  <section class="formular-ajutor">
+    <h2>Formular – Solicită ajutor</h2>
+    <form action="https://formspree.io/f/xpwolkdp" method="POST">
+      <div class="camp-formular">
+        <label for="nume">Nume complet</label>
+        <input type="text" id="nume" name="nume" required>
+      </div>
 
-        <div class="camp-formular">
-          <label for="email">Email:</label>
-          <input type="email" id="email" name="_replyto" placeholder="exemplu@email.com" required>
-        </div>
+      <div class="camp-formular">
+        <label for="email">Email</label>
+        <input type="email" id="email" name="_replyto" required>
+      </div>
 
-        <div class="camp-formular">
-          <label for="telefon">Telefon:</label>
-          <input type="tel" id="telefon" name="telefon" placeholder="07xx xxx xxx" required>
-        </div>
+      <div class="camp-formular">
+        <label for="telefon">Telefon</label>
+        <input type="tel" id="telefon" name="telefon" required>
+      </div>
 
-        <div class="camp-formular">
-          <label for="tip-ajutor">Tipul de ajutor dorit:</label>
-          <select id="tip-ajutor" name="tip-ajutor" required>
-            <option value="" disabled selected>-- Alege o opțiune --</option>
-            <option value="ingrijitoare">Îngrijitoare</option>
-            <option value="menajera">Menajeră</option>
-            <option value="bona">Bonă</option>
-            <option value="altul">Alt tip de ajutor</option>
-          </select>
-        </div>
+      <div class="camp-formular">
+        <label for="serviciu">Tip de ajutor dorit</label>
+        <select id="serviciu" name="serviciu" required>
+          <option value="">Alege o opțiune</option>
+          <option value="ingrijire">Îngrijitoare pentru senior</option>
+          <option value="bona">Bonă pentru copii</option>
+          <option value="menaj">Menajeră pentru gospodărie</option>
+        </select>
+      </div>
 
-        <div class="camp-formular">
-          <label for="mesaj">Descrie nevoia ta de ajutor:</label>
-          <textarea id="mesaj" name="mesaj" rows="5" placeholder="Ex: Am nevoie de o îngrijitoare pentru bunica mea, program zilnic..." required></textarea>
-        </div>
+      <div class="camp-formular">
+        <label for="detalii">Detalii suplimentare</label>
+        <textarea id="detalii" name="detalii" rows="5" placeholder="Scrie-ne câteva detalii despre nevoile tale..."></textarea>
+      </div>
 
-        <button type="submit">Trimite solicitarea 💌</button>
+      <button type="submit">Trimite solicitarea</button>
+    </form>
 
-        <p class="disclaimer">
-          Prin completarea acestui formular, confirm că am citit și sunt de acord cu  
-          <a href="confidentialitate.html">Politica de confidențialitate</a> și  
-          <a href="#">Termenii și condițiile</a>.
-        </p>
-      </form>
-    </section>
-  </main>
+    <div class="post-form-message">
+      Toate informațiile sunt confidențiale. Echipa noastră te va contacta cât mai curând.  
+      Îți mulțumim pentru încredere!
+    </div>
+  </section>
 
-  <!-- FOOTER -->
   <footer>
-    <p>&copy; 2025 Grijă pentru Bunici. Toate drepturile rezervate.</p>
-    <p><a href="mailto:grijapentrubunici@yahoo.com">grijapentrubunici@yahoo.com</a> | 
-    Tel: <a href="tel:+40712345678">+40 712 345 678</a></p>
+    © 2025 Grijă pentru Bunici | Contact WhatsApp: <b>0793 553 703</b>
   </footer>
-
-  <!-- SCRIPT CONFIRMARE -->
-  <script>
-  document.addEventListener('DOMContentLoaded', () => {
-    const form = document.querySelector('form[action*="formspree"]');
-    const status = document.createElement('div');
-    status.className = 'form-status';
-    form.insertAdjacentElement('afterend', status);
-
-    form.addEventListener('submit', async (e) => {
-      e.preventDefault();
-      status.textContent = 'Se trimite...';
-      const data = new FormData(form);
-
-      try {
-        const res = await fetch(form.action, {
-          method: 'POST',
-          body: data,
-          headers: { 'Accept': 'application/json' }
-        });
-
-        if (res.ok) {
-          status.textContent = 'Mulțumim! Te vom contacta în curând. 💌';
-          form.reset();
-        } else {
-          status.textContent = 'Eroare la trimitere. Încearcă din nou.';
-        }
-      } catch {
-        status.textContent = 'Conexiune indisponibilă. Reîncearcă.';
-      }
-    });
-  });
-  </script>
 </body>
 </html>
