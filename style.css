@@ -422,16 +422,19 @@ button[type="submit"]:hover {
 
 .hero img {
   width: 100%;
-  height: 300px; /* imagine mai scurtă */
+  height: 340px; /* puțin mai înaltă ca să încapă fețele */
   object-fit: cover;
+  object-position: top center; /* mută cadrul mai sus, ca să se vadă fețele */
   display: block;
-  border-radius: 0; /* fără colțuri rotunjite, să umple complet marginile */
+  border-radius: 0;
   box-shadow: none;
   filter: brightness(98%);
 }
 
 @media (max-width: 768px) {
   .hero img {
-    height: 200px; /* și mai compact pe mobil */
+    height: 220px;
+    object-position: center top;
   }
 }
+
