@@ -1,53 +1,109 @@
-/* --- Fundal animat cald pentru secțiunea de formulare --- */
-.form-section {
-  position: relative;
-  overflow: hidden;
-  background: linear-gradient(135deg, #ffe5e5, #ffd6c9, #fff2ec);
-  animation: gradientShift 10s ease infinite alternate;
-  border-radius: 12px;
-  padding: 40px 20px;
-  box-shadow: 0 4px 15px rgba(0,0,0,0.1);
-  max-width: 700px;
-  margin: 50px auto;
-}
+<!DOCTYPE html>
+<html lang="ro">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Caut loc de muncă | Grija pentru Bunici</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
 
-/* Bule plutitoare subtile */
-.form-section::before,
-.form-section::after {
-  content: "";
-  position: absolute;
-  top: -50px;
-  width: 300px;
-  height: 300px;
-  background: radial-gradient(circle at center, rgba(255,200,200,0.4), transparent 70%);
-  border-radius: 50%;
-  animation: floatBubble 12s infinite ease-in-out;
-}
+  <!-- 🔹 HEADER -->
+  <header>
+    <h1 class="site-title">💗 Grijă pentru Bunici</h1>
+    <nav class="menu">
+      <a href="index.html">Acasă</a>
+      <a href="despre-noi.html">Despre noi</a>
+      <a href="caut-ajutor.html">Caut ajutor</a>
+      <a href="caut-loc-de-munca.html" class="active">Caut loc de muncă</a>
+      <a href="contact.html">Contact</a>
+    </nav>
+  </header>
 
-.form-section::after {
-  top: auto;
-  bottom: -60px;
-  right: -80px;
-  left: auto;
-  background: radial-gradient(circle at center, rgba(255,210,180,0.4), transparent 70%);
-  animation-delay: 5s;
-}
+  <!-- 🔹 CONȚINUT PRINCIPAL -->
+  <main>
+    <section class="introducere">
+      <h2>Caut loc de muncă</h2>
+      <p>
+        Dacă dorești să lucrezi în domeniul îngrijirii persoanelor vârstnice, 
+        ca menajeră, bonă sau îngrijitoare, completează formularul de mai jos.  
+        Te vom contacta în cel mai scurt timp posibil. ❤️
+      </p>
+    </section>
 
-/* Animații */
-@keyframes floatBubble {
-  0%, 100% {
-    transform: translateY(0) scale(1);
-  }
-  50% {
-    transform: translateY(-20px) scale(1.1);
-  }
-}
+    <!-- 🔸 FORMULAR CU FUNDAL CALD ANIMAT -->
+    <section class="form-section">
+      <h2>Formular de înscriere</h2>
+      <p>Completează detaliile de mai jos și te vom contacta în cel mai scurt timp.</p>
 
-@keyframes gradientShift {
-  0% {
-    background: linear-gradient(135deg, #ffe5e5, #ffd6c9, #fff2ec);
-  }
-  100% {
-    background: linear-gradient(135deg, #ffd6c9, #fff2ec, #ffe5e5);
-  }
-}
+      <form action="https://formspree.io/f/xpwolkdp" method="POST">
+        <label for="nume">Nume complet:</label>
+        <input type="text" id="nume" name="nume" placeholder="Ex: Ioana Ionescu" required>
+
+        <label for="telefon">Telefon:</label>
+        <input type="tel" id="telefon" name="telefon" placeholder="07xx xxx xxx" required>
+
+        <label for="email">Email:</label>
+        <input type="email" id="email" name="_replyto" placeholder="exemplu@email.com">
+
+        <label for="experienta">Experiență relevantă:</label>
+        <textarea id="experienta" name="experienta" rows="5" placeholder="Ex: Am lucrat 3 ani ca îngrijitoare pentru o familie din București..."></textarea>
+
+        <label for="locatie">Localitate / Zonă preferată:</label>
+        <input type="text" id="locatie" name="locatie" placeholder="Ex: București, Brașov...">
+
+        <button type="submit">Trimite aplicația 💌</button>
+
+        <p class="disclaimer">
+          Prin completarea acestui formular, confirm că am citit și sunt de acord cu  
+          <a href="confidentialitate.html">Politica de confidențialitate</a> și  
+          <a href="#">Termenii și condițiile</a>.
+        </p>
+      </form>
+    </section>
+  </main>
+
+  <!-- 🔹 FOOTER -->
+  <footer>
+    <p>&copy; 2025 Grijă pentru Bunici. Toate drepturile rezervate.</p>
+    <p>
+      <a href="mailto:grijapentrubunici@yahoo.com">grijapentrubunici@yahoo.com</a> | 
+      Tel: <a href="tel:+40712345678">+40 712 345 678</a>
+    </p>
+  </footer>
+
+  <!-- 🔹 SCRIPT CONFIRMARE -->
+  <script>
+  document.addEventListener('DOMContentLoaded', () => {
+    const form = document.querySelector('form[action*="formspree"]');
+    const status = document.createElement('div');
+    status.className = 'form-status';
+    form.insertAdjacentElement('afterend', status);
+
+    form.addEventListener('submit', async (e) => {
+      e.preventDefault();
+      status.textContent = 'Se trimite...';
+      const data = new FormData(form);
+
+      try {
+        const res = await fetch(form.action, {
+          method: 'POST',
+          body: data,
+          headers: { 'Accept': 'application/json' }
+        });
+
+        if (res.ok) {
+          status.textContent = 'Mulțumim! Te vom contacta în curând. 💌';
+          form.reset();
+        } else {
+          status.textContent = 'Eroare la trimitere. Încearcă din nou.';
+        }
+      } catch {
+        status.textContent = 'Conexiune indisponibilă. Reîncearcă.';
+      }
+    });
+  });
+  </script>
+
+</body>
+</html>
