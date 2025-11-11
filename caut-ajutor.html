@@ -43,14 +43,14 @@
       color: var(--rose);
     }
 
-    /* INTRO - secțiune caldă */
+    /* SECTIUNE INTRO + FORMULAR */
     .intro-form {
       display: flex;
       flex-wrap: wrap;
-      align-items: center;
-      justify-content: center;
-      max-width: 1000px;
-      margin: 50px auto 30px;
+      justify-content: space-between;
+      align-items: flex-start;
+      max-width: 1100px;
+      margin: 50px auto 60px;
       padding: 40px 25px;
       background: linear-gradient(135deg, #fff7f6, #fff3f1);
       border-radius: 20px;
@@ -74,43 +74,20 @@
       line-height: 1.8;
       color: var(--text);
       text-align: justify;
+      margin-bottom: 15px;
     }
 
-    .intro-image {
-      flex: 1 1 350px;
-      text-align: center;
-    }
-
-    .intro-image img {
-      width: 100%;
-      max-width: 380px;
-      border-radius: 16px;
-      box-shadow: 0 4px 12px rgba(0,0,0,0.1);
-    }
-
-    @media (max-width: 768px) {
-      .intro-form {
-        flex-direction: column;
-        text-align: center;
-      }
-
-      .intro-text p {
-        text-align: center;
-      }
-    }
-
-    /* FORMULAR */
-    .formular-ajutor {
-      max-width: 700px;
-      margin: 0 auto 60px;
+    /* FORMULAR ÎN DREAPTA */
+    .intro-formular {
+      flex: 1 1 420px;
       background: #fffdfc;
       border: 1px solid #f2e3db;
       border-radius: 18px;
-      padding: 40px 50px;
+      padding: 35px 40px;
       box-shadow: 0 6px 20px rgba(0,0,0,0.05);
     }
 
-    .formular-ajutor h2 {
+    .intro-formular h3 {
       text-align: center;
       color: var(--rose);
       font-family: 'Poppins', sans-serif;
@@ -138,7 +115,7 @@
       font-size: 1rem;
     }
 
-    .formular-ajutor button {
+    .intro-formular button {
       background-color: var(--rose);
       color: white;
       border: none;
@@ -151,12 +128,11 @@
       transition: background 0.3s, transform 0.2s;
     }
 
-    .formular-ajutor button:hover {
+    .intro-formular button:hover {
       background-color: var(--rose-light);
       transform: translateY(-2px);
     }
 
-    /* Mesaj după formular */
     .post-form-message {
       text-align: center;
       font-size: 0.95rem;
@@ -166,6 +142,22 @@
       padding: 15px 20px;
       border-radius: 10px;
       box-shadow: 0 2px 8px rgba(0,0,0,0.04);
+    }
+
+    /* RESPONSIVE */
+    @media (max-width: 900px) {
+      .intro-form {
+        flex-direction: column;
+        text-align: center;
+      }
+
+      .intro-text p {
+        text-align: center;
+      }
+
+      .intro-formular {
+        padding: 25px;
+      }
     }
 
     footer {
@@ -203,51 +195,47 @@
         Grija, încrederea și respectul sunt temelia fiecărei colaborări.
       </p>
     </div>
-    <div class="intro-image">
-  <img src="images/familie-ajutor.webp" alt="Bonă, copil și bunică zâmbitoare">
-</div>
 
-  </section>
+    <div class="intro-formular">
+      <h3>Formular – Solicită ajutor</h3>
+      <form action="https://formspree.io/f/xpwolkdp" method="POST">
+        <div class="camp-formular">
+          <label for="nume">Nume complet</label>
+          <input type="text" id="nume" name="nume" required>
+        </div>
 
-  <section class="formular-ajutor">
-    <h2>Formular – Solicită ajutor</h2>
-    <form action="https://formspree.io/f/xpwolkdp" method="POST">
-      <div class="camp-formular">
-        <label for="nume">Nume complet</label>
-        <input type="text" id="nume" name="nume" required>
+        <div class="camp-formular">
+          <label for="email">Email</label>
+          <input type="email" id="email" name="_replyto" required>
+        </div>
+
+        <div class="camp-formular">
+          <label for="telefon">Telefon</label>
+          <input type="tel" id="telefon" name="telefon" required>
+        </div>
+
+        <div class="camp-formular">
+          <label for="serviciu">Tip de ajutor dorit</label>
+          <select id="serviciu" name="serviciu" required>
+            <option value="">Alege o opțiune</option>
+            <option value="ingrijire">Îngrijitoare pentru senior</option>
+            <option value="bona">Bonă pentru copii</option>
+            <option value="menaj">Menajeră pentru gospodărie</option>
+          </select>
+        </div>
+
+        <div class="camp-formular">
+          <label for="detalii">Detalii suplimentare</label>
+          <textarea id="detalii" name="detalii" rows="5" placeholder="Scrie-ne câteva detalii despre nevoile tale..."></textarea>
+        </div>
+
+        <button type="submit">Trimite solicitarea</button>
+      </form>
+
+      <div class="post-form-message">
+        Toate informațiile sunt confidențiale. Echipa noastră te va contacta cât mai curând.  
+        Îți mulțumim pentru încredere!
       </div>
-
-      <div class="camp-formular">
-        <label for="email">Email</label>
-        <input type="email" id="email" name="_replyto" required>
-      </div>
-
-      <div class="camp-formular">
-        <label for="telefon">Telefon</label>
-        <input type="tel" id="telefon" name="telefon" required>
-      </div>
-
-      <div class="camp-formular">
-        <label for="serviciu">Tip de ajutor dorit</label>
-        <select id="serviciu" name="serviciu" required>
-          <option value="">Alege o opțiune</option>
-          <option value="ingrijire">Îngrijitoare pentru senior</option>
-          <option value="bona">Bonă pentru copii</option>
-          <option value="menaj">Menajeră pentru gospodărie</option>
-        </select>
-      </div>
-
-      <div class="camp-formular">
-        <label for="detalii">Detalii suplimentare</label>
-        <textarea id="detalii" name="detalii" rows="5" placeholder="Scrie-ne câteva detalii despre nevoile tale..."></textarea>
-      </div>
-
-      <button type="submit">Trimite solicitarea</button>
-    </form>
-
-    <div class="post-form-message">
-      Toate informațiile sunt confidențiale. Echipa noastră te va contacta cât mai curând.  
-      Îți mulțumim pentru încredere!
     </div>
   </section>
 
