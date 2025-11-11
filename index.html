@@ -7,42 +7,152 @@
   <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600&family=Poppins:wght@500;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="style.css">
   <style>
-    /* Layout mai echilibrat pentru pagina principală */
-    main {
-      max-width: 900px;
-      margin: 0 auto;
-      padding: 40px 20px;
-      text-align: center;
-    }
-
-    .intro {
+    body {
+      background-color: var(--beige);
+      font-family: 'Open Sans', sans-serif;
       color: var(--text);
-      font-size: 1.1rem;
-      line-height: 1.7;
-      margin-bottom: 3rem;
+      margin: 0;
+      padding: 0;
     }
 
-    footer {
+    /* HEADER */
+    header {
       background-color: var(--beige-dark);
-      color: var(--text);
+      padding: 15px 0;
       text-align: center;
-      padding: 25px 10px;
-      font-size: 0.95rem;
-      box-shadow: 0 -2px 6px rgba(0,0,0,0.05);
-      margin-top: 40px;
+      box-shadow: 0 2px 6px rgba(0,0,0,0.05);
     }
 
-    footer a {
+    header h1 {
+      font-family: 'Poppins', sans-serif;
       color: var(--text);
-      text-decoration: underline;
-      font-weight: 600;
+      margin: 0;
     }
 
-    footer a:hover {
+    nav {
+      margin-top: 10px;
+    }
+
+    nav a {
+      text-decoration: none;
+      color: var(--text);
+      font-weight: 600;
+      margin: 0 12px;
+    }
+
+    nav a:hover {
       color: var(--rose);
     }
 
-    /* WhatsApp flotant */
+    /* HERO SECTION */
+    .hero-section {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      align-items: center;
+      max-width: 1100px;
+      margin: 60px auto 40px;
+      padding: 40px 25px;
+      background: #fffdfc;
+      border-radius: 18px;
+      box-shadow: 0 4px 15px rgba(0,0,0,0.05);
+      gap: 30px;
+    }
+
+    .hero-text {
+      flex: 1 1 450px;
+    }
+
+    .hero-text h2 {
+      color: var(--rose);
+      font-family: 'Poppins', sans-serif;
+      font-size: 2rem;
+      margin-bottom: 15px;
+    }
+
+    .hero-text p {
+      line-height: 1.8;
+      font-size: 1.05rem;
+      text-align: justify;
+      color: var(--text);
+    }
+
+    .hero-image {
+      flex: 1 1 350px;
+      text-align: center;
+    }
+
+    .hero-image img {
+      width: 100%;
+      max-width: 350px; /* 🔸 mai mică decât înainte */
+      border-radius: 16px;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+    }
+
+    /* SERVICES SECTION */
+    .services {
+      max-width: 1100px;
+      margin: 40px auto 60px;
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 25px;
+      padding: 0 25px;
+    }
+
+    .service-card {
+      background: #fff;
+      border-radius: 16px;
+      box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+      padding: 25px;
+      text-align: left;
+      transition: transform 0.3s ease;
+    }
+
+    .service-card:hover {
+      transform: translateY(-4px);
+    }
+
+    .service-card h3 {
+      color: var(--rose);
+      font-family: 'Poppins', sans-serif;
+      margin-bottom: 10px;
+    }
+
+    .service-card p {
+      color: var(--text);
+      line-height: 1.7;
+    }
+
+    /* FOOTER */
+    footer {
+      background-color: var(--beige-dark);
+      text-align: center;
+      padding: 25px 10px;
+      color: var(--text);
+      font-size: 0.95rem;
+      margin-top: 40px;
+      border-top: 1px solid #f1dada;
+    }
+
+    .footer-links {
+      margin-top: 10px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 6px;
+    }
+
+    .footer-link, .anpc-link {
+      color: #000;
+      font-weight: 700;
+      text-decoration: none;
+    }
+
+    .footer-link:hover, .anpc-link:hover {
+      color: #e77c7c;
+    }
+
+    /* WHATSAPP BUTTON */
     .whatsapp-float {
       position: fixed;
       width: 60px;
@@ -54,7 +164,7 @@
       display: flex;
       justify-content: center;
       align-items: center;
-      box-shadow: 0 3px 8px rgba(0, 0, 0, 0.3);
+      box-shadow: 0 3px 8px rgba(0,0,0,0.3);
       transition: all 0.3s ease;
       z-index: 999;
     }
@@ -64,95 +174,88 @@
       transform: scale(1.08);
     }
 
-    @media (max-width: 768px) {
-      main {
-        padding: 20px 15px;
+    /* RESPONSIVE */
+    @media (max-width: 900px) {
+      .hero-section {
+        flex-direction: column;
+        text-align: center;
+      }
+
+      .hero-text p {
+        text-align: center;
+      }
+
+      .hero-image img {
+        max-width: 280px;
       }
     }
   </style>
 </head>
 
 <body>
-  <!-- ✅ HEADER UNIFICAT -->
+  <!-- ✅ HEADER -->
   <header>
-  <h1 class="site-title">Grija pentru Bunici</h1>
-  <nav class="menu">
-    <a href="index.html">Acasă</a>
-    <a href="despre-noi.html">Despre noi</a>
-    <a href="caut-ajutor.html">Caut ajutor</a>
-    <a href="caut-loc-de-munca.html">Caut loc de muncă</a>
-    <a href="contact.html">Contact</a>
-  </nav>
-</header>
+    <h1 class="site-title">Grijă pentru Bunici</h1>
+    <nav class="menu">
+      <a href="index.html" class="active">Acasă</a>
+      <a href="despre-noi.html">Despre noi</a>
+      <a href="caut-ajutor.html">Caut ajutor</a>
+      <a href="caut-loc-de-munca.html">Caut loc de muncă</a>
+      <a href="contact.html">Contact</a>
+    </nav>
+  </header>
 
+  <!-- 🌸 HERO -->
+  <section class="hero-section">
+    <div class="hero-text">
+      <h2>Îngrijire de încredere pentru cei dragi</h2>
+      <p>
+        La <b>Grijă pentru Bunici</b> oferim servicii profesionale de <b>bone</b>, <b>menajere</b> și <b>îngrijitoare</b> pentru seniori.  
+        Fiecare colaborator este selectat cu atenție și verificat temeinic pentru a garanta siguranța, respectul și sprijinul real.  
+        Credem în <b>încredere</b>, <b>transparență</b> și <b>empatie</b> — valori care stau la baza fiecărei colaborări și a relațiilor de lungă durată cu familiile din România.
+      </p>
+    </div>
+    <div class="hero-image">
+      <img src="hero-ingrijitoare.jpg" alt="Îngrijitoare alături de o bunică fericită">
+    </div>
+  </section>
 
- <!-- 🌷 HERO -->
-<section class="hero">
-  <div class="hero-container">
-    <img src="hero-ingrijitoare.jpg" alt="Îngrijitoare alături de o bunică fericită">
-  </div>
-</section>
+  <!-- 💗 SERVICII -->
+  <section class="services">
+    <div class="service-card">
+      <h3>Bone</h3>
+      <p>Bonele noastre oferă mai mult decât supraveghere — aduc răbdare, calm și grijă autentică pentru fiecare copil.  
+      Selectăm atent persoane empatice și responsabile, care știu să creeze un mediu cald, sigur și educativ.</p>
+    </div>
 
+    <div class="service-card">
+      <h3>Menajere</h3>
+      <p>O locuință curată și bine organizată aduce liniște și confort familiei.  
+      Menajerele noastre au experiență reală și seriozitate, ocupându-se de curățenie, gătit ușor și administrarea treburilor zilnice cu discreție.</p>
+    </div>
 
-  <!-- 💬 INTRODUCERE -->
-  <main>
-    <h2 style="color:var(--text); font-size:2rem; font-family:'Poppins',sans-serif;">Îngrijire de încredere pentru cei dragi</h2>
-    <p class="intro">
-      La <b>Grijă pentru Bunici</b> oferim servicii profesionale de <b>bone</b>, <b>menajere</b> și <b>îngrijitoare</b> pentru seniori.  
-      Fiecare colaborator este selectat cu atenție și verificat temeinic pentru a garanta siguranța, respectul și sprijinul real.  
-      Credem în <b>încredere</b>, <b>transparență</b> și <b>empatie</b> — valori care stau la baza fiecărei colaborări și a relațiilor de lungă durată cu familiile din România.
-    </p>
+    <div class="service-card">
+      <h3>Îngrijitoare</h3>
+      <p>Îngrijitoarele noastre oferă sprijin complet la domiciliu: ajutor la deplasare, administrarea medicamentelor, gătit, companie și sprijin moral zilnic.</p>
+    </div>
 
-   <section class="services">
-  <div class="service-card">
-    <h3>Bone</h3>
-    <p>
-      Bonele noastre oferă mai mult decât supraveghere – ele aduc răbdare, calm și grijă autentică pentru fiecare copil.  
-      Selectăm atent persoane empatice și responsabile, care știu să creeze un mediu cald, sigur și educativ.
-    </p>
-  </div>
+    <div class="service-card">
+      <h3>✔ Selectare & Verificare</h3>
+      <p>Fiecare colaborator este verificat riguros înainte de angajare: experiență, recomandări și compatibilitate cu familia.  
+      Astfel, asigurăm un parteneriat bazat pe încredere, siguranță și profesionalism.</p>
+    </div>
+  </section>
 
-  <div class="service-card">
-    <h3>Menajere</h3>
-    <p>
-      O locuință curată și bine organizată aduce liniște și confort familiei.  
-      Menajerele noastre au experiență reală și seriozitate, ocupându-se de curățenie, gătit ușor și administrarea treburilor zilnice cu discreție.
-    </p>
-  </div>
+  <!-- 🩷 FOOTER -->
+  <footer>
+    <p>&copy; 2025 Grijă pentru Bunici. Toate drepturile rezervate.</p>
+    <div class="footer-links">
+      <a href="termeni.html" class="footer-link">Termeni și Condiții</a>
+      <a href="https://anpc.ro/ce-este-sal/" target="_blank" class="anpc-link">Soluționare ANPC</a>
+    </div>
+  </footer>
 
-  <div class="service-card">
-    <h3>Îngrijitoare</h3>
-    <p>
-      Oferim îngrijitoare calificate care știu cât de importantă este atenția și respectul față de persoanele vârstnice.  
-      Ele oferă ajutor la deplasare, administrarea medicamentelor, gătit, companie și sprijin moral zilnic.
-    </p>
-  </div>
-
-  <div class="service-card">
-    <h3>✔ Selectare & Verificare</h3>
-    <p>
-      Fiecare colaborator este verificat riguros înainte de angajare: experiență, recomandări, atitudine și compatibilitate cu familia.  
-      Astfel, asigurăm un parteneriat bazat pe încredere, siguranță și profesionalism.
-    </p>
-  </div>
-</section>
-
-  </main>
-
-<footer class="site-footer">
-  <p>&copy; 2025 Grija pentru Bunici. Toate drepturile rezervate.</p>
-
-  <div class="footer-links">
-    <a href="termeni.html" class="footer-link">Termeni și Condiții</a>
-    <a href="https://anpc.ro/ce-este-sal/" target="_blank" class="anpc-link">
-      Soluționare ANPC
-    </a>
-  </div>
-</footer>
-
-
-
-  <!-- 💚 BUTON WHATSAPP -->
+  <!-- 💚 WHATSAPP -->
   <a href="https://api.whatsapp.com/send?phone=40793553703&text=Bună!%20Aș%20dori%20mai%20multe%20informații%20despre%20Grijă%20pentru%20Bunici."
      class="whatsapp-float" target="_blank" title="Scrie-ne pe WhatsApp">
     <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512" width="32" height="32" fill="white">
