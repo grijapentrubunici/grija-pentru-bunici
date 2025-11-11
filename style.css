@@ -476,46 +476,28 @@ button[type="submit"]:hover {
   background-color: #fff;
   text-align: center;
   padding: 25px 10px;
-  color: #555;
+  color: #000;
   font-size: 14px;
   border-top: 1px solid #f1dada;
 }
 
 .footer-links {
+  margin-top: 8px;
   display: flex;
   flex-direction: column;
   align-items: center;
-  gap: 8px;
-  margin-top: 10px;
+  gap: 6px;
 }
 
-.footer-link {
-  color: #000;                /* negru */
-  font-weight: 600;           /* îngroșat */
-  text-decoration: none;
-  transition: opacity 0.3s ease;
-}
-
-.footer-link:hover {
-  opacity: 0.7;
-}
-
+.footer-link,
 .anpc-link {
-  display: flex;
-  align-items: center;
-  gap: 8px;
-  color: #000;                /* negru */
-  font-weight: 600;           /* îngroșat */
+  color: #000;          /* negru */
+  font-weight: 700;     /* îngroșat */
   text-decoration: none;
-  transition: opacity 0.3s ease;
+  transition: color 0.3s ease;
 }
 
+.footer-link:hover,
 .anpc-link:hover {
-  opacity: 0.7;
-}
-
-.anpc-logo {
-  height: 25px;
-  border-radius: 4px;
-  vertical-align: middle;
+  color: #e77c7c;       /* roz doar la hover */
 }
