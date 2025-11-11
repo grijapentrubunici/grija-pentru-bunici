@@ -501,3 +501,47 @@ button[type="submit"]:hover {
 .anpc-link:hover {
   color: #e77c7c;       /* roz doar la hover */
 }
+/* === SECȚIUNEA SERVICII - IMAGINI ȘI CARDURI === */
+
+/* Cardurile de servicii (Bone, Menajere, etc.) */
+.service-card {
+  background: #fff;
+  border-radius: 16px;
+  box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+  padding: 25px;
+  text-align: left;
+  transition: transform 0.3s ease;
+}
+
+.service-card:hover {
+  transform: translateY(-4px);
+}
+
+/* Imaginile din carduri */
+.service-img {
+  width: 100%;
+  border-radius: 12px;
+  margin-bottom: 15px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.06);
+  object-fit: cover;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.service-img:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+}
+
+/* Titlurile din carduri */
+.service-card h3 {
+  color: var(--rose);
+  font-family: 'Poppins', sans-serif;
+  margin-bottom: 10px;
+}
+
+/* Textele din carduri */
+.service-card p {
+  color: var(--text);
+  line-height: 1.7;
+  font-size: 1rem;
+}
