@@ -482,32 +482,40 @@ button[type="submit"]:hover {
 }
 
 .footer-links {
-  margin-top: 10px;
   display: flex;
-  flex-direction: column; /* 🔸 pune linkurile unul sub altul */
+  flex-direction: column;
   align-items: center;
-  gap: 6px;
+  gap: 8px;
+  margin-top: 10px;
 }
 
-.site-footer a {
-  color: var(--rose, #e77c7c);
+.footer-link {
+  color: #000;                /* negru */
+  font-weight: 600;           /* îngroșat */
   text-decoration: none;
-  font-weight: 500;
-  transition: color 0.3s ease;
+  transition: opacity 0.3s ease;
 }
 
-.site-footer a:hover {
-  color: #c55a5a;
+.footer-link:hover {
+  opacity: 0.7;
 }
 
 .anpc-link {
   display: flex;
   align-items: center;
-  gap: 6px;
+  gap: 8px;
+  color: #000;                /* negru */
+  font-weight: 600;           /* îngroșat */
+  text-decoration: none;
+  transition: opacity 0.3s ease;
+}
+
+.anpc-link:hover {
+  opacity: 0.7;
 }
 
 .anpc-logo {
-  height: 22px;
+  height: 25px;
   border-radius: 4px;
   vertical-align: middle;
 }
