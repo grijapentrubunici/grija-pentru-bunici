@@ -465,6 +465,18 @@ button[type="submit"]:hover {
   object-fit: cover;
   object-position: center top;
 }
+/* 🤝 SECTIUNEA DE VERIFICARE */
+.verificare-section {
+  text-align: center;
+  margin: 60px auto;
+}
+
+.verificare-img {
+  width: 100%;
+  max-width: 450px;
+  border-radius: 16px;
+  box-shadow: 0 4px 15px rgba(0,0,0,0.08);
+}
 
 @media (max-width: 768px) {
   .intro-form {
