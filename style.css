@@ -1,837 +1,86 @@
-/* 🌸 Grijă pentru Bunici – Stil unificat și paletă roz-bej caldă */
-
-/* --- Paletă culori --- */
+/* 🌸 Paletă culori */
 :root {
-  --rose: #c76b7d;        /* Roz principal */
-  --rose-light: #e4a6b3;  /* Roz deschis */
-  --bg: #fffaf9;          /* Fundal general */
-  --beige: #f8f4f2;       /* Bej deschis */
-  --beige-dark: #e9d8c7;  /* Bej închis */
-  --text: #3c1f1d;        /* Text maro închis */
+  --rose: #c76b7d;
+  --rose-light: #e4a6b3;
+  --bg: #fffaf9;
+  --beige: #f8f4f2;
+  --beige-dark: #e9d8c7;
+  --text: #3c1f1d;
 }
 
-/* --- Setări generale --- */
+/* 🌸 Setări generale */
 body {
   font-family: 'Open Sans', sans-serif;
   margin: 0;
   padding: 0;
-  background-color: var(--bg);
+  background-color: var(--beige);
   color: var(--text);
-  line-height: 1.6;
+  line-height: 1.7;
 }
 
-/* --- HEADER UNIFICAT (bej + maro) --- */
+/* 🌸 HEADER */
 header {
   background-color: var(--beige-dark);
-  color: var(--text);
   text-align: center;
-  padding: 15px 0 10px 0;
-  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.05);
+  padding: 15px 0 12px;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.05);
   position: sticky;
   top: 0;
-  z-index: 1000;
+  z-index: 100;
 }
 
-/* Titlul site-ului */
 .site-title {
   font-family: 'Poppins', sans-serif;
-  font-weight: 700;
   font-size: 1.7rem;
+  font-weight: 700;
+  margin: 0 0 5px 0;
   color: var(--text);
-  margin: 0;
-  margin-bottom: 8px;
 }
 
-/* Bara de navigație dedesubt */
 .menu {
   display: flex;
   justify-content: center;
-  flex-wrap: wrap;
-  gap: 30px;
+  gap: 28px;
 }
 
 .menu a {
   color: var(--text);
+  font-weight: 600;
   text-decoration: none;
-  font-weight: 700;
-  font-size: 1rem;
-  transition: color 0.3s ease;
+  transition: color .3s ease;
 }
 
 .menu a:hover,
 .menu a.active {
-  color: #8b5e3c; /* maro mai cald la hover */
+  color: #8b5e3c;
 }
 
-/* --- FUNDAL GENERAL BEJ --- */
-body {
-  background-color: var(--beige);
-  color: var(--text);
-  margin: 0;
-}
-
-/* --- Structură principală --- */
-main {
-  max-width: 900px;
-  margin: 2rem auto 4rem auto;
-  padding: 0 1.5rem;
-}
-
-section {
-  background-color: var(--beige);
-  border-radius: 12px;
-  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.04);
-  padding: 2rem;
-  margin-bottom: 2rem;
-}
-
-section h2 {
-  color: var(--text);
-  margin-bottom: 1rem;
-  font-family: 'Poppins', sans-serif;
-}
-
-/* --- Formular general --- */
-form label {
-  display: block;
-  margin-top: 1rem;
-  font-weight: 600;
-}
-
-form input,
-form textarea {
-  width: 100%;
-  padding: 10px;
-  margin-top: 5px;
-  border: 1px solid var(--beige-dark);
-  border-radius: 6px;
-  font-size: 1rem;
-  background-color: #fff;
-}
-
-form button {
-  margin-top: 1.5rem;
-  background-color: var(--text);
-  color: #fff;
-  border: none;
-  padding: 10px 20px;
-  border-radius: 8px;
-  font-size: 1rem;
-  font-weight: 600;
-  cursor: pointer;
-  transition: background 0.3s ease;
-}
-
-form button:hover {
-  background-color: #5b3a29;
-}
-
-/* --- FOOTER --- */
-footer {
-  text-align: center;
-  background-color: var(--beige-dark);
-  color: var(--text);
-  padding: 15px 0;
-  font-size: 0.9rem;
-  box-shadow: 0 -2px 6px rgba(0, 0, 0, 0.05);
-}
-
-/* --- Formular Caut Ajutor – Stil Nude Bej Elegant --- */
-.formular-ajutor {
-  max-width: 700px;
-  margin: 0 auto 80px auto;
-  background: linear-gradient(135deg, #f9f4ef, #f4e6d8, #f9f4ef);
-  animation: gradientShift 15s ease infinite alternate;
-  padding: 50px 60px;
-  border-radius: 20px;
-  box-shadow: 0 8px 25px rgba(0,0,0,0.05);
-}
-
-.formular-ajutor h2 {
-  color: #5a4634;
-  text-align: center;
-  font-size: 26px;
-  margin-bottom: 25px;
-  font-family: 'Poppins', sans-serif;
-}
-
-.camp-formular label {
-  font-weight: 600;
-  margin-bottom: 6px;
-  color: #3b2f25;
-}
-
-.camp-formular input,
-.camp-formular textarea,
-.camp-formular select {
-  padding: 12px 14px;
-  border-radius: 10px;
-  border: 1px solid #d8cbbd;
-  background: #fffaf5;
-  font-size: 16px;
-  color: #3b2f25;
-  transition: border-color 0.2s ease, box-shadow 0.2s ease;
-}
-
-.camp-formular input:focus,
-.camp-formular textarea:focus,
-.camp-formular select:focus {
-  border-color: #d6bfa3;
-  box-shadow: 0 0 0 3px rgba(214,191,163,0.2);
-  outline: none;
-}
-
-.formular-ajutor button {
-  background-color: #d6bfa3;
-  color: #3b2f25;
-  border: none;
-  border-radius: 12px;
-  padding: 14px 20px;
-  font-size: 17px;
-  cursor: pointer;
-  transition: background 0.3s, transform 0.2s;
-}
-
-.formular-ajutor button:hover {
-  background-color: #c5a988;
-  transform: translateY(-2px);
-}
-
-
-.disclaimer {
-  text-align: center;
-  font-size: 13px;
-  color: #777;
-  margin-top: 20px;
-}
-
-.disclaimer a {
-  color: var(--rose);
-  text-decoration: none;
-}
-
-.disclaimer a:hover {
-  text-decoration: underline;
-}
-
-.form-status {
-  margin-top: 15px;
-  text-align: center;
-  padding: 12px;
-  border-radius: 10px;
-  background: var(--beige);
-  color: var(--text);
-  box-shadow: 0 4px 12px rgba(0,0,0,0.05);
-}
-/* === SECTIUNEA CAUT AJUTOR === */
-.sectiune-ajutor {
-  max-width: 750px;
-  margin: 0 auto;
-  text-align: center;
-  padding: 30px 20px 10px;
-}
-
-.sectiune-ajutor h1 {
-  font-size: 1.8rem;
-  color: var(--rose, #cc3366);
-  margin-bottom: 10px;
-  font-weight: 600;
-}
-
-.descriere-ajutor {
-  font-size: 0.95rem;
-  line-height: 1.4;
-  color: #444;
-  margin-bottom: 8px;
-}
-
-.text-secundar {
-  font-size: 0.9rem;
-  line-height: 1.4;
-  color: #666;
-  margin-bottom: 20px;
-}
-
-/* === FORMULAR === */
-.formular-ajutor {
-  max-width: 700px;
-  margin: 0 auto 40px;
-  padding: 20px;
-  background-color: var(--bg, #fff5f7);
-  border-radius: 16px;
-  box-shadow: 0 2px 6px rgba(0,0,0,0.08);
-}
-
-.formular-ajutor h2 {
-  text-align: center;
-  color: var(--rose2, #c94f7c);
-  margin-bottom: 20px;
-}
-
-.camp-formular {
-  display: flex;
-  flex-direction: column;
-  margin-bottom: 15px;
-}
-
-.camp-formular label {
-  font-weight: 500;
-  margin-bottom: 5px;
-  color: #333;
-}
-
-.camp-formular input,
-.camp-formular select,
-.camp-formular textarea {
-  padding: 10px;
-  border: 1px solid #ddd;
-  border-radius: 8px;
-  font-size: 1rem;
-  font-family: inherit;
-  transition: border-color 0.2s ease;
-}
-
-.camp-formular input:focus,
-.camp-formular select:focus,
-.camp-formular textarea:focus {
-  border-color: var(--rose, #cc3366);
-  outline: none;
-}
-
-button[type="submit"] {
-  display: block;
-  width: 100%;
-  padding: 12px;
-  background-color: var(--rose, #cc3366);
-  color: white;
-  font-size: 1rem;
-  border: none;
-  border-radius: 10px;
-  cursor: pointer;
-  transition: background-color 0.3s ease;
-}
-
-button[type="submit"]:hover {
-  background-color: var(--rose2, #d95f8a);
-}
-
-.disclaimer {
-  font-size: 0.8rem;
-  text-align: center;
-  color: #666;
-  margin-top: 15px;
-}
-
-.disclaimer a {
-  color: var(--rose2, #c94f7c);
-  text-decoration: none;
-}
-
-.disclaimer a:hover {
-  text-decoration: underline;
-}
-
-/* === MESAJ CONFIRMARE === */
-.form-status {
-  text-align: center;
-  font-size: 0.95rem;
-  color: #444;
-  margin-top: 10px;
-}
-
-/* --- Fundal bej-crem subtil pentru secțiunea de formulare --- */
-.form-section {
-  position: relative;
-  overflow: hidden;
-  background: linear-gradient(135deg, #f9f4ef, #f4e6d8, #f9f4ef);
-  animation: gradientShift 15s ease infinite alternate;
-  border-radius: 12px;
-  padding: 40px 20px;
-  box-shadow: 0 4px 15px rgba(0,0,0,0.05);
-  max-width: 700px;
-  margin: 50px auto;
-}
-
-/* Bule luminoase subtile (foarte estompate) */
-.form-section::before,
-.form-section::after {
-  content: "";
-  position: absolute;
-  top: -50px;
-  width: 300px;
-  height: 300px;
-  background: radial-gradient(circle at center, rgba(255,255,255,0.3), transparent 70%);
-  border-radius: 50%;
-  animation: floatBubble 16s infinite ease-in-out;
-}
-
-.form-section::after {
-  top: auto;
-  bottom: -60px;
-  right: -80px;
-  left: auto;
-  background: radial-gradient(circle at center, rgba(255,255,255,0.25), transparent 70%);
-  animation-delay: 8s;
-}
-
-/* --- Animații bej discrete --- */
-@keyframes floatBubble {
-  0%, 100% {
-    transform: translateY(0) scale(1);
-  }
-  50% {
-    transform: translateY(-20px) scale(1.05);
-  }
-}
-
-@keyframes gradientShift {
-  0% {
-    background: linear-gradient(135deg, #f9f4ef, #f4e6d8, #f9f4ef);
-  }
-  100% {
-    background: linear-gradient(135deg, #f4e6d8, #f9f4ef, #f4e6d8);
-  }
-}
-
-/* --- Buton elegant și neutru --- */
-.form-section button {
-  background-color: #d6bfa3;
-  color: #3b2f25;
-  border: none;
-  padding: 12px 25px;
-  border-radius: 8px;
-  margin-top: 20px;
-  cursor: pointer;
-  font-size: 1rem;
-  font-weight: 500;
-  transition: background-color 0.3s, transform 0.2s;
-}
-
-.form-section button:hover {
-  background-color: #c5a988;
-  transform: translateY(-2px);
-}
-
-
-.hero-text-only {
-  background: linear-gradient(180deg, #fffaf9, #f9f4f2);
-  padding: 80px 12%;
-  display: flex;
-  justify-content: center;
-  box-sizing: border-box;
-}
-
-.hero-container {
-  max-width: 900px;
-  text-align: justify;
-  color: var(--text);
-  font-size: 1.05rem;
-  line-height: 1.8;
-}
-
-.hero-container h2 {
-  text-align: center;
-  color: var(--text);
-  font-family: 'Poppins', sans-serif;
-  font-size: 2.4rem;
-  margin-bottom: 20px;
-}
-
-.hero-divider {
-  width: 80px;
-  height: 4px;
-  background: var(--rose-light);
-  margin: 0 auto 40px;
-  border-radius: 4px;
-}
-
-.hero-container p {
-  margin-bottom: 20px;
-}
-
-@media (max-width: 900px) {
-  .hero-text-only {
-    padding: 60px 8%;
-  }
-  .hero-container h2 {
-    font-size: 2rem;
-  }
-}
-
-}
-
-@media (max-width: 768px) {
-  .hero img {
-    height: 300px;
-    object-position: top center;
-  }
-}
-
-.intro-form {
-  display: flex;
-  flex-wrap: wrap;
-  align-items: center;
-  justify-content: center;
-  max-width: 1000px;
-  margin: 50px auto;
-  padding: 40px 25px;
-  background: linear-gradient(135deg, #fff7f6, #fff3f1);
-  border-radius: 20px;
-  box-shadow: 0 6px 18px rgba(0,0,0,0.05);
-  gap: 40px;
-}
-
-.intro-image {
-  flex: 1 1 350px;
-  text-align: center;
-}
-
-.intro-image img {
-  width: 100%;
-  max-width: 380px;
-  border-radius: 16px;
-  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
-  object-fit: cover;
-  object-position: center top;
-}
-/* 🤝 SECTIUNEA DE VERIFICARE */
-.verificare-section {
-  text-align: center;
-  margin: 60px auto;
-}
-
-.verificare-img {
-  width: 100%;
-  max-width: 450px;
-  border-radius: 16px;
-  box-shadow: 0 4px 15px rgba(0,0,0,0.08);
-}
-
-@media (max-width: 768px) {
-  .intro-form {
-    flex-direction: column;
-    text-align: center;
-  }
-}
-.site-footer {
-  background-color: #fff;
-  text-align: center;
-  padding: 25px 10px;
-  color: #000;
-  font-size: 14px;
-  border-top: 1px solid #f1dada;
-}
-
-.footer-links {
-  margin-top: 8px;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  gap: 6px;
-}
-
-.footer-link,
-.anpc-link {
-  color: #000;          /* negru */
-  font-weight: 700;     /* îngroșat */
-  text-decoration: none;
-  transition: color 0.3s ease;
-}
-
-.footer-link:hover,
-.anpc-link:hover {
-  color: #e77c7c;       /* roz doar la hover */
-}
-/* 🌷 SECȚIUNEA SERVICII – CARDURI UNIFORME ȘI ELEGANTE */
-.services {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-  gap: 25px;
-  align-items: stretch;
-  justify-items: center;
-  max-width: 1100px;
-  margin: 60px auto;
-  padding: 0 20px;
-  background: linear-gradient(180deg, #fdfaf9, #f9f4f2);
-  border-radius: 20px;
-}
-
-/* Card general */
-.service-card {
-  background: #fff;
-  border-radius: 16px;
-  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
-  padding: 25px;
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-  align-items: center;
-  text-align: center;
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
-  height: 100%;
-}
-
-.service-card:hover {
-  transform: translateY(-6px);
-  box-shadow: 0 6px 18px rgba(199, 107, 125, 0.15);
-}
-
-/* Imaginea fixă și egală */
-.service-img {
-  width: 100%;
-  height: 200px;
-  object-fit: cover;
-  border-radius: 12px;
-  margin-bottom: 15px;
-  box-shadow: 0 3px 10px rgba(0, 0, 0, 0.08);
-}
-
-/* Titlul și textul uniforme */
-.service-card h3 {
-  color: var(--rose);
-  font-family: 'Poppins', sans-serif;
-  font-size: 1.2rem;
-  margin-bottom: 10px;
-}
-
-.service-card p {
-  color: var(--text);
-  line-height: 1.7;
-  font-size: 1rem;
-  text-align: justify;
-  flex-grow: 1; /* întinde textul pentru egalitate de înălțime */
-}
-
-/* Responsivitate */
-@media (max-width: 768px) {
-  .services {
-    gap: 20px;
-    padding: 0 10px;
-  }
-  .service-img {
-    height: 180px;
-  }
-}
-/* --- Secțiunea Îngrijitoare --- */
-.sectiune-ingrijitoare {
-  background-color: var(--bg);
-  padding: 60px 20px;
-}
-
-.ingrijitoare-content {
-  display: flex;
-  flex-wrap: wrap;
-  align-items: center;
-  justify-content: center;
-  gap: 30px;
-  max-width: 1100px;
-  margin: 0 auto;
-}
-
-.ingrijitoare-content img {
-  width: 100%;
-  max-width: 500px;
-  border-radius: 20px;
-  box-shadow: 0 4px 12px rgba(0,0,0,0.2);
-}
-
-.ingrijitoare-text {
-  max-width: 550px;
-}
-
-.ingrijitoare-text h2 {
-  color: var(--rose);
-  margin-bottom: 15px;
-  font-size: 1.8rem;
-}
-
-.ingrijitoare-text p {
-  line-height: 1.6;
-  color: #333;
-}
-/* 🌼 Efect bej elegant pe cardurile de servicii */
-.service-card {
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
-}
-
-.service-card:hover {
-  transform: translateY(-6px);
-  box-shadow: 0 6px 18px rgba(217, 186, 149, 0.35); /* umbră bej cald */
-}
-
-/* Mic efect pe imagine */
-.service-img {
-  transition: transform 0.4s ease, box-shadow 0.4s ease;
-}
-
-.service-card:hover .service-img {
-  transform: scale(1.04);
-  box-shadow: 0 4px 12px rgba(217, 186, 149, 0.4); /* reflexie bej */
-}
-
-/* 🩰 FOOTER PE JUMĂTATE - VARIANTĂ CU ANTET ÎNCHIS */
-.footer-half {
-  background-color: var(--beige-dark);
-  color: var(--text);
-  text-align: center;
-  padding: 30px 15px;
-  border-top: 1px solid #f1dada;
-  border-radius: 30px 30px 0 0;
-  max-width: 900px;
-  margin: 60px auto 20px;
-  box-shadow: 0 -4px 10px rgba(0,0,0,0.08);
-}
-
-.footer-half .footer-content p {
-  margin: 0 0 10px;
-  font-size: 0.95rem;
-}
-
-.footer-half .footer-links {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  gap: 8px;
-  flex-wrap: wrap;
-}
-
-.footer-half .footer-links a {
-  color: #000;
-  font-weight: 600;
-  text-decoration: none;
-  transition: color 0.3s ease;
-}
-
-.footer-half .footer-links a:hover {
-  color: var(--rose);
-}
-
-.footer-half span {
-  color: #555;
-}
-/* 🌸 CORECTARE LĂȚIME PAGINĂ ACASĂ – EXTINDERE PE TOT ECRANUL */
-main {
-  width: 100%;
-  max-width: 100%;
-  margin: 0;
-  padding: 0;
-}
-
-/* 🌷 SECȚIUNEA SERVICII – ÎNTINSĂ ȘI ELEGANTĂ */
-.services {
-  width: 100%;
-  max-width: 100%;
-  margin: 0 auto;
-  padding: 60px 40px;
-  background: linear-gradient(180deg, #fdfaf9, #f9f4f2);
-  border-radius: 0;
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-  gap: 25px;
-  align-items: stretch;
-  justify-items: center;
-}
-
-/* Cardurile rămân elegante */
-.service-card {
-  background: #fff;
-  border-radius: 16px;
-  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
-  padding: 25px;
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-  align-items: center;
-  text-align: center;
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
-  height: 100%;
-}
-
-.service-card:hover {
-  transform: translateY(-6px);
-  box-shadow: 0 6px 18px rgba(217, 186, 149, 0.35);
-}
-
-/* Imaginea din carduri */
-.service-img {
-  width: 100%;
-  height: 200px;
-  object-fit: cover;
-  border-radius: 12px;
-  margin-bottom: 15px;
-  box-shadow: 0 3px 10px rgba(0, 0, 0, 0.08);
-  transition: transform 0.4s ease, box-shadow 0.4s ease;
-}
-
-.service-card:hover .service-img {
-  transform: scale(1.04);
-  box-shadow: 0 4px 12px rgba(217, 186, 149, 0.4);
-}
-
-/* Responsivitate – pe ecrane mici */
-@media (max-width: 768px) {
-  .services {
-    padding: 40px 20px;
-    gap: 20px;
-  }
-  .service-img {
-    height: 180px;
-  }
-}
-/* 🌸 Extindere completă pentru pagina Acasă */
-.hero-section,
-.services {
-  max-width: 100% !important;
-  width: 100%;
-  margin: 0;
-  border-radius: 0;
-  box-shadow: none;
-}
-
-/* Mic retuș de echilibru la conținut */
-.hero-section {
-  padding: 60px 8%;
-  background: linear-gradient(180deg, #fffaf9, #f9f4f2);
-}
-
-.services {
-  padding: 60px 8%;
-  background: linear-gradient(180deg, #fdfaf9, #f9f4f2);
-}
-
-/* Ajustare carduri pentru noua lățime */
-.service-card {
-  max-width: 400px;
-}
-/* 🌸 Secțiune de început elegantă – doar text, în bej-maro */
+/* 🌸 HERO – doar text, elegant */
 .hero-text-only {
   background: linear-gradient(180deg, #f8f4f2, #fffaf9);
-  padding: 100px 12% 80px;
+  padding: 90px 12% 80px;
   display: flex;
   justify-content: center;
-  align-items: center;
-  box-sizing: border-box;
 }
 
 .hero-container {
   max-width: 950px;
-  text-align: justify;
-  color: var(--text);
-  font-size: 1.08rem;
-  line-height: 1.9;
   background: #fffefc;
   padding: 60px 70px;
   border-radius: 24px;
-  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.05);
-  border: 1px solid rgba(233, 216, 199, 0.6); /* contur bej subtil */
+  border: 1px solid rgba(233, 216, 199, 0.6);
+  box-shadow: 0 8px 25px rgba(0,0,0,0.05);
+  font-size: 1.08rem;
+  text-align: justify;
+  line-height: 1.9;
 }
 
 .hero-container h2 {
   text-align: center;
-  color: var(--text);
   font-family: 'Poppins', sans-serif;
-  font-size: 2.5rem;
-  margin-bottom: 25px;
+  font-size: 2.4rem;
+  margin-bottom: 20px;
+  color: var(--text);
 }
 
 .hero-divider {
@@ -839,26 +88,74 @@ main {
   height: 3px;
   background: var(--beige-dark);
   margin: 0 auto 40px;
-  border-radius: 4px;
-  opacity: 0.7;
+  border-radius: 5px;
 }
 
+/* 🌸 TEXT */
 .hero-container p {
-  margin-bottom: 22px;
+  margin-bottom: 20px;
 }
 
-/* 🪶 Responsivitate */
+/* 📱 Responsivitate HERO */
 @media (max-width: 900px) {
-  .hero-text-only {
-    padding: 70px 6%;
-  }
-
   .hero-container {
     padding: 40px 25px;
     font-size: 1rem;
   }
-
   .hero-container h2 {
     font-size: 2rem;
   }
+}
+
+/* 🌸 SERVICII */
+.services {
+  width: 100%;
+  padding: 60px 8%;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 25px;
+  background: linear-gradient(180deg, #fdfaf9, #f9f4f2);
+}
+
+.service-card {
+  background: #fff;
+  padding: 25px;
+  border-radius: 16px;
+  box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+  text-align: center;
+  transition: transform .3s ease;
+}
+
+.service-card:hover {
+  transform: translateY(-6px);
+}
+
+.service-img {
+  width: 100%;
+  height: 200px;
+  border-radius: 12px;
+  object-fit: cover;
+  margin-bottom: 15px;
+  box-shadow: 0 3px 10px rgba(0,0,0,0.08);
+}
+
+.service-card h3 {
+  font-family: 'Poppins', sans-serif;
+  color: var(--text);
+  margin-bottom: 10px;
+}
+
+.service-card p {
+  color: var(--text);
+  line-height: 1.7;
+  text-align: justify;
+}
+
+/* 🌸 FOOTER */
+footer {
+  background-color: var(--beige-dark);
+  text-align: center;
+  padding: 25px 10px;
+  color: var(--text);
+  border-top: 1px solid #f1dada;
 }
