@@ -501,106 +501,41 @@ button[type="submit"]:hover {
 .anpc-link:hover {
   color: #e77c7c;       /* roz doar la hover */
 }
-/* === SECȚIUNEA SERVICII - IMAGINI ȘI CARDURI === */
-
-/* Cardurile de servicii (Bone, Menajere, etc.) */
-
-
-.service-card {
-  background: #fff;
-  border-radius: 16px;
-  box-shadow: 0 2px 10px rgba(0,0,0,0.05);
-  padding: 25px;
-  text-align: left;
-  transition: transform 0.3s ease;
-  display: flex;
-  flex-direction: column;
-  align-items: center; /* centrează imaginea și textul */
-  justify-content: flex-start;
-  height: 100%;
-}
-
-.service-img {
-  width: 100%;
-  max-width: 260px; /* toate imaginile egale */
-  height: 200px; /* fixăm înălțimea pentru uniformitate */
-  object-fit: cover; /* taie proporțional marginile fără deformare */
-  border-radius: 12px;
-  margin-bottom: 15px;
-  box-shadow: 0 3px 10px rgba(0,0,0,0.08);
-}
-
-.service-card h3 {
-  color: var(--rose);
-  font-family: 'Poppins', sans-serif;
-  font-size: 1.2rem;
-  margin-bottom: 10px;
-  text-align: center;
-}
-
-.service-card p {
-  color: var(--text);
-  line-height: 1.7;
-  font-size: 1rem;
-  text-align: justify;
-}
-
-/* === Aliniere perfectă pe rânduri pentru secțiunea de servicii === */
+/* 🌷 SECȚIUNEA SERVICII – CARDURI UNIFORME ȘI ELEGANTE */
 .services {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
   gap: 25px;
-  align-items: stretch; /* toate cardurile au aceeași înălțime */
+  align-items: stretch;
   justify-items: center;
   max-width: 1100px;
-  margin: 50px auto;
+  margin: 60px auto;
   padding: 0 20px;
+  background: linear-gradient(180deg, #fdfaf9, #f9f4f2);
+  border-radius: 20px;
 }
 
-/* Pentru un efect uniform între text și margini */
+/* Card general */
 .service-card {
-  height: 100%;
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between; /* textul ocupă tot spațiul egal */
-  text-align: center;
-}
-
-/* În mobil – imaginile mai mici și spațiere mai bună */
-@media (max-width: 768px) {
-  .service-img {
-    max-width: 220px;
-    height: 180px;
-  }
-}
-
-/* === Carduri Servicii - uniformizare completă === */
-.services {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-  gap: 25px;
-  align-items: stretch; /* toate cardurile egale ca înălțime */
-  justify-items: center;
-  max-width: 1100px;
-  margin: 50px auto;
-  padding: 0 20px;
-}
-
-/* fiecare card ocupă toată înălțimea disponibilă */
-.service-card {
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-  height: 100%;
-  text-align: center;
   background: #fff;
   border-radius: 16px;
   box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
   padding: 25px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  text-align: center;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  height: 100%;
 }
 
-/* imaginea fixă, egală peste tot */
+.service-card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 6px 18px rgba(199, 107, 125, 0.15);
+}
+
+/* Imaginea fixă și egală */
 .service-img {
   width: 100%;
   height: 200px;
@@ -610,7 +545,7 @@ button[type="submit"]:hover {
   box-shadow: 0 3px 10px rgba(0, 0, 0, 0.08);
 }
 
-/* titlul și textul uniforme */
+/* Titlul și textul uniforme */
 .service-card h3 {
   color: var(--rose);
   font-family: 'Poppins', sans-serif;
@@ -623,18 +558,17 @@ button[type="submit"]:hover {
   line-height: 1.7;
   font-size: 1rem;
   text-align: justify;
-  flex-grow: 1; /* umple spațiul egal în fiecare card */
+  flex-grow: 1; /* întinde textul pentru egalitate de înălțime */
 }
 
-/* efect elegant la hover */
-.service-card:hover {
-  transform: translateY(-6px);
-  box-shadow: 0 6px 18px rgba(199, 107, 125, 0.15);
-}
-
-/* pe mobil: imagini puțin mai mici */
+/* Responsivitate */
 @media (max-width: 768px) {
+  .services {
+    gap: 20px;
+    padding: 0 10px;
+  }
   .service-img {
     height: 180px;
   }
 }
+
