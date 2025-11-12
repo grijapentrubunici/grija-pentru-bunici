@@ -5,37 +5,156 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Grijă pentru Bunici - Îngrijire de încredere</title>
 
-  <!-- Fonturi -->
   <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600&family=Poppins:wght@500;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
 
-  <!-- Style principal -->
-  <link rel="stylesheet" href="style.css?v=2025nov13">
-
-  <!-- 🌸 CSS pentru HERO BANNER (poza de sus) -->
   <style>
-    .hero-banner {
-      width: 100%;
-      overflow: hidden;
+    /* ===== PALETĂ ===== */
+    :root {
+      --bg: #f8f4f2;
+      --beige-dark: #e9d8c7;
+      --text: #3c1f1d;
+    }
+
+    body {
+      background-color: var(--bg);
+      font-family: 'Open Sans', sans-serif;
       margin: 0;
       padding: 0;
+      color: var(--text);
+    }
+
+    /* ===== HEADER ===== */
+    header {
+      background-color: var(--beige-dark);
+      text-align: center;
+      padding: 15px 0;
+      box-shadow: 0 2px 6px rgba(0,0,0,0.05);
+    }
+
+    .site-title {
+      font-family: 'Poppins', sans-serif;
+      margin: 0;
+      color: var(--text);
+      font-size: 1.7rem;
+    }
+
+    .menu a {
+      text-decoration: none;
+      color: var(--text);
+      font-weight: 700;
+      margin: 0 12px;
+    }
+
+    .menu a:hover,
+    .menu a.active {
+      color: #8b5e3c;
+    }
+
+    /* ===== HERO IMAGE ===== */
+    .hero-banner {
+      width: 100%;
+      margin: 0;
+      overflow: hidden;
+      position: relative;
+      background-color: #f8f4f2;
     }
 
     .hero-banner-img {
       width: 100%;
       height: auto;
-      display: block;
-      object-fit: cover;
-      object-position: center;
       max-height: 420px;
-      background-color: #f8f4f2;
+      object-fit: contain;
+      object-position: center;
+      display: block;
+      opacity: 0;
+      transform: scale(1.04);
+      animation: fadeZoom 1.4s ease forwards;
+    }
+
+    @keyframes fadeZoom {
+      0% { opacity: 0; transform: scale(1.06); }
+      100% { opacity: 1; transform: scale(1); }
+    }
+
+    /* ===== HERO TEXT ===== */
+    .hero-text-only {
+      padding: 100px 12% 80px;
+      display: flex;
+      justify-content: center;
+    }
+
+    .hero-container {
+      max-width: 900px;
+      background: #fffefc;
+      padding: 50px 60px;
+      border-radius: 22px;
+      text-align: justify;
+      line-height: 1.9;
+      box-shadow: 0 8px 25px rgba(0,0,0,0.05);
+      border: 1px solid rgba(233,216,199,0.6);
+    }
+
+    .hero-container h2 {
+      text-align: center;
+      font-size: 2.3rem;
+      font-family: 'Poppins', sans-serif;
+      margin-bottom: 20px;
+    }
+
+    .hero-divider {
+      width: 80px;
+      height: 3px;
+      background: var(--beige-dark);
+      margin: 0 auto 35px;
+      border-radius: 6px;
+    }
+
+    /* ===== SERVICII ===== */
+    .services {
+      width: 100%;
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 28px;
+      padding: 60px 8%;
+      background: linear-gradient(180deg, #fdfaf9, #f9f4f2);
+    }
+
+    .service-card {
+      background: #ffffff;
+      border-radius: 16px;
+      padding: 25px;
+      box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+      text-align: center;
+      transition: transform 0.3s ease;
+    }
+
+    .service-card:hover {
+      transform: translateY(-4px);
+    }
+
+    .service-img {
+      width: 100%;
+      height: 200px;
+      object-fit: cover;
+      border-radius: 12px;
+      box-shadow: 0 3px 10px rgba(0,0,0,0.08);
+      margin-bottom: 15px;
+    }
+
+    /* ===== FOOTER ===== */
+    footer {
+      background: var(--beige-dark);
+      text-align: center;
+      padding: 25px 10px;
+      color: var(--text);
+      margin-top: 40px;
     }
   </style>
-
 </head>
 
 <body>
 
-  <!-- HEADER -->
   <header>
     <h1 class="site-title">Grijă pentru Bunici</h1>
     <nav class="menu">
@@ -47,12 +166,12 @@
     </nav>
   </header>
 
-  <!-- 🌸 HERO cu imagine lată sus -->
+  <!-- === HERO IMAGE === -->
   <section class="hero-banner">
-    <img src="hero-ingrijitoare.jpg" alt="Îngrijitoare grijulie" class="hero-banner-img">
+    <img src="hero-ingrijitoare.jpg" alt="Îngrijitoare grijulie alături de o bunică" class="hero-banner-img">
   </section>
 
-  <!-- 🌸 HERO TEXT -->
+  <!-- === HERO TEXT === -->
   <section class="hero-text-only">
     <div class="hero-container">
       <h2>Îngrijire de încredere pentru cei dragi</h2>
@@ -79,7 +198,7 @@
     </div>
   </section>
 
-  <!-- 🌸 SERVICII -->
+  <!-- === SERVICII === -->
   <section class="services">
     <div class="service-card">
       <img src="bone.jpg" class="service-img">
@@ -106,7 +225,6 @@
     </div>
   </section>
 
-  <!-- FOOTER -->
   <footer>
     <p>&copy; 2025 Grijă pentru Bunici — Toate drepturile rezervate.</p>
   </footer>
