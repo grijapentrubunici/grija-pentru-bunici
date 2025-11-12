@@ -628,3 +628,58 @@ button[type="submit"]:hover {
   box-shadow: 0 4px 12px rgba(217, 186, 149, 0.4); /* reflexie bej */
 }
 
+.verificare-card {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 30px;
+  background-color: #fff;
+  border: 1px solid #f5d4db;
+  border-radius: 18px;
+  box-shadow: 0 6px 18px rgba(228, 142, 169, 0.15);
+  padding: 35px 30px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.verificare-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 25px rgba(228, 142, 169, 0.25);
+}
+
+.verificare-text {
+  flex: 1;
+  min-width: 280px;
+}
+
+.verificare-text h3 {
+  color: var(--rose, #e48ea9);
+  font-size: 1.6em;
+  margin-bottom: 12px;
+  font-weight: 600;
+}
+
+.verificare-text p {
+  font-size: 1.05em;
+  color: #444;
+  line-height: 1.7;
+}
+
+.verificare-image {
+  flex: 1;
+  min-width: 280px;
+  text-align: center;
+}
+
+.verificare-image img {
+  width: 100%;
+  max-width: 420px;
+  border-radius: 18px;
+  box-shadow: 0 5px 18px rgba(0, 0, 0, 0.08);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.verificare-image img:hover {
+  transform: scale(1.03);
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.12);
+}
