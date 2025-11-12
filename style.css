@@ -749,3 +749,28 @@ main {
     height: 180px;
   }
 }
+/* 🌸 Extindere completă pentru pagina Acasă */
+.hero-section,
+.services {
+  max-width: 100% !important;
+  width: 100%;
+  margin: 0;
+  border-radius: 0;
+  box-shadow: none;
+}
+
+/* Mic retuș de echilibru la conținut */
+.hero-section {
+  padding: 60px 8%;
+  background: linear-gradient(180deg, #fffaf9, #f9f4f2);
+}
+
+.services {
+  padding: 60px 8%;
+  background: linear-gradient(180deg, #fdfaf9, #f9f4f2);
+}
+
+/* Ajustare carduri pentru noua lățime */
+.service-card {
+  max-width: 400px;
+}
