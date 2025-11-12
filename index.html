@@ -7,100 +7,117 @@
 
   <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600&family=Poppins:wght@500;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="style.css?v=2025nov13">
-</head>
 
-<body>
+  <style>
+    :root {
+      --rose: #c76b7d;
+      --rose-light: #e4a6b3;
+      --bg: #fffaf9;
+      --beige: #f8f4f2;
+      --beige-dark: #e9d8c7;
+      --text: #3c1f1d;
+    }
 
-  <header>
-    <h1 class="site-title">Grijă pentru Bunici</h1>
-    <nav class="menu">
-      <a href="index.html" class="active">Acasă</a>
-      <a href="despre-noi.html">Despre noi</a>
-      <a href="caut-ajutor.html">Caut ajutor</a>
-      <a href="caut-loc-de-munca.html">Caut loc de muncă</a>
-      <a href="contact.html">Contact</a>
-    </nav>
-  </header>
+    body {
+      background-color: var(--beige);
+      font-family: 'Open Sans', sans-serif;
+      color: var(--text);
+      margin: 0;
+      padding: 0;
+    }
 
-  <!-- 🌸 HERO cu imagine lată sus -->
-  <section class="hero-banner">
-    <img src="hero-ingrijitoare.jpg" alt="Îngrijitoare grijulie" class="hero-banner-img">
-  </section>
-/* 🌸 HERO – Imagine întreagă, încadrată corect */
-.hero-banner {
-  width: 100%;
-  overflow: hidden;
-  margin: 0;
-  padding: 0;
-}
+    header {
+      background-color: var(--beige-dark);
+      padding: 15px 0;
+      text-align: center;
+      box-shadow: 0 2px 6px rgba(0,0,0,0.05);
+    }
 
-.hero-banner-img {
-  width: 100%;
-  height: auto;
-  display: block;
-  object-fit: contain;
-  object-position: center;
-  max-height: 420px;
-  background-color: #f8f4f2;
-}
+    header h1 {
+      font-family: 'Poppins', sans-serif;
+      color: var(--text);
+      margin: 0;
+    }
 
-  <!-- 🌸 HERO TEXT -->
-  <section class="hero-text-only">
-    <div class="hero-container">
-      <h2>Îngrijire de încredere pentru cei dragi</h2>
-      <div class="hero-divider"></div>
+    nav {
+      margin-top: 10px;
+    }
 
-      <p>
-        La <b>Grijă pentru Bunici</b>, considerăm că îngrijirea persoanelor dragi nu este doar o responsabilitate, ci o dovadă de respect și umanitate.
-        Cu o experiență solidă în domeniul <b>recrutării și selecției de personal pentru îngrijire la domiciliu</b>, ne-am dedicat scopului de a crea legături sigure și de încredere între familiile care au nevoie de ajutor și profesioniștii care oferă acest sprijin cu empatie și răbdare.
-      </p>
+    nav a {
+      text-decoration: none;
+      color: var(--text);
+      font-weight: 600;
+      margin: 0 12px;
+    }
 
-      <p>
-        Echipa noastră selectează cu atenție <b>îngrijitoare, bone și menajere</b> cu experiență reală și recomandări verificate.
-        Procesul nostru de recrutare se bazează pe criterii clare – competență, seriozitate, discreție și capacitatea de a oferi suport emoțional și uman, nu doar asistență practică.
-      </p>
+    nav a:hover {
+      color: var(--rose);
+    }
 
-      <p>
-        Punem accent pe <b>siguranță, respect și comunicare deschisă</b>, pentru ca fiecare familie să se simtă liniștită știind că persoanele dragi sunt îngrijite cu profesionalism și grijă autentică.
-      </p>
+    /* 🌸 HERO – Imagine întreagă, încadrată corect */
+    .hero-banner {
+      width: 100%;
+      overflow: hidden;
+      margin: 0;
+      padding: 0;
+      background: var(--beige);
+    }
 
-      <p>
-        Dacă ești în căutarea unei persoane potrivite pentru a avea grijă de părinți sau bunici, sau dacă îți dorești să faci parte din echipa noastră de profesioniști dedicați,
-        <b>Grijă pentru Bunici</b> este locul unde <b>empatia se întâlnește cu seriozitatea</b>.
-      </p>
-    </div>
-  </section>
+    .hero-banner-img {
+      width: 100%;
+      height: auto;
+      display: block;
+      object-fit: contain;
+      object-position: center;
+      max-height: 420px;
+      background-color: #f8f4f2;
+    }
 
-  <!-- 🌸 SERVICII -->
-  <section class="services">
-    <div class="service-card">
-      <img src="bone.jpg" class="service-img">
-      <h3>Bone</h3>
-      <p>Bonele noastre oferă mai mult decât supraveghere — aduc răbdare, calm și grijă autentică pentru fiecare copil.</p>
-    </div>
+    /* 🌸 Text-only Hero Section */
+    .hero-text-only {
+      background: linear-gradient(180deg, #fffaf9, #f9f4f2);
+      padding: 100px 12% 80px;
+      display: flex;
+      justify-content: center;
+      box-sizing: border-box;
+    }
 
-    <div class="service-card">
-      <img src="menajera.png" class="service-img">
-      <h3>Menajere</h3>
-      <p>O locuință curată și bine organizată aduce liniște și confort familiei. Menajerele noastre au experiență și seriozitate.</p>
-    </div>
+    .hero-container {
+      max-width: 900px;
+      text-align: justify;
+      color: var(--text);
+      font-size: 1.08rem;
+      line-height: 1.9;
+      background: #fffefc;
+      padding: 60px 70px;
+      border-radius: 24px;
+      box-shadow: 0 8px 25px rgba(0, 0, 0, 0.05);
+      border: 1px solid rgba(233, 216, 199, 0.6);
+    }
 
-    <div class="service-card">
-      <img src="ingrijitoare_optimizata.png" class="service-img">
-      <h3>Îngrijitoare</h3>
-      <p>Îngrijitoarele noastre oferă sprijin complet la domiciliu: ajutor la deplasare, gătit, companie și suport moral.</p>
-    </div>
+    .hero-container h2 {
+      text-align: center;
+      font-family: 'Poppins', sans-serif;
+      font-size: 2.4rem;
+      margin-bottom: 20px;
+      color: var(--text);
+    }
 
-    <div class="service-card">
-      <img src="verificare.png" class="service-img">
-      <h3>✔ Selectare & Verificare</h3>
-      <p>Fiecare colaborator este verificat riguros înainte de angajare: experiență, recomandări și compatibilitate cu familia.</p>
-    </div>
-  </section>
+    .hero-divider {
+      width: 100px;
+      height: 3px;
+      background: var(--beige-dark);
+      margin: 0 auto 35px;
+      border-radius: 4px;
+      opacity: 0.7;
+    }
 
-  <footer>
-    <p>&copy; 2025 Grijă pentru Bunici — Toate drepturile rezervate.</p>
-  </footer>
+    .hero-container p {
+      margin-bottom: 22px;
+    }
 
-</body>
-</html>
+    /* 🌸 Servicii */
+    .services {
+      width: 100%;
+      margin: 0;
+      display: grid
