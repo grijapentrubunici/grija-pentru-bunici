@@ -571,4 +571,41 @@ button[type="submit"]:hover {
     height: 180px;
   }
 }
+/* --- Secțiunea Îngrijitoare --- */
+.sectiune-ingrijitoare {
+  background-color: var(--bg);
+  padding: 60px 20px;
+}
+
+.ingrijitoare-content {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+  gap: 30px;
+  max-width: 1100px;
+  margin: 0 auto;
+}
+
+.ingrijitoare-content img {
+  width: 100%;
+  max-width: 500px;
+  border-radius: 20px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.2);
+}
+
+.ingrijitoare-text {
+  max-width: 550px;
+}
+
+.ingrijitoare-text h2 {
+  color: var(--rose);
+  margin-bottom: 15px;
+  font-size: 1.8rem;
+}
+
+.ingrijitoare-text p {
+  line-height: 1.6;
+  color: #333;
+}
 
