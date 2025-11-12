@@ -608,4 +608,23 @@ button[type="submit"]:hover {
   line-height: 1.6;
   color: #333;
 }
+/* 🌼 Efect bej elegant pe cardurile de servicii */
+.service-card {
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.service-card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 6px 18px rgba(217, 186, 149, 0.35); /* umbră bej cald */
+}
+
+/* Mic efect pe imagine */
+.service-img {
+  transition: transform 0.4s ease, box-shadow 0.4s ease;
+}
+
+.service-card:hover .service-img {
+  transform: scale(1.04);
+  box-shadow: 0 4px 12px rgba(217, 186, 149, 0.4); /* reflexie bej */
+}
 
