@@ -413,22 +413,51 @@ button[type="submit"]:hover {
 }
 
 
-/* HERO - imagine mare, pe toată lățimea și bine încadrată */
-.hero {
-  width: 100%;
-  margin: 0;
-  padding: 0;
+.hero-text-only {
+  background: linear-gradient(180deg, #fffaf9, #f9f4f2);
+  padding: 80px 12%;
+  display: flex;
+  justify-content: center;
+  box-sizing: border-box;
 }
 
-.hero img {
-  width: 100%;
-  height: 480px; /* imagine mare și clară */
-  object-fit: cover;
-  object-position: center top; /* arată fețele complet */
-  display: block;
-  border-radius: 0;
-  box-shadow: none;
-  filter: brightness(99%);
+.hero-container {
+  max-width: 900px;
+  text-align: justify;
+  color: var(--text);
+  font-size: 1.05rem;
+  line-height: 1.8;
+}
+
+.hero-container h2 {
+  text-align: center;
+  color: var(--text);
+  font-family: 'Poppins', sans-serif;
+  font-size: 2.4rem;
+  margin-bottom: 20px;
+}
+
+.hero-divider {
+  width: 80px;
+  height: 4px;
+  background: var(--rose-light);
+  margin: 0 auto 40px;
+  border-radius: 4px;
+}
+
+.hero-container p {
+  margin-bottom: 20px;
+}
+
+@media (max-width: 900px) {
+  .hero-text-only {
+    padding: 60px 8%;
+  }
+  .hero-container h2 {
+    font-size: 2rem;
+  }
+}
+
 }
 
 @media (max-width: 768px) {
