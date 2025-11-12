@@ -640,8 +640,6 @@ button[type="submit"]:hover {
   box-shadow: 0 4px 12px rgba(217, 186, 149, 0.4); /* reflexie bej */
 }
 
-
-}
 /* 🩰 FOOTER PE JUMĂTATE - VARIANTĂ CU ANTET ÎNCHIS */
 .footer-half {
   background-color: var(--beige-dark);
