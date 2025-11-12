@@ -545,3 +545,31 @@ button[type="submit"]:hover {
   text-align: justify;
 }
 
+/* === Aliniere perfectă pe rânduri pentru secțiunea de servicii === */
+.services {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 25px;
+  align-items: stretch; /* toate cardurile au aceeași înălțime */
+  justify-items: center;
+  max-width: 1100px;
+  margin: 50px auto;
+  padding: 0 20px;
+}
+
+/* Pentru un efect uniform între text și margini */
+.service-card {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between; /* textul ocupă tot spațiul egal */
+  text-align: center;
+}
+
+/* În mobil – imaginile mai mici și spațiere mai bună */
+@media (max-width: 768px) {
+  .service-img {
+    max-width: 220px;
+    height: 180px;
+  }
+}
