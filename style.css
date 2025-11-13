@@ -58,9 +58,7 @@ header {
 /* 🌸 HERO FULL-WIDTH */
 .hero-banner {
   width: 100%;
- .hero-banner {
-  height: 40vh;   /* mai mic → se vede partea de sus a imaginii */
-}
+  height: 55vh;
   overflow: hidden;
   margin: 0;
   padding: 0;
@@ -69,24 +67,18 @@ header {
   justify-content: center;
   align-items: center;
 }
+
 .hero-banner-img {
   width: 100%;
   height: 100%;
   object-fit: cover;
-  object-position: top;  /* forțăm să se vadă fețele */
-}
-
+  object-position: top 20%;
   display: block;
   border-radius: 0;
-  max-height: none;
-
   opacity: 0;
   transform: scale(1.04);
   animation: fadeZoom 1.4s ease forwards;
 }
-
-}
-
 
 @keyframes fadeZoom {
   0% { opacity: 0; transform: scale(1.06); }
@@ -96,21 +88,18 @@ header {
 /* 🌸 HERO TEXT */
 .hero-text-only {
   background: linear-gradient(180deg, #f8f4f2, #fffaf9);
- .hero-text-only {
-  padding: 60px 12% 60px; /* mai echilibrat */
-}
-
+  padding: 60px 12% 60px;
   display: flex;
   justify-content: center;
 }
 
-..hero-container {
+.hero-container {
   max-width: 850px;
   background: #fffefc;
-  padding: 45px 55px;    /* padding mai echilibrat */
+  padding: 45px 55px;
   border-radius: 22px;
   line-height: 1.8;
-  text-align: left;       /* ❗ mai profesionist decât justify */
+  text-align: left;
   font-size: 1.06rem;
   box-shadow: 0 6px 20px rgba(0,0,0,0.04);
   border: 1px solid rgba(233,216,199,0.4);
@@ -121,10 +110,10 @@ header {
   font-size: 2.2rem;
   margin-bottom: 15px;
   font-weight: 700;
-  .hero-container p {
-  margin-bottom: 18px;  /* spațiu egal între paragrafe */
 }
 
+.hero-container p {
+  margin-bottom: 18px;
 }
 
 .hero-divider {
@@ -178,11 +167,7 @@ footer {
 /* 📱 Responsivitate */
 @media (max-width: 900px) {
   .hero-banner {
-    padding: 0 5%;
-  }
-
-  .hero-banner-img {
-    max-width: 100%;
+    height: 45vh;
   }
 
   .hero-container {
