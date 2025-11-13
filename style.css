@@ -158,34 +158,24 @@ footer {
     font-size: 2rem;
   }
 }
-/* ==== FIX HERO FINAL ==== */
+/* ==== HERO IMAGE (versiunea finală, corectă) ==== */
 .hero-banner {
-    width: 100%;
-    height: auto;
-    display: flex;
-    justify-content: center;
-    overflow: hidden;
-}
-
-.hero-banner-img {
-    width: 100%;
-    height: auto;
-    object-fit: contain;
-    display: block;
-}
-/* === HERO IMAGE === */
-.hero-banner {
+  width: 100%;
   text-align: center;
   padding: 20px 0;
+  overflow: hidden;
 }
 
 .hero-banner-img {
   width: 100%;
+  max-width: 100%;
   height: auto;
-  max-height: 480px; /* imagine mare și frumoasă */
-  object-fit: cover; /* păstrează proporțiile și nu micșorează imaginea */
+  max-height: 480px;
+  object-fit: cover; 
   display: block;
   margin: 0 auto;
+}
+
 }
 /* ===== RESPONSIVE PENTRU MOBIL ===== */
 @media (max-width: 600px) {
