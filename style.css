@@ -96,36 +96,42 @@ header {
 /* 🌸 HERO TEXT */
 .hero-text-only {
   background: linear-gradient(180deg, #f8f4f2, #fffaf9);
-  padding: 60px 12% 80px;
+ .hero-text-only {
+  padding: 60px 12% 60px; /* mai echilibrat */
+}
+
   display: flex;
   justify-content: center;
 }
 
-.hero-container {
-  max-width: 900px;
+..hero-container {
+  max-width: 850px;
   background: #fffefc;
-  padding: 60px 70px;
-  border-radius: 24px;
-  border: 1px solid rgba(233,216,199,0.6);
-  box-shadow: 0 8px 25px rgba(0,0,0,0.05);
-  text-align: justify;
-  font-size: 1.08rem;
-  line-height: 1.9;
+  padding: 45px 55px;    /* padding mai echilibrat */
+  border-radius: 22px;
+  line-height: 1.8;
+  text-align: left;       /* ❗ mai profesionist decât justify */
+  font-size: 1.06rem;
+  box-shadow: 0 6px 20px rgba(0,0,0,0.04);
+  border: 1px solid rgba(233,216,199,0.4);
 }
 
 .hero-container h2 {
   text-align: center;
-  font-family: 'Poppins', sans-serif;
-  font-size: 2.4rem;
-  margin-bottom: 20px;
+  font-size: 2.2rem;
+  margin-bottom: 15px;
+  font-weight: 700;
+  .hero-container p {
+  margin-bottom: 18px;  /* spațiu egal între paragrafe */
+}
+
 }
 
 .hero-divider {
-  width: 100px;
+  width: 80px;
   height: 3px;
   background: var(--beige-dark);
-  margin: 0 auto 40px;
-  border-radius: 5px;
+  margin: 0 auto 30px;
 }
 
 /* 🌸 SERVICII */
