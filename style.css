@@ -55,10 +55,26 @@ header {
   color: #8b5e3c;
 }
 
-
+/* 🌸 Animație */
 @keyframes fadeZoom {
   0% { opacity: 0; transform: scale(1.06); }
   100% { opacity: 1; transform: scale(1); }
+}
+
+/* 🌸 HERO - versiunea FINALĂ */
+.hero {
+    width: 100%;
+    height: 65vh;          /* micșorează poza și taie jos */
+    overflow: hidden;      /* taie ce e sub mâini */
+    position: relative;
+}
+
+.hero img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;     /* nu deformează */
+    object-position: top;  /* arată partea superioară (mâinile) */
+    display: block;
 }
 
 /* 🌸 HERO TEXT */
@@ -142,8 +158,9 @@ footer {
 
 /* 📱 Responsivitate */
 @media (max-width: 900px) {
-  .hero-banner {
-    height: 45vh;
+
+  .hero {
+    height: 45vh; /* micșorată și pe mobil */
   }
 
   .hero-container {
@@ -153,25 +170,4 @@ footer {
   .hero-container h2 {
     font-size: 2rem;
   }
-}
-/* 🌸 Fix HERO - imagine completă și mutată mai jos (doar pe Acasă) */
-.hero {
-    height: auto; 
-    max-height: 450px;
-    overflow: hidden;
-}
-
-.hero {
-    width: 100%;
-    height: 65vh; /* micșorează înălțimea */
-    overflow: hidden; /* taie ce depășește */
-    position: relative;
-}
-
-.hero img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover; /* menține proporția fără deformare */
-    object-position: top; /* păstrează partea de sus (mâinile) și taie jos */
-    display: block;
 }
