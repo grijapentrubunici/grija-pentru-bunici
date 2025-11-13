@@ -178,3 +178,16 @@ footer {
     font-size: 2rem;
   }
 }
+/* 🌸 Fix HERO - imagine completă și mutată mai jos (doar pe Acasă) */
+.hero {
+    height: auto; 
+    max-height: 450px;
+    overflow: hidden;
+}
+
+.hero img {
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+    object-position: center 25%; /* mută focusul mai jos, ca să se vadă fețele */
+}
