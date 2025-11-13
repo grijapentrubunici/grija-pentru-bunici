@@ -58,7 +58,9 @@ header {
 /* 🌸 HERO FULL-WIDTH */
 .hero-banner {
   width: 100%;
-  height: 55vh; /* Mai mic, nu cere mult scroll — putem ajusta 50-60vh */
+ .hero-banner {
+  height: 40vh;   /* mai mic → se vede partea de sus a imaginii */
+}
   overflow: hidden;
   margin: 0;
   padding: 0;
@@ -70,8 +72,10 @@ header {
 .hero-banner-img {
   width: 100%;
   height: 100%;
-  object-fit: cover;      /* acoperă toată lățimea */
-  object-position: top;   /* 🔥 arată partea de sus (fețele) */
+  object-fit: cover;
+  object-position: top;  /* forțăm să se vadă fețele */
+}
+
   display: block;
   border-radius: 0;
   max-height: none;
