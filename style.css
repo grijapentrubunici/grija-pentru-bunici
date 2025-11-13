@@ -7,6 +7,9 @@
   --beige-dark: #e9d8c7;
   --text: #3c1f1d;
 }
+html, body {
+  overflow-x: hidden;
+}
 
 /* 🌸 Corp general */
 body {
