@@ -67,18 +67,20 @@ header {
   justify-content: center;
   align-items: center;
 }
-
 .hero-banner-img {
   width: 100%;
   height: 100%;
-  object-fit: cover;      /* UMPLERE FRUMOASĂ A SPAȚIULUI */
-  object-position: center;
-  border-radius: 0;        /* full width, fără colțuri rotunjite */
-  box-shadow: none;
+  object-fit: cover;      /* acoperă toată lățimea */
+  object-position: top;   /* 🔥 arată partea de sus (fețele) */
+  display: block;
+  border-radius: 0;
+  max-height: none;
 
   opacity: 0;
   transform: scale(1.04);
   animation: fadeZoom 1.4s ease forwards;
+}
+
 }
 
 
