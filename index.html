@@ -55,7 +55,9 @@
   width: 100%;
   height: 100%;
   object-fit: cover;
-  object-position: top;   /* ❤️ arată partea de sus (fețele) */
+  object-position: top 20%;  /* ❤️ NU doar top – asta păstrează și jos! */
+}
+
   display: block;
   border-radius: 0;
   opacity: 0;
@@ -66,15 +68,13 @@
 
   .hero-banner {
   width: 100%;
-  height: 55vh;  /* înălțime SETATĂ → obligatoriu */
-  margin: 0;
-  padding: 0;
+  height: 65vh;   /* ↑ mărit un pic ca să nu taie partea de jos */
   overflow: hidden;
-  background-color: #f8f4f2;
   display: flex;
   justify-content: center;
-  align-items: flex-start; /* important pentru a alinia sus */
+  align-items: center;
 }
+
 
   animation: fadeZoom 1.4s ease forwards;
 }
