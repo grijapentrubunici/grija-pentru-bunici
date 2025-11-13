@@ -170,3 +170,17 @@ footer {
     object-fit: contain;
     display: block;
 }
+/* === HERO IMAGE === */
+.hero-banner {
+  text-align: center;
+  padding: 20px 0;
+}
+
+.hero-banner-img {
+  width: 100%;
+  height: auto;
+  max-height: 320px; /* ajustează la 260–350 după preferință */
+  object-fit: contain; /* afișează imaginea COMPLET */
+  display: block;
+  margin: 0 auto;
+}
