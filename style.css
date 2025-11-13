@@ -161,20 +161,17 @@ footer {
     overflow: hidden;
 }
 
-.hero img {
-    width: 100%;
-    height: auto;
-    object-fit: cover;
-    object-position: center 25%; /* mută focusul mai jos, ca să se vadă fețele */
-}
 .hero {
-    height: 70vh; /* micșorăm înălțimea secțiunii */
-    overflow: hidden;
+    width: 100%;
+    height: 65vh; /* micșorează înălțimea */
+    overflow: hidden; /* taie ce depășește */
+    position: relative;
 }
 
 .hero img {
     width: 100%;
     height: 100%;
-    object-fit: cover;
-    object-position: center top; /* păstrează partea de sus, taie din partea de jos */
+    object-fit: cover; /* menține proporția fără deformare */
+    object-position: top; /* păstrează partea de sus (mâinile) și taie jos */
+    display: block;
 }
