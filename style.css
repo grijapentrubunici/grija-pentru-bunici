@@ -184,3 +184,44 @@ footer {
   display: block;
   margin: 0 auto;
 }
+/* ===== RESPONSIVE PENTRU MOBIL ===== */
+@media (max-width: 600px) {
+
+  /* Imaginea din homepage */
+  .hero-banner-img {
+    max-height: 260px;
+    object-fit: cover;
+    border-radius: 12px;
+    margin-top: 10px;
+  }
+
+  /* Textul din hero */
+  .hero-container {
+    padding: 30px 20px;
+    font-size: 0.95rem;
+  }
+
+  .hero-container h2 {
+    font-size: 1.6rem;
+  }
+
+  /* Meniul sus */
+  nav.menu a {
+    margin: 0 6px;
+    font-size: 0.9rem;
+  }
+
+  /* Cardurile de servicii */
+  .services {
+    padding: 30px 5%;
+    grid-template-columns: 1fr;
+  }
+
+  .service-card {
+    padding: 20px;
+  }
+
+  .service-img {
+    height: 180px;
+  }
+}
