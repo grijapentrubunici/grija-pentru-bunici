@@ -51,25 +51,31 @@
       color: #8b5e3c;
     }
 
-    /* ===== HERO IMAGE ===== */
-    .hero-banner {
-      width: 100%;
-      margin: 0;
-      overflow: hidden;
-      position: relative;
-      background-color: #f8f4f2;
-    }
-
-    .hero-banner-img {
+   .hero-banner-img {
   width: 100%;
   height: 100%;
-  object-fit: cover;   /* POZA UMPLĂ TOT — full width real */
-  object-position: center;
+  object-fit: cover;
+  object-position: top;   /* ❤️ arată partea de sus (fețele) */
   display: block;
   border-radius: 0;
-  max-height: none;    /* ← eliminăm limitarea care o făcea mică */
   opacity: 0;
   transform: scale(1.04);
+  animation: fadeZoom 1.4s ease forwards;
+}
+
+
+  .hero-banner {
+  width: 100%;
+  height: 55vh;  /* înălțime SETATĂ → obligatoriu */
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  background-color: #f8f4f2;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start; /* important pentru a alinia sus */
+}
+
   animation: fadeZoom 1.4s ease forwards;
 }
 
