@@ -57,6 +57,17 @@
   object-fit: cover;
   object-position: top 20%;  /* ❤️ NU doar top – asta păstrează și jos! */
 }
+/* === FIX HERO - doar micșorare partea de jos === */
+.hero-banner {
+  height: 50vh !important;   /* micșorează secțiunea */
+  overflow: hidden !important; 
+}
+
+.hero-banner-img {
+  height: 100% !important; 
+  object-fit: cover !important;
+  object-position: top !important; /* taie partea de jos */
+}
 
   display: block;
   border-radius: 0;
