@@ -261,33 +261,3 @@ footer {
   margin: 50px 0 10px;
 }
 
-/* Linia elegantă de sub titlu */
-.home-divider {
-  width: 90px;
-  height: 3px;
-  background: var(--beige-dark);
-  margin: 0 auto 45px;
-  border-radius: 4px;
-}
-
-/* Textul general */
-.hero-text-only {
-  padding: 0 12%;
-  display: flex;
-  justify-content: center;
-}
-
-/* Eliminat chenarul – doar text frumos */
-.hero-container {
-  max-width: 900px;
-  padding: 0;
-  line-height: 1.85;
-  text-align: center; /* pentru paragrafe centrate vizual */
-  font-size: 1.08rem;
-  margin: 0 auto;
-  color: var(--text);
-}
-
-.hero-container p {
-  margin-bottom: 22px;
-}
