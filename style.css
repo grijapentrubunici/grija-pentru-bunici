@@ -213,3 +213,68 @@ footer p {
   font-size: 1.4rem;
   color: var(--text);
 }
+/* ===== CONTACT PAGE ===== */
+
+.contact-section {
+  max-width: 900px;
+  margin: 60px auto;
+  padding: 20px;
+  text-align: center;
+}
+
+.contact-section h2 {
+  font-size: 2.2rem;
+  font-family: 'Poppins', sans-serif;
+  margin-bottom: 15px;
+  color: var(--text);
+}
+
+.contact-info {
+  margin: 30px auto;
+  text-align: center;
+  font-size: 1.1rem;
+}
+
+.contact-info p {
+  margin: 8px 0;
+}
+
+.contact-info a {
+  color: var(--text);
+  font-weight: 600;
+  text-decoration: none;
+}
+
+.contact-info a:hover {
+  color: #8b5e3c;
+}
+
+/* CARD PROGRAM – BEJ FRUMOS */
+.program-card {
+  margin: 45px auto 20px;
+  padding: 22px 25px;
+  max-width: 340px;
+  background: var(--beige-dark);
+  border-radius: 16px;
+  box-shadow: 0 4px 14px rgba(0,0,0,0.07);
+  text-align: center;
+}
+
+.program-card h3 {
+  margin: 0 0 10px;
+  font-size: 1.6rem;
+  color: var(--text);
+}
+
+.program-card p {
+  margin: 3px 0;
+  font-size: 1.15rem;
+}
+
+/* Nota */
+.contact-note {
+  margin-top: 25px;
+  font-style: italic;
+  color: #5a403e;
+}
+
