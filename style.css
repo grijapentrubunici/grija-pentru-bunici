@@ -71,8 +71,6 @@ header {
   }
 }
 
-}
-
 /* 🌸 HERO TEXT */
 .hero-text-only {
   padding: 40px 12%;
@@ -170,7 +168,7 @@ footer {
   padding: 25px 10px;
   color: var(--text);
   border-top: 1px solid #f1dada;
-}
+
 
 /* 📱 Responsivitate */
 @media (max-width: 900px) {
