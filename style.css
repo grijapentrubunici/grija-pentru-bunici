@@ -59,9 +59,18 @@ header {
 }
 
 /* 🌸 Animație */
-@keyframes fadeZoom {
-  0% { opacity: 0; transform: scale(1.06); }
-  100% { opacity: 1; transform: scale(1); }
+/* 🌟 Fade-in pentru imagine */
+@keyframes fadeInImage {
+  0% {
+    opacity: 0;
+    transform: scale(1.03);
+  }
+  100% {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
 }
 
 /* 🌸 HERO TEXT */
@@ -191,9 +200,12 @@ footer {
   max-width: 100%;
   height: auto;
   max-height: 480px;
-  object-fit: cover; 
+  object-fit: cover;
   display: block;
   margin: 0 auto;
+
+  /* 💫 efectul de fade-in */
+  animation: fadeInImage 1.4s ease-out forwards;
 }
 
 }
