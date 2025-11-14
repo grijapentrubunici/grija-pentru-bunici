@@ -7,15 +7,16 @@
   --beige-dark: #e9d8c7;
   --text: #3c1f1d;
 }
+
 html, body {
   overflow-x: hidden;
+  margin: 0;
+  padding: 0;
 }
 
 /* 🌸 Corp general */
 body {
   font-family: 'Open Sans', sans-serif;
-  margin: 0;
-  padding: 0;
   background-color: var(--beige);
   color: var(--text);
   line-height: 1.7;
@@ -58,26 +59,39 @@ header {
   color: #8b5e3c;
 }
 
-/* 🌸 Animație */
 /* 🌟 Fade-in pentru imagine */
 @keyframes fadeInImage {
-  0% {
-    opacity: 0;
-    transform: scale(1.03);
-  }
-  100% {
-    opacity: 1;
-    transform: scale(1);
-  }
+  0% { opacity: 0; transform: scale(1.03); }
+  100% { opacity: 1; transform: scale(1); }
 }
 
-/* 🌸 HERO TEXT */
+/* 🌸 HERO IMAGE */
+.hero-banner {
+  width: 100%;
+  text-align: center;
+  padding: 20px 0;
+  overflow: hidden;
+}
+
+.hero-banner-img {
+  width: 100%;
+  max-width: 100%;
+  height: auto;
+  max-height: 480px;
+  object-fit: cover;
+  display: block;
+  margin: 0 auto;
+  animation: fadeInImage 1.4s ease-out forwards;
+}
+
+/* 🌸 HERO TEXT – FĂRĂ CHENAR */
 .hero-text-only {
   padding: 40px 12%;
   background: none !important;
   display: flex;
   justify-content: center;
 }
+
 .hero-container {
   max-width: 950px;
   padding: 0;
@@ -91,6 +105,10 @@ header {
   font-size: 1.06rem;
 }
 
+.hero-container p {
+  margin-bottom: 18px;
+}
+
 .hero-container h2 {
   text-align: center;
   font-size: 2.2rem;
@@ -98,58 +116,32 @@ header {
   font-weight: 700;
 }
 
-.hero-container p {
-  margin-bottom: 18px;
-}
-
-.hero-divider {
-  width: 80px;
-  height: 3px;
-  background: var(--beige-dark);
-  margin: 0 auto 30px;
-}
-
 /* 🌸 SERVICII */
 .services {
   width: 100%;
-  padding: 60px 8%;
+  padding: 60px 5%;
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
   gap: 25px;
   background: linear-gradient(180deg, #fdfaf9, #f9f4f2);
+  box-sizing: border-box;
 }
 
 .service-card {
+  width: 100%;
+  max-width: 350px;
+  margin: 0 auto;
   background: #fff;
   padding: 25px;
   border-radius: 16px;
   box-shadow: 0 2px 10px rgba(0,0,0,0.05);
   text-align: center;
   transition: transform .3s ease;
+  box-sizing: border-box;
 }
 
 .service-card:hover {
   transform: translateY(-6px);
-}
-/* === FIX LĂȚIME SERVICII === */
-.services {
-  width: 100%;
-  padding: 60px 5%; /* REDUS din 8% la 5% ca să încapă */
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-  gap: 25px;
-  box-sizing: border-box; /* FIX scroll lateral */
-}
-
-.service-card {
-  width: 100%;
-  max-width: 350px; /* FIX: fiecare card se limitează corect */
-  margin: 0 auto;   /* centrează cardurile */
-  box-sizing: border-box;
-}
-.services {
-  padding: 20px 4%;
-  grid-template-columns: 1fr; /* 1 card pe rând */
 }
 
 .service-img {
@@ -168,60 +160,13 @@ footer {
   padding: 25px 10px;
   color: var(--text);
   border-top: 1px solid #f1dada;
-
+}
 
 /* 📱 Responsivitate */
-@media (max-width: 900px) {
-
-  .hero {
-    height: 45vh; /* micșorată și pe mobil */
-  }
-
-  .hero-container {
-    padding: 40px 25px;
-  }
-
-  .hero-container h2 {
-    font-size: 2rem;
-  }
-}
-/* ==== HERO IMAGE (versiunea finală, corectă) ==== */
-.hero-banner {
-  width: 100%;
-  text-align: center;
-  padding: 20px 0;
-  overflow: hidden;
-}
-
-.hero-banner-img {
-  width: 100%;
-  max-width: 100%;
-  height: auto;
-  max-height: 480px;
-  object-fit: cover;
-  display: block;
-  margin: 0 auto;
-
-  /* 💫 efectul de fade-in */
-  animation: fadeInImage 1.4s ease-out forwards;
-}
-
-}
-/* ===== RESPONSIVE PENTRU MOBIL ===== */
 @media (max-width: 600px) {
 
- .hero-banner-img {
-  width: 100%;
-  max-width: 100%;
-  height: auto;
-  display: block;
-  object-fit: cover;
-  margin: 0 auto;
-  }
-
-  /* Textul din hero */
   .hero-container {
-    padding: 30px 20px;
+    padding: 20px 0;
     font-size: 0.95rem;
   }
 
@@ -229,13 +174,11 @@ footer {
     font-size: 1.6rem;
   }
 
-  /* Meniul sus */
   nav.menu a {
     margin: 0 6px;
     font-size: 0.9rem;
   }
 
-  /* Cardurile de servicii */
   .services {
     padding: 30px 5%;
     grid-template-columns: 1fr;
@@ -249,13 +192,3 @@ footer {
     height: 180px;
   }
 }
-/* Titlu mare, centrat sub imagine */
-.home-title {
-  text-align: center;
-  font-size: 2.4rem;
-  font-family: 'Poppins', sans-serif;
-  font-weight: 700;
-  color: var(--text);
-  margin: 50px 0 10px;
-}
-
