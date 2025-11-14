@@ -51,42 +51,34 @@
       color: #8b5e3c;
     }
 
-    @keyframes fadeZoom {
-      0% { opacity: 0; transform: scale(1.06); }
-      100% { opacity: 1; transform: scale(1); }
+    /* ===== HERO ===== */
+    .hero-banner-img {
+      width: 100%;
+      height: auto;
+      max-height: 480px;
+      object-fit: cover;
+      display: block;
+      margin: 0 auto;
     }
 
-    /* ===== HERO TEXT ===== */
+    /* ===== TEXT ===== */
     .hero-text-only {
       padding: 100px 12% 80px;
       display: flex;
       justify-content: center;
     }
 
-   .hero-container {
+    .hero-container {
       max-width: 900px;
-      padding: 0;
       text-align: left;
       line-height: 1.9;
-      background: none;
-      border: none;
-      box-shadow: none;
-      border-radius: 0;
     }
 
     .hero-container h2 {
       text-align: center;
       font-size: 2.3rem;
       font-family: 'Poppins', sans-serif;
-      margin-bottom: 20px;
-    }
-
-    .hero-divider {
-      width: 80px;
-      height: 3px;
-      background: var(--beige-dark);
-      margin: 0 auto 35px;
-      border-radius: 6px;
+      margin-bottom: 25px;
     }
 
     /* ===== SERVICII ===== */
@@ -125,9 +117,26 @@
     footer {
       background: var(--beige-dark);
       text-align: center;
-      padding: 25px 10px;
+      padding: 25px 10px 35px;
       color: var(--text);
       margin-top: 40px;
+    }
+
+    .legal-links {
+      margin-top: 8px;
+      font-size: 0.95rem;
+    }
+
+    .legal-links a {
+      color: var(--text);
+      text-decoration: none;
+      font-weight: 600;
+      margin: 0 6px;
+    }
+
+    .legal-links span {
+      color: #8b5e3c;
+      font-weight: 600;
     }
   </style>
 </head>
@@ -145,39 +154,18 @@
     </nav>
   </header>
 
-<section class="hero-banner">
-  <img src="hero-ingrijitoare.jpg" 
-       alt="Îngrijitoare grijulie alături de o bunică" 
-       class="hero-banner-img">
-</section>
+  <!-- === HERO IMAGE === -->
+  <section class="hero-banner">
+    <img src="hero-ingrijitoare.jpg" 
+         alt="Îngrijitoare grijulie alături de o bunică" 
+         class="hero-banner-img">
+  </section>
 
-<section class="hero-text-only">
-  <div class="hero-container">
-    <h2>Îngrijire de încredere pentru cei dragi</h2>
-
-    <p>
-      La <b>Grijă pentru Bunici</b>, considerăm că îngrijirea persoanelor dragi nu este doar o responsabilitate, ci o dovadă de respect și umanitate.
-      Cu o experiență solidă în domeniul <b>recrutării și selecției de personal pentru îngrijire la domiciliu</b>, ne-am dedicat scopului de a crea legături sigure și de încredere între familiile care au nevoie de ajutor și profesioniștii care oferă acest sprijin cu empatie și răbdare.
-    </p>
-
-    <p>
-      Echipa noastră selectează cu atenție <b>îngrijitoare, bone și menajere</b> cu experiență reală și recomandări verificate.
-      Procesul nostru de recrutare se bazează pe criterii clare – competență, seriozitate, discreție și capacitatea de a oferi suport emoțional și uman, nu doar asistență practică.
-    </p>
-
-    <p>
-      Punem accent pe <b>siguranță, respect și comunicare deschisă</b>, pentru ca fiecare familie să se simtă liniștită știind că persoanele dragi sunt îngrijite cu profesionalism și grijă autentică.
-    </p>
-
-    <p>
-      Dacă ești în căutarea unei persoane potrivite pentru a avea grijă de părinți sau bunici, sau dacă îți dorești să faci parte din echipa noastră de profesioniști dedicați,
-      <b>Grijă pentru Bunici</b> este locul unde <b>empatia se întâlnește cu seriozitatea</b>.
-    </p>
-  </div>
-</section>
-
+  <!-- === TEXT (O SINGURĂ DATĂ) === -->
+  <section class="hero-text-only">
     <div class="hero-container">
       <h2>Îngrijire de încredere pentru cei dragi</h2>
+
       <p>
         La <b>Grijă pentru Bunici</b>, considerăm că îngrijirea persoanelor dragi nu este doar o responsabilitate, ci o dovadă de respect și umanitate.
         Cu o experiență solidă în domeniul <b>recrutării și selecției de personal pentru îngrijire la domiciliu</b>, ne-am dedicat scopului de a crea legături sigure și de încredere între familiile care au nevoie de ajutor și profesioniștii care oferă acest sprijin cu empatie și răbdare.
@@ -226,18 +214,18 @@
     </div>
   </section>
 
-<footer>
-  <p>&copy; 2025 Grijă pentru Bunici — Toate drepturile rezervate.</p>
+  <!-- === FOOTER === -->
+  <footer>
+    <p>&copy; 2025 Grijă pentru Bunici — Toate drepturile rezervate.</p>
 
-  <div class="legal-links">
-    <a href="termeni-conditii.html">Termeni și Condiții</a>
-    <span>|</span>
-    <a href="politica-confidentialitate.html">Politica de Confidențialitate (GDPR)</a>
-    <span>|</span>
-    <a href="https://ec.europa.eu/consumers/odr" target="_blank">Soluționare litigii ANPC / SOL</a>
-  </div>
-</footer>
-
+    <div class="legal-links">
+      <a href="termeni-conditii.html">Termeni și Condiții</a>
+      <span>|</span>
+      <a href="politica-confidentialitate.html">Politica de Confidențialitate (GDPR)</a>
+      <span>|</span>
+      <a href="https://ec.europa.eu/consumers/odr" target="_blank">Soluționare litigii ANPC / SOL</a>
+    </div>
+  </footer>
 
 </body>
 </html>
