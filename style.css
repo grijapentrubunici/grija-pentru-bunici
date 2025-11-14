@@ -124,6 +124,26 @@ header {
 .service-card:hover {
   transform: translateY(-6px);
 }
+/* === FIX LĂȚIME SERVICII === */
+.services {
+  width: 100%;
+  padding: 60px 5%; /* REDUS din 8% la 5% ca să încapă */
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 25px;
+  box-sizing: border-box; /* FIX scroll lateral */
+}
+
+.service-card {
+  width: 100%;
+  max-width: 350px; /* FIX: fiecare card se limitează corect */
+  margin: 0 auto;   /* centrează cardurile */
+  box-sizing: border-box;
+}
+.services {
+  padding: 20px 4%;
+  grid-template-columns: 1fr; /* 1 card pe rând */
+}
 
 .service-img {
   width: 100%;
