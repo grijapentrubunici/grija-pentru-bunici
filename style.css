@@ -75,22 +75,20 @@ header {
 
 /* 🌸 HERO TEXT */
 .hero-text-only {
-  background: linear-gradient(180deg, #f8f4f2, #fffaf9);
-  padding: 60px 12% 60px;
+  padding: 40px 12%;
   display: flex;
   justify-content: center;
+  background: none;
 }
 
 .hero-container {
-  max-width: 850px;
-  background: #fffefc;
-  padding: 45px 55px;
-  border-radius: 22px;
-  line-height: 1.8;
+  max-width: 900px;
+  padding: 30px 0; 
+  line-height: 1.85;
   text-align: left;
-  font-size: 1.06rem;
-  box-shadow: 0 6px 20px rgba(0,0,0,0.04);
-  border: 1px solid rgba(233,216,199,0.4);
+  font-size: 1.08rem;
+  margin: 0 auto;
+
 }
 
 .hero-container h2 {
