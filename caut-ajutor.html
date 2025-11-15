@@ -6,6 +6,7 @@
   <title>Caut Ajutor | Grijă pentru Bunici</title>
   <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600&family=Poppins:wght@500;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="style.css">
+
   <style>
     body {
       background-color: var(--beige);
@@ -77,7 +78,7 @@
       margin-bottom: 15px;
     }
 
-    /* FORMULAR ÎN DREAPTA */
+    /* FORMULAR */
     .intro-formular {
       flex: 1 1 420px;
       background: #fffdfc;
@@ -144,13 +145,62 @@
       box-shadow: 0 2px 8px rgba(0,0,0,0.04);
     }
 
-    /* RESPONSIVE */
+    /* CUM FUNCTIONEAZA */
+    .how-it-works {
+      margin-top: 25px;
+      padding: 10px 0;
+    }
+
+    .how-it-works h3 {
+      text-align: center;
+      font-family: 'Poppins', sans-serif;
+      font-size: 1.8rem;
+      color: var(--rose);
+      margin-bottom: 20px;
+    }
+
+    .steps {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 20px;
+    }
+
+    .step {
+      background: #ffffff;
+      padding: 20px;
+      width: 230px;
+      border-radius: 18px;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.06);
+      text-align: center;
+    }
+
+    .number {
+      display: inline-block;
+      width: 40px;
+      height: 40px;
+      background: var(--rose-light);
+      color: #fff;
+      font-weight: bold;
+      border-radius: 50%;
+      line-height: 40px;
+      margin-bottom: 10px;
+      font-size: 1.1rem;
+    }
+
+    .step p {
+      font-size: 0.98rem;
+      color: var(--text);
+      line-height: 1.5;
+    }
+
+    /* RESPONSIV */
     @media (max-width: 900px) {
       .intro-form {
         flex-direction: column;
         text-align: center;
       }
-
+      
       .intro-text p {
         text-align: center;
       }
@@ -170,37 +220,70 @@
     }
   </style>
 </head>
+
 <body>
+
   <header>
     <h1>Grijă pentru Bunici</h1>
-   <nav class="menu">
-  <a href="index.html">Acasă</a>
-  <a href="despre-noi.html">Despre noi</a>
-  <a href="caut-ajutor.html">Caut ajutor</a>
-  <a href="caut-loc-de-munca.html">Caut loc de muncă</a>
-  <a href="tarife.html">Tarife</a>
-  <a href="contact.html">Contact</a>
-</nav>
-
+    <nav class="menu">
+      <a href="index.html">Acasă</a>
+      <a href="despre-noi.html">Despre noi</a>
+      <a href="caut-ajutor.html">Caut ajutor</a>
+      <a href="caut-loc-de-munca.html">Caut loc de muncă</a>
+      <a href="tarife.html">Tarife</a>
+      <a href="contact.html">Contact</a>
+    </nav>
   </header>
 
   <section class="intro-form">
+
     <div class="intro-text">
       <h2>Ai nevoie de ajutor acasă?</h2>
+
       <p>
         Fie că ai nevoie de <b>îngrijitoare</b> pentru un părinte, o <b>bonă</b> pentru copil sau o <b>menajeră</b> de încredere,  
-        echipa <b>Grijă pentru Bunici</b> este aici să te sprijine.  
-        Selectăm cu atenție persoane empatice, responsabile și verificate, pentru ca tu și familia ta să aveți liniștea că totul este pe mâini bune.
+        echipa <b>Grijă pentru Bunici</b> este aici să te sprijine. Selectăm cu atenție persoane empatice, responsabile și verificate, pentru ca tu și familia ta să aveți liniștea că totul este pe mâini bune.
       </p>
+
       <p>
         Completează formularul de mai jos și vom reveni în cel mai scurt timp cu o soluție potrivită nevoilor tale.  
         Grija, încrederea și respectul sunt temelia fiecărei colaborări.
       </p>
+
+      <!-- CUM FUNCTIONEAZA - AICI AM INTEGRAT O PERFECT -->
+      <div class="how-it-works">
+        <h3>Cum funcționează?</h3>
+
+        <div class="steps">
+          <div class="step">
+            <span class="number">1</span>
+            <p>Completezi formularul cu nevoile tale.</p>
+          </div>
+
+          <div class="step">
+            <span class="number">2</span>
+            <p>Te contactăm rapid pentru detalii suplimentare.</p>
+          </div>
+
+          <div class="step">
+            <span class="number">3</span>
+            <p>Găsim persoana potrivită pentru situația ta.</p>
+          </div>
+
+          <div class="step">
+            <span class="number">4</span>
+            <p>Începe colaborarea în siguranță și cu încredere.</p>
+          </div>
+        </div>
+      </div>
     </div>
 
+    <!-- FORMULAR -->
     <div class="intro-formular">
       <h3>Formular – Solicită ajutor</h3>
+
       <form action="https://formspree.io/f/xpwolkdp" method="POST">
+
         <div class="camp-formular">
           <label for="nume">Nume complet</label>
           <input type="text" id="nume" name="nume" required>
@@ -239,10 +322,12 @@
         Îți mulțumim pentru încredere!
       </div>
     </div>
+
   </section>
 
   <footer>
     © 2025 Grijă pentru Bunici | Contact WhatsApp: <b>0793 553 703</b>
   </footer>
+
 </body>
 </html>
