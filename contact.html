@@ -3,66 +3,339 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Contact | Grijă pentru Bunici</title>
+  <title>Caut Ajutor | Grijă pentru Bunici</title>
 
-  <meta name="description" content="Contactează Grijă pentru Bunici pentru informații despre îngrijire, colaborare sau recrutare.">
+  <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600&family=Poppins:wght@500;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="style.css">
 
-  <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;500;600&family=Poppins:wght@500;600&display=swap" rel="stylesheet">
+  <style>
+    body {
+      background-color: var(--beige);
+      font-family: 'Open Sans', sans-serif;
+      color: var(--text);
+      margin: 0;
+      padding: 0;
+    }
+
+    header {
+      background-color: var(--beige-dark);
+      padding: 15px 0;
+      text-align: center;
+      box-shadow: 0 2px 6px rgba(0,0,0,0.05);
+    }
+
+    header h1 {
+      font-family: 'Poppins', sans-serif;
+      color: var(--text);
+      margin: 0;
+    }
+
+    nav {
+      margin-top: 10px;
+    }
+
+    nav a {
+      text-decoration: none;
+      color: var(--text);
+      font-weight: 600;
+      margin: 0 12px;
+    }
+
+    nav a:hover {
+      color: var(--rose);
+    }
+
+    /* CHENARUL MARE (TOT CE VEZI ÎN POZA TA) */
+    .intro-form {
+      max-width: 1200px;
+      margin: 50px auto 60px;
+      padding: 40px 30px 45px;
+      background: linear-gradient(135deg, #fff7f6, #fff3f1);
+      border-radius: 20px;
+      box-shadow: 0 6px 18px rgba(0,0,0,0.05);
+    }
+
+    /* RÂNDUL DE SUS: TEXT + FORMULAR */
+    .intro-top {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+      align-items: flex-start;
+      gap: 50px;
+      margin-bottom: 35px;
+    }
+
+    .intro-text {
+      flex: 1 1 460px;
+    }
+
+    .intro-text h2 {
+      font-family: 'Poppins', sans-serif;
+      font-size: 2rem;
+      color: var(--rose);
+      margin-bottom: 18px;
+    }
+
+    .intro-text p {
+      font-size: 1.08rem;
+      line-height: 1.8;
+      color: var(--text);
+      margin-bottom: 18px;
+      text-align: justify;
+    }
+
+    /* FORMULAR – ALUNGIT, DAR NU PREA LAT */
+    .intro-formular {
+      flex: 1 1 460px;
+      background: #ffffff;
+      border: 1px solid #f2e3db;
+      border-radius: 20px;
+      padding: 50px 50px 85px;  /* jos mai mult ca să fie mai lung */
+      box-shadow: 0 8px 22px rgba(0,0,0,0.06);
+    }
+
+    .intro-formular h3 {
+      text-align: center;
+      color: var(--rose);
+      font-family: 'Poppins', sans-serif;
+      margin-bottom: 30px;
+      font-size: 1.5rem;
+    }
+
+    .camp-formular {
+      margin-bottom: 24px;
+    }
+
+    .camp-formular label {
+      display: block;
+      font-weight: 600;
+      margin-bottom: 6px;
+      font-size: 1rem;
+    }
+
+    .camp-formular input,
+    .camp-formular textarea,
+    .camp-formular select {
+      width: 100%;
+      padding: 14px;
+      border-radius: 12px;
+      border: 1px solid #d8cbbd;
+      background-color: #fff;
+      font-size: 1rem;
+    }
+
+    textarea {
+      resize: vertical;
+    }
+
+    .intro-formular button {
+      background-color: var(--rose);
+      color: white;
+      border: none;
+      border-radius: 14px;
+      padding: 15px 28px;
+      font-size: 18px;
+      cursor: pointer;
+      display: block;
+      margin: 35px auto 25px;
+      transition: 0.3s;
+    }
+
+    .intro-formular button:hover {
+      background-color: var(--rose-light);
+      transform: translateY(-2px);
+    }
+
+    .post-form-message {
+      text-align: center;
+      font-size: 1rem;
+      color: #5a4634;
+      background: #fff7f5;
+      padding: 15px 20px;
+      border-radius: 12px;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.04);
+    }
+
+    /* CUM FUNCȚIONEAZĂ – ÎN ACELAȘI CHENAR MARE */
+    .how-it-works {
+      margin-top: 25px;
+    }
+
+    .how-it-works h3 {
+      text-align: center;
+      font-family: 'Poppins', sans-serif;
+      font-size: 1.9rem;
+      color: var(--rose);
+      margin-bottom: 25px;
+    }
+
+    .steps {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 20px;
+    }
+
+    .step {
+      background: #ffffff;
+      padding: 22px;
+      width: 250px;
+      border-radius: 18px;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.06);
+      text-align: center;
+    }
+
+    .number {
+      display: inline-block;
+      width: 45px;
+      height: 45px;
+      background: var(--rose-light);
+      color: #fff;
+      font-weight: bold;
+      border-radius: 50%;
+      line-height: 45px;
+      margin-bottom: 12px;
+      font-size: 1.1rem;
+    }
+
+    .step p {
+      margin: 0;
+      font-size: 1rem;
+      color: var(--text);
+      line-height: 1.5;
+    }
+
+    /* RESPONSIVE */
+    @media (max-width: 900px) {
+      .intro-top {
+        flex-direction: column;
+      }
+
+      .intro-text p {
+        text-align: left;
+      }
+
+      .intro-formular {
+        padding: 35px 25px 50px;
+      }
+    }
+
+    footer {
+      background-color: var(--beige-dark);
+      text-align: center;
+      padding: 25px;
+      color: var(--text);
+      font-size: 0.95rem;
+      margin-top: 20px;
+    }
+  </style>
 </head>
 
 <body>
-
-  <!-- HEADER -->
   <header>
-    <h1 class="site-title">Grijă pentru Bunici</h1>
+    <h1>Grijă pentru Bunici</h1>
     <nav class="menu">
-  <a href="index.html">Acasă</a>
-  <a href="despre-noi.html">Despre noi</a>
-  <a href="caut-ajutor.html">Caut ajutor</a>
-  <a href="caut-loc-de-munca.html">Caut loc de muncă</a>
-  <a href="tarife.html">Tarife</a>
-  <a href="contact.html">Contact</a>
-</nav>
-
+      <a href="index.html">Acasă</a>
+      <a href="despre-noi.html">Despre noi</a>
+      <a href="caut-ajutor.html">Caut ajutor</a>
+      <a href="caut-loc-de-munca.html">Caut loc de muncă</a>
+      <a href="tarife.html">Tarife</a>
+      <a href="contact.html">Contact</a>
+    </nav>
   </header>
 
-  <!-- CONTENT -->
-  <main>
-    <section class="contact-section">
-      <h2>Contactează-ne</h2>
-      <p>Suntem aici pentru tine! Dacă ai întrebări sau dorești să colaborezi cu noi, ne poți contacta prin:</p>
+  <!-- CHENARUL MARE CU TOT -->
+  <section class="intro-form">
+    <div class="intro-top">
+      <!-- TEXT STÂNGA -->
+      <div class="intro-text">
+        <h2>Ai nevoie de ajutor acasă?</h2>
 
-      <div class="contact-info">
-        <p><strong> Telefon:</strong> <a href="tel:+40793553703">+40 793 553 703</a></p>
-        <p><strong> Email:</strong> <a href="mailto:grijapentrubunici@yahoo.com">grijapentrubunici@yahoo.com</a></p>
-        <p><strong> WhatsApp:</strong> <a href="https://wa.me/40793553703" target="_blank">Trimite mesaj</a></p>
-        <p><strong> Locație:</strong> Str.Dr. Toma Ionescu, 9B, Bl.61, Sc. B, Ap.17 ,Campina, Prahova a</p>
+        <p>
+          Fie că ai nevoie de <b>îngrijitoare</b> pentru un părinte, o <b>bonă</b> pentru copil sau o <b>menajeră</b> de încredere,
+          echipa <b>Grijă pentru Bunici</b> este aici să te sprijine. Selectăm cu atenție persoane empatice, responsabile și verificate.
+        </p>
+
+        <p>
+          Completează formularul de mai jos și vom reveni rapid cu o soluție potrivită nevoilor tale.
+          Grija, încrederea și respectul sunt temelia fiecărei colaborări.
+        </p>
       </div>
 
-      <!-- PROGRAM BEJ -->
-      <div class="program-card">
-        <h3>Program</h3>
-        <p>Luni – Vineri</p>
-        <p><strong>10:00 – 18:00</strong></p>
+      <!-- FORMULAR DREAPTA -->
+      <div class="intro-formular">
+        <h3>Formular – Solicită ajutor</h3>
+
+        <form action="https://formspree.io/f/xpwolkdp" method="POST">
+          <div class="camp-formular">
+            <label for="nume">Nume complet</label>
+            <input type="text" id="nume" name="nume" required>
+          </div>
+
+          <div class="camp-formular">
+            <label for="email">Email</label>
+            <input type="email" id="email" name="_replyto" required>
+          </div>
+
+          <div class="camp-formular">
+            <label for="telefon">Telefon</label>
+            <input type="tel" id="telefon" name="telefon" required>
+          </div>
+
+          <div class="camp-formular">
+            <label for="serviciu">Tip de ajutor dorit</label>
+            <select id="serviciu" name="serviciu" required>
+              <option value="">Alege o opțiune</option>
+              <option value="ingrijire">Îngrijitoare pentru senior</option>
+              <option value="bona">Bonă pentru copii</option>
+              <option value="menaj">Menajeră pentru gospodărie</option>
+            </select>
+          </div>
+
+          <div class="camp-formular">
+            <label for="detalii">Detalii suplimentare</label>
+            <textarea id="detalii" name="detalii" rows="5" placeholder="Scrie-ne câteva detalii despre nevoile tale..."></textarea>
+          </div>
+
+          <button type="submit">Trimite solicitarea</button>
+        </form>
+
+        <div class="post-form-message">
+          Toate informațiile sunt confidențiale. Te vom contacta cât mai curând!
+        </div>
       </div>
-
-      <p class="contact-note">Răspundem de obicei în aceeași zi. Mulțumim pentru încrederea acordată!</p>
-    </section>
-  </main>
-
-  <!-- FOOTER -->
-  <footer>
-    <p>&copy; 2025 Grijă pentru Bunici — Toate drepturile rezervate.</p>
-
-    <div class="legal-links">
-      <a href="termeni-conditii.html">Termeni și Condiții</a>
-      <span>|</span>
-      <a href="politica-confidentialitate.html">Politica de Confidențialitate (GDPR)</a>
-      <span>|</span>
-      <a href="https://ec.europa.eu/consumers/odr" target="_blank">Soluționare litigii ANPC / SOL</a>
     </div>
-  </footer>
 
+    <!-- CUM FUNCȚIONEAZĂ – ÎN ACELAȘI CHENAR -->
+    <div class="how-it-works">
+      <h3>Cum funcționează?</h3>
+
+      <div class="steps">
+        <div class="step">
+          <span class="number">1</span>
+          <p>Completezi formularul cu nevoile tale.</p>
+        </div>
+
+        <div class="step">
+          <span class="number">2</span>
+          <p>Te contactăm rapid pentru detalii suplimentare.</p>
+        </div>
+
+        <div class="step">
+          <span class="number">3</span>
+          <p>Găsim persoana potrivită pentru situația ta.</p>
+        </div>
+
+        <div class="step">
+          <span class="number">4</span>
+          <p>Începe colaborarea în siguranță și cu încredere.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <footer>
+    © 2025 Grijă pentru Bunici | WhatsApp: <b>0793 553 703</b>
+  </footer>
 </body>
 </html>
