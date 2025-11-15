@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="ro">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Tarife | Grijă pentru Bunici</title>
+  <link rel="stylesheet" href="style.css">
+
+  <style>
+    .tarife-section {
+      max-width: 900px;
+      margin: 60px auto;
+      padding: 0 20px;
+      text-align: center;
+      color: var(--text);
+    }
+
+    .tarife-section h1 {
+      font-family: 'Poppins', sans-serif;
+      font-size: 2.4rem;
+      margin-bottom: 25px;
+      color: var(--text);
+    }
+
+    .tarife-intro {
+      font-size: 1.15rem;
+      margin-bottom: 40px;
+      line-height: 1.8;
+    }
+
+    .tarife-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+      gap: 25px;
+      margin-top: 30px;
+    }
+
+    .tarif-card {
+      background: #ffffff;
+      padding: 25px;
+      border-radius: 16px;
+      box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+      text-align: center;
+      border: 1px solid #e8e2dd;
+    }
+
+    .tarif-card h3 {
+      font-size: 1.4rem;
+      color: #8b5e3c;
+      margin-bottom: 15px;
+    }
+
+    .tarif-card p {
+      font-size: 1.1rem;
+      line-height: 1.7;
+    }
+
+    .garantie-box {
+      margin-top: 50px;
+      background: #fff;
+      padding: 25px;
+      border-radius: 18px;
+      box-shadow: 0 2px 12px rgba(0,0,0,0.05);
+      border: 1px solid #eaded5;
+    }
+
+    .garantie-box h2 {
+      font-size: 1.8rem;
+      color: #8b5e3c;
+      margin-bottom: 15px;
+    }
+
+    .garantie-box p {
+      font-size: 1.15rem;
+      line-height: 1.8;
+    }
+
+    @media (max-width: 600px) {
+      .tarife-section h1 { font-size: 2rem; }
+      .tarif-card { padding: 20px; }
+    }
+  </style>
+</head>
+
+<body>
+
+  <!-- HEADER -->
+  <header>
+    <h1 class="site-title">Grijă pentru Bunici</h1>
+    <nav class="menu">
+      <a href="index.html">Acasă</a>
+      <a href="despre-noi.html">Despre noi</a>
+      <a href="tarife.html" class="active">Tarife</a>
+      <a href="caut-ajutor.html">Caut ajutor</a>
+      <a href="caut-loc-de-munca.html">Caut loc de muncă</a>
+      <a href="contact.html">Contact</a>
+    </nav>
+  </header>
+
+  <!-- SECTIUNE TARIFE -->
+  <section class="tarife-section">
+
+    <h1>Tarifele noastre</h1>
+
+    <p class="tarife-intro">
+      Comisionul agenției se achită o singură dată, la semnarea contractului de intermediere.  
+      Taxa de vizionare a candidaților este de <b>200 lei</b> și se achită la interviu.  
+      Remunerația persoanei selectate (salariul) nu este inclusă în comision.
+    </p>
+
+    <div class="tarife-grid">
+
+      <!-- CARD 1 -->
+      <div class="tarif-card">
+        <h3>Servicii externe (part-time sau full-time)</h3>
+        <p><b>Comision: 2.000 lei</b><br>O singură plată</p>
+      </div>
+
+      <!-- CARD 2 -->
+      <div class="tarif-card">
+        <h3>Servicii interne (cu cazare la beneficiar)</h3>
+        <p><b>Comision: 3.000 lei</b><br>O singură plată</p>
+      </div>
+
+      <!-- CARD 3 -->
+      <div class="tarif-card">
+        <h3>Însoțire în spital / asistent familial</h3>
+        <p><b>Comision: 2.000 lei</b><br>O singură plată</p>
+      </div>
+
+    </div>
+
+    <!-- GARANTIE -->
+    <div class="garantie-box">
+      <h2>Garanție și înlocuire</h2>
+      <p>
+        Oferim <b>garanție de 30 de zile</b> pentru fiecare candidat plasat.  
+        Dacă în acest interval colaborarea nu este potrivită, vom recomanda alți candidați <b>fără costuri suplimentare</b>.
+      </p>
+    </div>
+
+  </section>
+
+  <!-- FOOTER -->
+  <footer>
+    <p>&copy; 2025 Grijă pentru Bunici — Toate drepturile rezervate.</p>
+
+    <div class="legal-links">
+      <a href="termeni-conditii.html">Termeni și Condiții</a>
+      <span>|</span>
+      <a href="politica-confidentialitate.html">Politica de Confidențialitate (GDPR)</a>
+      <span>|</span>
+      <a href="https://ec.europa.eu/consumers/odr" target="_blank">Soluționare litigii ANPC / SOL</a>
+    </div>
+  </footer>
+
+</body>
+</html>
