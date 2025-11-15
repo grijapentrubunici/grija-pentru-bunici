@@ -316,3 +316,26 @@ footer p {
   font-size: 1.9rem;
   margin-bottom: 25px;
 }
+.steps-left {
+  display: grid;
+  grid-template-columns: 1fr 1fr;   /* două coloane FIX */
+  gap: 25px;
+  width: 100%;
+  max-width: 650px;                /* mai lat, ca în designul tău ideal */
+}
+
+.steps-left .step {
+  background: #ffffff;
+  padding: 25px;
+  border-radius: 18px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.06);
+  text-align: left;
+  height: 100%;                    /* toate cardurile egal înalte */
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+}
+
+.steps-left .number {
+  margin-bottom: 12px;
+}
