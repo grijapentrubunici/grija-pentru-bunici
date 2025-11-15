@@ -1,233 +1,104 @@
 <!DOCTYPE html>
 <html lang="ro">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Grijă pentru Bunici - Îngrijire de încredere</title>
 
   <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600&family=Poppins:wght@500;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="style.css">
-
-  <style>
-    /* ===== PALETĂ ===== */
-    :root {
-      --bg: #f8f4f2;
-      --beige-dark: #e9d8c7;
-      --text: #3c1f1d;
-    }
-
-    body {
-      background-color: var(--bg);
-      font-family: 'Open Sans', sans-serif;
-      margin: 0;
-      padding: 0;
-      color: var(--text);
-    }
-
-    /* ===== HEADER ===== */
-    header {
-      background-color: var(--beige-dark);
-      text-align: center;
-      padding: 15px 0;
-      box-shadow: 0 2px 6px rgba(0,0,0,0.05);
-    }
-
-    .site-title {
-      font-family: 'Poppins', sans-serif;
-      margin: 0;
-      color: var(--text);
-      font-size: 1.7rem;
-    }
-
-    .menu a {
-      text-decoration: none;
-      color: var(--text);
-      font-weight: 700;
-      margin: 0 12px;
-    }
-
-    .menu a:hover,
-    .menu a.active {
-      color: #8b5e3c;
-    }
-
-    /* ===== HERO ===== */
-    .hero-banner-img {
-      width: 100%;
-      height: auto;
-      max-height: 480px;
-      object-fit: cover;
-      display: block;
-      margin: 0 auto;
-    }
-
-    /* ===== TEXT ===== */
-    .hero-text-only {
-      padding: 100px 12% 80px;
-      display: flex;
-      justify-content: center;
-    }
-
-    .hero-container {
-      max-width: 900px;
-      text-align: left;
-      line-height: 1.9;
-    }
-
-    .hero-container h2 {
-      text-align: center;
-      font-size: 2.3rem;
-      font-family: 'Poppins', sans-serif;
-      margin-bottom: 25px;
-    }
-
-    /* ===== SERVICII ===== */
-    .services {
-      width: 100%;
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-      gap: 28px;
-      padding: 60px 8%;
-      background: linear-gradient(180deg, #fdfaf9, #f9f4f2);
-    }
-
-    .service-card {
-      background: #ffffff;
-      border-radius: 16px;
-      padding: 25px;
-      box-shadow: 0 2px 10px rgba(0,0,0,0.05);
-      text-align: center;
-      transition: transform 0.3s ease;
-    }
-
-    .service-card:hover {
-      transform: translateY(-4px);
-    }
-
-    .service-img {
-      width: 100%;
-      height: 200px;
-      object-fit: cover;
-      border-radius: 12px;
-      box-shadow: 0 3px 10px rgba(0,0,0,0.08);
-      margin-bottom: 15px;
-    }
-
-    /* ===== FOOTER ===== */
-    footer {
-      background: var(--beige-dark);
-      text-align: center;
-      padding: 25px 10px 35px;
-      color: var(--text);
-      margin-top: 40px;
-    }
-
-    .legal-links {
-      margin-top: 8px;
-      font-size: 0.95rem;
-    }
-
-    .legal-links a {
-      color: var(--text);
-      text-decoration: none;
-      font-weight: 600;
-      margin: 0 6px;
-    }
-
-    .legal-links span {
-      color: #8b5e3c;
-      font-weight: 600;
-    }
-  </style>
 </head>
 
 <body>
 
-  <header>
-    <h1 class="site-title">Grijă pentru Bunici</h1>
-    <nav class="menu">
-  <a href="index.html">Acasă</a>
-  <a href="despre-noi.html">Despre noi</a>
-  <a href="caut-ajutor.html">Caut ajutor</a>
-  <a href="caut-loc-de-munca.html">Caut loc de muncă</a>
-  <a href="tarife.html">Tarife</a>
-  <a href="contact.html">Contact</a>
-</nav>
+<header>
+  <h1 class="site-title">Grijă pentru Bunici</h1>
+  <nav class="menu">
+    <a href="index.html" class="active">Acasă</a>
+    <a href="despre-noi.html">Despre noi</a>
+    <a href="caut-ajutor.html">Caut ajutor</a>
+    <a href="caut-loc-de-munca.html">Caut loc de muncă</a>
+    <a href="tarife.html">Tarife</a>
+    <a href="contact.html">Contact</a>
+  </nav>
+</header>
 
-  </header>
+<!-- === HERO IMAGE === -->
+<section class="hero-banner">
+  <img src="hero-ingrijitoare.jpg" alt="Îngrijitoare grijulie" class="hero-banner-img">
+</section>
 
-  <!-- === HERO IMAGE === -->
-  <section class="hero-banner">
-    <img src="hero-ingrijitoare.jpg" 
-         alt="Îngrijitoare grijulie alături de o bunică" 
-         class="hero-banner-img">
-  </section>
+<!-- === TEXT === -->
+<section class="hero-text-only" style="padding-top:40px;">
+  <div class="hero-container" style="max-width:1100px;">
 
-  <!-- === TEXT (O SINGURĂ DATĂ) === -->
-  <section class="hero-text-only">
-    <div class="hero-container">
-      <h2>Îngrijire de încredere pentru cei dragi</h2>
+    <h2>Îngrijire de încredere pentru cei dragi</h2>
 
-      <p>
-        La <b>Grijă pentru Bunici</b>, considerăm că îngrijirea persoanelor dragi nu este doar o responsabilitate, ci o dovadă de respect și umanitate.
-        Cu o experiență solidă în domeniul <b>recrutării și selecției de personal pentru îngrijire la domiciliu</b>, ne-am dedicat scopului de a crea legături sigure și de încredere între familiile care au nevoie de ajutor și profesioniștii care oferă acest sprijin cu empatie și răbdare.
-      </p>
+    <p>
+      La <b>Grijă pentru Bunici</b>, considerăm că îngrijirea persoanelor dragi nu este doar o responsabilitate,
+      ci o dovadă de respect și umanitate. Cu o experiență solidă în domeniul
+      <b>recrutării și selecției de personal pentru îngrijire la domiciliu</b>, ne-am dedicat scopului de a crea
+      legături sigure și de încredere între familiile care au nevoie de ajutor și profesioniștii care oferă acest sprijin cu empatie și răbdare.
+    </p>
 
-      <p>
-        Echipa noastră selectează cu atenție <b>îngrijitoare, bone și menajere</b> cu experiență reală și recomandări verificate.
-        Procesul nostru de recrutare se bazează pe criterii clare – competență, seriozitate, discreție și capacitatea de a oferi suport emoțional și uman, nu doar asistență practică.
-      </p>
+    <p>
+      Echipa noastră selectează cu atenție <b>îngrijitoare, bone și menajere</b> cu experiență reală și recomandări verificate.
+      Procesul nostru de recrutare se bazează pe criterii clare – competență, seriozitate, discreție și capacitatea
+      de a oferi suport emoțional și uman, nu doar asistență practică.
+    </p>
 
-      <p>
-        Punem accent pe <b>siguranță, respect și comunicare deschisă</b>, pentru ca fiecare familie să se simtă liniștită știind că persoanele dragi sunt îngrijite cu profesionalism și grijă autentică.
-      </p>
+    <p>
+      Punem accent pe <b>siguranță, respect și comunicare deschisă</b>, pentru ca fiecare familie să se simtă liniștită,
+      știind că persoanele dragi sunt îngrijite cu profesionalism și grijă autentică.
+    </p>
 
-      <p>
-        Dacă ești în căutarea unei persoane potrivite pentru a avea grijă de părinți sau bunici, sau dacă îți dorești să faci parte din echipa noastră de profesioniști dedicați,
-        <b>Grijă pentru Bunici</b> este locul unde <b>empatia se întâlnește cu seriozitatea</b>.
-      </p>
-    </div>
-  </section>
+    <p>
+      Dacă ești în căutarea unei persoane potrivite pentru a avea grijă de părinți sau bunici, sau dacă îți dorești
+      să faci parte din echipa noastră de profesioniști dedicați, <b>Grijă pentru Bunici</b> este locul unde
+      <b>empatia se întâlnește cu seriozitatea</b>.
+    </p>
 
-  <!-- === SERVICII === -->
-  <section class="services">
-    <div class="service-card">
-      <img src="bone.jpg" class="service-img">
-      <h3>Bone</h3>
-      <p>Bonele noastre oferă mai mult decât supraveghere — aduc răbdare, calm și grijă autentică pentru fiecare copil.</p>
-    </div>
+  </div>
+</section>
 
-    <div class="service-card">
-      <img src="menajera.png" class="service-img">
-      <h3>Menajere</h3>
-      <p>O locuință curată și bine organizată aduce liniște și confort familiei. Menajerele noastre au experiență și seriozitate.</p>
-    </div>
+<!-- === SERVICII === -->
+<section class="services">
+  <div class="service-card">
+    <img src="bone.jpg" class="service-img">
+    <h3>Bone</h3>
+    <p>Bonele noastre oferă răbdare, calm și grijă autentică pentru fiecare copil.</p>
+  </div>
 
-    <div class="service-card">
-      <img src="ingrijitoare_optimizata.png" class="service-img">
-      <h3>Îngrijitoare</h3>
-      <p>Îngrijitoarele noastre oferă sprijin complet la domiciliu: ajutor la deplasare, gătit, companie și suport moral.</p>
-    </div>
+  <div class="service-card">
+    <img src="menajera.png" class="service-img">
+    <h3>Menajere</h3>
+    <p>O locuință curată și bine organizată pentru confortul familiei tale.</p>
+  </div>
 
-    <div class="service-card">
-      <img src="verificare.png" class="service-img">
-      <h3>✔ Selectare & Verificare</h3>
-      <p>Fiecare colaborator este verificat riguros înainte de angajare: experiență, recomandări și compatibilitate cu familia.</p>
-    </div>
-  </section>
+  <div class="service-card">
+    <img src="ingrijitoare_optimizata.png" class="service-img">
+    <h3>Îngrijitoare</h3>
+    <p>Sprijin complet la domiciliu: deplasare, companie, gătit și suport moral.</p>
+  </div>
 
-  <!-- === FOOTER === -->
-  <footer>
-    <p>&copy; 2025 Grijă pentru Bunici — Toate drepturile rezervate.</p>
+  <div class="service-card">
+    <img src="verificare.png" class="service-img">
+    <h3>✔ Selectare & Verificare</h3>
+    <p>Recrutare profesionista și recomandări atent verificate.</p>
+  </div>
+</section>
 
-    <div class="legal-links">
-      <a href="termeni-conditii.html">Termeni și Condiții</a>
-      <span>|</span>
-      <a href="politica-confidentialitate.html">Politica de Confidențialitate (GDPR)</a>
-      <span>|</span>
-      <a href="https://ec.europa.eu/consumers/odr" target="_blank">Soluționare litigii ANPC / SOL</a>
-    </div>
-  </footer>
+<footer>
+  <p>&copy; 2025 Grijă pentru Bunici — Toate drepturile rezervate.</p>
+
+  <div class="legal-links">
+    <a href="termeni-conditii.html">Termeni și Condiții</a>
+    <span>|</span>
+    <a href="politica-confidentialitate.html">Politica de Confidențialitate (GDPR)</a>
+    <span>|</span>
+    <a href="https://ec.europa.eu/consumers/odr" target="_blank">Soluționare litigii ANPC / SOL</a>
+  </div>
+</footer>
 
 </body>
 </html>
