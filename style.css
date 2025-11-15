@@ -281,61 +281,62 @@ footer p {
   color: #5a403e;
 }
 
-/* 🌸 ——— CUM FUNCȚIONEAZĂ (NOU, CURAT) ——— */
-.steps-left {
-  display: grid;
-  grid-template-columns: repeat(2, 1fr);
-  gap: 20px;
-  margin-top: 20px;
-  max-width: 530px;
-}
+/* 🌸 CUM FUNCȚIONEAZĂ – CA ÎN POZA TA */
 
-.steps-left .step {
-  background: #ffffff;
-  padding: 25px;
-  border-radius: 18px;
-  box-shadow: 0 4px 12px rgba(0,0,0,0.06);
-  text-align: left;
-}
-
-.steps-left .number {
-  display: inline-block;
-  width: 45px;
-  height: 45px;
-  background: var(--rose-light);
-  color: white;
-  font-weight: bold;
-  border-radius: 50%;
-  line-height: 45px;
-  text-align: center;
-  margin-bottom: 8px;
-  font-size: 1.2rem;
+.how-it-works-left {
+  margin-top: 40px;
 }
 
 .how-it-works-left h3 {
-  font-size: 1.9rem;
+  font-family: 'Poppins', sans-serif;
+  font-size: 2rem;
+  color: var(--text);        /* titlul mai închis, ca sus */
+  text-align: center;
   margin-bottom: 25px;
 }
+
 .steps-left {
   display: grid;
-  grid-template-columns: 1fr 1fr;   /* două coloane FIX */
-  gap: 25px;
-  width: 100%;
-  max-width: 650px;                /* mai lat, ca în designul tău ideal */
+  grid-template-columns: repeat(2, minmax(0, 1fr)); /* 2 coloane fixe */
+  gap: 24px;
+  max-width: 540px;          /* lățime similară cu poza */
 }
 
 .steps-left .step {
   background: #ffffff;
-  padding: 25px;
+  padding: 24px 26px;
   border-radius: 18px;
   box-shadow: 0 4px 12px rgba(0,0,0,0.06);
   text-align: left;
-  height: 100%;                    /* toate cardurile egal înalte */
   display: flex;
   flex-direction: column;
   justify-content: flex-start;
 }
 
 .steps-left .number {
+  display: inline-block;
+  width: 46px;
+  height: 46px;
+  background: var(--rose);   /* cerc mai intens, ca în titlu */
+  color: #ffffff;
+  font-weight: 700;
+  border-radius: 50%;
+  line-height: 46px;
+  text-align: center;
   margin-bottom: 12px;
+  font-size: 1.15rem;
+}
+
+.steps-left .step p {
+  margin: 0;
+  font-size: 1rem;
+  color: var(--text);
+}
+
+/* pe ecrane mici – 1 coloană, să nu se înghesuie */
+@media (max-width: 900px) {
+  .steps-left {
+    grid-template-columns: 1fr;
+    max-width: 100%;
+  }
 }
