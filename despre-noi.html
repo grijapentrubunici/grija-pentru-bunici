@@ -1,100 +1,138 @@
 <!DOCTYPE html>
 <html lang="ro">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Despre Noi | Grija pentru Bunici</title>
-  <link rel="stylesheet" href="style.css">
-  <style>
-    .hero {
-      position: relative;
-      text-align: center;
-      color: white;
-    }
-
-    .hero-image {
-      width: 100%;
-      height: 60vh;
-      object-fit: cover;
-      filter: brightness(60%);
-    }
-
-    .hero-text {
-      position: absolute;
-      top: 50%;
-      left: 50%;
-      transform: translate(-50%, -50%);
-    }
-
-    .hero-text h1 {
-      font-size: 3em;
-      color: #fff;
-      margin-bottom: 10px;
-    }
-
-    .hero-text p {
-      font-size: 1.2em;
-      color: #fff;
-    }
-
-    .content {
-      max-width: 900px;
-      margin: 50px auto;
-      padding: 0 20px;
-      line-height: 1.7;
-      font-size: 1.1em;
-      color: #333;
-    }
-
-    .content h2 {
-      color: #c76b7d;
-      text-align: center;
-      margin-bottom: 20px;
-    }
-  </style>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Despre noi - Grijă pentru Bunici</title>
+    <link rel="stylesheet" href="style.css" />
 </head>
 <body>
-<header>
-  <h1 class="site-title">Grija pentru Bunici</h1>
-  <nav class="menu">
-  <a href="index.html">Acasă</a>
-  <a href="despre-noi.html">Despre noi</a>
-  <a href="caut-ajutor.html">Caut ajutor</a>
-  <a href="caut-loc-de-munca.html">Caut loc de muncă</a>
-  <a href="tarife.html">Tarife</a>
-  <a href="contact.html">Contact</a>
-</nav>
-</header>
+    <!-- 🔝 Header (același stil ca pe celelalte pagini) -->
+    <header class="site-header">
+        <div class="container header-inner">
+            <a href="index.html" class="logo">
+                <span class="logo-heart">♥</span>
+                <span class="logo-text">Grijă pentru Bunici</span>
+            </a>
 
-  <section class="hero">
-  <img src="despre-noi-banner.png" 
-       alt="Mâini care simbolizează grijă și sprijin" 
-       class="hero-image">
+            <nav class="main-nav">
+                <ul>
+                    <li><a href="index.html">Acasă</a></li>
+                    <li><a href="despre-noi.html" class="active">Despre noi</a></li>
+                    <li><a href="caut-ajutor.html">Caut ajutor</a></li>
+                    <li><a href="caut-loc-de-munca.html">Caut loc de muncă</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
 
+    <!-- 🌸 Conținut principal DESPRE NOI – cursiv, fără chenare -->
+    <main class="page about-page">
+        <div class="container">
+            <header class="page-header">
+                <p class="page-eyebrow">🌟 Despre noi</p>
+                <h1 class="page-title">Grijă, respect și siguranță pentru familia ta</h1>
+            </header>
 
+            <!-- 🤍 Cine suntem noi -->
+            <section class="about-section">
+                <h2>🤍 Cine suntem noi</h2>
+                <p>
+                    La <strong>Grijă pentru Bunici</strong>, misiunea noastră este să oferim familiilor liniște și sprijin real prin
+                    găsirea persoanei potrivite pentru nevoile lor — fie că este vorba de o îngrijitoare pentru un senior, o bonă
+                    pentru copii sau o menajeră de încredere. Alegem cu atenție oameni empatici, responsabili, respectuoși și
+                    verificați, pentru ca tu și cei dragi să fiți în siguranță.
+                </p>
+                <p>
+                    Credem cu tărie că orice colaborare trebuie să se bazeze pe respect, grijă și încredere. De aceea investim timp
+                    în a înțelege situația fiecărei familii și în a găsi persoana care se potrivește cu adevărat.
+                </p>
+            </section>
 
-  <section class="content">
-    <h2>Grijă, Respect și Încredere</h2>
-    <p>
-      „Grija pentru Bunici” a apărut din dorința sinceră de a oferi sprijin persoanelor vârstnice și familiilor
-      care caută ajutor de încredere. Ne dorim să construim o punte între oameni – între cei care oferă ajutor și
-      cei care au nevoie de el.
-    </p>
+            <!-- ⭐ Tipuri de servicii oferite -->
+            <section class="about-section">
+                <h2>⭐ Tipuri de servicii oferite</h2>
+                <p>
+                    Oferim o gamă completă de servicii adaptate fiecărei situații, astfel încât fiecare familie să găsească soluția
+                    ideală. Poți alege personal care să lucreze full-time, part-time, doar pentru anumite ore ale zilei, pe timpul
+                    nopții sau chiar personal care locuiește în casă, atunci când este nevoie de supraveghere permanentă.
+                </p>
+                <p>
+                    Personalul intern (care locuiește în casa beneficiarului) este recomandat atunci când seniorul are nevoie de
+                    ajutor constant, supraveghere și siguranță în orice moment al zilei. Este o soluție ideală pentru familiile
+                    care doresc continuitate și stabilitate. În același timp, oferim și personal full-time, pentru 8 ore pe zi,
+                    potrivit pentru menaj, îngrijirea persoanelor în vârstă sau supravegherea copiilor.
+                </p>
+                <p>
+                    Pentru nevoile mai ușoare sau ocazionale, există opțiunea part-time, între 2 și 6 ore pe zi, o alegere eficientă
+                    pentru activități precum curățenie, cumpărături, însoțire la medic sau ajutor minim în casă.
+                </p>
+                <p>
+                    Punem la dispoziție și personal pentru îngrijire pe timp de noapte, pentru familiile care au nevoie de
+                    supraveghere în orele în care riscurile pot fi mai mari sau situația necesită o prezență umană constantă.
+                </p>
+            </section>
 
-    <p>
-      Echipa noastră colaborează cu îngrijitori, menajere și însoțitori cu experiență, care înțeleg importanța
-      respectului, răbdării și empatiei în fiecare gest. Fiecare colaborator este ales cu grijă, pentru ca
-      familia ta să simtă siguranță și liniște.
-    </p>
+            <!-- ⭐ Procesul nostru -->
+            <section class="about-section">
+                <h2>⭐ Procesul nostru</h2>
+                <p>
+                    Procesul nostru este simplu, transparent și orientat către siguranța familiei. Începem cu o discuție detaliată
+                    pentru a înțelege exact nevoile tale. Ulterior, selectăm cu atenție personalul compatibil și organizăm interviuri
+                    astfel încât familia să poată cunoaște persoana înainte de începerea colaborării.
+                </p>
+                <p>
+                    După alegerea persoanei potrivite, continuăm să fim prezenți, urmărind colaborarea și asigurându-ne că totul
+                    decurge bine.
+                </p>
+            </section>
 
-    <p>
-      Suntem mândri să fim parte dintr-o comunitate în care bunicii noștri primesc atenția și grija pe care o
-      merită. 
-    </p>
-  </section>
+            <!-- ⭐ Garanție de compatibilitate -->
+            <section class="about-section">
+                <h2>⭐ Garanție de compatibilitate</h2>
+                <p>
+                    Știm cât de importantă este relația dintre familie și persoana aleasă. De aceea oferim <strong>garanție de
+                    compatibilitate</strong>: dacă simți că persoana propusă nu se potrivește nevoilor sau stilului familiei tale,
+                    intervenim imediat și oferim înlocuire rapidă, fără costuri suplimentare și fără complicații.
+                </p>
+                <p>
+                    Scopul nostru este ca tu să te simți în siguranță și liniștită, știind că ai mereu sprijin.
+                </p>
+            </section>
 
-  <footer>
-    <p>© 2025 Grija pentru Bunici | Toate drepturile rezervate</p>
-  </footer>
+            <!-- ⭐ De ce familiile ne aleg -->
+            <section class="about-section">
+                <h2>⭐ De ce familiile ne aleg</h2>
+                <p>
+                    Familiile aleg <strong>Grijă pentru Bunici</strong> pentru profesionalism, seriozitate și atenția cu care ne
+                    ocupăm de fiecare detaliu. Oferim personal verificat, comunicare transparentă, intervenție rapidă și opțiuni
+                    flexibile pentru orice situație. Suntem alături de tine pe parcursul întregii colaborări și oferim soluții
+                    personalizate, pentru ca tu să știi că ai luat decizia potrivită.
+                </p>
+            </section>
+
+            <!-- ❤️ Suntem aici pentru tine -->
+            <section class="about-section about-section-final">
+                <h2>❤️ Suntem aici pentru tine</h2>
+                <p>
+                    Indiferent de situație, găsim persoana potrivită și te sprijinim din primul până în ultimul pas. Pentru noi,
+                    fiecare familie contează, iar fiecare colaborare este construită pe grijă, empatie și profesionalism.
+                </p>
+            </section>
+        </div>
+    </main>
+
+    <!-- 🔚 Footer simplu -->
+    <footer class="site-footer">
+        <div class="container footer-inner">
+            <p>© <span id="year"></span> Grijă pentru Bunici. Toate drepturile rezervate.</p>
+        </div>
+    </footer>
+
+    <script>
+        // Actualizare automată an în footer
+        document.getElementById("year").textContent = new Date().getFullYear();
+    </script>
 </body>
 </html>
