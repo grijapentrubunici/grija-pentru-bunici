@@ -458,3 +458,10 @@ footer p {
     object-fit: cover !important;
   }
 }
+/* Reparare vizibilitate buton WhatsApp */
+.whatsapp-btn,
+.whatsapp-button,
+a[href*="wa.me"] {
+    z-index: 9999 !important;
+    position: fixed !important;
+}
