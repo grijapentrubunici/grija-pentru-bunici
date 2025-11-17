@@ -1,3 +1,4 @@
+
 /* 🌸 Paletă culori */
 :root {
   --rose: #c76b7d;
@@ -65,22 +66,22 @@ header {
   100% { opacity: 1; transform: scale(1); }
 }
 
-/* 🌸 DESPRE NOI – HERO BANNER */
-.about-hero {
+/* 🌸 HERO IMAGE */
+.hero-banner {
   width: 100%;
-  height: 180px; /* înălțimea aleasă de tine */
+  text-align: center;
+  padding: 20px 0;
   overflow: hidden;
-  margin: 0;
-  padding: 0;
 }
 
-.about-hero-img {
+.hero-banner-img {
   width: 100%;
-  height: 100%;
+  max-width: 100%;
+  height: auto;
+  max-height: 480px;
   object-fit: cover;
   display: block;
-}
-
+  margin: 0 auto;
   animation: fadeInImage 1.4s ease-out forwards;
 }
 
