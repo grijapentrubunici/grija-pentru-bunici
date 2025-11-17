@@ -11,18 +11,15 @@
   <style>
 
     /* ===== CONTAINER MARE – TEXT + FORMULAR ===== */
-    .intro-form {
-      display: flex;
-      flex-wrap: wrap;
-      justify-content: space-between;
-      align-items: flex-start;
-      max-width: 1200px;
-      margin: 60px auto;
-      padding: 45px 35px;
-      background: linear-gradient(135deg, #fff7f6, #fff3f1);
-      border-radius: 20px;
-      box-shadow: 0 6px 18px rgba(0,0,0,0.07);
-      gap: 50px;
+    .intro-formular {
+  flex: 1 1 420px;         /* mai mic, mai elegant */
+  background: #ffffff;
+  border: 1px solid #f2e3db;
+  border-radius: 20px;
+  
+  padding: 35px 35px 45px; /* aici e magia: redus mult */
+  
+  box-shadow: 0 8px 22px rgba(0,0,0,0.06);
     }
 
     /* ===== TEXT STÂNGA ===== */
@@ -71,18 +68,14 @@
       display: block;
       font-weight: 600;
       margin-bottom: 6px;
-    }
+  .camp-formular input,
+.camp-formular textarea,
+.camp-formular select {
+  padding: 11px;     /* era 14px */
+  font-size: 1rem;
+  border-radius: 10px;  /* puțin mai mic */
+}
 
-    .camp-formular input,
-    .camp-formular textarea,
-    .camp-formular select {
-      width: 100%;
-      padding: 14px;
-      border-radius: 12px;
-      border: 1px solid #d8cbbd;
-      font-size: 1rem;
-      background: #fff;
-    }
 
     textarea { resize: vertical; }
 
@@ -97,12 +90,12 @@
       display: block;
       margin: 35px auto 25px;
       transition: 0.3s;
-    }
-
-    .intro-formular button:hover {
-      background-color: var(--rose-light);
-      transform: translateY(-2px);
-    }
+      
+  .intro-formular button {
+    padding: 12px 22px;
+    font-size: 17px;
+    border-radius: 12px;
+}
 
     .post-form-message {
       text-align: center;
