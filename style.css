@@ -350,11 +350,9 @@ footer p {
     margin: 0 auto;
     padding: 20px;
 }
-
-/* Banner / Hero */
+/* Doar pentru pagina Despre Noi — Bannerul */
 .about-page .about-hero {
-    width: 100%;
-    height: 220px;
+    height: 300px;   /* înălțimea dorită */
     overflow: hidden;
     margin: 0;
     padding: 0;
@@ -366,6 +364,8 @@ footer p {
     object-fit: cover;
     display: block;
 }
+
+
 
 /* Secțiuni */
 .about-page .about-section {
