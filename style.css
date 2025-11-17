@@ -422,3 +422,39 @@ footer p {
     object-fit: cover;
   }
 }
+/* ===== MOBILE FIX — DOAR PENTRU PAGINA ACASĂ ===== */
+@media (max-width: 600px) {
+
+  /* Header mai mic pe mobil */
+  header {
+    padding: 10px 0 6px;
+  }
+
+  .site-title, h1 {
+    font-size: 1.4rem !important;
+    margin-bottom: 6px;
+  }
+
+  /* Meniu flexibil și vizibil */
+  .menu {
+    flex-wrap: wrap;
+    gap: 10px;
+    padding: 0 10px;
+  }
+
+  .menu a {
+    font-size: 0.9rem;
+    padding: 4px 5px;
+  }
+
+  /* HERO IMAGE – FIX pentru poză dispărută pe mobil */
+  .hero-banner {
+    height: 190px !important;
+    overflow: hidden;
+  }
+
+  .hero-banner-img {
+    height: 100% !important;
+    object-fit: cover !important;
+  }
+}
