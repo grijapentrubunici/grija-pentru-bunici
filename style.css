@@ -390,3 +390,35 @@ footer p {
     line-height: 1.75;
     color: var(--text);
 }
+/* ===== MOBILE FIX FOR HEADER ===== */
+@media (max-width: 600px) {
+
+  header {
+    padding: 10px 0 5px;
+  }
+
+  .site-title, h1 {
+    font-size: 1.4rem;
+    margin-bottom: 8px;
+  }
+
+  .menu {
+    flex-wrap: wrap;
+    gap: 10px;
+    padding: 0 8px;
+  }
+
+  .menu a {
+    font-size: 0.85rem;
+    padding: 4px 6px;
+  }
+
+  .about-hero {
+    height: 180px !important; /* banner perfect pe mobil */
+  }
+
+  .about-hero img {
+    height: 100%;
+    object-fit: cover;
+  }
+}
