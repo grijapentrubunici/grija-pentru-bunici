@@ -465,3 +465,66 @@ a[href*="wa.me"] {
     z-index: 9999 !important;
     position: fixed !important;
 }
+/* ===== FUNDAL FORMULARE (Caut Ajutor + Caut Loc de Muncă) ===== */
+
+/* Fundal secțiune mare din jurul formularului */
+.intro-form,
+.job-form-section {
+  background-color: #f8f1ed !important; /* bejul din pagina Tarife */
+  padding-top: 40px;
+  padding-bottom: 40px;
+  border-radius: 20px;
+}
+
+/* Cardul formularului – ALB ca pe Tarife */
+.intro-formular,
+.job-form-card {
+  background: #ffffff; 
+  border: 1px solid #e7d7ca;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.06);
+  border-radius: 20px;
+}
+
+/* Titluri */
+.intro-formular h3,
+.job-form-card h3 {
+  color: #5a4038;
+}
+
+/* Label-uri */
+.camp-formular label {
+  color: #3c1f1d;
+}
+
+/* Câmpuri */
+.camp-formular input,
+.camp-formular textarea,
+.camp-formular select {
+  background: #fffaf7;
+  border: 1px solid #dccbc0;
+  color: #3c1f1d;
+}
+
+.camp-formular input::placeholder,
+.camp-formular textarea::placeholder {
+  color: #7a625b;
+}
+
+/* Butoane */
+.intro-formular button,
+.job-form-card button {
+  background-color: #5a4038;
+  color: #fff;
+  border: none;
+}
+
+.intro-formular button:hover,
+.job-form-card button:hover {
+  background-color: #3c1f1d;
+}
+
+/* Mesaj informativ */
+.post-form-message {
+  background: #fff3ec;
+  color: #5a4038;
+}
