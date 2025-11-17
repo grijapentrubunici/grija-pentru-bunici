@@ -65,22 +65,22 @@ header {
   100% { opacity: 1; transform: scale(1); }
 }
 
-/* 🌸 HERO IMAGE */
-.hero-banner {
+/* 🌸 DESPRE NOI – HERO BANNER */
+.about-hero {
   width: 100%;
-  text-align: center;
-  padding: 20px 0;
+  height: 180px; /* înălțimea aleasă de tine */
   overflow: hidden;
+  margin: 0;
+  padding: 0;
 }
 
-.hero-banner-img {
+.about-hero-img {
   width: 100%;
-  max-width: 100%;
-  height: auto;
-  max-height: 480px;
+  height: 100%;
   object-fit: cover;
   display: block;
-  margin: 0 auto;
+}
+
   animation: fadeInImage 1.4s ease-out forwards;
 }
 
