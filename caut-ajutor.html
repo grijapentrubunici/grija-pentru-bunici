@@ -10,19 +10,26 @@
 
   <style>
 
-    /* ===== CONTAINER MARE – TEXT + FORMULAR ===== */
-    .intro-formular {
-  flex: 1 1 420px;         /* mai mic, mai elegant */
-  background: #ffffff;
-  border: 1px solid #f2e3db;
-  border-radius: 20px;
-  
-  padding: 35px 35px 45px; /* aici e magia: redus mult */
-  
-  box-shadow: 0 8px 22px rgba(0,0,0,0.06);
+    body {
+      background: #f8f4f2;
     }
 
-    /* ===== TEXT STÂNGA ===== */
+    /* CONTAINER MARE – TEXT + FORMULAR */
+    .intro-form {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+      align-items: flex-start;
+      max-width: 1200px;
+      margin: 60px auto;
+      padding: 40px 35px;
+      background: linear-gradient(135deg, #fff7f6, #fef3ef);
+      border-radius: 22px;
+      box-shadow: 0 8px 22px rgba(0,0,0,0.06);
+      gap: 50px;
+    }
+
+    /* TEXT STÂNGA */
     .intro-text {
       flex: 1 1 460px;
     }
@@ -30,128 +37,132 @@
     .intro-text h2 {
       font-family: 'Poppins', sans-serif;
       font-size: 2rem;
-      color: var(--rose);
+      color: #5a4038;
       margin-bottom: 20px;
     }
 
     .intro-text p {
-      font-size: 1.08rem;
-      line-height: 1.8;
-      margin-bottom: 20px;
-      color: var(--text);
-      text-align: justify;
+      font-size: 1.05rem;
+      line-height: 1.7;
+      margin-bottom: 16px;
+      color: #3c1f1d;
     }
 
-    /* ===== FORMULAR DREAPTA ===== */
-    .intro-formular {
-      flex: 1 1 460px;
-      background: #ffffff;
-      border: 1px solid #f2e3db;
-      border-radius: 20px;
-      padding: 50px 45px 80px;
-      box-shadow: 0 8px 22px rgba(0,0,0,0.06);
-    }
-
-    .intro-formular h3 {
-      text-align: center;
-      color: var(--rose);
-      font-family: 'Poppins', sans-serif;
-      margin-bottom: 30px;
-      font-size: 1.5rem;
-    }
-
-    .camp-formular {
-      margin-bottom: 24px;
-    }
-
-    .camp-formular label {
-      display: block;
-      font-weight: 600;
-      margin-bottom: 6px;
-  .camp-formular input,
-.camp-formular textarea,
-.camp-formular select {
-  padding: 11px;     /* era 14px */
-  font-size: 1rem;
-  border-radius: 10px;  /* puțin mai mic */
-}
-
-
-    textarea { resize: vertical; }
-
-    .intro-formular button {
-      background-color: var(--rose);
-      color: white;
-      border: none;
-      border-radius: 14px;
-      padding: 15px 28px;
-      font-size: 18px;
-      cursor: pointer;
-      display: block;
-      margin: 35px auto 25px;
-      transition: 0.3s;
-      
-  .intro-formular button {
-    padding: 12px 22px;
-    font-size: 17px;
-    border-radius: 12px;
-}
-
-    .post-form-message {
-      text-align: center;
-      font-size: 1rem;
-      background: #fff7f5;
-      padding: 15px 20px;
-      border-radius: 12px;
-      box-shadow: 0 2px 8px rgba(0,0,0,0.04);
-      color: #5a4634;
-    }
-
-    /* ===== CUM FUNCȚIONEAZĂ – 2 COLONNE FRUMOASE ===== */
+    /* PASI */
     .how-it-works-left {
       margin-top: 30px;
     }
 
     .how-it-works-left h3 {
       font-family: 'Poppins', sans-serif;
-      font-size: 1.9rem;
-      margin-bottom: 25px;
-      color: var(--rose);
+      font-size: 1.8rem;
+      margin-bottom: 22px;
+      color: #5a4038;
     }
 
     .steps-left {
       display: grid;
       grid-template-columns: repeat(2, 1fr);
       gap: 20px;
-      max-width: 550px;
+      max-width: 520px;
     }
 
     .steps-left .step {
       background: #ffffff;
-      padding: 25px;
-      border-radius: 18px;
-      box-shadow: 0 4px 12px rgba(0,0,0,0.06);
-      text-align: left;
+      padding: 22px;
+      border-radius: 16px;
+      box-shadow: 0 4px 14px rgba(0,0,0,0.06);
     }
 
     .steps-left .number {
       display: inline-block;
       width: 45px;
       height: 45px;
-      background: var(--rose-light);
-      color: white;
-      border-radius: 50%;
       line-height: 45px;
-      text-align: center;
+      background: #d3969d;
+      color: white;
       font-weight: bold;
-      font-size: 1.2rem;
+      text-align: center;
+      border-radius: 50%;
       margin-bottom: 8px;
+      font-size: 1.1rem;
     }
 
+    /* FORMULAR DREAPTA */
+    .intro-formular {
+      flex: 1 1 430px;
+      background: #fff;
+      border: 1px solid #e7d7ca;
+      border-radius: 18px;
+      padding: 28px 30px 30px;
+      box-shadow: 0 6px 14px rgba(0,0,0,0.06);
+    }
+
+    .intro-formular h3 {
+      text-align: center;
+      color: #5a4038;
+      font-family: 'Poppins', sans-serif;
+      margin-bottom: 20px;
+      font-size: 1.4rem;
+    }
+
+    .camp-formular {
+      margin-bottom: 16px;
+    }
+
+    .camp-formular label {
+      display: block;
+      font-weight: 600;
+      margin-bottom: 6px;
+      color: #3c1f1d;
+    }
+
+    .camp-formular input,
+    .camp-formular textarea,
+    .camp-formular select {
+      width: 100%;
+      padding: 11px;
+      border-radius: 12px;
+      border: 1px solid #d9c8b8;
+      background: #faf6f2;
+      font-size: 1rem;
+      color: #3c1f1d;
+    }
+
+    textarea { resize: vertical; }
+
+    .intro-formular button {
+      background-color: #c76b7d;
+      color: white;
+      border: none;
+      border-radius: 14px;
+      padding: 12px 26px;
+      font-size: 1.05rem;
+      cursor: pointer;
+      display: block;
+      margin: 20px auto 12px;
+      transition: 0.3s;
+    }
+
+    .intro-formular button:hover {
+      background-color: #b45f71;
+      transform: translateY(-2px);
+    }
+
+    .post-form-message {
+      text-align: center;
+      font-size: 0.95rem;
+      background: #fff6f4;
+      padding: 12px 14px;
+      border-radius: 12px;
+      box-shadow: 0 2px 6px rgba(0,0,0,0.05);
+      color: #5a4634;
+    }
+
+    /* Responsive */
     @media (max-width: 900px) {
       .steps-left {
         grid-template-columns: 1fr;
-        max-width: 100%;
       }
     }
 
@@ -160,108 +171,81 @@
 
 <body>
 
-  <header>
-    <h1>Grijă pentru Bunici</h1>
-    <nav class="menu">
-      <a href="index.html">Acasă</a>
-      <a href="despre-noi.html">Despre noi</a>
-      <a href="caut-ajutor.html" class="active">Caut ajutor</a>
-      <a href="caut-loc-de-munca.html">Caut loc de muncă</a>
-      <a href="tarife.html">Tarife</a>
-      <a href="contact.html">Contact</a>
-    </nav>
-  </header>
+<header>
+  <h1>Grijă pentru Bunici</h1>
+  <nav class="menu">
+    <a href="index.html">Acasă</a>
+    <a href="despre-noi.html">Despre noi</a>
+    <a href="caut-ajutor.html" class="active">Caut ajutor</a>
+    <a href="caut-loc-de-munca.html">Caut loc de muncă</a>
+    <a href="tarife.html">Tarife</a>
+    <a href="contact.html">Contact</a>
+  </nav>
+</header>
 
-  <!-- ===== INTRO + FORMULAR ===== -->
-  <section class="intro-form">
+<section class="intro-form">
 
-    <!-- TEXT STÂNGA -->
-    <div class="intro-text">
-      <h2>Ai nevoie de ajutor acasă?</h2>
+  <!-- TEXT STÂNGA -->
+  <div class="intro-text">
+    <h2>Ai nevoie de ajutor acasă?</h2>
 
-      <p>Fie că ai nevoie de <b>îngrijitoare</b> pentru un părinte, o <b>bonă</b> pentru copil sau o <b>menajeră</b> de încredere, echipa <b>Grijă pentru Bunici</b> este aici să te sprijine. Selectăm cu atenție persoane empatice, responsabile și verificate.</p>
+    <p>Fie că ai nevoie de o <b>îngrijitoare</b> pentru un senior, o <b>bonă</b> sau o <b>menajeră</b>, echipa noastră te ajută rapid și în siguranță.</p>
 
-      <p>Completează formularul de mai jos și vom reveni rapid cu o soluție potrivită nevoilor tale. Grija, încrederea și respectul sunt temelia fiecărei colaborări.</p>
+    <p>Completează formularul, iar noi revenim cu soluția potrivită.</p>
 
-      <!-- CUM FUNCȚIONEAZĂ -->
-      <div class="how-it-works-left">
-        <h3>Cum funcționează?</h3>
-        <div class="steps-left">
+    <!-- CUM FUNCȚIONEAZĂ -->
+    <div class="how-it-works-left">
+      <h3>Cum funcționează?</h3>
 
-          <div class="step">
-            <span class="number">1</span>
-            <p>Completezi formularul cu nevoile tale.</p>
-          </div>
+      <div class="steps-left">
+        <div class="step">
+          <span class="number">1</span>
+          <p>Completezi formularul cu nevoile tale.</p>
+        </div>
 
-          <div class="step">
-            <span class="number">2</span>
-            <p>Te contactăm rapid pentru detalii suplimentare.</p>
-          </div>
+        <div class="step">
+          <span class="number">2</span>
+          <p>Te contactăm rapid pentru detalii.</p>
+        </div>
 
-          <div class="step">
-            <span class="number">3</span>
-            <p>Găsim persoana potrivită pentru situația ta.</p>
-          </div>
+        <div class="step">
+          <span class="number">3</span>
+          <p>Găsim persoana potrivită pentru tine.</p>
+        </div>
 
-          <div class="step">
-            <span class="number">4</span>
-            <p>Începe colaborarea în siguranță și cu încredere.</p>
-          </div>
-
+        <div class="step">
+          <span class="number">4</span>
+          <p>Colaborarea începe în siguranță.</p>
         </div>
       </div>
 
     </div>
+  </div>
 
-    <!-- FORMULAR DREAPTA -->
-    <div class="intro-formular">
-      <h3>Formular – Solicită ajutor</h3>
+  <!-- FORMULAR DREAPTA -->
+  <div class="intro-formular">
+    <h3>Formular – Solicită ajutor</h3>
 
-      <form action="https://formspree.io/f/xpwolkdp" method="POST">
+    <form action="https://formspree.io/f/xpwolkdp" method="POST">
 
-        <div class="camp-formular">
-          <label for="nume">Nume complet</label>
-          <input type="text" id="nume" name="nume" required>
-        </div>
-
-        <div class="camp-formular">
-          <label for="email">Email</label>
-          <input type="email" id="email" name="_replyto" required>
-        </div>
-
-        <div class="camp-formular">
-          <label for="telefon">Telefon</label>
-          <input type="tel" id="telefon" name="telefon" required>
-        </div>
-
-        <div class="camp-formular">
-          <label for="serviciu">Tip de ajutor dorit</label>
-          <select id="serviciu" name="serviciu" required>
-            <option value="">Alege o opțiune</option>
-            <option value="ingrijire">Îngrijitoare pentru senior</option>
-            <option value="bona">Bonă pentru copii</option>
-            <option value="menaj">Menajeră pentru gospodărie</option>
-          </select>
-        </div>
-
-        <div class="camp-formular">
-          <label for="detalii">Detalii suplimentare</label>
-          <textarea id="detalii" name="detalii" rows="5" placeholder="Scrie-ne câteva detalii despre nevoile tale..."></textarea>
-        </div>
-
-        <button type="submit">Trimite solicitarea</button>
-      </form>
-
-      <div class="post-form-message">
-        Toate informațiile sunt confidențiale. Te vom contacta cât mai curând!
+      <div class="camp-formular">
+        <label>Nume complet</label>
+        <input type="text" name="nume" required>
       </div>
-    </div>
 
-  </section>
+      <div class="camp-formular">
+        <label>Email</label>
+        <input type="email" name="_replyto" required>
+      </div>
 
-  <footer>
-    © 2025 Grijă pentru Bunici | WhatsApp: <b>0793 553 703</b>
-  </footer>
+      <div class="camp-formular">
+        <label>Telefon</label>
+        <input type="tel" name="telefon" required>
+      </div>
 
-</body>
-</html>
+      <div class="camp-formular">
+        <label>Tip de ajutor dorit</label>
+        <select name="serviciu" required>
+          <option value="">Alege o opțiune</option>
+          <option value="ingrijitoare">Îngrijitoare senior</option>
+          <option value="bona">Bonă copii</optio
