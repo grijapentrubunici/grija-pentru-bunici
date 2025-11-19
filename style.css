@@ -554,3 +554,66 @@ a[href*="wa.me"] {
   transform: scale(1.07);
   box-shadow: 0 6px 18px rgba(0,0,0,0.35);
 }
+/* FORMULAR – menține structura originală, fără lățire */
+.help-form {
+    max-width: 550px;
+    margin: 0 auto;
+}
+
+/* Titlu formular */
+.help-form-title {
+    text-align: center;
+    font-size: 1.6rem;
+    font-weight: 700;
+    margin-bottom: 25px;
+    color: var(--text-dark);
+}
+
+/* Etichete */
+.help-form label {
+    display: block;
+    margin-bottom: 6px;
+    font-weight: 600;
+    color: var(--text-dark);
+}
+
+/* Inputuri / Selecturi / Textarea */
+.help-form input,
+.help-form select,
+.help-form textarea {
+    width: 100%;
+    padding: 14px;
+    border-radius: 12px;
+    border: 1px solid #e8deda;
+    background: #f7f3f1;
+    font-size: 1rem;
+    margin-bottom: 18px;
+    box-sizing: border-box;
+}
+
+/* GDPR text */
+.gdpr-text {
+    font-size: 0.85rem;
+    color: #6a5555;
+    margin-top: -5px;
+    margin-bottom: 18px;
+    line-height: 1.4;
+}
+
+/* Buton */
+.submit-btn {
+    width: 100%;
+    padding: 14px;
+    background: var(--rose);
+    color: white;
+    border: none;
+    border-radius: 12px;
+    font-size: 1rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: 0.2s ease;
+}
+
+.submit-btn:hover {
+    background: var(--rose2);
+}
