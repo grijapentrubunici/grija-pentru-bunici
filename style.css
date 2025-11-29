@@ -632,6 +632,73 @@ footer a:hover {
     margin-top: 10px;
     font-size: 0.9rem;
 }
+/* 🌸 COOKIE BANNER – în stilul site-ului */
+
+.cookie-banner {
+  position: fixed;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: var(--text); /* fundal maro închis */
+  color: #fff;
+  padding: 12px 18px;
+  font-size: 0.9rem;
+  z-index: 10000; /* peste WhatsApp (9999) */
+  display: none; /* devine block din JS dacă nu există acord */
+}
+
+.cookie-banner-content {
+  max-width: 960px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.cookie-banner p {
+  margin: 0;
+}
+
+.cookie-banner a {
+  color: var(--rose-light);
+  text-decoration: underline;
+  font-weight: 600;
+}
+
+.cookie-banner a:hover {
+  color: #ffffff;
+}
+
+.cookie-banner button {
+  align-self: flex-start;
+  border: none;
+  padding: 7px 16px;
+  border-radius: 999px;
+  font-size: 0.9rem;
+  cursor: pointer;
+  font-weight: 600;
+  font-family: 'Open Sans', sans-serif;
+}
+
+/* Buton accept */
+#cookie-accept {
+  background-color: var(--rose);
+  color: #fff;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.25);
+}
+
+#cookie-accept:hover {
+  background-color: var(--rose-light);
+}
+
+/* Pe ecrane mai mari, text + buton pe un rând */
+@media (min-width: 700px) {
+  .cookie-banner-content {
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+  }
+}
 
 .legal-links span {
     margin: 0 6px;
