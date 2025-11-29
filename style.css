@@ -617,3 +617,23 @@ a[href*="wa.me"] {
 .submit-btn:hover {
     background: var(--rose2);
 }
+footer a {
+    color: #5b4037; /* maro cald */
+    text-decoration: none;
+    font-weight: 500;
+}
+
+footer a:hover {
+    color: #a87a6c; /* bej rozaliu la hover */
+    text-decoration: underline;
+}
+
+.legal-links {
+    margin-top: 10px;
+    font-size: 0.9rem;
+}
+
+.legal-links span {
+    margin: 0 6px;
+    color: #7a645b;
+}
